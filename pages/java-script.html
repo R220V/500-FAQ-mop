@@ -40,7 +40,7 @@
 </div>
 <header class="header container">
 
-  <h1>100 запитань та відповідей по темі:</h1>
+  <h1>Перевір знання по темі:</h1>
 
 </div>
     <ul class="header-menu">
@@ -76,7 +76,7 @@
           </a>
 </div>
 <div class="icon-scroll-down">
-<a href="#Linka"> <span class="swim-scroll">
+<a href="#Now"> <span class="swim-scroll">
               <svg class="hero-icon-scroll-down" width="15" height="15">
                 <use href="../img/sprite.svg#arrow-scroll-down"></use>
               </svg>
@@ -1047,27 +1047,14 @@ console.log(a ** b); // 1000 (степінь: 10^3)</code></pre>
 <!-- 100 -->
 <details class="faq"><summary><span class="chev">▸</span> 100. Що таке top-level module scope?</summary><div class="answer"><p>Модулі ES6 мають власний scope, відокремлений від глобального, тому <code>var</code> не створює глобальні змінні.</p></div></details>
 
-<script>
-    // Пошук по FAQ
-    const input = document.getElementById('q');
-    const items = Array.from(document.querySelectorAll('details.faq'));
+ <h3  id="Now" style="margin-top:22px;  color:teal">Наразі проєкт ще в розробці...</h3>
+  </div>
 
-    function filter() {
-      const term = input.value.trim().toLowerCase();
-      items.forEach(d => {
-        const text = (d.querySelector('summary')?.innerText + " " + d.querySelector('.answer')?.innerText)
-          .toLowerCase();
-        const hit = text.includes(term);
-        d.style.display = hit ? '' : 'none';
-        if (!hit) d.open = false;
-      });
-    }
-    input.addEventListener('input', filter);
-
-    // Відкрити/закрити всі
-    document.getElementById('openAll').addEventListener('click', () => items.forEach(d => d.open = true));
-    document.getElementById('closeAll').addEventListener('click', () => items.forEach(d => d.open = false));
-   </script>
+  <footer>
+    <p style="font-size: 14px; color: gray; text-align: center; ">
+      Створено з ♥   |   Україна
+    </p>
+  </footer>
 
 </body>
 </html>

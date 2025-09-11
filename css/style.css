@@ -50,7 +50,9 @@ p {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,6 +64,12 @@ a {
   color: inherit;
   text-decoration: none;
 }
+/* .active-page {
+  background: var(--card-accent); 
+  color: var(--text-logo);
+  transform: scale(1.1);
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.3);
+} */
 
 .container {
   max-width: 1200px;
@@ -340,7 +348,7 @@ pre {
 /* 576 */
 /* @media (min-width: 768px) {
 } */
- /* 1024 */
+/* 1024 */
 /* @media (min-width: 1158px) {
   } */
 
@@ -364,9 +372,9 @@ pre {
     /* box-shadow: 30px 0 20px var(--accent); */
   }
   .circle {
-  width: 24px;
-  height: 10px;
-   border-radius: 0;
+    width: 24px;
+    height: 10px;
+    border-radius: 0;
   }
   header {
     padding: 8px;
@@ -413,115 +421,114 @@ pre {
     text-align: center;
     padding-top: 30px;
   }
-  h2 {
-    font-size: 1.3rem;
+  h3 {
+    font-size: 1.1rem;
     text-align: center;
-    padding: 0 0 10px 0;
+    padding: 0;
   }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
+  h5 {
+    font-size: 1em;
+    text-align: center;
+    margin: 20px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 
-    /* scroll -----------------*/
-.icon-scroll-up {
-  top:0;
-  right:0;
-  transform: rotate(180deg) scale(0.7);
-}
-.icon-scroll-down {
+  /* scroll -----------------*/
+  .icon-scroll-up {
+    top: 0;
+    right: 0;
+    transform: rotate(180deg) scale(0.7);
+  }
+  .icon-scroll-down {
+    top: 680px;
+    right: 0;
+    z-index: 4;
+    transform: scale(0.7);
+  }
+  .hero-icon-scroll-down {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 50%;
+    color: #19161a;
+    transform: translate(50%, -50%);
+  }
+  .wrap-content {
+    padding: 6px;
+  }
 
-  top: 680px;
-  right: 0;
-  z-index: 4;
-   transform:  scale(0.7);
-}
-.hero-icon-scroll-down {
-  position: absolute;
-  content: '';
-  top: 50%;
-  right: 50%;
-  color: #19161a;
-  transform: translate(50%, -50%);
-}
-.wrap-content {
-  padding: 6px;
-}
+  .tools {
+    top: 30px;
+    left: 0;
 
-.tools {
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 6px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+  }
 
-  top: 30px;
-  left: 0;
+  .tools input[type='search'] {
+    flex: 1 1 150px;
+    padding: 4px;
+    font-size: 16px;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
 
- flex-wrap: wrap;
-  gap: 6px;
-  padding: 6px;
-  margin-bottom: 10px;
-  border-radius: 6px;
-}
+  .btn {
+    flex: 1 1 auto;
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  details.faq {
+    margin: 6px auto;
+    padding: 3px;
+    border-radius: 6px;
+  }
 
-.tools input[type='search'] {
-  flex: 1 1 150px;
-  padding: 4px;
-  font-size: 16px;
-  border-radius: 6px;
-  outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn {
-  flex: 1 1 auto;
-  padding: 4px 6px;
-  border-radius: 6px;
-  font-size: 16px;
-}
-details.faq {
- 
-  margin: 6px auto;
-  padding: 3px;
-  border-radius: 6px;
-}
-
-summary {
-display: block;
-  gap: 5px;
+  summary {
+    display: block;
+    gap: 5px;
   }
 
   .chev {
-  scale: 1;
-}
-.answer {
-  margin-top:6px;
-}
-
-pre,
-code {
-display: inline-block;
-  padding:0;
-   /* width: 100%; */
-  border-radius: 4px;
-  font-family: Consolas, monospace;
-  font-size:1em;
-  white-space: pre-wrap;   /* зберігає пробіли/переноси */
-  word-break: break-word;  /* переносить довгі слова */
- 
-       }       /* щоб не вилазив */
-pre {
-  /* display: flex; */
-  /* padding: 1px; */
-
-  font-size: clamp(14px, 2vw, 16px);
-}
-
-    @media print {
-      .theme-circle {
-        display: none;
-      }
-      .btn {
-        display: none;
-      }
-    }
-
-    
+    scale: 1;
   }
+  .answer {
+    margin-top: 6px;
+  }
+
+  pre,
+  code {
+    display: inline-block;
+    padding: 0;
+    /* width: 100%; */
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+    font-size: 1em;
+    white-space: pre-wrap; /* зберігає пробіли/переноси */
+    word-break: break-word; /* переносить довгі слова */
+  } /* щоб не вилазив */
+  pre {
+    /* display: flex; */
+    /* padding: 1px; */
+
+    font-size: clamp(14px, 2vw, 16px);
+  }
+
+  @media print {
+    .theme-circle {
+      display: none;
+    }
+    .btn {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="../css/form.css" />
+  </head>
+
+  <body>
+<!-- input -->
+    <form class="order-form">
+      <label class="order-form-field-label" for="name">Your name: <sup class="required-color">*</sup></label>
+      <input class="order-form-input" type="text" placeholder="Ruslan" id="name" name="user-name" ; required />
+      <label class="order-form-field-label" for="mail">Your mail: <sup class="required-color">*</sup></label>
+      <input
+        class="order-form-input"
+        type="email"
+        placeholder="ruslan@ukr.net"
+        id="mail"
+        name="user-email"
+        ;
+        required
+      />
+      <label class="order-form-field-label" for="phone">Your phone: <sup class="required-color">*</sup></label>
+      <input
+        class="order-form-input"
+        type="tel"
+        placeholder="097-777-77-77"
+        id="phone"
+        name="user-phone"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9{3}-[0-9]{2}-[0-9]{2}"
+        title="xxx-xxx-xx-xx"
+        required
+      />
+<!-- radio-button -->
+      <fieldset class="order-form-fieldset">
+        <legend>Pizza size</legend>
+        <ul>
+          <li>
+            <input type="radio" id="pizzasize-s" name="pizza-size" value="s" />
+            <label for="pizza-size-s">small</label>
+          </li>
+
+          <li>
+            <input type="radio" id="pizza-size-m" name="pizza-size" value="m" />
+            <label for="pizza-size-m">medium</label>
+          </li>
+
+          <li>
+            <input type="radio" id="pizza-size-l" name="pizza-size" value="l" />
+            <label>large</label>
+          </li>
+        </ul>
+      </fieldset>
+<!-- checkbox -->
+      <fieldset class="order-form-fieldset">
+        <legend>Ingredients</legend>
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox" name="addition-ingredients" value="mushrooms" />
+              Mushrooms</label
+            >
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="addition-ingredients" value="mushrooms" />
+              Cheese</label
+            >
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="addition-ingredients" value="mushrooms" />
+              Peperoni</label
+            >
+          </li>
+        </ul>
+      </fieldset>
+
+<!-- textarea -->
+      <label>Your comments 
+        <textarea class="order-form-comment" name="" id=""></textarea>
+      </label>
+      <div class="order-form-btn-wrapper">
+        <button class="order-form-btn order-form-btn-submit" type="submit">Submit</button>
+        <button class="order-form-btn order-form-btn-reset" type="reset">Clear</button>
+      </div>
+    </form>
+    <div class="text">
+      <p>Pythagorean theorem:</p>
+      <p>a <sup>2</sup>+b <sup>2</sup>=c <sup>2</sup></p>
+    </div>
+  </body>
+</html>

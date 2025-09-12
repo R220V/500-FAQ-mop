@@ -64,12 +64,6 @@ a {
   color: inherit;
   text-decoration: none;
 }
-/* .active-page {
-  background: var(--card-accent); 
-  color: var(--text-logo);
-  transform: scale(1.1);
-  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.3);
-} */
 
 .container {
   max-width: 1200px;
@@ -130,10 +124,16 @@ header {
   color: var(--text);
   transform: translateY(-2px);
 }
+/* .active-page { */
+/* background: var(--accent); */
+/* color: var(--accent); */
+/* transform: scale(1.1); */
+/* box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.3); */
+/* } */
 
 .icon {
-  width: 24px;
-  height: 24px;
+  width: 15px;
+  height: 15px;
   fill: currentColor;
   filter: drop-shadow(1px 1px 3px black);
   flex-shrink: 0;
@@ -300,6 +300,14 @@ pre {
 }
 
 /* scroll -----------------*/
+.icon-scroll-back {
+  position: fixed;
+  top: -2px;
+  left: 0;
+  transform: rotate(0deg);
+  z-index: 4;
+}
+
 .icon-scroll-up {
   position: fixed;
   top: 40px;
@@ -318,7 +326,7 @@ pre {
   content: '';
   top: 50%;
   right: 50%;
-  color: #19161a;
+  color: #202020;
   transform: translate(50%, -50%);
 }
 
@@ -359,6 +367,7 @@ pre {
     font-size: 16px;
     line-height: 1.4;
   }
+
   .theme-circle {
     top: 0;
     right: 50%;
@@ -386,13 +395,13 @@ pre {
     flex-wrap: wrap;
     gap: 0.5rem;
     padding: 0;
-    margin: 1rem 0;
+    /* margin: 8px; */
   }
 
-  .container {
+  /* .container {
     padding-left: 8px;
     padding-right: 8px;
-  }
+  } */
   .header-link {
     min-width: 100px;
     white-space: nowrap;
@@ -419,7 +428,12 @@ pre {
   h1 {
     font-size: 1.5rem;
     text-align: center;
-    padding-top: 30px;
+    padding: 30px 0 10px 0;
+  }
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 0 5px 0;
   }
   h3 {
     font-size: 1.1rem;
@@ -438,6 +452,9 @@ pre {
   }
 
   /* scroll -----------------*/
+  .icon-scroll-back {
+    transform: rotate(90deg) scale(0.7);
+  }
   .icon-scroll-up {
     top: 0;
     right: 0;
@@ -458,7 +475,7 @@ pre {
     transform: translate(50%, -50%);
   }
   .wrap-content {
-    padding: 6px;
+    padding: 8px;
   }
 
   .tools {

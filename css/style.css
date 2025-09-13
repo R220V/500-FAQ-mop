@@ -1,3 +1,8 @@
+/* Включаємо плавний скрол для всієї сторінки */
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --bg: #d2dbe4;
   --card: #f9f9fa;
@@ -20,6 +25,7 @@
 }
 
 body {
+  font-family: 'Open Sans', sans-serif;
   margin: 20px;
   padding: 32px;
   background: var(--bg);
@@ -35,10 +41,26 @@ ol {
   padding: 0;
   list-style: none;
 }
+
+section li {
+  padding-bottom: 10px;
+}
+
+section li::before {
+  content: '✔  ';
+  color: var(--text-logo);
+  font-weight: bolder;
+}
 img {
   display: block;
 }
-
+.highlight {
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.heart {
+  color: rgba(92, 19, 19, 1);
+}
 h1,
 h2,
 h3,
@@ -59,7 +81,35 @@ h4 {
   padding-top: 20px;
   color: var(--text);
 }
+#author-name {
+  font-weight: bolder;
+  color: teal;
+}
+.footer {
+  padding: 20px 10px;
+  background-color: var(--card-alt);
+}
+.footer h3 {
+  margin-top: 12px;
+  color: teal;
+  text-align: center;
+}
 
+.footer p {
+  text-align: center;
+  /* margin: 4px 0; */
+  color: #5c5c5c;
+}
+p strong {
+  display: block;
+  text-align: center;
+  padding: 5px;
+}
+
+.section {
+  margin-top: 20px;
+  padding: 20px;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -83,21 +133,11 @@ header {
   box-shadow: var(--bshadow);
 }
 
-/* .wrapper {
-  margin-bottom: 20px;
-  width: 100%;
-} */
 .header-menu {
   display: flex;
   justify-content: center;
   gap: 16px;
 }
-
-/* .header-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .header-link {
   display: inline-flex;
@@ -124,12 +164,6 @@ header {
   color: var(--text);
   transform: translateY(-2px);
 }
-/* .active-page { */
-/* background: var(--accent); */
-/* color: var(--accent); */
-/* transform: scale(1.1); */
-/* box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.3); */
-/* } */
 
 .icon {
   width: 15px;
@@ -146,7 +180,7 @@ header {
   padding: 0 16px;
 }
 
-.tools {
+.input-buttons {
   position: sticky;
   top: 0;
   left: 0;
@@ -163,7 +197,7 @@ header {
   z-index: 3;
 }
 
-.tools input[type='search'] {
+.input-buttons input[type='search'] {
   flex: 1 1 260px;
   padding: 10px 12px;
   font-size: 18px;
@@ -177,7 +211,7 @@ header {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.tools input[type='search']:focus {
+.input-buttons input[type='search']:focus {
   border-color: var(--accent);
   box-shadow: 0 0 6px var(--accent);
 }
@@ -321,7 +355,7 @@ pre {
   right: 20px;
   z-index: 4;
 }
-.hero-icon-scroll-down {
+.icon-scroll-png {
   position: absolute;
   content: '';
   top: 50%;
@@ -353,12 +387,6 @@ pre {
 }
 
 /* ----------response----------- */
-/* 576 */
-/* @media (min-width: 768px) {
-} */
-/* 1024 */
-/* @media (min-width: 1158px) {
-  } */
 
 @media (min-width: 320px) {
   body {
@@ -374,11 +402,9 @@ pre {
     transform: translateX(50%);
     gap: 9px;
     margin: 0;
-    /* border-radius: 50px; */
     background-color: #c0c0c0;
     padding: 9px 60px;
     z-index: 3;
-    /* box-shadow: 30px 0 20px var(--accent); */
   }
   .circle {
     width: 24px;
@@ -395,13 +421,16 @@ pre {
     flex-wrap: wrap;
     gap: 0.5rem;
     padding: 0;
-    /* margin: 8px; */
+  }
+  .section {
+    margin-top: 5px;
+    padding: 0;
   }
 
-  /* .container {
+  .container {
     padding-left: 8px;
     padding-right: 8px;
-  } */
+  }
   .header-link {
     min-width: 100px;
     white-space: nowrap;
@@ -421,29 +450,33 @@ pre {
     flex-shrink: 0;
   }
 
+  section li {
+    padding-bottom: 5px;
+  }
   p {
     padding: 5px;
     overflow-wrap: break-word;
   }
+
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     text-align: center;
     padding: 30px 0 10px 0;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-align: center;
-    padding: 0 0 5px 0;
+    padding: 5px 0 0 0;
   }
   h3 {
     font-size: 1.1rem;
     text-align: center;
-    padding: 0;
+    padding: 0 0 5px 0;
   }
   h5 {
     font-size: 1em;
     text-align: center;
-    margin: 20px;
+    margin: 10px;
   }
   img {
     max-width: 100%;
@@ -451,7 +484,7 @@ pre {
     display: block;
   }
 
-  /* scroll -----------------*/
+  /* --------scroll --------*/
   .icon-scroll-back {
     transform: rotate(90deg) scale(0.7);
   }
@@ -475,10 +508,10 @@ pre {
     transform: translate(50%, -50%);
   }
   .wrap-content {
-    padding: 8px;
+    padding: 0;
   }
 
-  .tools {
+  .input-buttons {
     top: 30px;
     left: 0;
 
@@ -489,7 +522,7 @@ pre {
     border-radius: 6px;
   }
 
-  .tools input[type='search'] {
+  .input-buttons input[type='search'] {
     flex: 1 1 150px;
     padding: 4px;
     font-size: 16px;
@@ -526,18 +559,17 @@ pre {
   code {
     display: inline-block;
     padding: 0;
-    /* width: 100%; */
     border-radius: 4px;
     font-family: Consolas, monospace;
     font-size: 1em;
-    white-space: pre-wrap; /* зберігає пробіли/переноси */
-    word-break: break-word; /* переносить довгі слова */
-  } /* щоб не вилазив */
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
   pre {
-    /* display: flex; */
-    /* padding: 1px; */
-
     font-size: clamp(14px, 2vw, 16px);
+  }
+  .footer {
+    padding: 5px;
   }
 
   @media print {
@@ -549,3 +581,6 @@ pre {
     }
   }
 }
+
+/* @media (min-width: 768px) {
+} */

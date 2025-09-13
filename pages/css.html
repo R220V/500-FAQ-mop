@@ -1,59 +1,100 @@
-
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FAQ, Питання-відповіді для співбесіди">
-  <meta name="author" content="Козюбра Руслан">
-  <title>100 CSS...</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FAQ, Питання-відповіді для співбесіди" />
+    <meta name="author" content="Козюбра Руслан" />
+    <title>100 CSS...</title>
 
-  <!-- Підключення фавіконки -->
-  <link rel="icon" href="../icons/css.ico" type="image/x-icon">
-  <link rel="icon" href="../icons/css.png" type="image/png">
+    <!-- Підключення фавіконки -->
+    <link rel="icon" href="../icons/css.ico" type="image/x-icon" />
+    <link rel="icon" href="../icons/css.png" type="image/png" />
 
-  <!-- Підключення скрипта -->
-  <script src="../script/script_theme.js" defer></script>
-  <script src="../script/script_search.js" defer></script>
-  <script src="../script/script_open_close.js" defer></script>
+    <!-- Підключення скрипта -->
+    <script src="../script/script_theme.js" defer></script>
+    <script src="../script/script_search.js" defer></script>
+    <script src="../script/script_open_close.js" defer></script>
 
-      <!-- Підключення нормалайз -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css">
+    <!-- Підключення нормалайз -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" />
 
-  <!-- Підключення CSS -->
-  <link rel="stylesheet" href="../css/style.css">
-
-</head>
-<body>
-
- <!-- #region theme+header -->
+    <!-- Підключення CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- #region theme+header -->
     <div class="theme-circle">
-<button class="circle" data-color="red" style="background:red;" onclick="setTheme('red')"></button>
-<button class="circle" data-color="orange" style="background:orange;" onclick="setTheme('orange')"></button>
-<button class="circle" data-color="yellow" style="background:yellow;" onclick="setTheme('yellow')"></button>
-<button class="circle" data-color="green" style="background:green" onclick="setTheme('green')"></button>
-<button class="circle" data-color="skyblue" style="background:skyblue" onclick="setTheme('skyblue')"></button>
-<button class="circle" data-color="blue" style="background:blue;" onclick="setTheme('blue')"></button>
-<button class="circle" data-color="purple" style="background:purple;" onclick="setTheme('purple')"></button>
-<button class="circle" data-color="light" style="background:whitesmoke;" onclick="setTheme('light')"></button>
-<button class="circle" data-color="dark" style="background:black;" onclick="setTheme('dark')"></button>
+      <button
+        class="circle"
+        data-color="red"
+        style="background: red"
+        onclick="setTheme('red')"
+        aria-label="Встановити червону тему"
+        title="Червона тема"
+      ></button>
+      <button
+        class="circle"
+        data-color="orange"
+        style="background: orange"
+        onclick="setTheme('orange')"
+        aria-label="Встановити помаранчеву тему"
+        title="Помаранчева тема"
+      ></button>
+      <button
+        class="circle"
+        data-color="yellow"
+        style="background: yellow"
+        onclick="setTheme('yellow')"
+        aria-label="Встановити жовту тему"
+        title="Жовта тема"
+      ></button>
+      <button
+        class="circle"
+        data-color="green"
+        style="background: green"
+        onclick="setTheme('green')"
+        aria-label="Встановити зелену тему"
+        title="Зелена тема"
+      ></button>
+      <button
+        class="circle"
+        data-color="skyblue"
+        style="background: skyblue"
+        onclick="setTheme('skyblue')"
+        aria-label="Встановити блакитну тему"
+        title="Блакитна тема"
+      ></button>
+      <button class="circle" data-color="blue" style="background: blue" onclick="setTheme('blue')" aria-label="Встановити синю тему" title="Синя тема"></button>
+      <button
+        class="circle"
+        data-color="purple"
+        style="background: purple"
+        onclick="setTheme('purple')"
+        aria-label="Встановити фіолетову тему"
+        title="Фіолетоватема"
+      ></button>
+      <button
+        class="circle"
+        data-color="light"
+        style="background: whitesmoke"
+        onclick="setTheme('light')"
+        aria-label="Встановити білу тему"
+        title="Біла тема"
+      ></button>
+      <button
+        class="circle"
+        data-color="dark"
+        style="background: black"
+        onclick="setTheme('dark')"
+        aria-label="Встановити чорну тему"
+        title="Чорна тема"
+      ></button>
+    </div>
+    <header class="header container" id="top">
+      <h1>Перевірка знань по темі CSS</h1>
 
-</div>
-<header class="header container">
-
-  <h1>Перевірка знань по темі CSS</h1>
-
-</div>
-  <div class="icon-scroll-back">
-    <a href="http://127.0.0.1:5501"> 
-      <span class="swim-scroll">
-        <svg class="hero-icon-scroll-down" width="15" height="15">
-        <use href="../img/sprite.svg#arrow-scroll-down"></use>
-      </svg>
-      </span>
-    </a>
-  </div>
-    <!-- <ul class="header-menu">
+      <!-- <ul class="header-menu">
       <li class="header-item">
         <a class="header-link" href="../pages/html.html">
               <svg class="icon" width="24" height="24">
@@ -73,1193 +114,1577 @@
                 <use href="../icons/sprite-logo.svg#icon-nodejs-2"></use>
               </svg>Node</a></li>
  </ul> -->
- </header>
-<!-- #endregion theme+header -->
+    </header>
+    <!-- #endregion theme+header -->
 
- <!-- #region scroll -->
-  <div class="icon-scroll-up">
-<a href="#"> <span class="swim-scroll">
-              <svg class="hero-icon-scroll-down" width="15" height="15">
-                <use href="../img/sprite.svg#arrow-scroll-down"></use>
-              </svg>
-            </span>
-          </a>
-</div>
-<div class="icon-scroll-down">
-<a href="#Now"> <span class="swim-scroll">
-              <svg class="hero-icon-scroll-down" width="15" height="15">
-                <use href="../img/sprite.svg#arrow-scroll-down"></use>
-              </svg>
-            </span>
-          </a>
-</div>
- <!-- endregion scroll -->
-  
-  <div class="wrap-content">
-        <!-- <h2>CSS — Шпаргалка</h2> -->
+    <!-- #region scroll -->
+    <div>
+      <div class="icon-scroll-back">
+        <a href="/" aria-label="На головну" title="На головну">
+          <span class="swim-scroll">
+            <svg class="icon-scroll-svg" width="15" height="15">
+              <use href="../img/sprite.svg#arrow-scroll-down"></use>
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="icon-scroll-up">
+        <a href="#top" aria-label="До початку сторінки" title="На початок сторінки">
+          <span class="swim-scroll">
+            <svg class="icon-scroll-svg" width="15" height="15">
+              <use href="../img/sprite.svg#arrow-scroll-down"></use>
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="icon-scroll-down">
+        <a href="#Now" aria-label="В кінець сторінки" title="В кінець сторінки">
+          <span class="swim-scroll">
+            <svg class="icon-scroll-svg" width="15" height="15">
+              <use href="../img/sprite.svg#arrow-scroll-down"></use>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+    <!-- endregion scroll -->
+
+    <div class="wrap-content">
+      <!-- <h2>CSS — Шпаргалка</h2> -->
       <div class="tools">
         <input id="q" type="search" placeholder="Пошук по питаннях і відповідях…" />
         <button id="openAll" class="btn" type="button">Відкрити всі</button>
         <button id="closeAll" class="btn" type="button">Закрити всі</button>
       </div>
-<!-- 1 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 1. Що таке CSS і навіщо він потрібен?</summary>
-  <div class="answer">
-    <p>CSS (Cascading Style Sheets) — мова стилів для опису зовнішнього вигляду HTML-елементів: кольори, шрифти, відступи, позиціонування тощо.</p>
-  </div>
-</details>
-
-<!-- 2 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 2. Які є способи підключення CSS до HTML?</summary>
-  <div class="answer">
-    <ul>
-      <li>Inline: <code>&lt;h1 style="color:red"&gt;Текст&lt;/h1&gt;</code></li>
-      <li>Internal: <code>&lt;style&gt;h1 {color:red;}&lt;/style&gt;</code> у <code>&lt;head&gt;</code></li>
-      <li>External: <code>&lt;link rel="stylesheet" href="style.css"&gt;</code></li>
-    </ul>
-  </div>
-</details>
-
-<!-- 3 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 3. Що таке селектори в CSS?</summary>
-  <div class="answer">
-    <p>Селектори визначають, до яких HTML-елементів застосовувати стиль: по тегу, класу, id або атрибуту.</p>
-  </div>
-</details>
-
-<!-- 4 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 4. Які основні типи селекторів?</summary>
-  <div class="answer">
-    <ul>
-      <li>Тегові: <code>p { color: blue; }</code></li>
-      <li>Класові: <code>.button { padding: 10px; }</code></li>
-      <li>ID: <code>#header { background: gray; }</code></li>
-      <li>Універсальний: <code>* { margin: 0; }</code></li>
-      <li>Комбіновані: <code>div p { font-size: 14px; }</code></li>
-    </ul>
-  </div>
-</details>
-
-<!-- 5 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 5. Що таке каскадність і пріоритет стилів?</summary>
-  <div class="answer">
-    <p>CSS застосовує стилі за пріоритетом: Inline > Internal > External; також враховується специфічність селекторів.</p>
-  </div>
-</details>
-
-<!-- 6 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 6. Як працює специфічність CSS?</summary>
-  <div class="answer">
-    <p>Специфічність визначає, який стиль переважатиме при конфлікті. Враховується тип селектора (id > клас > тег) і порядок у коді.</p>
-  </div>
-</details>
-
-<!-- 7 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 7. Що таке псевдокласи і псевдоелементи?</summary>
-  <div class="answer">
-    <ul>
-      <li>Псевдокласи: <code>:hover</code>, <code>:focus</code> — стиль для стану елемента</li>
-      <li>Псевдоелементи: <code>::before</code>, <code>::after</code> — створюють віртуальні елементи</li>
-    </ul>
-  </div>
-</details>
-
-<!-- 8 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 8. Що таке властивості кольору в CSS?</summary>
-  <div class="answer">
-    <p>Можна задавати кольори через назви, HEX, RGB, RGBA, HSL, HSLA:</p>
-    <ul>
-      <li><code>color: red;</code></li>
-      <li><code>color: #ff0000;</code></li>
-      <li><code>color: rgb(255,0,0);</code></li>
-      <li><code>color: rgba(255,0,0,0.5);</code></li>
-      <li><code>color: hsl(0, 100%, 50%);</code></li>
-    </ul>
-  </div>
-</details>
-
-<!-- 9 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 9. Що таке шрифти і як їх задавати?</summary>
-  <div class="answer">
-    <p>Через властивості <code>font-family</code>, <code>font-size</code>, <code>font-weight</code>, <code>font-style</code>.</p>
-  </div>
-</details>
-
-<!-- 10 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 10. Як працюють відступи і поля (margin, padding)?</summary>
-  <div class="answer">
-    <p><code>margin</code> — зовнішній відступ, <code>padding</code> — внутрішній відступ елемента.</p>
-  </div>
-</details>
-
-<!-- 11 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 11. Що таке border і які його властивості?</summary>
-  <div class="answer">
-    <p>Межа елемента: <code>border-width</code>, <code>border-style</code>, <code>border-color</code>. Можна задавати окремо або скорочено: <code>border: 1px solid black;</code>.</p>
-  </div>
-</details>
-
-<!-- 12 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 12. Як працює display?</summary>
-  <div class="answer">
-    <p>Контролює, як елемент відображається:</p>
-    <ul>
-      <li><code>block</code> — блочний елемент</li>
-      <li><code>inline</code> — вбудований елемент</li>
-      <li><code>inline-block</code> — як inline, але з блоковими властивостями</li>
-      <li><code>none</code> — приховати елемент</li>
-    </ul>
-  </div>
-</details>
-
-<!-- 13 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 13. Що таке position і типи позиціонування?</summary>
-  <div class="answer">
-    <p>Властивість <code>position</code> визначає спосіб розташування елемента:</p>
-    <ul>
-      <li><code>static</code> — за замовчуванням</li>
-      <li><code>relative</code> — відносно звичайного місця</li>
-      <li><code>absolute</code> — відносно найближчого позиційованого предка</li>
-      <li><code>fixed</code> — фіксовано на екрані</li>
-      <li><code>sticky</code> — прилипає під час прокрутки</li>
-    </ul>
-  </div>
-</details>
-
-<!-- 14 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 14. Як працює float і clear?</summary>
-  <div class="answer">
-    <p><code>float</code> переміщує елемент вліво/вправо, <code>clear</code> зупиняє обтікання попередніх елементів.</p>
-  </div>
-</details>
-
-<!-- 15 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 15. Що таке flexbox і його основні властивості?</summary>
-  <div class="answer">
-    <p>Flexbox — сучасний метод верстки:</p>
-    <ul>
-      <li>display: <code>flex</code></li>
-      <li>justify-content, align-items, align-content</li>
-      <li>flex-direction, flex-wrap</li>
-    </ul>
-  </div>
-</details>
-
-<!-- 16 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 16. Що таке grid і його базові властивості?</summary>
-  <div class="answer">
-    <p>CSS Grid дозволяє створювати двовимірні макети:</p>
-    <ul>
-      <li>display: <code>grid</code></li>
-      <li>grid-template-columns, grid-template-rows</li>
-      <li>grid-gap, grid-area</li>
-    </ul>
-  </div>
-</details>
-
-<!-- 17 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 17. Що таке z-index?</summary>
-  <div class="answer">
-    <p>Контролює порядок нашарування елементів. Вищий <code>z-index</code> знаходиться поверх елементів з меншим значенням.</p>
-  </div>
-</details>
-
-<!-- 18 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 18. Як працює opacity?</summary>
-  <div class="answer">
-    <p>Визначає прозорість елемента: <code>opacity: 0.5;</code> робить елемент напівпрозорим.</p>
-  </div>
-</details>
-
-<!-- 19 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 19. Що таке transitions і як їх використовувати?</summary>
-  <div class="answer">
-    <p>Додають плавні анімації при зміні властивостей:</p>
-    <code>transition: all 0.3s ease;</code>
-  </div>
-</details>
-
-<!-- 20 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 20. Що таке transform і основні функції?</summary>
-  <div class="answer">
-    <p>Дозволяє змінювати елемент: <code>translate</code>, <code>rotate</code>, <code>scale</code>, <code>skew</code>.</p>
-  </div>
-</details>
-
-<!-- 21 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 21. Що таке animation і як її використовувати?</summary>
-  <div class="answer">
-    <p>CSS-анімації дозволяють створювати складні ефекти за допомогою <code>@keyframes</code> та властивості <code>animation</code>.</p>
-  </div>
-</details>
-
-<!-- 22 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 22. Що таке @keyframes?</summary>
-  <div class="answer">
-    <p>Визначає ключові кадри анімації, наприклад:</p>
-    <code>@keyframes slide { from {left:0;} to {left:100px;} }</code>
-  </div>
-</details>
-
-<!-- 23 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 23. Що таке box-sizing?</summary>
-  <div class="answer">
-    <p>Визначає, як обчислюються ширина і висота елемента: <code>content-box</code> або <code>border-box</code>.</p>
-  </div>
-</details>
-
-<!-- 24 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 24. Що таке pseudo-elements ::before і ::after?</summary>
-  <div class="answer">
-    <p>Додають віртуальні елементи до контенту елемента для декоративних ефектів.</p>
-  </div>
-</details>
-
-<!-- 25 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 25. Як працюють медіа-запити (media queries)?</summary>
-  <div class="answer">
-    <p>Дозволяють адаптувати стиль під різні пристрої:</p>
-    <code>@media (max-width: 768px) { body { font-size: 14px; } }</code>
-  </div>
-</details>
-
-<!-- 26 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 26. Що таке viewport і як він впливає на CSS?</summary>
-  <div class="answer">
-    <p>Viewport — видима область браузера. Через медіа-запити і відносні одиниці стилі підлаштовуються під розмір екрану.</p>
-  </div>
-</details>
-
-<!-- 27 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 27. Що таке flex-wrap?</summary>
-  <div class="answer">
-    <p>Властивість <code>flex-wrap</code> визначає, чи будуть елементи flex-контейнера переноситися на новий рядок.</p>
-  </div>
-</details>
-
-<!-- 28 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 28. Що таке justify-content?</summary>
-  <div class="answer">
-    <p>Вирівнює елементи по головній осі flex-контейнера (start, center, space-between тощо).</p>
-  </div>
-</details>
-
-<!-- 29 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 29. Що таке align-items?</summary>
-  <div class="answer">
-    <p>Вирівнює елементи по поперечній осі flex-контейнера (stretch, center, flex-start, flex-end).</p>
-  </div>
-</details>
-
-<!-- 30 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 30. Що таке min-width і max-width?</summary>
-  <div class="answer">
-    <p>Обмежують мінімальну та максимальну ширину елемента, щоб він не виходив за рамки.</p>
-  </div>
-</details>
-
-<!-- 31 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 31. Що таке min-height і max-height?</summary>
-  <div class="answer">
-    <p>Обмежують мінімальну та максимальну висоту елемента.</p>
-  </div>
-</details>
-
-<!-- 32 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 32. Що таке overflow і які значення він має?</summary>
-  <div class="answer">
-    <ul>
-      <li><code>visible</code> — контент виходить за межі</li>
-      <li><code>hidden</code> — обрізає зайве</li>
-      <li><code>scroll</code> — додає скролл</li>
-      <li><code>auto</code> — скролл, якщо потрібно</li>
-    </ul>
-  </div>
-</details>
-
-<!-- 33 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 33. Що таке clip-path?</summary>
-  <div class="answer">
-    <p>Властивість для обрізки елемента за формою (circle, polygon, inset тощо).</p>
-  </div>
-</details>
-
-<!-- 34 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 34. Що таке gradients?</summary>
-  <div class="answer">
-    <p>Градієнти для фону: <code>linear-gradient</code>, <code>radial-gradient</code>, <code>conic-gradient</code>.</p>
-  </div>
-</details>
-
-<!-- 35 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 35. Що таке background-size?</summary>
-  <div class="answer">
-    <p>Контролює розмір фонового зображення: <code>cover</code>, <code>contain</code>, конкретні значення px/%.</p>
-  </div>
-</details>
-
-<!-- 36 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 36. Що таке background-position?</summary>
-  <div class="answer">
-    <p>Визначає позицію фонового зображення: top, center, bottom, left, right, або %/px.</p>
-  </div>
-</details>
-
-<!-- 37 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 37. Що таке box-shadow?</summary>
-  <div class="answer">
-    <p>Додає тінь до елемента: <code>box-shadow: 5px 5px 10px rgba(0,0,0,0.5);</code></p>
-  </div>
-</details>
-
-<!-- 38 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 38. Що таке text-shadow?</summary>
-  <div class="answer">
-    <p>Додає тінь до тексту: <code>text-shadow: 2px 2px 5px gray;</code></p>
-  </div>
-</details>
-
-<!-- 39 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 39. Що таке word-wrap і overflow-wrap?</summary>
-  <div class="answer">
-    <p>Контролюють перенесення слів, щоб уникнути виходу тексту за межі блока.</p>
-  </div>
-</details>
-
-<!-- 40 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 40. Що таке white-space?</summary>
-  <div class="answer">
-    <p>Визначає, як обробляються пробіли та перенос рядків: normal, nowrap, pre, pre-wrap, pre-line.</p>
-  </div>
-</details>
-
-<!-- 41 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 41. Що таке text-align?</summary>
-  <div class="answer">
-    <p>Вирівнює текст по горизонталі: left, right, center, justify.</p>
-  </div>
-</details>
-
-<!-- 42 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 42. Що таке vertical-align?</summary>
-  <div class="answer">
-    <p>Вирівнює inline або table-cell елементи по вертикалі: baseline, top, middle, bottom.</p>
-  </div>
-</details>
-
-<!-- 43 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 43. Що таке list-style?</summary>
-  <div class="answer">
-    <p>Визначає стиль маркерів у списках: <code>list-style-type</code>, <code>list-style-image</code>, <code>list-style-position</code>.</p>
-  </div>
-</details>
-
-<!-- 44 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 44. Що таке cursor?</summary>
-  <div class="answer">
-    <p>Змінює вигляд курсора: pointer, default, text, move, wait тощо.</p>
-  </div>
-</details>
-
-<!-- 45 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 45. Що таке pointer-events?</summary>
-  <div class="answer">
-    <p>Контролює, чи реагує елемент на події миші: none або auto.</p>
-  </div>
-</details>
-
-<!-- 46 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 46. Що таке overflow-x та overflow-y?</summary>
-  <div class="answer">
-    <p>Окремо контролюють горизонтальний та вертикальний скролл.</p>
-  </div>
-</details>
-
-<!-- 47 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 47. Що таке clip?</summary>
-  <div class="answer">
-    <p>Старий спосіб обрізки елемента за прямокутником (deprecated, замінено на clip-path).</p>
-  </div>
-</details>
-
-<!-- 48 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 48. Що таке filter?</summary>
-  <div class="answer">
-    <p>Додає ефекти до елементів: blur, brightness, contrast, grayscale, hue-rotate тощо.</p>
-  </div>
-</details>
-
-<!-- 49 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 49. Що таке transition-delay?</summary>
-  <div class="answer">
-    <p>Задає затримку перед початком CSS-переходу.</p>
-  </div>
-</details>
-
-<!-- 50 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 50. Що таке transition-duration?</summary>
-  <div class="answer">
-    <p>Визначає тривалість CSS-переходу.</p>
-  </div>
-</details>
-
-<!-- 51 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 51. Що таке transition-timing-function?</summary>
-  <div class="answer">
-    <p>Визначає криву прискорення анімації: linear, ease, ease-in, ease-out, cubic-bezier.</p>
-  </div>
-</details>
-
-<!-- 52 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 52. Що таке overflow-wrap: break-word?</summary>
-  <div class="answer">
-    <p>Примушує слова переноситися всередині блоку, щоб не виходили за межі.</p>
-  </div>
-</details>
-
-<!-- 53 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 53. Що таке word-break?</summary>
-  <div class="answer">
-    <p>Контролює перенесення слів: normal, break-all, keep-all.</p>
-  </div>
-</details>
-
-<!-- 54 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 54. Що таке object-fit?</summary>
-  <div class="answer">
-    <p>Визначає, як зображення/відео вписується у контейнер: fill, contain, cover, none, scale-down.</p>
-  </div>
-</details>
-
-<!-- 55 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 55. Що таке object-position?</summary>
-  <div class="answer">
-    <p>Визначає позицію зображення/відео всередині контейнера, якщо <code>object-fit</code> не cover/fill.</p>
-  </div>
-</details>
-
-<!-- 56 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 56. Що таке overflow: clip?</summary>
-  <div class="answer">
-    <p>Обрізає зайвий контент без скролу, аналог <code>hidden</code>, але сучасніше.</p>
-  </div>
-</details>
-
-<!-- 57 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 57. Що таке resize?</summary>
-  <div class="answer">
-    <p>Дозволяє користувачу змінювати розмір елемента: none, both, horizontal, vertical.</p>
-  </div>
-</details>
-
-<!-- 58 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 58. Що таке list-style-position?</summary>
-  <div class="answer">
-    <p>Визначає позицію маркера списку: inside або outside.</p>
-  </div>
-</details>
-
-<!-- 59 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 59. Що таке list-style-image?</summary>
-  <div class="answer">
-    <p>Задає власне зображення маркера списку.</p>
-  </div>
-</details>
-
-<!-- 60 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 60. Що таке word-spacing?</summary>
-  <div class="answer">
-    <p>Визначає відстань між словами у тексті.</p>
-  </div>
-</details>
-
-<!-- 61 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 61. Що таке letter-spacing?</summary>
-  <div class="answer">
-    <p>Визначає відстань між літерами у тексті.</p>
-  </div>
-</details>
-
-<!-- 62 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 62. Що таке line-height?</summary>
-  <div class="answer">
-    <p>Визначає висоту рядка тексту, контролюючи вертикальний відступ між рядками.</p>
-  </div>
-</details>
-
-<!-- 63 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 63. Що таке max-lines і line-clamp?</summary>
-  <div class="answer">
-    <p>Дозволяє обмежити кількість рядків тексту та обрізати зайвий вміст.</p>
-  </div>
-</details>
-
-<!-- 64 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 64. Що таке text-overflow?</summary>
-  <div class="answer">
-    <p>Контролює обрізання тексту всередині блоку: clip, ellipsis.</p>
-  </div>
-</details>
-
-<!-- 65 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 65. Що таке text-decoration?</summary>
-  <div class="answer">
-    <p>Додає підкреслення, лінії зверху або крізь текст: underline, overline, line-through.</p>
-  </div>
-</details>
-
-<!-- 66 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 66. Що таке text-transform?</summary>
-  <div class="answer">
-    <p>Контролює регістр тексту: uppercase, lowercase, capitalize, none.</p>
-  </div>
-</details>
-
-<!-- 67 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 67. Що таке writing-mode?</summary>
-  <div class="answer">
-    <p>Задає напрямок письма: horizontal-tb, vertical-rl, vertical-lr.</p>
-  </div>
-</details>
-
-<!-- 68 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 68. Що таке direction?</summary>
-  <div class="answer">
-    <p>Визначає напрям тексту: ltr (left-to-right) або rtl (right-to-left).</p>
-  </div>
-</details>
-
-<!-- 69 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 69. Що таке user-select?</summary>
-  <div class="answer">
-    <p>Контролює можливість виділення тексту: auto, none, text, all.</p>
-  </div>
-</details>
-
-<!-- 70 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 70. Що таке visibility?</summary>
-  <div class="answer">
-    <p>Контролює видимість елемента: visible, hidden, collapse.</p>
-  </div>
-</details>
-
-<!-- 71 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 71. Що таке opacity?</summary>
-  <div class="answer">
-    <p>Визначає прозорість елемента: від 0 (повністю прозорий) до 1 (непрозорий).</p>
-  </div>
-</details>
-
-<!-- 72 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 72. Що таке z-index?</summary>
-  <div class="answer">
-    <p>Визначає порядок накладання елементів по осі Z (верхній/нижній шар).</p>
-  </div>
-</details>
-
-<!-- 73 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 73. Що таке position?</summary>
-  <div class="answer">
-    <p>Визначає метод позиціонування: static, relative, absolute, fixed, sticky.</p>
-  </div>
-</details>
-
-<!-- 74 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 74. Що таке top, right, bottom, left?</summary>
-  <div class="answer">
-    <p>Задають відступи від відповідних сторін контейнера для позиціонованого елемента.</p>
-  </div>
-</details>
-
-<!-- 75 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 75. Що таке float?</summary>
-  <div class="answer">
-    <p>Використовується для обтікання елементами (left, right, none), рідко потрібен у сучасному дизайні.</p>
-  </div>
-</details>
-
-<!-- 76 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 76. Що таке clear?</summary>
-  <div class="answer">
-    <p>Визначає, як елементи після плаваючих блоків будуть розташовані: none, left, right, both.</p>
-  </div>
-</details>
-
-<!-- 77 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 77. Що таке clip-path: circle()?</summary>
-  <div class="answer">
-    <p>Обрізає елемент по колу, наприклад: <code>clip-path: circle(50% at 50% 50%);</code></p>
-  </div>
-</details>
-
-<!-- 78 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 78. Що таке filter: blur()?</summary>
-  <div class="answer">
-    <p>Розмиває елемент: <code>filter: blur(5px);</code></p>
-  </div>
-</details>
-
-<!-- 79 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 79. Що таке backdrop-filter?</summary>
-  <div class="answer">
-    <p>Додає фільтри до елементів, що знаходяться позаду (розмиття, контраст, яскравість).</p>
-  </div>
-</details>
-
-<!-- 80 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 80. Що таке clip-path: polygon()?</summary>
-  <div class="answer">
-    <p>Обрізає елемент за багатокутником, наприклад: <code>clip-path: polygon(50% 0%, 100% 100%, 0% 100%);</code></p>
-  </div>
-</details>
-
-<!-- 81 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 81. Що таке perspective?</summary>
-  <div class="answer">
-    <p>Додає ефект перспективи для 3D-трансформацій: <code>perspective: 1000px;</code></p>
-  </div>
-</details>
-
-<!-- 82 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 82. Що таке transform?</summary>
-  <div class="answer">
-    <p>Дозволяє переміщення, обертання, масштабування та нахил елементів: translate, rotate, scale, skew.</p>
-  </div>
-</details>
-
-<!-- 83 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 83. Що таке transform-origin?</summary>
-  <div class="answer">
-    <p>Визначає точку, від якої застосовується трансформація: center, top, left, right, bottom або px/%.</p>
-  </div>
-</details>
-
-<!-- 84 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 84. Що таке backface-visibility?</summary>
-  <div class="answer">
-    <p>Визначає, чи видно "задню" сторону елемента під час 3D-поворотів: visible або hidden.</p>
-  </div>
-</details>
-
-<!-- 85 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 85. Що таке perspective-origin?</summary>
-  <div class="answer">
-    <p>Визначає точку зору для перспективи: center, top, bottom, left, right або %/px.</p>
-  </div>
-</details>
-
-<!-- 86 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 86. Що таке grid-template-columns?</summary>
-  <div class="answer">
-    <p>Визначає кількість і ширину колонок у CSS Grid: repeat(3, 1fr), 200px auto тощо.</p>
-  </div>
-</details>
-
-<!-- 87 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 87. Що таке grid-template-rows?</summary>
-  <div class="answer">
-    <p>Визначає кількість і висоту рядків у CSS Grid.</p>
-  </div>
-</details>
-
-<!-- 88 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 88. Що таке grid-gap / gap?</summary>
-  <div class="answer">
-    <p>Визначає відстань між рядками і колонками у CSS Grid та Flexbox.</p>
-  </div>
-</details>
-
-<!-- 89 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 89. Що таке justify-items?</summary>
-  <div class="answer">
-    <p>Вирівнює елементи всередині осередків CSS Grid по горизонталі.</p>
-  </div>
-</details>
-
-<!-- 90 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 90. Що таке align-items (Grid)?</summary>
-  <div class="answer">
-    <p>Вирівнює елементи всередині осередків CSS Grid по вертикалі.</p>
-  </div>
-</details>
-
-<!-- 91 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 91. Що таке place-items?</summary>
-  <div class="answer">
-    <p>Скорочення для одночасного визначення <code>align-items</code> та <code>justify-items</code> у Grid.</p>
-  </div>
-</details>
-
-<!-- 92 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 92. Що таке grid-auto-flow?</summary>
-  <div class="answer">
-    <p>Визначає порядок розміщення елементів у Grid: row, column, dense.</p>
-  </div>
-</details>
-
-<!-- 93 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 93. Що таке grid-column / grid-row?</summary>
-  <div class="answer">
-    <p>Визначає позицію та розмір елемента у CSS Grid по колонках та рядках.</p>
-  </div>
-</details>
-
-<!-- 94 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 94. Що таке grid-area?</summary>
-  <div class="answer">
-    <p>Визначає позицію та розмір елемента у Grid, об’єднуючи <code>grid-row</code> та <code>grid-column</code>.</p>
-  </div>
-</details>
-
-<!-- 95 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 95. Що таке place-content?</summary>
-  <div class="answer">
-    <p>Вирівнює весь вміст Grid контейнера: скорочення для <code>align-content</code> + <code>justify-content</code>.</p>
-  </div>
-</details>
-
-<!-- 96 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 96. Що таке place-self?</summary>
-  <div class="answer">
-    <p>Вирівнює окремий елемент Grid по вертикалі та горизонталі: скорочення для <code>align-self</code> + <code>justify-self</code>.</p>
-  </div>
-</details>
-
-<!-- 97 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 97. Що таке object-fit: cover?</summary>
-  <div class="answer">
-    <p>Зображення або відео заповнює контейнер, обрізаючи зайве, зберігаючи пропорції.</p>
-  </div>
-</details>
-
-<!-- 98 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 98. Що таке object-fit: contain?</summary>
-  <div class="answer">
-    <p>Зображення або відео поміщається всередину контейнера без обрізання, зберігаючи пропорції.</p>
-  </div>
-</details>
-
-<!-- 99 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 99. Що таке transition-property?</summary>
-  <div class="answer">
-    <p>Визначає, які властивості елемента будуть анімовані при зміні: <code>all</code>, <code>opacity</code>, <code>transform</code> тощо.</p>
-  </div>
-</details>
-
-<!-- 100 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 100. Що таке will-change?</summary>
-  <div class="answer">
-    <p>Підказує браузеру, які властивості елемента будуть змінюватися, щоб оптимізувати анімації та рендеринг.</p>
-  </div>
-</details>
-
-<!-- 1 -->
-<details class="faq"><summary><span class="chev">▸</span> 1. Що таке CSS?</summary><div class="answer"><p>CSS (Cascading Style Sheets) — мова для опису стилів HTML-документів.</p></div></details>
-
-<!-- 2 -->
-<details class="faq"><summary><span class="chev">▸</span> 2. Як підключити CSS до HTML?</summary><div class="answer"><p>За допомогою <code>&lt;link rel="stylesheet" href="style.css"&gt;</code> у <code>&lt;head&gt;</code>.</p></div></details>
-
-<!-- 3 -->
-<details class="faq"><summary><span class="chev">▸</span> 3. Що таке inline-стилі?</summary><div class="answer"><p>CSS, що записується прямо в атрибут <code>style</code> елемента.</p></div></details>
-
-<!-- 4 -->
-<details class="faq"><summary><span class="chev">▸</span> 4. Що таке internal CSS?</summary><div class="answer"><p>Стилі всередині тегу <code>&lt;style&gt;</code> у HTML.</p></div></details>
-
-<!-- 5 -->
-<details class="faq"><summary><span class="chev">▸</span> 5. Що таке external CSS?</summary><div class="answer"><p>Окремий файл зі стилями, підключений через <code>&lt;link&gt;</code>.</p></div></details>
-
-<!-- 6 -->
-<details class="faq"><summary><span class="chev">▸</span> 6. Що таке селектор у CSS?</summary><div class="answer"><p>Частина CSS, яка визначає, до яких елементів застосовувати стилі.</p></div></details>
-
-<!-- 7 -->
-<details class="faq"><summary><span class="chev">▸</span> 7. Що таке властивість у CSS?</summary><div class="answer"><p>Атрибут стилю, який змінює вигляд елемента (наприклад, <code>color</code>).</p></div></details>
-
-<!-- 8 -->
-<details class="faq"><summary><span class="chev">▸</span> 8. Як задати колір у CSS?</summary><div class="answer"><p>За допомогою властивості <code>color</code> або <code>background-color</code>.</p></div></details>
-
-<!-- 9 -->
-<details class="faq"><summary><span class="chev">▸</span> 9. Які є формати задання кольорів?</summary><div class="answer"><p>Назви, HEX, RGB, RGBA, HSL, HSLA.</p></div></details>
-
-<!-- 10 -->
-<details class="faq"><summary><span class="chev">▸</span> 10. Що таке одиниці виміру у CSS?</summary><div class="answer"><p>px, em, rem, %, vh, vw тощо.</p></div></details>
-
-<!-- 11 -->
-<details class="faq"><summary><span class="chev">▸</span> 11. Що таке абсолютні та відносні одиниці?</summary><div class="answer"><p>Абсолютні (px) — фіксовані, відносні (em, rem, %) — залежать від контексту.</p></div></details>
-
-<!-- 12 -->
-<details class="faq"><summary><span class="chev">▸</span> 12. Що таке клас у CSS?</summary><div class="answer"><p>Селектор, що починається з <code>.</code> (наприклад, <code>.btn</code>).</p></div></details>
-
-<!-- 13 -->
-<details class="faq"><summary><span class="chev">▸</span> 13. Що таке id у CSS?</summary><div class="answer"><p>Селектор з <code>#</code> (наприклад, <code>#header</code>).</p></div></details>
-
-<!-- 14 -->
-<details class="faq"><summary><span class="chev">▸</span> 14. Що таке універсальний селектор?</summary><div class="answer"><p><code>*</code> — вибирає всі елементи.</p></div></details>
-
-<!-- 15 -->
-<details class="faq"><summary><span class="chev">▸</span> 15. Що таке селектор тегу?</summary><div class="answer"><p>Застосовує стилі до всіх елементів конкретного тегу (наприклад, <code>p</code>).</p></div></details>
-
-<!-- 16 -->
-<details class="faq"><summary><span class="chev">▸</span> 16. Що таке групування селекторів?</summary><div class="answer"><p>Кілька селекторів через кому (<code>h1, h2, h3 { color: red; }</code>).</p></div></details>
-
-<!-- 17 -->
-<details class="faq"><summary><span class="chev">▸</span> 17. Що таке комбінатори селекторів?</summary><div class="answer"><p>Селектори для відносин: нащадок, дитина, сусід, брат.</p></div></details>
-
-<!-- 18 -->
-<details class="faq"><summary><span class="chev">▸</span> 18. Що таке псевдоклас?</summary><div class="answer"><p>Селектор для стану елемента (наприклад, <code>:hover</code>).</p></div></details>
-
-<!-- 19 -->
-<details class="faq"><summary><span class="chev">▸</span> 19. Що таке псевдоелемент?</summary><div class="answer"><p>Селектор для частини елемента (<code>::before</code>, <code>::after</code>).</p></div></details>
-
-<!-- 20 -->
-<details class="faq"><summary><span class="chev">▸</span> 20. Що таке специфічність у CSS?</summary><div class="answer"><p>Правило, яке визначає пріоритет стилів (inline &gt; id &gt; клас &gt; тег).</p></div></details>
-
-<!-- 21 -->
-<details class="faq"><summary><span class="chev">▸</span> 21. Що таке каскадність у CSS?</summary><div class="answer"><p>Принцип, за яким браузер вибирає стилі при конфліктах.</p></div></details>
-
-<!-- 22 -->
-<details class="faq"><summary><span class="chev">▸</span> 22. Що таке успадкування?</summary><div class="answer"><p>Деякі властивості передаються від батьківських елементів дітям.</p></div></details>
-
-<!-- 23 -->
-<details class="faq"><summary><span class="chev">▸</span> 23. Як задати фон у CSS?</summary><div class="answer"><p>Через <code>background-color</code>, <code>background-image</code> тощо.</p></div></details>
-
-<!-- 24 -->
-<details class="faq"><summary><span class="chev">▸</span> 24. Що таке background-repeat?</summary><div class="answer"><p>Визначає повторення фонового зображення.</p></div></details>
-
-<!-- 25 -->
-<details class="faq"><summary><span class="chev">▸</span> 25. Що таке background-position?</summary><div class="answer"><p>Визначає розташування фонового зображення.</p></div></details>
-
-<!-- 26 -->
-<details class="faq"><summary><span class="chev">▸</span> 26. Що таке background-size?</summary><div class="answer"><p>Визначає розмір фонового зображення (cover, contain).</p></div></details>
-
-<!-- 27 -->
-<details class="faq"><summary><span class="chev">▸</span> 27. Що таке border?</summary><div class="answer"><p>Властивість для малювання рамки навколо елемента.</p></div></details>
-
-<!-- 28 -->
-<details class="faq"><summary><span class="chev">▸</span> 28. Що таке margin?</summary><div class="answer"><p>Зовнішній відступ елемента.</p></div></details>
-
-<!-- 29 -->
-<details class="faq"><summary><span class="chev">▸</span> 29. Що таке padding?</summary><div class="answer"><p>Внутрішній відступ елемента.</p></div></details>
-
-<!-- 30 -->
-<details class="faq"><summary><span class="chev">▸</span> 30. Що таке box model?</summary><div class="answer"><p>Модель, яка описує побудову блоку: content, padding, border, margin.</p></div></details>
-
-<!-- 31 -->
-<details class="faq"><summary><span class="chev">▸</span> 31. Що таке box-sizing?</summary><div class="answer"><p>Визначає, чи враховуються padding і border у розмірах елемента (<code>content-box</code> або <code>border-box</code>).</p></div></details>
-
-<!-- 32 -->
-<details class="faq"><summary><span class="chev">▸</span> 32. Що таке display у CSS?</summary><div class="answer"><p>Визначає тип відображення елемента: <code>block</code>, <code>inline</code>, <code>flex</code>, <code>grid</code> тощо.</p></div></details>
-
-<!-- 33 -->
-<details class="faq"><summary><span class="chev">▸</span> 33. Що таке inline-block?</summary><div class="answer"><p>Тип відображення, який поєднує властивості inline та block.</p></div></details>
-
-<!-- 34 -->
-<details class="faq"><summary><span class="chev">▸</span> 34. Що таке overflow?</summary><div class="answer"><p>Визначає, як відображати вміст, що виходить за межі елемента (<code>hidden</code>, <code>scroll</code>, <code>auto</code>).</p></div></details>
-
-<!-- 35 -->
-<details class="faq"><summary><span class="chev">▸</span> 35. Що таке position?</summary><div class="answer"><p>Визначає спосіб позиціювання елемента: <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code>.</p></div></details>
-
-<!-- 36 -->
-<details class="faq"><summary><span class="chev">▸</span> 36. Чим relative відрізняється від absolute?</summary><div class="answer"><p><code>relative</code> зміщує елемент відносно його початкової позиції, а <code>absolute</code> — відносно найближчого позиціонованого предка.</p></div></details>
-
-<!-- 37 -->
-<details class="faq"><summary><span class="chev">▸</span> 37. Що таке fixed?</summary><div class="answer"><p>Елемент прив’язується до вікна браузера, а не до сторінки.</p></div></details>
-
-<!-- 38 -->
-<details class="faq"><summary><span class="chev">▸</span> 38. Що таке sticky?</summary><div class="answer"><p>Елемент поводиться як <code>relative</code>, доки не досягне заданої межі, після чого стає <code>fixed</code>.</p></div></details>
-
-<!-- 39 -->
-<details class="faq"><summary><span class="chev">▸</span> 39. Що таке z-index?</summary><div class="answer"><p>Визначає порядок накладання елементів.</p></div></details>
-
-<!-- 40 -->
-<details class="faq"><summary><span class="chev">▸</span> 40. Що таке float?</summary><div class="answer"><p>Старий метод вирівнювання елементів ліворуч чи праворуч.</p></div></details>
-
-<!-- 41 -->
-<details class="faq"><summary><span class="chev">▸</span> 41. Що таке clear?</summary><div class="answer"><p>Скасовує обтікання елемента (<code>left</code>, <code>right</code>, <code>both</code>).</p></div></details>
-
-<!-- 42 -->
-<details class="faq"><summary><span class="chev">▸</span> 42. Що таке flexbox?</summary><div class="answer"><p>CSS-модель для вирівнювання та розподілу простору між елементами.</p></div></details>
-
-<!-- 43 -->
-<details class="faq"><summary><span class="chev">▸</span> 43. Що таке display: flex?</summary><div class="answer"><p>Робить контейнер гнучким, його діти стають flex-елементами.</p></div></details>
-
-<!-- 44 -->
-<details class="faq"><summary><span class="chev">▸</span> 44. Що таке justify-content?</summary><div class="answer"><p>Вирівнювання елементів по головній осі.</p></div></details>
-
-<!-- 45 -->
-<details class="faq"><summary><span class="chev">▸</span> 45. Що таке align-items?</summary><div class="answer"><p>Вирівнювання елементів по поперечній осі.</p></div></details>
-
-<!-- 46 -->
-<details class="faq"><summary><span class="chev">▸</span> 46. Що таке flex-wrap?</summary><div class="answer"><p>Дозволяє елементам переноситися на новий рядок.</p></div></details>
-
-<!-- 47 -->
-<details class="faq"><summary><span class="chev">▸</span> 47. Що таке flex-grow?</summary><div class="answer"><p>Визначає, як елемент розтягується, щоб зайняти вільний простір.</p></div></details>
-
-<!-- 48 -->
-<details class="faq"><summary><span class="chev">▸</span> 48. Що таке flex-shrink?</summary><div class="answer"><p>Визначає, як елемент стискається при нестачі простору.</p></div></details>
-
-<!-- 49 -->
-<details class="faq"><summary><span class="chev">▸</span> 49. Що таке flex-basis?</summary><div class="answer"><p>Базовий розмір елемента перед розподілом простору.</p></div></details>
-
-<!-- 50 -->
-<details class="faq"><summary><span class="chev">▸</span> 50. Що таке CSS Grid?</summary><div class="answer"><p>Система для створення двовимірних сіток.</p></div></details>
-
-<!-- 51 -->
-<details class="faq"><summary><span class="chev">▸</span> 51. Що таке grid-template-columns?</summary><div class="answer"><p>Визначає кількість і розміри колонок у сітці.</p></div></details>
-
-<!-- 52 -->
-<details class="faq"><summary><span class="chev">▸</span> 52. Що таке grid-template-rows?</summary><div class="answer"><p>Визначає кількість і розміри рядків.</p></div></details>
-
-<!-- 53 -->
-<details class="faq"><summary><span class="chev">▸</span> 53. Що таке grid-gap?</summary><div class="answer"><p>Відстань між рядками та колонками (тепер <code>gap</code>).</p></div></details>
-
-<!-- 54 -->
-<details class="faq"><summary><span class="chev">▸</span> 54. Що таке grid-area?</summary><div class="answer"><p>Визначає область сітки, яку займає елемент.</p></div></details>
-
-<!-- 55 -->
-<details class="faq"><summary><span class="chev">▸</span> 55. Що таке grid-template-areas?</summary><div class="answer"><p>Описує шаблон розміщення областей сітки.</p></div></details>
-
-<!-- 56 -->
-<details class="faq"><summary><span class="chev">▸</span> 56. Що таке minmax() у Grid?</summary><div class="answer"><p>Встановлює мінімальне і максимальне значення для треку.</p></div></details>
-
-<!-- 57 -->
-<details class="faq"><summary><span class="chev">▸</span> 57. Що таке auto-fit та auto-fill у Grid?</summary><div class="answer"><p>Ключові слова для автоматичного заповнення сітки.</p></div></details>
-
-<!-- 58 -->
-<details class="faq"><summary><span class="chev">▸</span> 58. Що таке media queries?</summary><div class="answer"><p>Умови для адаптивних стилів залежно від ширини, висоти екрана тощо.</p></div></details>
-
-<!-- 59 -->
-<details class="faq"><summary><span class="chev">▸</span> 59. Що таке @media?</summary><div class="answer"><p>Правило для написання медіа-запитів.</p></div></details>
-
-<!-- 60 -->
-<details class="faq"><summary><span class="chev">▸</span> 60. Що таке responsive design?</summary><div class="answer"><p>Підхід, при якому сайт підлаштовується під різні екрани.</p></div></details>
-
-<!-- 61 -->
-<details class="faq"><summary><span class="chev">▸</span> 61. Що таке transition?</summary><div class="answer"><p>Властивість для створення плавних змін стилів.</p></div></details>
-
-<!-- 62 -->
-<details class="faq"><summary><span class="chev">▸</span> 62. Що таке animation?</summary><div class="answer"><p>Використовується для складних анімацій з ключовими кадрами.</p></div></details>
-
-<!-- 63 -->
-<details class="faq"><summary><span class="chev">▸</span> 63. Що таке keyframes?</summary><div class="answer"><p>Опис проміжних станів анімації (<code>@keyframes</code>).</p></div></details>
-
-<!-- 64 -->
-<details class="faq"><summary><span class="chev">▸</span> 64. Що таке transform?</summary><div class="answer"><p>Застосовує обертання, масштабування, зсув та інші перетворення.</p></div></details>
-
-<!-- 65 -->
-<details class="faq"><summary><span class="chev">▸</span> 65. Що таке translate?</summary><div class="answer"><p>Переміщення елемента по осях X та Y.</p></div></details>
-
-<!-- 66 -->
-<details class="faq"><summary><span class="chev">▸</span> 66. Що таке rotate?</summary><div class="answer"><p>Обертання елемента.</p></div></details>
-
-<!-- 67 -->
-<details class="faq"><summary><span class="chev">▸</span> 67. Що таке scale?</summary><div class="answer"><p>Масштабування елемента.</p></div></details>
-
-<!-- 68 -->
-<details class="faq"><summary><span class="chev">▸</span> 68. Що таке skew?</summary><div class="answer"><p>Нахил елемента.</p></div></details>
-
-<!-- 69 -->
-<details class="faq"><summary><span class="chev">▸</span> 69. Що таке will-change?</summary><div class="answer"><p>Підказка браузеру, які властивості змінюватимуться для оптимізації.</p></div></details>
-
-<!-- 70 -->
-<details class="faq"><summary><span class="chev">▸</span> 70. Що таке clip-path?</summary><div class="answer"><p>Обрізає елемент за заданою формою.</p></div></details>
-
-<!-- 71 -->
-<details class="faq"><summary><span class="chev">▸</span> 71. Що таке filter?</summary><div class="answer"><p>Застосовує графічні ефекти (blur, grayscale, contrast).</p></div></details>
-
-<!-- 72 -->
-<details class="faq"><summary><span class="chev">▸</span> 72. Що таке backdrop-filter?</summary><div class="answer"><p>Застосовує ефекти до фону позаду елемента.</p></div></details>
-
-<!-- 73 -->
-<details class="faq"><summary><span class="chev">▸</span> 73. Що таке variables у CSS?</summary><div class="answer"><p>Кастомні властивості, що починаються з <code>--</code>.</p></div></details>
-
-<!-- 74 -->
-<details class="faq"><summary><span class="chev">▸</span> 74. Як використовувати CSS-змінні?</summary><div class="answer"><p>Оголосити: <code>--main-color: red;</code>, використати: <code>color: var(--main-color);</code>.</p></div></details>
-
-<!-- 75 -->
-<details class="faq"><summary><span class="chev">▸</span> 75. Що таке calc()?</summary><div class="answer"><p>Функція для математичних розрахунків у CSS.</p></div></details>
-
-<!-- 76 -->
-<details class="faq"><summary><span class="chev">▸</span> 76. Що таке clamp()?</summary><div class="answer"><p>Функція, яка задає мінімальне, оптимальне і максимальне значення.</p></div></details>
-
-<!-- 77 -->
-<details class="faq"><summary><span class="chev">▸</span> 77. Що таке min() і max()?</summary><div class="answer"><p>Функції для обрання мінімального чи максимального значення.</p></div></details>
-
-<!-- 78 -->
-<details class="faq"><summary><span class="chev">▸</span> 78. Що таке viewport units?</summary><div class="answer"><p>Одиниці <code>vw</code> і <code>vh</code>, що залежать від розміру вікна.</p></div></details>
-
-<!-- 79 -->
-<details class="faq"><summary><span class="chev">▸</span> 79. Що таке ch у CSS?</summary><div class="answer"><p>Одиниця виміру, що відповідає ширині символу "0".</p></div></details>
-
-<!-- 80 -->
-<details class="faq"><summary><span class="chev">▸</span> 80. Що таке ex у CSS?</summary><div class="answer"><p>Одиниця виміру, що відповідає висоті маленької літери "x".</p></div></details>
-
-<!-- 81 -->
-<details class="faq"><summary><span class="chev">▸</span> 81. Що таке print styles?</summary><div class="answer"><p>Стилі для друку, що задаються через <code>@media print</code>.</p></div></details>
-
-<!-- 82 -->
-<details class="faq"><summary><span class="chev">▸</span> 82. Що таке prefers-color-scheme?</summary><div class="answer"><p>Медіа-запит для темної/світлої теми.</p></div></details>
-
-<!-- 83 -->
-<details class="faq"><summary><span class="chev">▸</span> 83. Що таке prefers-reduced-motion?</summary><div class="answer"><p>Медіа-запит для вимкнення або зменшення анімацій.</p></div></details>
-
-<!-- 84 -->
-<details class="faq"><summary><span class="chev">▸</span> 84. Що таке container queries?</summary><div class="answer"><p>Медіа-запити, що базуються на розмірах контейнера, а не вікна.</p></div></details>
-
-<!-- 85 -->
-<details class="faq"><summary><span class="chev">▸</span> 85. Що таке CSS Houdini?</summary><div class="answer"><p>API для створення кастомних CSS-функцій і властивостей.</p></div></details>
-
-<!-- 86 -->
-<details class="faq"><summary><span class="chev">▸</span> 86. Що таке @supports?</summary><div class="answer"><p>Умова, яка перевіряє підтримку властивостей у браузері.</p></div></details>
-
-<!-- 87 -->
-<details class="faq"><summary><span class="chev">▸</span> 87. Що таке @layer?</summary><div class="answer"><p>Система каскадування стилів із різних шарів.</p></div></details>
-
-<!-- 88 -->
-<details class="faq"><summary><span class="chev">▸</span> 88. Що таке @import?</summary><div class="answer"><p>Правило для підключення інших CSS-файлів.</p></div></details>
-
-<!-- 89 -->
-<details class="faq"><summary><span class="chev">▸</span> 89. Що таке inline critical CSS?</summary><div class="answer"><p>Вбудовування критичних стилів у HTML для швидшого рендерингу.</p></div></details>
-
-<!-- 90 -->
-<details class="faq"><summary><span class="chev">▸</span> 90. Що таке CSS specificity?</summary><div class="answer"><p>Визначає пріоритет застосування стилів: inline > id > class/attribute/pseudo-class > element/pseudo-element.</p></div></details>
-
-<!-- 91 -->
-<details class="faq"><summary><span class="chev">▸</span> 91. Що таке pseudo-classes?</summary><div class="answer"><p>Класи, що застосовуються в певних станах елемента, наприклад <code>:hover</code>, <code>:focus</code>, <code>:nth-child()</code>.</p></div></details>
-
-<!-- 92 -->
-<details class="faq"><summary><span class="chev">▸</span> 92. Що таке pseudo-elements?</summary><div class="answer"><p>Віртуальні елементи, наприклад <code>::before</code> та <code>::after</code>, для додавання контенту через CSS.</p></div></details>
-
-<!-- 93 -->
-<details class="faq"><summary><span class="chev">▸</span> 93. Що таке CSS cascade?</summary><div class="answer"><p>Правила каскадування стилів: порядок, специфічність і важливість визначають фінальний стиль елемента.</p></div></details>
-
-<!-- 94 -->
-<details class="faq"><summary><span class="chev">▸</span> 94. Що таке important?</summary><div class="answer"><p>Позначка <code>!important</code> робить стиль пріоритетним над іншими.</p></div></details>
-
-<!-- 95 -->
-<details class="faq"><summary><span class="chev">▸</span> 95. Що таке CSS containment?</summary><div class="answer"><p>Вказує браузеру, що елемент ізольований у певних аспектах для оптимізації рендерингу (<code>contain</code>).</p></div></details>
-
-<!-- 96 -->
-<details class="faq"><summary><span class="chev">▸</span> 96. Що таке CSS isolation?</summary><div class="answer"><p>Властивість <code>isolation: isolate;</code> створює новий контекст змішування для елементів.</p></div></details>
-
-<!-- 97 -->
-<details class="faq"><summary><span class="chev">▸</span> 97. Що таке CSS object-fit?</summary><div class="answer"><p>Визначає, як вміст (зображення, відео) заповнює контейнер: <code>cover</code>, <code>contain</code>, <code>fill</code>.</p></div></details>
-
-<!-- 98 -->
-<details class="faq"><summary><span class="chev">▸</span> 98. Що таке CSS object-position?</summary><div class="answer"><p>Визначає позицію вмісту всередині контейнера при використанні <code>object-fit</code>.</p></div></details>
-
-<!-- 99 -->
-<details class="faq"><summary><span class="chev">▸</span> 99. Що таке CSS scroll-snap?</summary><div class="answer"><p>Дозволяє елементам "зафіксовуватися" при прокрутці у визначених точках.</p></div></details>
-
-<!-- 100 -->
-<details class="faq"><summary><span class="chev">▸</span> 100. Що таке CSS logical properties?</summary><div class="answer"><p>Властивості, які адаптуються до напрямку тексту та мови, наприклад <code>margin-inline-start</code>, <code>padding-block-end</code>.</p></div></details>
-
- <h3  id="Now" style="margin-top:22px;  color:teal">Наразі проєкт ще в розробці...</h3>
-  </div>
-
-  <footer>
-    <p style="font-size: 14px; color: gray; text-align: center; ">
-      Створено з ♥   |   Україна
-    </p>
-  </footer>
-</body>
+      <!-- 1 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 1. Що таке CSS і навіщо він потрібен?</summary>
+        <div class="answer">
+          <p>CSS (Cascading Style Sheets) — мова стилів для опису зовнішнього вигляду HTML-елементів: кольори, шрифти, відступи, позиціонування тощо.</p>
+        </div>
+      </details>
+
+      <!-- 2 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 2. Які є способи підключення CSS до HTML?</summary>
+        <div class="answer">
+          <ul>
+            <li>Inline: <code>&lt;h1 style="color:red"&gt;Текст&lt;/h1&gt;</code></li>
+            <li>Internal: <code>&lt;style&gt;h1 {color:red;}&lt;/style&gt;</code> у <code>&lt;head&gt;</code></li>
+            <li>External: <code>&lt;link rel="stylesheet" href="style.css"&gt;</code></li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- 3 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 3. Що таке селектори в CSS?</summary>
+        <div class="answer">
+          <p>Селектори визначають, до яких HTML-елементів застосовувати стиль: по тегу, класу, id або атрибуту.</p>
+        </div>
+      </details>
+
+      <!-- 4 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 4. Які основні типи селекторів?</summary>
+        <div class="answer">
+          <ul>
+            <li>Тегові: <code>p { color: blue; }</code></li>
+            <li>Класові: <code>.button { padding: 10px; }</code></li>
+            <li>ID: <code>#header { background: gray; }</code></li>
+            <li>Універсальний: <code>* { margin: 0; }</code></li>
+            <li>Комбіновані: <code>div p { font-size: 14px; }</code></li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- 5 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 5. Що таке каскадність і пріоритет стилів?</summary>
+        <div class="answer">
+          <p>CSS застосовує стилі за пріоритетом: Inline > Internal > External; також враховується специфічність селекторів.</p>
+        </div>
+      </details>
+
+      <!-- 6 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 6. Як працює специфічність CSS?</summary>
+        <div class="answer">
+          <p>Специфічність визначає, який стиль переважатиме при конфлікті. Враховується тип селектора (id > клас > тег) і порядок у коді.</p>
+        </div>
+      </details>
+
+      <!-- 7 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 7. Що таке псевдокласи і псевдоелементи?</summary>
+        <div class="answer">
+          <ul>
+            <li>Псевдокласи: <code>:hover</code>, <code>:focus</code> — стиль для стану елемента</li>
+            <li>Псевдоелементи: <code>::before</code>, <code>::after</code> — створюють віртуальні елементи</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- 8 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 8. Що таке властивості кольору в CSS?</summary>
+        <div class="answer">
+          <p>Можна задавати кольори через назви, HEX, RGB, RGBA, HSL, HSLA:</p>
+          <ul>
+            <li><code>color: red;</code></li>
+            <li><code>color: #ff0000;</code></li>
+            <li><code>color: rgb(255,0,0);</code></li>
+            <li><code>color: rgba(255,0,0,0.5);</code></li>
+            <li><code>color: hsl(0, 100%, 50%);</code></li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- 9 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 9. Що таке шрифти і як їх задавати?</summary>
+        <div class="answer">
+          <p>Через властивості <code>font-family</code>, <code>font-size</code>, <code>font-weight</code>, <code>font-style</code>.</p>
+        </div>
+      </details>
+
+      <!-- 10 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 10. Як працюють відступи і поля (margin, padding)?</summary>
+        <div class="answer">
+          <p><code>margin</code> — зовнішній відступ, <code>padding</code> — внутрішній відступ елемента.</p>
+        </div>
+      </details>
+
+      <!-- 11 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 11. Що таке border і які його властивості?</summary>
+        <div class="answer">
+          <p>
+            Межа елемента: <code>border-width</code>, <code>border-style</code>, <code>border-color</code>. Можна задавати окремо або скорочено:
+            <code>border: 1px solid black;</code>.
+          </p>
+        </div>
+      </details>
+
+      <!-- 12 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 12. Як працює display?</summary>
+        <div class="answer">
+          <p>Контролює, як елемент відображається:</p>
+          <ul>
+            <li><code>block</code> — блочний елемент</li>
+            <li><code>inline</code> — вбудований елемент</li>
+            <li><code>inline-block</code> — як inline, але з блоковими властивостями</li>
+            <li><code>none</code> — приховати елемент</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- 13 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 13. Що таке position і типи позиціонування?</summary>
+        <div class="answer">
+          <p>Властивість <code>position</code> визначає спосіб розташування елемента:</p>
+          <ul>
+            <li><code>static</code> — за замовчуванням</li>
+            <li><code>relative</code> — відносно звичайного місця</li>
+            <li><code>absolute</code> — відносно найближчого позиційованого предка</li>
+            <li><code>fixed</code> — фіксовано на екрані</li>
+            <li><code>sticky</code> — прилипає під час прокрутки</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- 14 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 14. Як працює float і clear?</summary>
+        <div class="answer">
+          <p><code>float</code> переміщує елемент вліво/вправо, <code>clear</code> зупиняє обтікання попередніх елементів.</p>
+        </div>
+      </details>
+
+      <!-- 15 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 15. Що таке flexbox і його основні властивості?</summary>
+        <div class="answer">
+          <p>Flexbox — сучасний метод верстки:</p>
+          <ul>
+            <li>display: <code>flex</code></li>
+            <li>justify-content, align-items, align-content</li>
+            <li>flex-direction, flex-wrap</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- 16 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 16. Що таке grid і його базові властивості?</summary>
+        <div class="answer">
+          <p>CSS Grid дозволяє створювати двовимірні макети:</p>
+          <ul>
+            <li>display: <code>grid</code></li>
+            <li>grid-template-columns, grid-template-rows</li>
+            <li>grid-gap, grid-area</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- 17 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 17. Що таке z-index?</summary>
+        <div class="answer">
+          <p>Контролює порядок нашарування елементів. Вищий <code>z-index</code> знаходиться поверх елементів з меншим значенням.</p>
+        </div>
+      </details>
+
+      <!-- 18 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 18. Як працює opacity?</summary>
+        <div class="answer">
+          <p>Визначає прозорість елемента: <code>opacity: 0.5;</code> робить елемент напівпрозорим.</p>
+        </div>
+      </details>
+
+      <!-- 19 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 19. Що таке transitions і як їх використовувати?</summary>
+        <div class="answer">
+          <p>Додають плавні анімації при зміні властивостей:</p>
+          <code>transition: all 0.3s ease;</code>
+        </div>
+      </details>
+
+      <!-- 20 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 20. Що таке transform і основні функції?</summary>
+        <div class="answer">
+          <p>Дозволяє змінювати елемент: <code>translate</code>, <code>rotate</code>, <code>scale</code>, <code>skew</code>.</p>
+        </div>
+      </details>
+
+      <!-- 21 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 21. Що таке animation і як її використовувати?</summary>
+        <div class="answer">
+          <p>CSS-анімації дозволяють створювати складні ефекти за допомогою <code>@keyframes</code> та властивості <code>animation</code>.</p>
+        </div>
+      </details>
+
+      <!-- 22 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 22. Що таке @keyframes?</summary>
+        <div class="answer">
+          <p>Визначає ключові кадри анімації, наприклад:</p>
+          <code>@keyframes slide { from {left:0;} to {left:100px;} }</code>
+        </div>
+      </details>
+
+      <!-- 23 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 23. Що таке box-sizing?</summary>
+        <div class="answer">
+          <p>Визначає, як обчислюються ширина і висота елемента: <code>content-box</code> або <code>border-box</code>.</p>
+        </div>
+      </details>
+
+      <!-- 24 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 24. Що таке pseudo-elements ::before і ::after?</summary>
+        <div class="answer">
+          <p>Додають віртуальні елементи до контенту елемента для декоративних ефектів.</p>
+        </div>
+      </details>
+
+      <!-- 25 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 25. Як працюють медіа-запити (media queries)?</summary>
+        <div class="answer">
+          <p>Дозволяють адаптувати стиль під різні пристрої:</p>
+          <code>@media (max-width: 768px) { body { font-size: 14px; } }</code>
+        </div>
+      </details>
+
+      <!-- 26 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 26. Що таке viewport і як він впливає на CSS?</summary>
+        <div class="answer">
+          <p>Viewport — видима область браузера. Через медіа-запити і відносні одиниці стилі підлаштовуються під розмір екрану.</p>
+        </div>
+      </details>
+
+      <!-- 27 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 27. Що таке flex-wrap?</summary>
+        <div class="answer">
+          <p>Властивість <code>flex-wrap</code> визначає, чи будуть елементи flex-контейнера переноситися на новий рядок.</p>
+        </div>
+      </details>
+
+      <!-- 28 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 28. Що таке justify-content?</summary>
+        <div class="answer">
+          <p>Вирівнює елементи по головній осі flex-контейнера (start, center, space-between тощо).</p>
+        </div>
+      </details>
+
+      <!-- 29 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 29. Що таке align-items?</summary>
+        <div class="answer">
+          <p>Вирівнює елементи по поперечній осі flex-контейнера (stretch, center, flex-start, flex-end).</p>
+        </div>
+      </details>
+
+      <!-- 30 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 30. Що таке min-width і max-width?</summary>
+        <div class="answer">
+          <p>Обмежують мінімальну та максимальну ширину елемента, щоб він не виходив за рамки.</p>
+        </div>
+      </details>
+
+      <!-- 31 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 31. Що таке min-height і max-height?</summary>
+        <div class="answer">
+          <p>Обмежують мінімальну та максимальну висоту елемента.</p>
+        </div>
+      </details>
+
+      <!-- 32 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 32. Що таке overflow і які значення він має?</summary>
+        <div class="answer">
+          <ul>
+            <li><code>visible</code> — контент виходить за межі</li>
+            <li><code>hidden</code> — обрізає зайве</li>
+            <li><code>scroll</code> — додає скролл</li>
+            <li><code>auto</code> — скролл, якщо потрібно</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- 33 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 33. Що таке clip-path?</summary>
+        <div class="answer">
+          <p>Властивість для обрізки елемента за формою (circle, polygon, inset тощо).</p>
+        </div>
+      </details>
+
+      <!-- 34 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 34. Що таке gradients?</summary>
+        <div class="answer">
+          <p>Градієнти для фону: <code>linear-gradient</code>, <code>radial-gradient</code>, <code>conic-gradient</code>.</p>
+        </div>
+      </details>
+
+      <!-- 35 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 35. Що таке background-size?</summary>
+        <div class="answer">
+          <p>Контролює розмір фонового зображення: <code>cover</code>, <code>contain</code>, конкретні значення px/%.</p>
+        </div>
+      </details>
+
+      <!-- 36 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 36. Що таке background-position?</summary>
+        <div class="answer">
+          <p>Визначає позицію фонового зображення: top, center, bottom, left, right, або %/px.</p>
+        </div>
+      </details>
+
+      <!-- 37 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 37. Що таке box-shadow?</summary>
+        <div class="answer">
+          <p>Додає тінь до елемента: <code>box-shadow: 5px 5px 10px rgba(0,0,0,0.5);</code></p>
+        </div>
+      </details>
+
+      <!-- 38 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 38. Що таке text-shadow?</summary>
+        <div class="answer">
+          <p>Додає тінь до тексту: <code>text-shadow: 2px 2px 5px gray;</code></p>
+        </div>
+      </details>
+
+      <!-- 39 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 39. Що таке word-wrap і overflow-wrap?</summary>
+        <div class="answer">
+          <p>Контролюють перенесення слів, щоб уникнути виходу тексту за межі блока.</p>
+        </div>
+      </details>
+
+      <!-- 40 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 40. Що таке white-space?</summary>
+        <div class="answer">
+          <p>Визначає, як обробляються пробіли та перенос рядків: normal, nowrap, pre, pre-wrap, pre-line.</p>
+        </div>
+      </details>
+
+      <!-- 41 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 41. Що таке text-align?</summary>
+        <div class="answer">
+          <p>Вирівнює текст по горизонталі: left, right, center, justify.</p>
+        </div>
+      </details>
+
+      <!-- 42 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 42. Що таке vertical-align?</summary>
+        <div class="answer">
+          <p>Вирівнює inline або table-cell елементи по вертикалі: baseline, top, middle, bottom.</p>
+        </div>
+      </details>
+
+      <!-- 43 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 43. Що таке list-style?</summary>
+        <div class="answer">
+          <p>Визначає стиль маркерів у списках: <code>list-style-type</code>, <code>list-style-image</code>, <code>list-style-position</code>.</p>
+        </div>
+      </details>
+
+      <!-- 44 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 44. Що таке cursor?</summary>
+        <div class="answer">
+          <p>Змінює вигляд курсора: pointer, default, text, move, wait тощо.</p>
+        </div>
+      </details>
+
+      <!-- 45 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 45. Що таке pointer-events?</summary>
+        <div class="answer">
+          <p>Контролює, чи реагує елемент на події миші: none або auto.</p>
+        </div>
+      </details>
+
+      <!-- 46 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 46. Що таке overflow-x та overflow-y?</summary>
+        <div class="answer">
+          <p>Окремо контролюють горизонтальний та вертикальний скролл.</p>
+        </div>
+      </details>
+
+      <!-- 47 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 47. Що таке clip?</summary>
+        <div class="answer">
+          <p>Старий спосіб обрізки елемента за прямокутником (deprecated, замінено на clip-path).</p>
+        </div>
+      </details>
+
+      <!-- 48 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 48. Що таке filter?</summary>
+        <div class="answer">
+          <p>Додає ефекти до елементів: blur, brightness, contrast, grayscale, hue-rotate тощо.</p>
+        </div>
+      </details>
+
+      <!-- 49 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 49. Що таке transition-delay?</summary>
+        <div class="answer">
+          <p>Задає затримку перед початком CSS-переходу.</p>
+        </div>
+      </details>
+
+      <!-- 50 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 50. Що таке transition-duration?</summary>
+        <div class="answer">
+          <p>Визначає тривалість CSS-переходу.</p>
+        </div>
+      </details>
+
+      <!-- 51 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 51. Що таке transition-timing-function?</summary>
+        <div class="answer">
+          <p>Визначає криву прискорення анімації: linear, ease, ease-in, ease-out, cubic-bezier.</p>
+        </div>
+      </details>
+
+      <!-- 52 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 52. Що таке overflow-wrap: break-word?</summary>
+        <div class="answer">
+          <p>Примушує слова переноситися всередині блоку, щоб не виходили за межі.</p>
+        </div>
+      </details>
+
+      <!-- 53 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 53. Що таке word-break?</summary>
+        <div class="answer">
+          <p>Контролює перенесення слів: normal, break-all, keep-all.</p>
+        </div>
+      </details>
+
+      <!-- 54 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 54. Що таке object-fit?</summary>
+        <div class="answer">
+          <p>Визначає, як зображення/відео вписується у контейнер: fill, contain, cover, none, scale-down.</p>
+        </div>
+      </details>
+
+      <!-- 55 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 55. Що таке object-position?</summary>
+        <div class="answer">
+          <p>Визначає позицію зображення/відео всередині контейнера, якщо <code>object-fit</code> не cover/fill.</p>
+        </div>
+      </details>
+
+      <!-- 56 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 56. Що таке overflow: clip?</summary>
+        <div class="answer">
+          <p>Обрізає зайвий контент без скролу, аналог <code>hidden</code>, але сучасніше.</p>
+        </div>
+      </details>
+
+      <!-- 57 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 57. Що таке resize?</summary>
+        <div class="answer">
+          <p>Дозволяє користувачу змінювати розмір елемента: none, both, horizontal, vertical.</p>
+        </div>
+      </details>
+
+      <!-- 58 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 58. Що таке list-style-position?</summary>
+        <div class="answer">
+          <p>Визначає позицію маркера списку: inside або outside.</p>
+        </div>
+      </details>
+
+      <!-- 59 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 59. Що таке list-style-image?</summary>
+        <div class="answer">
+          <p>Задає власне зображення маркера списку.</p>
+        </div>
+      </details>
+
+      <!-- 60 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 60. Що таке word-spacing?</summary>
+        <div class="answer">
+          <p>Визначає відстань між словами у тексті.</p>
+        </div>
+      </details>
+
+      <!-- 61 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 61. Що таке letter-spacing?</summary>
+        <div class="answer">
+          <p>Визначає відстань між літерами у тексті.</p>
+        </div>
+      </details>
+
+      <!-- 62 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 62. Що таке line-height?</summary>
+        <div class="answer">
+          <p>Визначає висоту рядка тексту, контролюючи вертикальний відступ між рядками.</p>
+        </div>
+      </details>
+
+      <!-- 63 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 63. Що таке max-lines і line-clamp?</summary>
+        <div class="answer">
+          <p>Дозволяє обмежити кількість рядків тексту та обрізати зайвий вміст.</p>
+        </div>
+      </details>
+
+      <!-- 64 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 64. Що таке text-overflow?</summary>
+        <div class="answer">
+          <p>Контролює обрізання тексту всередині блоку: clip, ellipsis.</p>
+        </div>
+      </details>
+
+      <!-- 65 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 65. Що таке text-decoration?</summary>
+        <div class="answer">
+          <p>Додає підкреслення, лінії зверху або крізь текст: underline, overline, line-through.</p>
+        </div>
+      </details>
+
+      <!-- 66 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 66. Що таке text-transform?</summary>
+        <div class="answer">
+          <p>Контролює регістр тексту: uppercase, lowercase, capitalize, none.</p>
+        </div>
+      </details>
+
+      <!-- 67 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 67. Що таке writing-mode?</summary>
+        <div class="answer">
+          <p>Задає напрямок письма: horizontal-tb, vertical-rl, vertical-lr.</p>
+        </div>
+      </details>
+
+      <!-- 68 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 68. Що таке direction?</summary>
+        <div class="answer">
+          <p>Визначає напрям тексту: ltr (left-to-right) або rtl (right-to-left).</p>
+        </div>
+      </details>
+
+      <!-- 69 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 69. Що таке user-select?</summary>
+        <div class="answer">
+          <p>Контролює можливість виділення тексту: auto, none, text, all.</p>
+        </div>
+      </details>
+
+      <!-- 70 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 70. Що таке visibility?</summary>
+        <div class="answer">
+          <p>Контролює видимість елемента: visible, hidden, collapse.</p>
+        </div>
+      </details>
+
+      <!-- 71 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 71. Що таке opacity?</summary>
+        <div class="answer">
+          <p>Визначає прозорість елемента: від 0 (повністю прозорий) до 1 (непрозорий).</p>
+        </div>
+      </details>
+
+      <!-- 72 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 72. Що таке z-index?</summary>
+        <div class="answer">
+          <p>Визначає порядок накладання елементів по осі Z (верхній/нижній шар).</p>
+        </div>
+      </details>
+
+      <!-- 73 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 73. Що таке position?</summary>
+        <div class="answer">
+          <p>Визначає метод позиціонування: static, relative, absolute, fixed, sticky.</p>
+        </div>
+      </details>
+
+      <!-- 74 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 74. Що таке top, right, bottom, left?</summary>
+        <div class="answer">
+          <p>Задають відступи від відповідних сторін контейнера для позиціонованого елемента.</p>
+        </div>
+      </details>
+
+      <!-- 75 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 75. Що таке float?</summary>
+        <div class="answer">
+          <p>Використовується для обтікання елементами (left, right, none), рідко потрібен у сучасному дизайні.</p>
+        </div>
+      </details>
+
+      <!-- 76 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 76. Що таке clear?</summary>
+        <div class="answer">
+          <p>Визначає, як елементи після плаваючих блоків будуть розташовані: none, left, right, both.</p>
+        </div>
+      </details>
+
+      <!-- 77 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 77. Що таке clip-path: circle()?</summary>
+        <div class="answer">
+          <p>Обрізає елемент по колу, наприклад: <code>clip-path: circle(50% at 50% 50%);</code></p>
+        </div>
+      </details>
+
+      <!-- 78 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 78. Що таке filter: blur()?</summary>
+        <div class="answer">
+          <p>Розмиває елемент: <code>filter: blur(5px);</code></p>
+        </div>
+      </details>
+
+      <!-- 79 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 79. Що таке backdrop-filter?</summary>
+        <div class="answer">
+          <p>Додає фільтри до елементів, що знаходяться позаду (розмиття, контраст, яскравість).</p>
+        </div>
+      </details>
+
+      <!-- 80 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 80. Що таке clip-path: polygon()?</summary>
+        <div class="answer">
+          <p>Обрізає елемент за багатокутником, наприклад: <code>clip-path: polygon(50% 0%, 100% 100%, 0% 100%);</code></p>
+        </div>
+      </details>
+
+      <!-- 81 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 81. Що таке perspective?</summary>
+        <div class="answer">
+          <p>Додає ефект перспективи для 3D-трансформацій: <code>perspective: 1000px;</code></p>
+        </div>
+      </details>
+
+      <!-- 82 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 82. Що таке transform?</summary>
+        <div class="answer">
+          <p>Дозволяє переміщення, обертання, масштабування та нахил елементів: translate, rotate, scale, skew.</p>
+        </div>
+      </details>
+
+      <!-- 83 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 83. Що таке transform-origin?</summary>
+        <div class="answer">
+          <p>Визначає точку, від якої застосовується трансформація: center, top, left, right, bottom або px/%.</p>
+        </div>
+      </details>
+
+      <!-- 84 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 84. Що таке backface-visibility?</summary>
+        <div class="answer">
+          <p>Визначає, чи видно "задню" сторону елемента під час 3D-поворотів: visible або hidden.</p>
+        </div>
+      </details>
+
+      <!-- 85 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 85. Що таке perspective-origin?</summary>
+        <div class="answer">
+          <p>Визначає точку зору для перспективи: center, top, bottom, left, right або %/px.</p>
+        </div>
+      </details>
+
+      <!-- 86 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 86. Що таке grid-template-columns?</summary>
+        <div class="answer">
+          <p>Визначає кількість і ширину колонок у CSS Grid: repeat(3, 1fr), 200px auto тощо.</p>
+        </div>
+      </details>
+
+      <!-- 87 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 87. Що таке grid-template-rows?</summary>
+        <div class="answer">
+          <p>Визначає кількість і висоту рядків у CSS Grid.</p>
+        </div>
+      </details>
+
+      <!-- 88 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 88. Що таке grid-gap / gap?</summary>
+        <div class="answer">
+          <p>Визначає відстань між рядками і колонками у CSS Grid та Flexbox.</p>
+        </div>
+      </details>
+
+      <!-- 89 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 89. Що таке justify-items?</summary>
+        <div class="answer">
+          <p>Вирівнює елементи всередині осередків CSS Grid по горизонталі.</p>
+        </div>
+      </details>
+
+      <!-- 90 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 90. Що таке align-items (Grid)?</summary>
+        <div class="answer">
+          <p>Вирівнює елементи всередині осередків CSS Grid по вертикалі.</p>
+        </div>
+      </details>
+
+      <!-- 91 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 91. Що таке place-items?</summary>
+        <div class="answer">
+          <p>Скорочення для одночасного визначення <code>align-items</code> та <code>justify-items</code> у Grid.</p>
+        </div>
+      </details>
+
+      <!-- 92 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 92. Що таке grid-auto-flow?</summary>
+        <div class="answer">
+          <p>Визначає порядок розміщення елементів у Grid: row, column, dense.</p>
+        </div>
+      </details>
+
+      <!-- 93 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 93. Що таке grid-column / grid-row?</summary>
+        <div class="answer">
+          <p>Визначає позицію та розмір елемента у CSS Grid по колонках та рядках.</p>
+        </div>
+      </details>
+
+      <!-- 94 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 94. Що таке grid-area?</summary>
+        <div class="answer">
+          <p>Визначає позицію та розмір елемента у Grid, об’єднуючи <code>grid-row</code> та <code>grid-column</code>.</p>
+        </div>
+      </details>
+
+      <!-- 95 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 95. Що таке place-content?</summary>
+        <div class="answer">
+          <p>Вирівнює весь вміст Grid контейнера: скорочення для <code>align-content</code> + <code>justify-content</code>.</p>
+        </div>
+      </details>
+
+      <!-- 96 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 96. Що таке place-self?</summary>
+        <div class="answer">
+          <p>Вирівнює окремий елемент Grid по вертикалі та горизонталі: скорочення для <code>align-self</code> + <code>justify-self</code>.</p>
+        </div>
+      </details>
+
+      <!-- 97 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 97. Що таке object-fit: cover?</summary>
+        <div class="answer">
+          <p>Зображення або відео заповнює контейнер, обрізаючи зайве, зберігаючи пропорції.</p>
+        </div>
+      </details>
+
+      <!-- 98 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 98. Що таке object-fit: contain?</summary>
+        <div class="answer">
+          <p>Зображення або відео поміщається всередину контейнера без обрізання, зберігаючи пропорції.</p>
+        </div>
+      </details>
+
+      <!-- 99 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 99. Що таке transition-property?</summary>
+        <div class="answer">
+          <p>Визначає, які властивості елемента будуть анімовані при зміні: <code>all</code>, <code>opacity</code>, <code>transform</code> тощо.</p>
+        </div>
+      </details>
+
+      <!-- 100 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 100. Що таке will-change?</summary>
+        <div class="answer">
+          <p>Підказує браузеру, які властивості елемента будуть змінюватися, щоб оптимізувати анімації та рендеринг.</p>
+        </div>
+      </details>
+
+      <!-- 1 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 1. Що таке CSS?</summary>
+        <div class="answer"><p>CSS (Cascading Style Sheets) — мова для опису стилів HTML-документів.</p></div>
+      </details>
+
+      <!-- 2 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 2. Як підключити CSS до HTML?</summary>
+        <div class="answer">
+          <p>За допомогою <code>&lt;link rel="stylesheet" href="style.css"&gt;</code> у <code>&lt;head&gt;</code>.</p>
+        </div>
+      </details>
+
+      <!-- 3 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 3. Що таке inline-стилі?</summary>
+        <div class="answer">
+          <p>CSS, що записується прямо в атрибут <code>style</code> елемента.</p>
+        </div>
+      </details>
+
+      <!-- 4 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 4. Що таке internal CSS?</summary>
+        <div class="answer">
+          <p>Стилі всередині тегу <code>&lt;style&gt;</code> у HTML.</p>
+        </div>
+      </details>
+
+      <!-- 5 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 5. Що таке external CSS?</summary>
+        <div class="answer">
+          <p>Окремий файл зі стилями, підключений через <code>&lt;link&gt;</code>.</p>
+        </div>
+      </details>
+
+      <!-- 6 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 6. Що таке селектор у CSS?</summary>
+        <div class="answer"><p>Частина CSS, яка визначає, до яких елементів застосовувати стилі.</p></div>
+      </details>
+
+      <!-- 7 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 7. Що таке властивість у CSS?</summary>
+        <div class="answer">
+          <p>Атрибут стилю, який змінює вигляд елемента (наприклад, <code>color</code>).</p>
+        </div>
+      </details>
+
+      <!-- 8 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 8. Як задати колір у CSS?</summary>
+        <div class="answer">
+          <p>За допомогою властивості <code>color</code> або <code>background-color</code>.</p>
+        </div>
+      </details>
+
+      <!-- 9 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 9. Які є формати задання кольорів?</summary>
+        <div class="answer"><p>Назви, HEX, RGB, RGBA, HSL, HSLA.</p></div>
+      </details>
+
+      <!-- 10 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 10. Що таке одиниці виміру у CSS?</summary>
+        <div class="answer"><p>px, em, rem, %, vh, vw тощо.</p></div>
+      </details>
+
+      <!-- 11 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 11. Що таке абсолютні та відносні одиниці?</summary>
+        <div class="answer"><p>Абсолютні (px) — фіксовані, відносні (em, rem, %) — залежать від контексту.</p></div>
+      </details>
+
+      <!-- 12 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 12. Що таке клас у CSS?</summary>
+        <div class="answer">
+          <p>Селектор, що починається з <code>.</code> (наприклад, <code>.btn</code>).</p>
+        </div>
+      </details>
+
+      <!-- 13 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 13. Що таке id у CSS?</summary>
+        <div class="answer">
+          <p>Селектор з <code>#</code> (наприклад, <code>#header</code>).</p>
+        </div>
+      </details>
+
+      <!-- 14 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 14. Що таке універсальний селектор?</summary>
+        <div class="answer">
+          <p><code>*</code> — вибирає всі елементи.</p>
+        </div>
+      </details>
+
+      <!-- 15 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 15. Що таке селектор тегу?</summary>
+        <div class="answer">
+          <p>Застосовує стилі до всіх елементів конкретного тегу (наприклад, <code>p</code>).</p>
+        </div>
+      </details>
+
+      <!-- 16 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 16. Що таке групування селекторів?</summary>
+        <div class="answer">
+          <p>Кілька селекторів через кому (<code>h1, h2, h3 { color: red; }</code>).</p>
+        </div>
+      </details>
+
+      <!-- 17 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 17. Що таке комбінатори селекторів?</summary>
+        <div class="answer"><p>Селектори для відносин: нащадок, дитина, сусід, брат.</p></div>
+      </details>
+
+      <!-- 18 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 18. Що таке псевдоклас?</summary>
+        <div class="answer">
+          <p>Селектор для стану елемента (наприклад, <code>:hover</code>).</p>
+        </div>
+      </details>
+
+      <!-- 19 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 19. Що таке псевдоелемент?</summary>
+        <div class="answer">
+          <p>Селектор для частини елемента (<code>::before</code>, <code>::after</code>).</p>
+        </div>
+      </details>
+
+      <!-- 20 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 20. Що таке специфічність у CSS?</summary>
+        <div class="answer"><p>Правило, яке визначає пріоритет стилів (inline &gt; id &gt; клас &gt; тег).</p></div>
+      </details>
+
+      <!-- 21 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 21. Що таке каскадність у CSS?</summary>
+        <div class="answer"><p>Принцип, за яким браузер вибирає стилі при конфліктах.</p></div>
+      </details>
+
+      <!-- 22 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 22. Що таке успадкування?</summary>
+        <div class="answer"><p>Деякі властивості передаються від батьківських елементів дітям.</p></div>
+      </details>
+
+      <!-- 23 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 23. Як задати фон у CSS?</summary>
+        <div class="answer">
+          <p>Через <code>background-color</code>, <code>background-image</code> тощо.</p>
+        </div>
+      </details>
+
+      <!-- 24 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 24. Що таке background-repeat?</summary>
+        <div class="answer"><p>Визначає повторення фонового зображення.</p></div>
+      </details>
+
+      <!-- 25 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 25. Що таке background-position?</summary>
+        <div class="answer"><p>Визначає розташування фонового зображення.</p></div>
+      </details>
+
+      <!-- 26 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 26. Що таке background-size?</summary>
+        <div class="answer"><p>Визначає розмір фонового зображення (cover, contain).</p></div>
+      </details>
+
+      <!-- 27 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 27. Що таке border?</summary>
+        <div class="answer"><p>Властивість для малювання рамки навколо елемента.</p></div>
+      </details>
+
+      <!-- 28 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 28. Що таке margin?</summary>
+        <div class="answer"><p>Зовнішній відступ елемента.</p></div>
+      </details>
+
+      <!-- 29 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 29. Що таке padding?</summary>
+        <div class="answer"><p>Внутрішній відступ елемента.</p></div>
+      </details>
+
+      <!-- 30 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 30. Що таке box model?</summary>
+        <div class="answer"><p>Модель, яка описує побудову блоку: content, padding, border, margin.</p></div>
+      </details>
+
+      <!-- 31 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 31. Що таке box-sizing?</summary>
+        <div class="answer">
+          <p>Визначає, чи враховуються padding і border у розмірах елемента (<code>content-box</code> або <code>border-box</code>).</p>
+        </div>
+      </details>
+
+      <!-- 32 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 32. Що таке display у CSS?</summary>
+        <div class="answer">
+          <p>Визначає тип відображення елемента: <code>block</code>, <code>inline</code>, <code>flex</code>, <code>grid</code> тощо.</p>
+        </div>
+      </details>
+
+      <!-- 33 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 33. Що таке inline-block?</summary>
+        <div class="answer"><p>Тип відображення, який поєднує властивості inline та block.</p></div>
+      </details>
+
+      <!-- 34 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 34. Що таке overflow?</summary>
+        <div class="answer">
+          <p>Визначає, як відображати вміст, що виходить за межі елемента (<code>hidden</code>, <code>scroll</code>, <code>auto</code>).</p>
+        </div>
+      </details>
+
+      <!-- 35 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 35. Що таке position?</summary>
+        <div class="answer">
+          <p>
+            Визначає спосіб позиціювання елемента: <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code>.
+          </p>
+        </div>
+      </details>
+
+      <!-- 36 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 36. Чим relative відрізняється від absolute?</summary>
+        <div class="answer">
+          <p><code>relative</code> зміщує елемент відносно його початкової позиції, а <code>absolute</code> — відносно найближчого позиціонованого предка.</p>
+        </div>
+      </details>
+
+      <!-- 37 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 37. Що таке fixed?</summary>
+        <div class="answer"><p>Елемент прив’язується до вікна браузера, а не до сторінки.</p></div>
+      </details>
+
+      <!-- 38 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 38. Що таке sticky?</summary>
+        <div class="answer">
+          <p>Елемент поводиться як <code>relative</code>, доки не досягне заданої межі, після чого стає <code>fixed</code>.</p>
+        </div>
+      </details>
+
+      <!-- 39 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 39. Що таке z-index?</summary>
+        <div class="answer"><p>Визначає порядок накладання елементів.</p></div>
+      </details>
+
+      <!-- 40 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 40. Що таке float?</summary>
+        <div class="answer"><p>Старий метод вирівнювання елементів ліворуч чи праворуч.</p></div>
+      </details>
+
+      <!-- 41 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 41. Що таке clear?</summary>
+        <div class="answer">
+          <p>Скасовує обтікання елемента (<code>left</code>, <code>right</code>, <code>both</code>).</p>
+        </div>
+      </details>
+
+      <!-- 42 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 42. Що таке flexbox?</summary>
+        <div class="answer"><p>CSS-модель для вирівнювання та розподілу простору між елементами.</p></div>
+      </details>
+
+      <!-- 43 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 43. Що таке display: flex?</summary>
+        <div class="answer"><p>Робить контейнер гнучким, його діти стають flex-елементами.</p></div>
+      </details>
+
+      <!-- 44 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 44. Що таке justify-content?</summary>
+        <div class="answer"><p>Вирівнювання елементів по головній осі.</p></div>
+      </details>
+
+      <!-- 45 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 45. Що таке align-items?</summary>
+        <div class="answer"><p>Вирівнювання елементів по поперечній осі.</p></div>
+      </details>
+
+      <!-- 46 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 46. Що таке flex-wrap?</summary>
+        <div class="answer"><p>Дозволяє елементам переноситися на новий рядок.</p></div>
+      </details>
+
+      <!-- 47 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 47. Що таке flex-grow?</summary>
+        <div class="answer"><p>Визначає, як елемент розтягується, щоб зайняти вільний простір.</p></div>
+      </details>
+
+      <!-- 48 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 48. Що таке flex-shrink?</summary>
+        <div class="answer"><p>Визначає, як елемент стискається при нестачі простору.</p></div>
+      </details>
+
+      <!-- 49 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 49. Що таке flex-basis?</summary>
+        <div class="answer"><p>Базовий розмір елемента перед розподілом простору.</p></div>
+      </details>
+
+      <!-- 50 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 50. Що таке CSS Grid?</summary>
+        <div class="answer"><p>Система для створення двовимірних сіток.</p></div>
+      </details>
+
+      <!-- 51 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 51. Що таке grid-template-columns?</summary>
+        <div class="answer"><p>Визначає кількість і розміри колонок у сітці.</p></div>
+      </details>
+
+      <!-- 52 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 52. Що таке grid-template-rows?</summary>
+        <div class="answer"><p>Визначає кількість і розміри рядків.</p></div>
+      </details>
+
+      <!-- 53 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 53. Що таке grid-gap?</summary>
+        <div class="answer">
+          <p>Відстань між рядками та колонками (тепер <code>gap</code>).</p>
+        </div>
+      </details>
+
+      <!-- 54 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 54. Що таке grid-area?</summary>
+        <div class="answer"><p>Визначає область сітки, яку займає елемент.</p></div>
+      </details>
+
+      <!-- 55 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 55. Що таке grid-template-areas?</summary>
+        <div class="answer"><p>Описує шаблон розміщення областей сітки.</p></div>
+      </details>
+
+      <!-- 56 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 56. Що таке minmax() у Grid?</summary>
+        <div class="answer"><p>Встановлює мінімальне і максимальне значення для треку.</p></div>
+      </details>
+
+      <!-- 57 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 57. Що таке auto-fit та auto-fill у Grid?</summary>
+        <div class="answer"><p>Ключові слова для автоматичного заповнення сітки.</p></div>
+      </details>
+
+      <!-- 58 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 58. Що таке media queries?</summary>
+        <div class="answer"><p>Умови для адаптивних стилів залежно від ширини, висоти екрана тощо.</p></div>
+      </details>
+
+      <!-- 59 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 59. Що таке @media?</summary>
+        <div class="answer"><p>Правило для написання медіа-запитів.</p></div>
+      </details>
+
+      <!-- 60 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 60. Що таке responsive design?</summary>
+        <div class="answer"><p>Підхід, при якому сайт підлаштовується під різні екрани.</p></div>
+      </details>
+
+      <!-- 61 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 61. Що таке transition?</summary>
+        <div class="answer"><p>Властивість для створення плавних змін стилів.</p></div>
+      </details>
+
+      <!-- 62 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 62. Що таке animation?</summary>
+        <div class="answer"><p>Використовується для складних анімацій з ключовими кадрами.</p></div>
+      </details>
+
+      <!-- 63 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 63. Що таке keyframes?</summary>
+        <div class="answer"><p>Опис проміжних станів анімації (<code>@keyframes</code>).</p></div>
+      </details>
+
+      <!-- 64 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 64. Що таке transform?</summary>
+        <div class="answer"><p>Застосовує обертання, масштабування, зсув та інші перетворення.</p></div>
+      </details>
+
+      <!-- 65 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 65. Що таке translate?</summary>
+        <div class="answer"><p>Переміщення елемента по осях X та Y.</p></div>
+      </details>
+
+      <!-- 66 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 66. Що таке rotate?</summary>
+        <div class="answer"><p>Обертання елемента.</p></div>
+      </details>
+
+      <!-- 67 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 67. Що таке scale?</summary>
+        <div class="answer"><p>Масштабування елемента.</p></div>
+      </details>
+
+      <!-- 68 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 68. Що таке skew?</summary>
+        <div class="answer"><p>Нахил елемента.</p></div>
+      </details>
+
+      <!-- 69 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 69. Що таке will-change?</summary>
+        <div class="answer"><p>Підказка браузеру, які властивості змінюватимуться для оптимізації.</p></div>
+      </details>
+
+      <!-- 70 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 70. Що таке clip-path?</summary>
+        <div class="answer"><p>Обрізає елемент за заданою формою.</p></div>
+      </details>
+
+      <!-- 71 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 71. Що таке filter?</summary>
+        <div class="answer"><p>Застосовує графічні ефекти (blur, grayscale, contrast).</p></div>
+      </details>
+
+      <!-- 72 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 72. Що таке backdrop-filter?</summary>
+        <div class="answer"><p>Застосовує ефекти до фону позаду елемента.</p></div>
+      </details>
+
+      <!-- 73 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 73. Що таке variables у CSS?</summary>
+        <div class="answer">
+          <p>Кастомні властивості, що починаються з <code>--</code>.</p>
+        </div>
+      </details>
+
+      <!-- 74 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 74. Як використовувати CSS-змінні?</summary>
+        <div class="answer">
+          <p>Оголосити: <code>--main-color: red;</code>, використати: <code>color: var(--main-color);</code>.</p>
+        </div>
+      </details>
+
+      <!-- 75 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 75. Що таке calc()?</summary>
+        <div class="answer"><p>Функція для математичних розрахунків у CSS.</p></div>
+      </details>
+
+      <!-- 76 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 76. Що таке clamp()?</summary>
+        <div class="answer"><p>Функція, яка задає мінімальне, оптимальне і максимальне значення.</p></div>
+      </details>
+
+      <!-- 77 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 77. Що таке min() і max()?</summary>
+        <div class="answer"><p>Функції для обрання мінімального чи максимального значення.</p></div>
+      </details>
+
+      <!-- 78 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 78. Що таке viewport units?</summary>
+        <div class="answer">
+          <p>Одиниці <code>vw</code> і <code>vh</code>, що залежать від розміру вікна.</p>
+        </div>
+      </details>
+
+      <!-- 79 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 79. Що таке ch у CSS?</summary>
+        <div class="answer"><p>Одиниця виміру, що відповідає ширині символу "0".</p></div>
+      </details>
+
+      <!-- 80 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 80. Що таке ex у CSS?</summary>
+        <div class="answer"><p>Одиниця виміру, що відповідає висоті маленької літери "x".</p></div>
+      </details>
+
+      <!-- 81 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 81. Що таке print styles?</summary>
+        <div class="answer">
+          <p>Стилі для друку, що задаються через <code>@media print</code>.</p>
+        </div>
+      </details>
+
+      <!-- 82 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 82. Що таке prefers-color-scheme?</summary>
+        <div class="answer"><p>Медіа-запит для темної/світлої теми.</p></div>
+      </details>
+
+      <!-- 83 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 83. Що таке prefers-reduced-motion?</summary>
+        <div class="answer"><p>Медіа-запит для вимкнення або зменшення анімацій.</p></div>
+      </details>
+
+      <!-- 84 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 84. Що таке container queries?</summary>
+        <div class="answer"><p>Медіа-запити, що базуються на розмірах контейнера, а не вікна.</p></div>
+      </details>
+
+      <!-- 85 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 85. Що таке CSS Houdini?</summary>
+        <div class="answer"><p>API для створення кастомних CSS-функцій і властивостей.</p></div>
+      </details>
+
+      <!-- 86 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 86. Що таке @supports?</summary>
+        <div class="answer"><p>Умова, яка перевіряє підтримку властивостей у браузері.</p></div>
+      </details>
+
+      <!-- 87 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 87. Що таке @layer?</summary>
+        <div class="answer"><p>Система каскадування стилів із різних шарів.</p></div>
+      </details>
+
+      <!-- 88 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 88. Що таке @import?</summary>
+        <div class="answer"><p>Правило для підключення інших CSS-файлів.</p></div>
+      </details>
+
+      <!-- 89 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 89. Що таке inline critical CSS?</summary>
+        <div class="answer"><p>Вбудовування критичних стилів у HTML для швидшого рендерингу.</p></div>
+      </details>
+
+      <!-- 90 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 90. Що таке CSS specificity?</summary>
+        <div class="answer"><p>Визначає пріоритет застосування стилів: inline > id > class/attribute/pseudo-class > element/pseudo-element.</p></div>
+      </details>
+
+      <!-- 91 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 91. Що таке pseudo-classes?</summary>
+        <div class="answer">
+          <p>Класи, що застосовуються в певних станах елемента, наприклад <code>:hover</code>, <code>:focus</code>, <code>:nth-child()</code>.</p>
+        </div>
+      </details>
+
+      <!-- 92 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 92. Що таке pseudo-elements?</summary>
+        <div class="answer">
+          <p>Віртуальні елементи, наприклад <code>::before</code> та <code>::after</code>, для додавання контенту через CSS.</p>
+        </div>
+      </details>
+
+      <!-- 93 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 93. Що таке CSS cascade?</summary>
+        <div class="answer"><p>Правила каскадування стилів: порядок, специфічність і важливість визначають фінальний стиль елемента.</p></div>
+      </details>
+
+      <!-- 94 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 94. Що таке important?</summary>
+        <div class="answer">
+          <p>Позначка <code>!important</code> робить стиль пріоритетним над іншими.</p>
+        </div>
+      </details>
+
+      <!-- 95 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 95. Що таке CSS containment?</summary>
+        <div class="answer"><p>Вказує браузеру, що елемент ізольований у певних аспектах для оптимізації рендерингу (<code>contain</code>).</p></div>
+      </details>
+
+      <!-- 96 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 96. Що таке CSS isolation?</summary>
+        <div class="answer">
+          <p>Властивість <code>isolation: isolate;</code> створює новий контекст змішування для елементів.</p>
+        </div>
+      </details>
+
+      <!-- 97 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 97. Що таке CSS object-fit?</summary>
+        <div class="answer">
+          <p>Визначає, як вміст (зображення, відео) заповнює контейнер: <code>cover</code>, <code>contain</code>, <code>fill</code>.</p>
+        </div>
+      </details>
+
+      <!-- 98 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 98. Що таке CSS object-position?</summary>
+        <div class="answer">
+          <p>Визначає позицію вмісту всередині контейнера при використанні <code>object-fit</code>.</p>
+        </div>
+      </details>
+
+      <!-- 99 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 99. Що таке CSS scroll-snap?</summary>
+        <div class="answer"><p>Дозволяє елементам "зафіксовуватися" при прокрутці у визначених точках.</p></div>
+      </details>
+
+      <!-- 100 -->
+      <details class="faq">
+        <summary><span class="chev">▸</span> 100. Що таке CSS logical properties?</summary>
+        <div class="answer">
+          <p>Властивості, які адаптуються до напрямку тексту та мови, наприклад <code>margin-inline-start</code>, <code>padding-block-end</code>.</p>
+        </div>
+      </details>
+
+      <h3 id="Now" style="margin-top: 22px; color: teal">Наразі проєкт ще в розробці...</h3>
+    </div>
+
+    <footer>
+      <p style="font-size: 14px; color: gray; text-align: center">Створено з ♥ | Україна</p>
+    </footer>
+  </body>
 </html>

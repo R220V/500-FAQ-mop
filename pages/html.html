@@ -27,17 +27,25 @@
 <body>
 
  <!-- #region theme+header -->
-    <div class="theme-circle">
-<button class="circle" data-color="red" style="background:red;" onclick="setTheme('red')"></button>
-<button class="circle" data-color="orange" style="background:orange;" onclick="setTheme('orange')"></button>
-<button class="circle" data-color="yellow" style="background:yellow;" onclick="setTheme('yellow')"></button>
-<button class="circle" data-color="green" style="background:green" onclick="setTheme('green')"></button>
-<button class="circle" data-color="skyblue" style="background:skyblue" onclick="setTheme('skyblue')"></button>
-<button class="circle" data-color="blue" style="background:blue;" onclick="setTheme('blue')"></button>
-<button class="circle" data-color="purple" style="background:purple;" onclick="setTheme('purple')"></button>
-<button class="circle" data-color="light" style="background:whitesmoke;" onclick="setTheme('light')"></button>
-<button class="circle" data-color="dark" style="background:black;" onclick="setTheme('dark')"></button>
-
+<div class="theme-circle">
+<button class="circle" data-color="red" style="background:red;" onclick="setTheme('red')"  aria-label="Встановити червону тему"
+        title="Червона тема"></button>
+<button class="circle" data-color="orange" style="background:orange;" onclick="setTheme('orange')"  aria-label="Встановити помаранчеву тему"
+        title="Помаранчева тема"></button>
+<button class="circle" data-color="yellow" style="background:yellow;" onclick="setTheme('yellow')"  aria-label="Встановити жовту тему"
+        title="Жовта тема"></button>
+<button class="circle" data-color="green" style="background:green" onclick="setTheme('green')"  aria-label="Встановити зелену тему"
+        title="Зелена тема"></button>
+<button class="circle" data-color="skyblue" style="background:skyblue" onclick="setTheme('skyblue')"  aria-label="Встановити блакитну тему"
+        title="Блакитна тема"></button>
+<button class="circle" data-color="blue" style="background:blue;" onclick="setTheme('blue')"  aria-label="Встановити синю тему"
+        title="Синя тема"></button>
+<button class="circle" data-color="purple" style="background:purple;" onclick="setTheme('purple')"  aria-label="Встановити фіолетову тему"
+        title="Фіолетоватема"></button>
+<button class="circle" data-color="light" style="background:whitesmoke;" onclick="setTheme('light')"  aria-label="Встановити білу тему"
+        title="Біла тема"></button>
+<button class="circle" data-color="dark" style="background:black;" onclick="setTheme('dark')"  aria-label="Встановити чорну тему"
+        title="Чорна тема"></button>
 </div>
 <header class="header container">
 
@@ -68,33 +76,37 @@
 <!-- #endregion theme+header -->
 
  <!-- #region scroll -->
-  <div class="icon-scroll-back">
-    <a href="http://127.0.0.1:5501"> 
-      <span class="swim-scroll">
-        <svg class="hero-icon-scroll-down" width="15" height="15">
-        <use href="../img/sprite.svg#arrow-scroll-down"></use>
-      </svg>
-      </span>
-    </a>
-  </div>
+ <div>
+      <div class="icon-scroll-back">
+        <a href="/" aria-label="На головну" title="На головну">
+          <span class="swim-scroll">
+            <svg class="icon-scroll-svg" width="15" height="15">
+              <use href="../img/sprite.svg#arrow-scroll-down"></use>
+            </svg>
+          </span>
+        </a>
+      </div>
 
+      <div class="icon-scroll-up">
+        <a href="#top" aria-label="До початку сторінки" title="На початок сторінки">
+          <span class="swim-scroll">
+            <svg class="icon-scroll-svg" width="15" height="15">
+              <use href="../img/sprite.svg#arrow-scroll-down"></use>
+            </svg>
+          </span>
+        </a>
+      </div>
 
-  <div class="icon-scroll-up">
-<a href="#"> <span class="swim-scroll">
-              <svg class="hero-icon-scroll-down" width="15" height="15">
-                <use href="../img/sprite.svg#arrow-scroll-down"></use>
-              </svg>
-            </span>
-          </a>
-</div>
-<div class="icon-scroll-down">
-<a href="#Now"> <span class="swim-scroll">
-              <svg class="hero-icon-scroll-down" width="15" height="15">
-                <use href="../img/sprite.svg#arrow-scroll-down"></use>
-              </svg>
-            </span>
-          </a>
-</div>
+      <div class="icon-scroll-down">
+        <a href="#Now" aria-label="В кінець сторінки" title="В кінець сторінки">
+          <span class="swim-scroll">
+            <svg class="icon-scroll-svg" width="15" height="15">
+              <use href="../img/sprite.svg#arrow-scroll-down"></use>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
  <!-- endregion scroll -->
   
   <div class="wrap-content">

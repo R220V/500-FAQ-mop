@@ -1,84 +1,114 @@
-
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FAQ, Питання-відповіді для співбесіди">
-  <meta name="author" content="Козюбра Руслан">
-  <title>100 HTML...</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FAQ, Питання-відповіді для співбесіди" />
+    <meta name="author" content="Козюбра Руслан" />
+    <title>100 FAQ HTML...</title>
 
-  <!-- Підключення фавіконки -->
-  <link rel="icon" href="../icons/html.ico" type="image/x-icon">
-  <link rel="icon" href="../icons/html.png" type="image/png">
+    <!-- Підключення шрифта -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
 
-  <!-- Підключення скрипта -->
-  <script src="../script/script_theme.js" defer></script>
-  <script src="../script/script_search.js" defer></script>
-  <script src="../script/script_open_close.js" defer></script>
+    <!-- Підключення фавіконки -->
+    <link rel="icon" href="../icons/html.ico" type="image/x-icon" />
+    <link rel="icon" href="../icons/html.png" type="image/png" />
 
-      <!-- Підключення нормалайз -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css">
+    <!-- Підключення скрипта -->
+    <script src="../script/script_theme.js" defer></script>
+    <script src="../script/script_search.js" defer></script>
+    <script src="../script/script_open_close.js" defer></script>
 
-  <!-- Підключення CSS -->
-  <link rel="stylesheet" href="../css/style.css">
+    <!-- Підключення нормалайз -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" />
 
-</head>
-<body>
-
- <!-- #region theme+header -->
-<div class="theme-circle">
-<button class="circle" data-color="red" style="background:red;" onclick="setTheme('red')"  aria-label="Встановити червону тему"
-        title="Червона тема"></button>
-<button class="circle" data-color="orange" style="background:orange;" onclick="setTheme('orange')"  aria-label="Встановити помаранчеву тему"
-        title="Помаранчева тема"></button>
-<button class="circle" data-color="yellow" style="background:yellow;" onclick="setTheme('yellow')"  aria-label="Встановити жовту тему"
-        title="Жовта тема"></button>
-<button class="circle" data-color="green" style="background:green" onclick="setTheme('green')"  aria-label="Встановити зелену тему"
-        title="Зелена тема"></button>
-<button class="circle" data-color="skyblue" style="background:skyblue" onclick="setTheme('skyblue')"  aria-label="Встановити блакитну тему"
-        title="Блакитна тема"></button>
-<button class="circle" data-color="blue" style="background:blue;" onclick="setTheme('blue')"  aria-label="Встановити синю тему"
-        title="Синя тема"></button>
-<button class="circle" data-color="purple" style="background:purple;" onclick="setTheme('purple')"  aria-label="Встановити фіолетову тему"
-        title="Фіолетоватема"></button>
-<button class="circle" data-color="light" style="background:whitesmoke;" onclick="setTheme('light')"  aria-label="Встановити білу тему"
-        title="Біла тема"></button>
-<button class="circle" data-color="dark" style="background:black;" onclick="setTheme('dark')"  aria-label="Встановити чорну тему"
-        title="Чорна тема"></button>
-</div>
-<header class="header container">
-
-  <h1>Перевірка знань по темі "HTML"</h1>
-
-</div>
-    <!-- <ul class="header-menu">
-      <li class="header-item">
-        <a class="header-link" href="../pages/html.html">
-              <svg class="icon" width="24" height="24">
-                <use href="../icons/sprite-logo.svg#icon-html-5-logo-svg-1"></use>
-              </svg>
-            HTML 5 </a></li>
-      <li class="header-item"><a class="header-link" href="../pages/css.html"><svg class="icon" width="24" height="24">
-                <use href="../icons/sprite-logo.svg#icon-css-3"></use>
-              </svg>CSS</a></li>
-      <li class="header-item"><a class="header-link" href="../pages/java-script.html"><svg class="icon" width="24" height="24">
-                <use href="../icons/sprite-logo.svg#icon-javascript-1"></use>
-              </svg>Java Script</a></li>
-<li class="header-item"><a class="header-link" href="../pages/react.html"><svg class="icon" width="24" height="24">
-                <use href="../icons/sprite-logo.svg#icon-react-2"></use>
-              </svg>React</a></li>
- <li class="header-item"><a class="header-link" href="../pages/node.html"><svg class="icon" width="24" height="24">
-                <use href="../icons/sprite-logo.svg#icon-nodejs-2"></use>
-              </svg>Node</a></li>
- </ul> -->
- </header>
-<!-- #endregion theme+header -->
-
- <!-- #region scroll -->
- <div>
+    <!-- Підключення CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="header container" id="top">
+      <!-- #region theme -->
+      <div class="theme-circle">
+        <button
+          class="circle"
+          data-color="red"
+          style="background: red"
+          onclick="setTheme('red')"
+          aria-label="Встановити червону тему"
+          title="Червона тема"
+        ></button>
+        <button
+          class="circle"
+          data-color="orange"
+          style="background: orange"
+          onclick="setTheme('orange')"
+          aria-label="Встановити помаранчеву тему"
+          title="Помаранчева тема"
+        ></button>
+        <button
+          class="circle"
+          data-color="yellow"
+          style="background: yellow"
+          onclick="setTheme('yellow')"
+          aria-label="Встановити жовту тему"
+          title="Жовта тема"
+        ></button>
+        <button
+          class="circle"
+          data-color="green"
+          style="background: green"
+          onclick="setTheme('green')"
+          aria-label="Встановити зелену тему"
+          title="Зелена тема"
+        ></button>
+        <button
+          class="circle"
+          data-color="skyblue"
+          style="background: skyblue"
+          onclick="setTheme('skyblue')"
+          aria-label="Встановити блакитну тему"
+          title="Блакитна тема"
+        ></button>
+        <button
+          class="circle"
+          data-color="blue"
+          style="background: blue"
+          onclick="setTheme('blue')"
+          aria-label="Встановити синю тему"
+          title="Синя тема"
+        ></button>
+        <button
+          class="circle"
+          data-color="purple"
+          style="background: purple"
+          onclick="setTheme('purple')"
+          aria-label="Встановити фіолетову тему"
+          title="Фіолетоватема"
+        ></button>
+        <button
+          class="circle"
+          data-color="light"
+          style="background: whitesmoke"
+          onclick="setTheme('light')"
+          aria-label="Встановити білу тему"
+          title="Біла тема"
+        ></button>
+        <button
+          class="circle"
+          data-color="dark"
+          style="background: black"
+          onclick="setTheme('dark')"
+          aria-label="Встановити чорну тему"
+          title="Чорна тема"
+        ></button>
+      </div>
+      <!-- #endregion theme -->
+      <h1>Перевірка знань по темі "HTML"</h1>
+    </header>
+    <!-- #region scroll -->
+    <div>
       <div class="icon-scroll-back">
-        <a href="/" aria-label="На головну" title="На головну">
+        <a href="../index.html" aria-label="На головну" title="На головну">
           <span class="swim-scroll">
             <svg class="icon-scroll-svg" width="15" height="15">
               <use href="../img/sprite.svg#arrow-scroll-down"></use>
@@ -88,7 +118,7 @@
       </div>
 
       <div class="icon-scroll-up">
-        <a href="#top" aria-label="До початку сторінки" title="На початок сторінки">
+        <a href="#top" class="back-to-top" aria-label="До початку сторінки" title="На початок сторінки">
           <span class="swim-scroll">
             <svg class="icon-scroll-svg" width="15" height="15">
               <use href="../img/sprite.svg#arrow-scroll-down"></use>
@@ -98,7 +128,7 @@
       </div>
 
       <div class="icon-scroll-down">
-        <a href="#Now" aria-label="В кінець сторінки" title="В кінець сторінки">
+        <a href="#footer" aria-label="В кінець сторінки" title="В кінець сторінки">
           <span class="swim-scroll">
             <svg class="icon-scroll-svg" width="15" height="15">
               <use href="../img/sprite.svg#arrow-scroll-down"></use>
@@ -107,72 +137,80 @@
         </a>
       </div>
     </div>
- <!-- endregion scroll -->
-  
-  <div class="wrap-content">
-        <!-- <h2>HTML — Шпаргалка</h2> -->
-      <div class="tools">
-        <input id="q" type="search" placeholder="Пошук по питаннях і відповідях…" />
-        <button id="openAll" class="btn" type="button">Відкрити всі</button>
-        <button id="closeAll" class="btn" type="button">Закрити всі</button>
-      </div>
-  
 
-    <!-- 1 -->
-    <details class="faq">
-      <summary><span class="chev">▸</span> 1. Що означає абревіатура HTML і яке її призначення?</summary>
-      <div class="answer">
-        <p><strong>HTML</strong> — HyperText Markup Language, мова розмітки для структурування вмісту вебсторінок (текст, зображення, посилання тощо).</p>
-        <p>Призначення — описувати структуру та семантику контенту, який браузер відображає користувачу.</p>
-      </div>
-    </details>
+    <!-- #endregion scroll -->
+    <main class="container">
+      <div class="wrap-content">
+        <div class="input-buttons">
+          <input
+            id="q"
+            type="search"
+            placeholder="Пошук по питаннях і відповідях…"
+            aria-label="Поле пошуку по питаннях і відповідях"
+            title="Введіть ключове слово для пошуку"
+          />
 
-    <!-- 2 -->
-    <details class="faq">
-      <summary><span class="chev">▸</span> 2. Чим HTML відрізняється від CSS та JavaScript?</summary>
-      <div class="answer">
-        <ul>
-          <li><strong>HTML</strong> — описує структуру веб-сторінки.</li>
-          <li><strong>CSS</strong> — відповідає за оформлення і стиль.</li>
-          <li><strong>JavaScript</strong> — додає динаміку та інтерактивність.</li>
-        </ul>
-        <p>Разом вони формують основу фронтенд-розробки: HTML — кістяк, CSS — одяг, JavaScript — поведінка.</p>
-      </div>
-    </details>
+          <button id="openAll" class="btn" type="button" aria-label="Відкрити всі питання і відповіді" title="Розгорнути всі">Відкрити всі</button>
 
-    <!-- 3 -->
-    <details class="faq">
-      <summary><span class="chev">▸</span> 3. Що таке HTML теги?</summary>
-      <div class="answer">
-        <p>HTML теги — це інструкції (команди), які визначають структуру та зміст веб-сторінки. Теги пишуться у кутових дужках <code>&lt; &gt;</code>.</p>
-        <p>Більшість тегів мають відкриваючу та закриваючу частини:</p>
-        <pre><code>&lt;p&gt;Текст абзацу&lt;/p&gt;</code></pre>
-        <p>Деякі теги самозакриваючі:</p>
-        <pre><code>&lt;br /&gt;
+          <button id="closeAll" class="btn" type="button" aria-label="Закрити всі питання і відповіді" title="Згорнути всі">Закрити всі</button>
+        </div>
+      </div>
+      <div>
+        <!-- 1 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 1. Що означає абревіатура HTML і яке її призначення?</summary>
+          <div class="answer">
+            <p><strong>HTML</strong> — HyperText Markup Language, мова розмітки для структурування вмісту вебсторінок (текст, зображення, посилання тощо).</p>
+            <p>Призначення — описувати структуру та семантику контенту, який браузер відображає користувачу.</p>
+          </div>
+        </details>
+
+        <!-- 2 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 2. Чим HTML відрізняється від CSS та JavaScript?</summary>
+          <div class="answer">
+            <ul>
+              <li><strong>HTML</strong> — описує структуру веб-сторінки.</li>
+              <li><strong>CSS</strong> — відповідає за оформлення і стиль.</li>
+              <li><strong>JavaScript</strong> — додає динаміку та інтерактивність.</li>
+            </ul>
+            <p>Разом вони формують основу фронтенд-розробки: HTML — кістяк, CSS — одяг, JavaScript — поведінка.</p>
+          </div>
+        </details>
+
+        <!-- 3 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 3. Що таке HTML теги?</summary>
+          <div class="answer">
+            <p>HTML теги — це інструкції (команди), які визначають структуру та зміст веб-сторінки. Теги пишуться у кутових дужках <code>&lt; &gt;</code>.</p>
+            <p>Більшість тегів мають відкриваючу та закриваючу частини:</p>
+            <pre><code>&lt;p&gt;Текст абзацу&lt;/p&gt;</code></pre>
+            <p>Деякі теги самозакриваючі:</p>
+            <pre><code>&lt;br /&gt;
 &lt;img src="image.jpg" alt="Зображення" /&gt;</code></pre>
-        <p>Теги можуть мати атрибути:</p>
-        <pre><code>&lt;a href="https://example.com"&gt;Посилання&lt;/a&gt;</code></pre>
-      </div>
-    </details>
+            <p>Теги можуть мати атрибути:</p>
+            <pre><code>&lt;a href="https://example.com"&gt;Посилання&lt;/a&gt;</code></pre>
+          </div>
+        </details>
 
-    <!-- 4 -->
-    <details class="faq">
-      <summary><span class="chev">▸</span> 4. Що таке HTML елементи?</summary>
-      <div class="answer">
-        <p>HTML елемент — це відкриваючий тег + контент + закриваючий тег.</p>
-        <pre><code>&lt;tagname attribute="value"&gt;контент&lt;/tagname&gt;</code></pre>
-        <p>Приклади:</p>
-        <pre><code>&lt;h1&gt;Заголовок&lt;/h1&gt; — елемент заголовка
+        <!-- 4 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 4. Що таке HTML елементи?</summary>
+          <div class="answer">
+            <p>HTML елемент — це відкриваючий тег + контент + закриваючий тег.</p>
+            <pre><code>&lt;tagname attribute="value"&gt;контент&lt;/tagname&gt;</code></pre>
+            <p>Приклади:</p>
+            <pre><code>&lt;h1&gt;Заголовок&lt;/h1&gt; — елемент заголовка
 &lt;p&gt;Абзац тексту&lt;/p&gt; — елемент абзацу
 &lt;img src="photo.jpg" alt="Фото"&gt; — елемент зображення (самозакриваючий)</code></pre>
-      </div>
-    </details>
+          </div>
+        </details>
 
-    <!-- 5 -->
-    <details class="faq">
-      <summary><span class="chev">▸</span> 5. Опишіть базову структуру HTML-сторінки?</summary>
-      <div class="answer">
-        <pre><code>&lt;!DOCTYPE html&gt;
+        <!-- 5 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 5. Опишіть базову структуру HTML-сторінки?</summary>
+          <div class="answer">
+            <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
     &lt;meta charset="UTF-8" /&gt;
@@ -182,429 +220,461 @@
     &lt;!-- Вміст сторінки --&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-        <p><strong>Складові:</strong> <code>&lt;!DOCTYPE html&gt;</code> — HTML5; <code>&lt;html&gt;</code> — кореневий елемент; <code>&lt;head&gt;</code> — метадані; <code>&lt;body&gt;</code> — видимий контент.</p>
-      </div>
-    </details>
+            <p>
+              <strong>Складові:</strong> <code>&lt;!DOCTYPE html&gt;</code> — HTML5; <code>&lt;html&gt;</code> — кореневий елемент; <code>&lt;head&gt;</code> —
+              метадані; <code>&lt;body&gt;</code> — видимий контент.
+            </p>
+          </div>
+        </details>
 
-    <!-- 6 -->
-    <details class="faq">
-      <summary><span class="chev">▸</span> 6. Що таке DOCTYPE і навіщо його використовують?</summary>
-      <div class="answer">
-        <p><strong>DOCTYPE</strong> (Document Type Declaration) — декларація типу документа, яка повідомляє браузеру, яку версію HTML використовує сторінка.</p>
-        <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
-        <ul>
-          <li>Запобігає режиму сумісності (quirks mode).</li>
-          <li>Забезпечує коректне відображення згідно зі стандартами.</li>
-          <li>Має бути першим рядком документа.</li>
-        </ul>
-      </div>
-    </details>
+        <!-- 6 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 6. Що таке DOCTYPE і навіщо його використовують?</summary>
+          <div class="answer">
+            <p>
+              <strong>DOCTYPE</strong> (Document Type Declaration) — декларація типу документа, яка повідомляє браузеру, яку версію HTML використовує сторінка.
+            </p>
+            <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+            <ul>
+              <li>Запобігає режиму сумісності (quirks mode).</li>
+              <li>Забезпечує коректне відображення згідно зі стандартами.</li>
+              <li>Має бути першим рядком документа.</li>
+            </ul>
+          </div>
+        </details>
 
-    <!-- 7 -->
-    <details class="faq">
-      <summary><span class="chev">▸</span> 7. Яка поточна версія HTML?</summary>
-      <div class="answer">
-        <p>Поточна версія — <strong>HTML5</strong>. Це <em>Living Standard</em> (живий стандарт), що постійно оновлюється.</p>
-      </div>
-    </details>
+        <!-- 7 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 7. Яка поточна версія HTML?</summary>
+          <div class="answer">
+            <p>Поточна версія — <strong>HTML5</strong>. Це <em>Living Standard</em> (живий стандарт), що постійно оновлюється.</p>
+          </div>
+        </details>
 
-    <!-- 8 -->
-    <details class="faq">
-      <summary><span class="chev">▸</span> 8. Що роблять атрибути DOCTYPE та <code>html lang</code>?</summary>
-      <div class="answer">
-        <pre><code>&lt;!DOCTYPE html&gt;  — вказує стандарт HTML5
+        <!-- 8 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 8. Що роблять атрибути DOCTYPE та <code>html lang</code>?</summary>
+          <div class="answer">
+            <pre><code>&lt;!DOCTYPE html&gt;  — вказує стандарт HTML5
 &lt;html lang="uk"&gt; — вказує мову вмісту</code></pre>
-        <p>Покращують доступність, SEO та коректність відображення сторінки.</p>
-      </div>
-    </details>
+            <p>Покращують доступність, SEO та коректність відображення сторінки.</p>
+          </div>
+        </details>
 
-    <!-- 9 -->
-    <details class="faq">
-      <summary><span class="chev">▸</span> 9. Що описується в тегі <code>&lt;head&gt;</code>?</summary>
-      <div class="answer">
-        <p>Тег <code>&lt;head&gt;</code> містить метаінформацію про документ:</p>
-        <ul>
-          <li>Назва сторінки — <code>&lt;title&gt;</code></li>
-          <li>Мета-теги — <code>&lt;meta&gt;</code></li>
-          <li>Підключення стилів — <code>&lt;link&gt;</code></li>
-          <li>Скрипти — <code>&lt;script&gt;</code></li>
-          <li>Фавікон — <code>&lt;link rel="icon"&gt;</code></li>
-        </ul>
-        <pre><code>&lt;head&gt;
+        <!-- 9 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 9. Що описується в тегі <code>&lt;head&gt;</code>?</summary>
+          <div class="answer">
+            <p>Тег <code>&lt;head&gt;</code> містить метаінформацію про документ:</p>
+            <ul>
+              <li>Назва сторінки — <code>&lt;title&gt;</code></li>
+              <li>Мета-теги — <code>&lt;meta&gt;</code></li>
+              <li>Підключення стилів — <code>&lt;link&gt;</code></li>
+              <li>Скрипти — <code>&lt;script&gt;</code></li>
+              <li>Фавікон — <code>&lt;link rel="icon"&gt;</code></li>
+            </ul>
+            <pre><code>&lt;head&gt;
   &lt;meta charset="UTF-8" /&gt;
   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
   &lt;title&gt;Назва сторінки&lt;/title&gt;
   &lt;link rel="stylesheet" href="styles.css" /&gt;
   &lt;script src="script.js"&gt;&lt;/script&gt;
 &lt;/head&gt;</code></pre>
-      </div>
-    </details>
+          </div>
+        </details>
 
-    <!-- 10 -->
-    <details class="faq">
-      <summary><span class="chev">▸</span> 10. Яка різниця між тегами <code>&lt;head&gt;</code> та <code>&lt;body&gt;</code>?</summary>
-      <div class="answer">
-        <p><strong>&lt;head&gt;</strong> — метадані (не відображаються напряму). <strong>&lt;body&gt;</strong> — видимий контент (текст, зображення, кнопки тощо).</p>
-      </div>
-    </details>
+        <!-- 10 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 10. Яка різниця між тегами <code>&lt;head&gt;</code> та <code>&lt;body&gt;</code>?</summary>
+          <div class="answer">
+            <p>
+              <strong>&lt;head&gt;</strong> — метадані (не відображаються напряму). <strong>&lt;body&gt;</strong> — видимий контент (текст, зображення, кнопки
+              тощо).
+            </p>
+          </div>
+        </details>
 
-    <!-- <div class="section">Основи роботи з текстом і структурою</div> -->
+        <!-- <div class="section">Основи роботи з текстом і структурою</div> -->
 
-    <!-- 11 -->
-    <details class="faq">
-      <summary><span class="chev">▸</span> 11. Що таке пробільний простір в HTML?</summary>
-      <div class="answer">
-        <p>Пробільний простір — пробіли, табуляції та переноси рядків. Браузер зазвичай <em>схлопує</em> кілька пробілів до одного, кілька переносів — до пробілу; початкові та кінцеві пробіли ігноруються.</p>
-        <p>Приклад:</p>
-        <pre><code>&lt;p&gt;Цей     текст     має     багато пробілів&lt;/p&gt;</code></pre>
-        <p>Відображення: <code>Цей текст має багато пробілів</code></p>
-        <p>Щоб зберегти пробіли й переноси — CSS <code>white-space: pre</code> або тег <code>&lt;pre&gt;</code>.</p>
-      </div>
-    </details>
+        <!-- 11 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 11. Що таке пробільний простір в HTML?</summary>
+          <div class="answer">
+            <p>
+              Пробільний простір — пробіли, табуляції та переноси рядків. Браузер зазвичай <em>схлопує</em> кілька пробілів до одного, кілька переносів — до
+              пробілу; початкові та кінцеві пробіли ігноруються.
+            </p>
+            <p>Приклад:</p>
+            <pre><code>&lt;p&gt;Цей     текст     має     багато пробілів&lt;/p&gt;</code></pre>
+            <p>Відображення: <code>Цей текст має багато пробілів</code></p>
+            <p>Щоб зберегти пробіли й переноси — CSS <code>white-space: pre</code> або тег <code>&lt;pre&gt;</code>.</p>
+          </div>
+        </details>
 
-    <!-- 12 -->
-    <details class="faq">
-      <summary><span class="chev">▸</span> 12. Що таке порожні елементи в HTML?</summary>
-      <div class="answer">
-        <p>Порожні (void) елементи не мають контенту і закриваючого тега.</p>
-        <ul>
-          <li><code>&lt;br&gt;</code> — розрив рядка</li>
-          <li><code>&lt;hr&gt;</code> — горизонтальна лінія</li>
-          <li><code>&lt;img&gt;</code> — зображення</li>
-          <li><code>&lt;input&gt;</code> — поле вводу</li>
-          <li><code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code> — метадані/ресурси</li>
-        </ul>
-        <pre><code>&lt;img src="photo.jpg" alt="Фото" /&gt;
+        <!-- 12 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 12. Що таке порожні елементи в HTML?</summary>
+          <div class="answer">
+            <p>Порожні (void) елементи не мають контенту і закриваючого тега.</p>
+            <ul>
+              <li><code>&lt;br&gt;</code> — розрив рядка</li>
+              <li><code>&lt;hr&gt;</code> — горизонтальна лінія</li>
+              <li><code>&lt;img&gt;</code> — зображення</li>
+              <li><code>&lt;input&gt;</code> — поле вводу</li>
+              <li><code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code> — метадані/ресурси</li>
+            </ul>
+            <pre><code>&lt;img src="photo.jpg" alt="Фото" /&gt;
 &lt;br /&gt;
 &lt;input type="text" name="name" /&gt;</code></pre>
-      </div>
-    </details>
+          </div>
+        </details>
 
-    <!-- 13 -->
-    <details class="faq">
-      <summary><span class="chev">▸</span> 13. У чому різниця між елементами <code>&lt;div&gt;</code> і <code>&lt;span&gt;</code>?</summary>
-      <div class="answer">
-        <ul>
-          <li><code>&lt;div&gt;</code> — <em>блоковий</em> елемент (повна ширина, з нового рядка) — для великих блоків.</li>
-          <li><code>&lt;span&gt;</code> — <em>вбудований</em> елемент (лише потрібна ширина, в рядку) — для невеликих фрагментів.</li>
-        </ul>
-        <pre><code>&lt;div&gt;Це блоковий елемент&lt;/div&gt;
+        <!-- 13 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 13. У чому різниця між елементами <code>&lt;div&gt;</code> і <code>&lt;span&gt;</code>?</summary>
+          <div class="answer">
+            <ul>
+              <li><code>&lt;div&gt;</code> — <em>блоковий</em> елемент (повна ширина, з нового рядка) — для великих блоків.</li>
+              <li><code>&lt;span&gt;</code> — <em>вбудований</em> елемент (лише потрібна ширина, в рядку) — для невеликих фрагментів.</li>
+            </ul>
+            <pre><code>&lt;div&gt;Це блоковий елемент&lt;/div&gt;
 &lt;div&gt;Він займає всю ширину&lt;/div&gt;
 
 &lt;p&gt;Це &lt;span&gt;вбудований елемент&lt;/span&gt; всередині абзацу.&lt;/p&gt;</code></pre>
-      </div>
-    </details>
+          </div>
+        </details>
 
-    <!-- 14 -->
-    <details class="faq">
-      <summary><span class="chev">▸</span> 14. Яка різниця між тегами <code>&lt;b&gt;</code> та <code>&lt;strong&gt;</code>?</summary>
-      <div class="answer">
-        <p><code>&lt;b&gt;</code> — візуально жирний, без семантики. <code>&lt;strong&gt;</code> — жирний із семантичним акцентом (важливість, впливає на доступність).</p>
-        <pre><code>&lt;p&gt;Цей текст &lt;b&gt;жирний&lt;/b&gt; тільки візуально.&lt;/p&gt;
+        <!-- 14 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 14. Яка різниця між тегами <code>&lt;b&gt;</code> та <code>&lt;strong&gt;</code>?</summary>
+          <div class="answer">
+            <p>
+              <code>&lt;b&gt;</code> — візуально жирний, без семантики. <code>&lt;strong&gt;</code> — жирний із семантичним акцентом (важливість, впливає на
+              доступність).
+            </p>
+            <pre><code>&lt;p&gt;Цей текст &lt;b&gt;жирний&lt;/b&gt; тільки візуально.&lt;/p&gt;
 &lt;p&gt;Цей текст &lt;strong&gt;важливий&lt;/strong&gt; за змістом.&lt;/p&gt;</code></pre>
-      </div>
-    </details>
+          </div>
+        </details>
 
-    <!-- 15 -->
-    <details class="faq">
-      <summary><span class="chev">▸</span> 15. Коли використовувати <code>&lt;em&gt;</code> замість <code>&lt;i&gt;</code>?</summary>
-      <div class="answer">
-        <ul>
-          <li><code>&lt;em&gt;</code> — курсив із логічним/інтонаційним наголосом.</li>
-          <li><code>&lt;i&gt;</code> — курсив без семантики (назви, іншомовні слова, терміни).</li>
-        </ul>
-        <pre><code>&lt;p&gt;Я &lt;em&gt;дуже&lt;/em&gt; хочу це зробити!&lt;/p&gt;
+        <!-- 15 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 15. Коли використовувати <code>&lt;em&gt;</code> замість <code>&lt;i&gt;</code>?</summary>
+          <div class="answer">
+            <ul>
+              <li><code>&lt;em&gt;</code> — курсив із логічним/інтонаційним наголосом.</li>
+              <li><code>&lt;i&gt;</code> — курсив без семантики (назви, іншомовні слова, терміни).</li>
+            </ul>
+            <pre><code>&lt;p&gt;Я &lt;em&gt;дуже&lt;/em&gt; хочу це зробити!&lt;/p&gt;
 &lt;p&gt;Фільм &lt;i&gt;Титанік&lt;/i&gt; вийшов у 1997 році.&lt;/p&gt;
 &lt;p&gt;Слово &lt;i&gt;bonjour&lt;/i&gt; означає "привіт" французькою.&lt;/p&gt;</code></pre>
-      </div>
-    </details>
+          </div>
+        </details>
 
-    <!-- 16 -->
-    <details class="faq">
-      <summary><span class="chev">▸</span> 16. Призначення тегів <code>&lt;small&gt;</code>, <code>&lt;s&gt;</code> та <code>&lt;mark&gt;</code>?</summary>
-      <div class="answer">
-        <ul>
-          <li><code>&lt;small&gt;</code> — другорядна/додаткова інформація (менший текст).</li>
-          <li><code>&lt;s&gt;</code> — закреслений (втратив актуальність).</li>
-          <li><code>&lt;mark&gt;</code> — підсвічений фрагмент.</li>
-        </ul>
-        <pre><code>&lt;p&gt;Ціна: &lt;s&gt;100 грн&lt;/s&gt; 80 грн&lt;/p&gt;
+        <!-- 16 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 16. Призначення тегів <code>&lt;small&gt;</code>, <code>&lt;s&gt;</code> та <code>&lt;mark&gt;</code>?</summary>
+          <div class="answer">
+            <ul>
+              <li><code>&lt;small&gt;</code> — другорядна/додаткова інформація (менший текст).</li>
+              <li><code>&lt;s&gt;</code> — закреслений (втратив актуальність).</li>
+              <li><code>&lt;mark&gt;</code> — підсвічений фрагмент.</li>
+            </ul>
+            <pre><code>&lt;p&gt;Ціна: &lt;s&gt;100 грн&lt;/s&gt; 80 грн&lt;/p&gt;
 &lt;p&gt;&lt;mark&gt;Важливо:&lt;/mark&gt; Термін дії до 31 грудня.&lt;/p&gt;
 &lt;p&gt;Основний текст. &lt;small&gt;© 2023 Всі права захищені.&lt;/small&gt;&lt;/p&gt;</code></pre>
-      </div>
-    </details>
+          </div>
+        </details>
 
-    <!-- 17 -->
-    <details class="faq">
-      <summary><span class="chev">▸</span> 17. Як створити абзац або розрив рядка?</summary>
-      <div class="answer">
-        <p>Абзац:</p>
-        <pre><code>&lt;p&gt;Текст абзацу&lt;/p&gt;</code></pre>
-        <p>Розрив рядка:</p>
-        <pre><code>Текст першого рядка&lt;br /&gt;Текст другого рядка</code></pre>
-        <p><strong>Коли що:</strong> <code>&lt;p&gt;</code> — для абзаців; <code>&lt;br&gt;</code> — для примусового переносу в межах одного блоку (адреси, вірші). <span class="muted">(<code>&lt;br&gt;</code> — порожній тег)</span></p>
-      </div>
-    </details>
+        <!-- 17 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 17. Як створити абзац або розрив рядка?</summary>
+          <div class="answer">
+            <p>Абзац:</p>
+            <pre><code>&lt;p&gt;Текст абзацу&lt;/p&gt;</code></pre>
+            <p>Розрив рядка:</p>
+            <pre><code>Текст першого рядка&lt;br /&gt;Текст другого рядка</code></pre>
+            <p>
+              <strong>Коли що:</strong> <code>&lt;p&gt;</code> — для абзаців; <code>&lt;br&gt;</code> — для примусового переносу в межах одного блоку (адреси,
+              вірші). <span class="muted">(<code>&lt;br&gt;</code> — порожній тег)</span>
+            </p>
+          </div>
+        </details>
 
-    <!-- 18 -->
-    <details class="faq">
-      <summary><span class="chev">▸</span> 18. Для чого використовуються теги <code>&lt;sub&gt;</code> та <code>&lt;sup&gt;</code>?</summary>
-      <div class="answer">
-        <ul>
-          <li><code>&lt;sub&gt;</code> — підрядковий (нижче базової лінії).</li>
-          <li><code>&lt;sup&gt;</code> — надрядковий (вище базової лінії).</li>
-        </ul>
-        <pre><code>&lt;p&gt;H&lt;sub&gt;2&lt;/sub&gt;O — формула води&lt;/p&gt;
+        <!-- 18 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 18. Для чого використовуються теги <code>&lt;sub&gt;</code> та <code>&lt;sup&gt;</code>?</summary>
+          <div class="answer">
+            <ul>
+              <li><code>&lt;sub&gt;</code> — підрядковий (нижче базової лінії).</li>
+              <li><code>&lt;sup&gt;</code> — надрядковий (вище базової лінії).</li>
+            </ul>
+            <pre><code>&lt;p&gt;H&lt;sub&gt;2&lt;/sub&gt;O — формула води&lt;/p&gt;
 &lt;p&gt;E = mc&lt;sup&gt;2&lt;/sup&gt; — формула Ейнштейна&lt;/p&gt;
 &lt;p&gt;CO&lt;sub&gt;2&lt;/sub&gt; — вуглекислий газ&lt;/p&gt;
 &lt;p&gt;Цей факт&lt;sup&gt;1&lt;/sup&gt; потребує підтвердження.&lt;/p&gt;</code></pre>
-      </div>
-    </details>
+          </div>
+        </details>
 
-    <!-- 19 -->
-    <details class="faq">
-      <summary><span class="chev">▸</span> 19. Розкажіть про тег <code>&lt;samp&gt;</code>?</summary>
-      <div class="answer">
-        <p><code>&lt;samp&gt;</code> — позначає <em>результат</em> виконання програми (повідомлення, вивід). За замовчуванням рендериться моноширинним шрифтом.</p>
-        <pre><code>&lt;p&gt;Результат виконання: &lt;samp&gt;Помилка: Невірний ввід&lt;/samp&gt;&lt;/p&gt;
+        <!-- 19 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 19. Розкажіть про тег <code>&lt;samp&gt;</code>?</summary>
+          <div class="answer">
+            <p>
+              <code>&lt;samp&gt;</code> — позначає <em>результат</em> виконання програми (повідомлення, вивід). За замовчуванням рендериться моноширинним
+              шрифтом.
+            </p>
+            <pre><code>&lt;p&gt;Результат виконання: &lt;samp&gt;Помилка: Невірний ввід&lt;/samp&gt;&lt;/p&gt;
 &lt;p&gt;Командний рядок повернув: &lt;samp&gt;Hello World!&lt;/samp&gt;&lt;/p&gt;</code></pre>
-        <p>Пов’язані теги: <code>&lt;code&gt;</code> — фрагменти коду, <code>&lt;kbd&gt;</code> — клавіші, <code>&lt;var&gt;</code> — змінні.</p>
-      </div>
-    </details>
+            <p>Пов’язані теги: <code>&lt;code&gt;</code> — фрагменти коду, <code>&lt;kbd&gt;</code> — клавіші, <code>&lt;var&gt;</code> — змінні.</p>
+          </div>
+        </details>
 
-		<!-- 20 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 20. Що таке семантичні теги в HTML?</summary>
-  <div class="answer">
-    <p>Семантичні теги надають значення контенту, полегшують роботу браузеру, пошуковим системам та допоміжним технологіям.</p>
-    <ul>
-      <li><code>&lt;header&gt;</code> — шапка документа або секції</li>
-      <li><code>&lt;footer&gt;</code> — нижній колонтитул документа або секції</li>
-      <li><code>&lt;article&gt;</code> — самостійний блок контенту</li>
-      <li><code>&lt;section&gt;</code> — логічний розділ</li>
-      <li><code>&lt;nav&gt;</code> — навігаційне меню</li>
-    </ul>
-  </div>
-</details>
+        <!-- 20 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 20. Що таке семантичні теги в HTML?</summary>
+          <div class="answer">
+            <p>Семантичні теги надають значення контенту, полегшують роботу браузеру, пошуковим системам та допоміжним технологіям.</p>
+            <ul>
+              <li><code>&lt;header&gt;</code> — шапка документа або секції</li>
+              <li><code>&lt;footer&gt;</code> — нижній колонтитул документа або секції</li>
+              <li><code>&lt;article&gt;</code> — самостійний блок контенту</li>
+              <li><code>&lt;section&gt;</code> — логічний розділ</li>
+              <li><code>&lt;nav&gt;</code> — навігаційне меню</li>
+            </ul>
+          </div>
+        </details>
 
-<!-- 21 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 21. Для чого використовується тег <code>&lt;figure&gt;</code> та <code>&lt;figcaption&gt;</code>?</summary>
-  <div class="answer">
-    <p><code>&lt;figure&gt;</code> — контейнер для ілюстрацій, діаграм, фото тощо. <code>&lt;figcaption&gt;</code> — підпис до фігури.</p>
-    <pre><code>&lt;figure&gt;
+        <!-- 21 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 21. Для чого використовується тег <code>&lt;figure&gt;</code> та <code>&lt;figcaption&gt;</code>?</summary>
+          <div class="answer">
+            <p><code>&lt;figure&gt;</code> — контейнер для ілюстрацій, діаграм, фото тощо. <code>&lt;figcaption&gt;</code> — підпис до фігури.</p>
+            <pre><code>&lt;figure&gt;
   &lt;img src="photo.jpg" alt="Фото"&gt;
   &lt;figcaption&gt;Підпис до фото&lt;/figcaption&gt;
 &lt;/figure&gt;</code></pre>
-  </div>
-</details>
+          </div>
+        </details>
 
-<!-- 22 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 22. Що таке списки в HTML?</summary>
-  <div class="answer">
-    <p>HTML підтримує три основні типи списків:</p>
-    <ul>
-      <li><code>&lt;ul&gt;</code> — ненумерований список</li>
-      <li><code>&lt;ol&gt;</code> — нумерований список</li>
-      <li><code>&lt;dl&gt;</code> — список визначень (definition list)</li>
-    </ul>
-    <pre><code>&lt;ul&gt;
+        <!-- 22 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 22. Що таке списки в HTML?</summary>
+          <div class="answer">
+            <p>HTML підтримує три основні типи списків:</p>
+            <ul>
+              <li><code>&lt;ul&gt;</code> — ненумерований список</li>
+              <li><code>&lt;ol&gt;</code> — нумерований список</li>
+              <li><code>&lt;dl&gt;</code> — список визначень (definition list)</li>
+            </ul>
+            <pre><code>&lt;ul&gt;
   &lt;li&gt;Пункт 1&lt;/li&gt;
   &lt;li&gt;Пункт 2&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-  </div>
-</details>
+          </div>
+        </details>
 
-<!-- 23 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 23. Що таке атрибут <code>alt</code> у тегу <code>&lt;img&gt;</code>?</summary>
-  <div class="answer">
-    <p>Атрибут <code>alt</code> описує вміст зображення для доступності та SEO. Якщо зображення не завантажується, користувач побачить текст з <code>alt</code>.</p>
-    <pre><code>&lt;img src="logo.png" alt="Логотип компанії"&gt;</code></pre>
-  </div>
-</details>
+        <!-- 23 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 23. Що таке атрибут <code>alt</code> у тегу <code>&lt;img&gt;</code>?</summary>
+          <div class="answer">
+            <p>
+              Атрибут <code>alt</code> описує вміст зображення для доступності та SEO. Якщо зображення не завантажується, користувач побачить текст з
+              <code>alt</code>.
+            </p>
+            <pre><code>&lt;img src="logo.png" alt="Логотип компанії"&gt;</code></pre>
+          </div>
+        </details>
 
-<!-- 24 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 24. Що таке посилання в HTML?</summary>
-  <div class="answer">
-    <p>Посилання створюється тегом <code>&lt;a&gt;</code> з атрибутом <code>href</code>:</p>
-    <pre><code>&lt;a href="https://example.com"&gt;Відкрити сайт&lt;/a&gt;</code></pre>
-    <p>Атрибут <code>target="_blank"</code> відкриває посилання в новій вкладці.</p>
-  </div>
-</details>
+        <!-- 24 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 24. Що таке посилання в HTML?</summary>
+          <div class="answer">
+            <p>Посилання створюється тегом <code>&lt;a&gt;</code> з атрибутом <code>href</code>:</p>
+            <pre><code>&lt;a href="https://example.com"&gt;Відкрити сайт&lt;/a&gt;</code></pre>
+            <p>Атрибут <code>target="_blank"</code> відкриває посилання в новій вкладці.</p>
+          </div>
+        </details>
 
-<!-- 25 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 25. Що таке форма в HTML і які основні елементи вона містить?</summary>
-  <div class="answer">
-    <p>Форма збирає дані від користувача:</p>
-    <ul>
-      <li><code>&lt;form&gt;</code> — контейнер форми</li>
-      <li><code>&lt;input&gt;</code> — поле вводу</li>
-      <li><code>&lt;textarea&gt;</code> — текстове поле</li>
-      <li><code>&lt;button&gt;</code> — кнопка відправки</li>
-      <li><code>&lt;select&gt;</code> — випадаючий список</li>
-    </ul>
-    <pre><code>&lt;form action="/submit" method="post"&gt;
+        <!-- 25 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 25. Що таке форма в HTML і які основні елементи вона містить?</summary>
+          <div class="answer">
+            <p>Форма збирає дані від користувача:</p>
+            <ul>
+              <li><code>&lt;form&gt;</code> — контейнер форми</li>
+              <li><code>&lt;input&gt;</code> — поле вводу</li>
+              <li><code>&lt;textarea&gt;</code> — текстове поле</li>
+              <li><code>&lt;button&gt;</code> — кнопка відправки</li>
+              <li><code>&lt;select&gt;</code> — випадаючий список</li>
+            </ul>
+            <pre><code>&lt;form action="/submit" method="post"&gt;
   &lt;input type="text" name="name" /&gt;
   &lt;button type="submit"&gt;Відправити&lt;/button&gt;
 &lt;/form&gt;</code></pre>
-  </div>
-</details>
+          </div>
+        </details>
 
-<!-- 26 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 26. Що таке атрибут <code>id</code> і <code>class</code>?</summary>
-  <div class="answer">
-    <p>Атрибути для ідентифікації та стилізації елементів:</p>
-    <ul>
-      <li><code>id</code> — унікальний ідентифікатор елемента на сторінці</li>
-      <li><code>class</code> — група елементів з однаковим класом для стилізації або скриптів</li>
-    </ul>
-    <pre><code>&lt;div id="header"&gt;Шапка&lt;/div&gt;
+        <!-- 26 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 26. Що таке атрибут <code>id</code> і <code>class</code>?</summary>
+          <div class="answer">
+            <p>Атрибути для ідентифікації та стилізації елементів:</p>
+            <ul>
+              <li><code>id</code> — унікальний ідентифікатор елемента на сторінці</li>
+              <li><code>class</code> — група елементів з однаковим класом для стилізації або скриптів</li>
+            </ul>
+            <pre><code>&lt;div id="header"&gt;Шапка&lt;/div&gt;
 &lt;div class="card"&gt;Картка 1&lt;/div&gt;
 &lt;div class="card"&gt;Картка 2&lt;/div&gt;</code></pre>
-  </div>
-</details>
+          </div>
+        </details>
 
-<!-- 27 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 27. Що таке атрибут <code>title</code>?</summary>
-  <div class="answer">
-    <p>Атрибут <code>title</code> надає підказку при наведенні курсора на елемент:</p>
-    <pre><code>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</code></pre>
-    <p>Допомагає зрозуміти значення абревіатур та складних термінів.</p>
-  </div>
-</details>
+        <!-- 27 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 27. Що таке атрибут <code>title</code>?</summary>
+          <div class="answer">
+            <p>Атрибут <code>title</code> надає підказку при наведенні курсора на елемент:</p>
+            <pre><code>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</code></pre>
+            <p>Допомагає зрозуміти значення абревіатур та складних термінів.</p>
+          </div>
+        </details>
 
-<!-- 28 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 28. Що таке коментарі в HTML?</summary>
-  <div class="answer">
-    <p>Коментарі — це текст, який не відображається у браузері:</p>
-    <pre><code>&lt;!-- Це коментар --&gt;</code></pre>
-    <p>Використовуються для пояснень коду або тимчасового відключення фрагментів HTML.</p>
-  </div>
-</details>
+        <!-- 28 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 28. Що таке коментарі в HTML?</summary>
+          <div class="answer">
+            <p>Коментарі — це текст, який не відображається у браузері:</p>
+            <pre><code>&lt;!-- Це коментар --&gt;</code></pre>
+            <p>Використовуються для пояснень коду або тимчасового відключення фрагментів HTML.</p>
+          </div>
+        </details>
 
-<!-- 29 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 29. Що таке медіа-елементи в HTML?</summary>
-  <div class="answer">
-    <p>Медіа-елементи додають аудіо та відео на сторінку:</p>
-    <ul>
-      <li><code>&lt;audio&gt;</code> — для звуку</li>
-      <li><code>&lt;video&gt;</code> — для відео</li>
-    </ul>
-    <pre><code>&lt;audio controls&gt;
+        <!-- 29 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 29. Що таке медіа-елементи в HTML?</summary>
+          <div class="answer">
+            <p>Медіа-елементи додають аудіо та відео на сторінку:</p>
+            <ul>
+              <li><code>&lt;audio&gt;</code> — для звуку</li>
+              <li><code>&lt;video&gt;</code> — для відео</li>
+            </ul>
+            <pre><code>&lt;audio controls&gt;
   &lt;source src="music.mp3" type="audio/mpeg"&gt;
 &lt;/audio&gt;
 
 &lt;video width="320" height="240" controls&gt;
   &lt;source src="movie.mp4" type="video/mp4"&gt;
 &lt;/video&gt;</code></pre>
-  </div>
-</details>
+          </div>
+        </details>
 
-<!-- 30 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 30. Що таке фрейми та тег <code>&lt;iframe&gt;</code>?</summary>
-  <div class="answer">
-    <p><code>&lt;iframe&gt;</code> дозволяє вбудовувати інший HTML-документ всередині сторінки:</p>
-    <pre><code>&lt;iframe src="https://example.com" width="600" height="400"&gt;&lt;/iframe&gt;</code></pre>
-    <p>Використовується для вбудовування карт, відео, сторонніх сайтів тощо.</p>
-  </div>
-</details>
+        <!-- 30 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 30. Що таке фрейми та тег <code>&lt;iframe&gt;</code>?</summary>
+          <div class="answer">
+            <p><code>&lt;iframe&gt;</code> дозволяє вбудовувати інший HTML-документ всередині сторінки:</p>
+            <pre><code>&lt;iframe src="https://example.com" width="600" height="400"&gt;&lt;/iframe&gt;</code></pre>
+            <p>Використовується для вбудовування карт, відео, сторонніх сайтів тощо.</p>
+          </div>
+        </details>
 
-<!-- 31 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 31. Що таке тег <code>&lt;main&gt;</code> і для чого він використовується?</summary>
-  <div class="answer">
-    <p><code>&lt;main&gt;</code> — головний контент сторінки. Використовується один раз на сторінку і містить основну інформацію.</p>
-  </div>
-</details>
+        <!-- 31 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 31. Що таке тег <code>&lt;main&gt;</code> і для чого він використовується?</summary>
+          <div class="answer">
+            <p><code>&lt;main&gt;</code> — головний контент сторінки. Використовується один раз на сторінку і містить основну інформацію.</p>
+          </div>
+        </details>
 
-<!-- 32 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 32. Що таке <code>&lt;aside&gt;</code> і коли його використовують?</summary>
-  <div class="answer">
-    <p><code>&lt;aside&gt;</code> — бічний блок або додаткова інформація, що не є основним контентом (наприклад, сайдбар, рекламні блоки).</p>
-  </div>
-</details>
+        <!-- 32 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 32. Що таке <code>&lt;aside&gt;</code> і коли його використовують?</summary>
+          <div class="answer">
+            <p><code>&lt;aside&gt;</code> — бічний блок або додаткова інформація, що не є основним контентом (наприклад, сайдбар, рекламні блоки).</p>
+          </div>
+        </details>
 
-<!-- 33 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 33. Що таке <code>&lt;mark&gt;</code> і чим він відрізняється від <code>&lt;strong&gt;</code>?</summary>
-  <div class="answer">
-    <p><code>&lt;mark&gt;</code> — підсвічує текст (візуально), <code>&lt;strong&gt;</code> — підкреслює важливість семантично та візуально.</p>
-  </div>
-</details>
+        <!-- 33 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 33. Що таке <code>&lt;mark&gt;</code> і чим він відрізняється від <code>&lt;strong&gt;</code>?</summary>
+          <div class="answer">
+            <p><code>&lt;mark&gt;</code> — підсвічує текст (візуально), <code>&lt;strong&gt;</code> — підкреслює важливість семантично та візуально.</p>
+          </div>
+        </details>
 
-<!-- 34 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 34. Що таке <code>&lt;time&gt;</code> і як його правильно використовувати?</summary>
-  <div class="answer">
-    <p><code>&lt;time&gt;</code> — відображає дату або час. Має атрибут <code>datetime</code> для стандартизованого формату.</p>
-    <pre><code>&lt;time datetime="2025-09-04"&gt;4 вересня 2025&lt;/time&gt;</code></pre>
-  </div>
-</details>
+        <!-- 34 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 34. Що таке <code>&lt;time&gt;</code> і як його правильно використовувати?</summary>
+          <div class="answer">
+            <p><code>&lt;time&gt;</code> — відображає дату або час. Має атрибут <code>datetime</code> для стандартизованого формату.</p>
+            <pre><code>&lt;time datetime="2025-09-04"&gt;4 вересня 2025&lt;/time&gt;</code></pre>
+          </div>
+        </details>
 
-<!-- 35 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 35. Що таке <code>&lt;address&gt;</code> і де його доцільно розміщувати?</summary>
-  <div class="answer">
-    <p><code>&lt;address&gt;</code> — контактна інформація автора або організації. Використовується у <code>&lt;footer&gt;</code> або окремому блоці контакту.</p>
-  </div>
-</details>
+        <!-- 35 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 35. Що таке <code>&lt;address&gt;</code> і де його доцільно розміщувати?</summary>
+          <div class="answer">
+            <p>
+              <code>&lt;address&gt;</code> — контактна інформація автора або організації. Використовується у <code>&lt;footer&gt;</code> або окремому блоці
+              контакту.
+            </p>
+          </div>
+        </details>
 
-<!-- 36 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 36. Яка різниця між <code>&lt;section&gt;</code> та <code>&lt;article&gt;</code>?</summary>
-  <div class="answer">
-    <p><code>&lt;section&gt;</code> — логічний розділ контенту. <code>&lt;article&gt;</code> — самостійний, незалежний блок (новини, блог-пост, коментар).</p>
-  </div>
-</details>
+        <!-- 36 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 36. Яка різниця між <code>&lt;section&gt;</code> та <code>&lt;article&gt;</code>?</summary>
+          <div class="answer">
+            <p>
+              <code>&lt;section&gt;</code> — логічний розділ контенту. <code>&lt;article&gt;</code> — самостійний, незалежний блок (новини, блог-пост,
+              коментар).
+            </p>
+          </div>
+        </details>
 
-<!-- 37 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 37. Що таке <code>&lt;blockquote&gt;</code> і як його форматують?</summary>
-  <div class="answer">
-    <p><code>&lt;blockquote&gt;</code> — довга цитата. Може мати атрибут <code>cite</code> для джерела.</p>
-  </div>
-</details>
+        <!-- 37 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 37. Що таке <code>&lt;blockquote&gt;</code> і як його форматують?</summary>
+          <div class="answer">
+            <p><code>&lt;blockquote&gt;</code> — довга цитата. Може мати атрибут <code>cite</code> для джерела.</p>
+          </div>
+        </details>
 
-<!-- 38 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 38. Що таке <code>&lt;cite&gt;</code> і коли його застосовують?</summary>
-  <div class="answer">
-    <p><code>&lt;cite&gt;</code> — посилання на джерело, назву книги, статті або роботи. Використовується всередині цитат.</p>
-  </div>
-</details>
+        <!-- 38 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 38. Що таке <code>&lt;cite&gt;</code> і коли його застосовують?</summary>
+          <div class="answer">
+            <p><code>&lt;cite&gt;</code> — посилання на джерело, назву книги, статті або роботи. Використовується всередині цитат.</p>
+          </div>
+        </details>
 
-<!-- 39 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 39. Як використовувати <code>&lt;q&gt;</code> для коротких цитат?</summary>
-  <div class="answer">
-    <p><code>&lt;q&gt;</code> — для коротких цитат у тексті. Браузер автоматично додає лапки.</p>
-    <pre><code>&lt;p&gt;Він сказав: &lt;q&gt;Привіт!&lt;/q&gt;&lt;/p&gt;</code></pre>
-  </div>
-</details>
+        <!-- 39 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 39. Як використовувати <code>&lt;q&gt;</code> для коротких цитат?</summary>
+          <div class="answer">
+            <p><code>&lt;q&gt;</code> — для коротких цитат у тексті. Браузер автоматично додає лапки.</p>
+            <pre><code>&lt;p&gt;Він сказав: &lt;q&gt;Привіт!&lt;/q&gt;&lt;/p&gt;</code></pre>
+          </div>
+        </details>
 
-<!-- 40 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 40. Що таке <code>&lt;details&gt;</code> та <code>&lt;summary&gt;</code> і як їх правильно поєднувати?</summary>
-  <div class="answer">
-    <p><code>&lt;details&gt;</code> — розкривний блок, <code>&lt;summary&gt;</code> — заголовок, який відображається завжди. Використовуються разом для FAQ чи прихованого контенту.</p>
-  </div>
-</details>
+        <!-- 40 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 40. Що таке <code>&lt;details&gt;</code> та <code>&lt;summary&gt;</code> і як їх правильно поєднувати?</summary>
+          <div class="answer">
+            <p>
+              <code>&lt;details&gt;</code> — розкривний блок, <code>&lt;summary&gt;</code> — заголовок, який відображається завжди. Використовуються разом для
+              FAQ чи прихованого контенту.
+            </p>
+          </div>
+        </details>
 
-<!-- 41 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 41. Як створити вкладені списки в HTML?</summary>
-  <div class="answer">
-    <pre><code>&lt;ul&gt;
+        <!-- 41 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 41. Як створити вкладені списки в HTML?</summary>
+          <div class="answer">
+            <pre><code>&lt;ul&gt;
   &lt;li&gt;Пункт 1
     &lt;ul&gt;
       &lt;li&gt;Підпункт 1&lt;/li&gt;
@@ -613,827 +683,1244 @@
   &lt;/li&gt;
   &lt;li&gt;Пункт 2&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-  </div>
-</details>
+          </div>
+        </details>
 
-<!-- 42 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 42. Чим відрізняється <code>&lt;ul&gt;</code> від <code>&lt;ol&gt;</code>?</summary>
-  <div class="answer">
-    <p><code>&lt;ul&gt;</code> — ненумерований список, <code>&lt;ol&gt;</code> — нумерований список. Використовуються для різних контекстів.</p>
-  </div>
-</details>
+        <!-- 42 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 42. Чим відрізняється <code>&lt;ul&gt;</code> від <code>&lt;ol&gt;</code>?</summary>
+          <div class="answer">
+            <p><code>&lt;ul&gt;</code> — ненумерований список, <code>&lt;ol&gt;</code> — нумерований список. Використовуються для різних контекстів.</p>
+          </div>
+        </details>
 
-<!-- 43 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 43. Що таке <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code> та <code>&lt;dd&gt;</code> і як їх використовувати?</summary>
-  <div class="answer">
-    <p><code>&lt;dl&gt;</code> — список визначень, <code>&lt;dt&gt;</code> — термін, <code>&lt;dd&gt;</code> — визначення.</p>
-    <pre><code>&lt;dl&gt;
+        <!-- 43 -->
+        <details class="faq">
+          <summary>
+            <span class="chev">▸</span> 43. Що таке <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code> та <code>&lt;dd&gt;</code> і як їх використовувати?
+          </summary>
+          <div class="answer">
+            <p><code>&lt;dl&gt;</code> — список визначень, <code>&lt;dt&gt;</code> — термін, <code>&lt;dd&gt;</code> — визначення.</p>
+            <pre><code>&lt;dl&gt;
   &lt;dt&gt;HTML&lt;/dt&gt;
   &lt;dd&gt;Мова розмітки&lt;/dd&gt;
 &lt;/dl&gt;</code></pre>
-  </div>
-</details>
+          </div>
+        </details>
 
-<!-- 44 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 44. Як створити просту таблицю за допомогою <code>&lt;table&gt;</code>?</summary>
-  <div class="answer">
-    <pre><code>&lt;table&gt;
+        <!-- 44 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 44. Як створити просту таблицю за допомогою <code>&lt;table&gt;</code>?</summary>
+          <div class="answer">
+            <pre><code>&lt;table&gt;
   &lt;tr&gt;&lt;th&gt;Ім'я&lt;/th&gt;&lt;th&gt;Вік&lt;/th&gt;&lt;/tr&gt;
   &lt;tr&gt;&lt;td&gt;Оля&lt;/td&gt;&lt;td&gt;25&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;</code></pre>
-  </div>
-</details>
+          </div>
+        </details>
 
-<!-- 45 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 45. Що таке <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> та <code>&lt;tfoot&gt;</code> у таблицях?</summary>
-  <div class="answer">
-    <p>Розділяють таблицю на заголовок (<code>&lt;thead&gt;</code>), тіло (<code>&lt;tbody&gt;</code>) та нижню частину (<code>&lt;tfoot&gt;</code>).</p>
-  </div>
-</details>
+        <!-- 45 -->
+        <details class="faq">
+          <summary>
+            <span class="chev">▸</span> 45. Що таке <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> та <code>&lt;tfoot&gt;</code> у таблицях?
+          </summary>
+          <div class="answer">
+            <p>
+              Розділяють таблицю на заголовок (<code>&lt;thead&gt;</code>), тіло (<code>&lt;tbody&gt;</code>) та нижню частину (<code>&lt;tfoot&gt;</code>).
+            </p>
+          </div>
+        </details>
 
-<!-- 46 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 46. Як використовувати атрибут <code>colspan</code> та <code>rowspan</code> у таблицях?</summary>
-  <div class="answer">
-    <p>Атрибути дозволяють об’єднувати стовпці та рядки:</p>
-    <pre><code>&lt;td colspan="2"&gt;Об'єднані стовпці&lt;/td&gt;
+        <!-- 46 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 46. Як використовувати атрибут <code>colspan</code> та <code>rowspan</code> у таблицях?</summary>
+          <div class="answer">
+            <p>Атрибути дозволяють об’єднувати стовпці та рядки:</p>
+            <pre><code>&lt;td colspan="2"&gt;Об'єднані стовпці&lt;/td&gt;
 &lt;td rowspan="2"&gt;Об'єднані рядки&lt;/td&gt;</code></pre>
-  </div>
-</details>
-
-<!-- 47 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 47. Що таке <code>&lt;caption&gt;</code> у таблиці і навіщо він потрібен?</summary>
-  <div class="answer">
-    <p><code>&lt;caption&gt;</code> — підпис таблиці, який описує її зміст. Розміщується всередині <code>&lt;table&gt;</code> перед рядками.</p>
-  </div>
-</details>
-
-<!-- 48 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 48. Як додати форми з <code>&lt;form&gt;</code> та <code>&lt;fieldset&gt;</code>?</summary>
-  <div class="answer">
-    <p><code>&lt;form&gt;</code> — контейнер для вводу даних. <code>&lt;fieldset&gt;</code> групує пов’язані поля, <code>&lt;legend&gt;</code> дає заголовок групи.</p>
-  </div>
-</details>
-
-<!-- 49 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 49. Що таке <code>&lt;label&gt;</code> і як він взаємодіє з <code>&lt;input&gt;</code>?</summary>
-  <div class="answer">
-    <p><code>&lt;label for="id"&gt;Текст&lt;/label&gt;</code> пов’язує підпис з полем вводу через атрибут <code>id</code> для кращої доступності.</p>
-  </div>
-</details>
-
-<!-- 50 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 50. Які типи полів <code>&lt;input&gt;</code> існують і для чого вони потрібні?</summary>
-  <div class="answer">
-    <ul>
-      <li><code>text</code> — звичайний текст</li>
-      <li><code>password</code> — пароль</li>
-      <li><code>email</code> — email</li>
-      <li><code>number</code> — числове значення</li>
-      <li><code>checkbox</code>, <code>radio</code> — прапорці та радіо-кнопки</li>
-      <li><code>submit</code> — кнопка відправки</li>
-      <li><code>file</code> — вибір файлу</li>
-    </ul>
-  </div>
-</details>
-
-
-<!-- 51 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 51. Що таке <code>&lt;img&gt;</code> і які основні атрибути він підтримує?</summary>
-  <div class="answer">
-    <p><code>&lt;img&gt;</code> вставляє зображення. Основні атрибути: <code>src</code> — шлях до зображення, <code>alt</code> — альтернативний текст, <code>width</code>, <code>height</code>.</p>
-  </div>
-</details>
-
-<!-- 52 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 52. Що таке <code>&lt;picture&gt;</code> і як він допомагає адаптивним зображенням?</summary>
-  <div class="answer">
-    <p><code>&lt;picture&gt;</code> дозволяє задавати різні джерела зображень для різних розмірів екрану через <code>&lt;source&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 53 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 53. Що таке <code>&lt;audio&gt;</code> і як додати альтернативні формати аудіо?</summary>
-  <div class="answer">
-    <p><code>&lt;audio controls&gt;</code> додає аудіо. Для підтримки всіх браузерів додають кілька <code>&lt;source&gt;</code> з різними форматами.</p>
-  </div>
-</details>
-
-<!-- 54 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 54. Що таке <code>&lt;video&gt;</code> і як працює атрибут <code>controls</code>?</summary>
-  <div class="answer">
-    <p><code>&lt;video controls&gt;</code> — відео з елементами керування: відтворити, пауза, гучність.</p>
-  </div>
-</details>
-
-<!-- 55 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 55. Як вставити зовнішнє відео за допомогою <code>&lt;iframe&gt;</code>?</summary>
-  <div class="answer">
-    <pre><code>&lt;iframe src="https://www.youtube.com/embed/VIDEO_ID" width="560" height="315" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
-  </div>
-</details>
-
-<!-- 56 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 56. Що таке <code>&lt;source&gt;</code> і де його використовують?</summary>
-  <div class="answer">
-    <p><code>&lt;source&gt;</code> використовується всередині <code>&lt;audio&gt;</code> або <code>&lt;video&gt;</code> для підключення альтернативних форматів.</p>
-  </div>
-</details>
-
-<!-- 57 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 57. Як працює <code>&lt;track&gt;</code> для субтитрів у відео?</summary>
-  <div class="answer">
-    <p><code>&lt;track kind="subtitles" src="subtitles.vtt" srclang="ua" label="Українська"&gt;</code> додає субтитри до відео.</p>
-  </div>
-</details>
-
-<!-- 58 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 58. Що таке <code>&lt;canvas&gt;</code> і як створювати графіку за допомогою нього?</summary>
-  <div class="answer">
-    <p><code>&lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;</code> дозволяє малювати графіку через JavaScript.</p>
-  </div>
-</details>
-
-<!-- 59 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 59. Що таке <code>&lt;svg&gt;</code> і коли краще використовувати замість <code>&lt;img&gt;</code>?</summary>
-  <div class="answer">
-    <p><code>&lt;svg&gt;</code> — векторна графіка. Краще для логотипів, іконок та анімацій, де важлива масштабованість без втрати якості.</p>
-  </div>
-</details>
-
-<!-- 60 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 60. Що таке <code>&lt;map&gt;</code> та <code>&lt;area&gt;</code> і як вони створюють клікабельні зони на зображенні?</summary>
-  <div class="answer">
-    <p>Створюють інтерактивні зони на зображенні. <code>&lt;map name="mapName"&gt;</code> містить <code>&lt;area shape="rect" coords="x1,y1,x2,y2" href="#"&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 61 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 61. Що таке абсолютні та відносні посилання?</summary>
-  <div class="answer">
-    <p>Абсолютні: повний URL (https://...). Відносні: шлях від поточної сторінки (./index.html, ../page.html).</p>
-  </div>
-</details>
-
-<!-- 62 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 62. Як використовувати <code>&lt;a&gt;</code> з <code>target="_blank"</code> і <code>rel="noopener"</code>?</summary>
-  <div class="answer">
-    <p>Відкриває посилання у новій вкладці. <code>rel="noopener"</code> підвищує безпеку та швидкодію.</p>
-  </div>
-</details>
-
-<!-- 63 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 63. Що таке якорі (<code>#id</code>) і як на них посилатися?</summary>
-  <div class="answer">
-    <p>Позначка в документі. Посилання: <code>&lt;a href="#section1"&gt;Перейти&lt;/a&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 64 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 64. Що таке маршрутизація через <code>&lt;base&gt;</code>?</summary>
-  <div class="answer">
-    <p><code>&lt;base href="https://example.com/"&gt;</code> встановлює базовий URL для всіх відносних посилань на сторінці.</p>
-  </div>
-</details>
-
-<!-- 65 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 65. Як створювати кнопки з <code>&lt;button&gt;</code> та <code>&lt;input type="button"&gt;</code>?</summary>
-  <div class="answer">
-    <p><code>&lt;button&gt;Натисни&lt;/button&gt;</code> або <code>&lt;input type="button" value="Натисни"&gt;</code>. Обидва створюють кнопки, але <code>&lt;button&gt;</code> гнучкіший у розмітці.</p>
-  </div>
-</details>
-
-<!-- 66 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 66. Що таке <code>&lt;nav&gt;</code> і для чого він потрібен?</summary>
-  <div class="answer">
-    <p>Семантичний блок для навігації по сайту. Може містити списки посилань (<code>&lt;ul&gt;&lt;li&gt;&lt;a&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</code>).</p>
-  </div>
-</details>
-
-<!-- 67 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 67. Як працюють списки навігації з <code>&lt;ul&gt;</code> і <code>&lt;li&gt;</code> у <code>&lt;nav&gt;</code>?</summary>
-  <div class="answer">
-    <p>Створюють структуроване меню: <code>&lt;nav&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="#"&gt;Посилання&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 68 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 68. Що таке <code>&lt;menu&gt;</code> та <code>&lt;menuitem&gt;</code> і чи актуально їх використовувати?</summary>
-  <div class="answer">
-    <p>За старим стандартом створювали меню. Сьогодні майже не використовуються через погану підтримку браузерами.</p>
-  </div>
-</details>
-
-<!-- 69 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 69. Як створити “кнопку назад” за допомогою HTML та JavaScript?</summary>
-  <div class="answer">
-    <p><code>&lt;button onclick="history.back()"&gt;Назад&lt;/button&gt;</code> повертає на попередню сторінку.</p>
-  </div>
-</details>
-
-<!-- 70 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 70. Що таке <code>&lt;link&gt;</code> і як він підключає стилі та інші ресурси?</summary>
-  <div class="answer">
-    <p><code>&lt;link rel="stylesheet" href="style.css"&gt;</code> підключає CSS. Може використовуватися для фавіконів, prefetch, альтернативних ресурсів.</p>
-  </div>
-</details>
-
-<!-- 71 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 71. Що таке <code>&lt;meta charset&gt;</code> і навіщо його вказувати?</summary>
-  <div class="answer">
-    <p>Встановлює кодування сторінки (зазвичай UTF-8) для правильного відображення символів.</p>
-  </div>
-</details>
-
-<!-- 72 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 72. Що таке <code>&lt;meta name="viewport"&gt;</code> і як він впливає на мобільні пристрої?</summary>
-  <div class="answer">
-    <p>Контролює масштаб та ширину сторінки на мобільних пристроях, наприклад: <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 73 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 73. Що таке <code>&lt;meta name="description"&gt;</code> для SEO?</summary>
-  <div class="answer">
-    <p>Короткий опис сторінки, який відображається в результатах пошуку. Допомагає пошуковим системам зрозуміти зміст.</p>
-  </div>
-</details>
-
-<!-- 74 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 74. Що таке <code>&lt;meta name="keywords"&gt;</code> і чи варто його використовувати?</summary>
-  <div class="answer">
-    <p>Список ключових слів для SEO. Сьогодні мало впливає на пошукові системи, тому використання необов’язкове.</p>
-  </div>
-</details>
-
-<!-- 75 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 75. Як працює <code>&lt;meta http-equiv&gt;</code> і які типи є?</summary>
-  <div class="answer">
-    <p>Дозволяє встановлювати заголовки HTTP через HTML, наприклад: <code>Content-Type</code>, <code>refresh</code>, <code>X-UA-Compatible</code>.</p>
-  </div>
-</details>
-
-<!-- 76 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 76. Що таке <code>&lt;title&gt;</code> і де його найкраще розміщувати?</summary>
-  <div class="answer">
-    <p>Задає заголовок вкладки/сторінки. Розміщується всередині <code>&lt;head&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 77 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 77. Що таке фавікон і як його додати за допомогою <code>&lt;link rel="icon"&gt;</code>?</summary>
-  <div class="answer">
-    <p>Маленька іконка сайту у вкладці браузера: <code>&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 78 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 78. Як підключити веб-шрифти за допомогою <code>&lt;link&gt;</code> або <code>&lt;style&gt;</code>?</summary>
-  <div class="answer">
-    <p>Через Google Fonts: <code>&lt;link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 79 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 79. Що таке <code>&lt;base&gt;</code> і як він впливає на посилання в документі?</summary>
-  <div class="answer">
-    <p>Встановлює базовий URL для всіх відносних посилань: <code>&lt;base href="https://example.com/"&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 80 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 80. Як використовувати <code>&lt;noscript&gt;</code> для альтернативного контенту?</summary>
-  <div class="answer">
-    <p>Відображає контент, якщо у користувача вимкнено JavaScript: <code>&lt;noscript&gt;Включіть JS&lt;/noscript&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 81 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 81. Що таке атрибут <code>hidden</code> і як він працює?</summary>
-  <div class="answer">
-    <p>Приховує елемент на сторінці: <code>&lt;div hidden&gt;Схований блок&lt;/div&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 82 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 82. Що таке <code>data-*</code> атрибути і для чого вони потрібні?</summary>
-  <div class="answer">
-    <p>Зберігають власні дані для JavaScript: <code>&lt;div data-id="123"&gt;&lt;/div&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 83 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 83. Як працює <code>contenteditable</code> і де його застосовують?</summary>
-  <div class="answer">
-    <p>Дозволяє редагувати текст елемента напряму на сторінці: <code>&lt;div contenteditable&gt;Редагуй мене&lt;/div&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 84 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 84. Що таке <code>draggable</code> і як додати перетягування елементів?</summary>
-  <div class="answer">
-    <p>Дозволяє перетягування елементів: <code>&lt;div draggable="true"&gt;Перетягни мене&lt;/div&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 85 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 85. Як використовувати <code>tabindex</code> для управління фокусом?</summary>
-  <div class="answer">
-    <p>Встановлює порядок фокусування через Tab: <code>&lt;button tabindex="1"&gt;Перша&lt;/button&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 86 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 86. Що таке ARIA-атрибути і як вони покращують доступність?</summary>
-  <div class="answer">
-    <p>ARIA додає семантику для допоміжних технологій: <code>role="button"</code>, <code>aria-label="Опис кнопки"</code>.</p>
-  </div>
-</details>
-
-<!-- 87 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 87. Що таке <code>spellcheck</code> і як його використовувати в текстових полях?</summary>
-  <div class="answer">
-    <p>Увімкнення перевірки орфографії: <code>&lt;input type="text" spellcheck="true"&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 88 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 88. Як працює атрибут <code>autofocus</code>?</summary>
-  <div class="answer">
-    <p>Автоматично встановлює фокус на елемент при завантаженні сторінки: <code>&lt;input autofocus&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 89 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 89. Що таке <code>required</code> у формах і як він контролює обов’язковість полів?</summary>
-  <div class="answer">
-    <p>Змушує користувача заповнити поле перед відправкою форми: <code>&lt;input required&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 90 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 90. Що таке <code>readonly</code> та <code>disabled</code> і в чому різниця між ними?</summary>
-  <div class="answer">
-    <p><code>readonly</code> — поле можна виділити, але не редагувати. <code>disabled</code> — поле неактивне і не відправляється з формою.</p>
-  </div>
-</details>
-
-<!-- 91 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 91. Як створити адаптивну картинку за допомогою атрибутів <code>srcset</code> і <code>sizes</code>?</summary>
-  <div class="answer">
-    <p>Вказує різні зображення для різних розмірів екранів: <code>&lt;img src="small.jpg" srcset="medium.jpg 600w, large.jpg 1200w" sizes="(max-width: 600px) 100vw, 50vw"&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 92 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 92. Що таке <code>lazy loading</code> для зображень?</summary>
-  <div class="answer">
-    <p>Відкладене завантаження зображень для швидшого відображення сторінки: <code>&lt;img loading="lazy"&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 93 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 93. Як створювати чекбокси та радіокнопки у формі?</summary>
-  <div class="answer">
-    <p>Чекбокси: <code>&lt;input type="checkbox"&gt;</code>, радіо: <code>&lt;input type="radio" name="group"&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 94 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 94. Що таке <code>&lt;progress&gt;</code> і як його використовувати?</summary>
-  <div class="answer">
-    <p>Відображає прогрес: <code>&lt;progress value="50" max="100"&gt;&lt;/progress&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 95 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 95. Що таке <code>&lt;meter&gt;</code> і для чого він потрібен?</summary>
-  <div class="answer">
-    <p>Показує рівень або міру чогось: <code>&lt;meter value="0.6"&gt;60%&lt;/meter&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 96 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 96. Як додати фавікон різних форматів для всіх пристроїв?</summary>
-  <div class="answer">
-    <p>Використовують різні <code>&lt;link rel="icon"&gt;</code> та <code>rel="apple-touch-icon"</code> для iOS та Android.</p>
-  </div>
-</details>
-
-<!-- 97 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 97. Що таке <code>iframe sandbox</code> і як він підвищує безпеку?</summary>
-  <div class="answer">
-    <p>Атрибут <code>sandbox</code> обмежує функції в <code>&lt;iframe&gt;</code> (JS, форми, плагіни) для безпеки.</p>
-  </div>
-</details>
-
-<!-- 98 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 98. Як створити спойлер або розкривний блок за допомогою <code>&lt;details&gt;</code>?</summary>
-  <div class="answer">
-    <p>Створює блок, що можна відкривати/закривати: <code>&lt;details&gt;&lt;summary&gt;Показати&lt;/summary&gt;Контент&lt;/details&gt;</code>.</p>
-  </div>
-</details>
-
-<!-- 99 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 99. Як додати елементи для друку сторінки за допомогою CSS?</summary>
-  <div class="answer">
-    <p>Використовують медіа-запит <code>@media print { ... }</code> для стилів друку.</p>
-  </div>
-</details>
-
-<!-- 100 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 100. Як зробити сторінку доступною для людей з обмеженими можливостями?</summary>
-  <div class="answer">
-    <p>Використовують семантичні теги, ARIA-атрибути, контрастний текст, альтернативні описи для зображень, правильну навігацію клавіатурою.</p>
-  </div>
-</details>
-
-
-<details class="faq">
-  <summary><span class="chev">▸</span> Що робить <code>font-size: clamp(22px, 3.2vw, 32px);</code>?</summary>
-  <div class="answer">
-    <p>Властивість <code>clamp(MIN, PREFERRED, MAX)</code> задає значення, яке завжди буде між мінімумом і максимумом.</p>
-    <pre><code>font-size: clamp(22px, 3.2vw, 32px);</code></pre>
-    <ul>
-      <li><strong>22px</strong> → мінімальний розмір (менше ніколи не стане)</li>
-      <li><strong>3.2vw</strong> → бажане (динамічне, залежить від ширини вікна)</li>
-      <li><strong>32px</strong> → максимальний розмір (більше не виросте)</li>
-    </ul>
-    <p>Шрифт гнучко підлаштовується під екран:  
-      від 22px до 32px, а між ними масштабується через <code>vw</code>.</p>
-      <p>1vw = 1% від ширини вікна браузера (viewport width).</p>
-<p>Якщо ширина вікна = 1000px, тоді 1vw = 10px.</p>
-<p>Якщо ширина вікна = 500px, тоді 1vw = 5px.</p>
-  </div>
-</details>
-
-
-<!-- 1 -->
-<details class="faq"><summary><span class="chev">▸</span> 1. Що таке HTML?</summary><div class="answer"><p>HTML (HyperText Markup Language) — це стандартна мова розмітки для створення веб-сторінок.</p></div></details>
-
-<!-- 2 -->
-<details class="faq"><summary><span class="chev">▸</span> 2. З чого складається HTML-документ?</summary><div class="answer"><p>HTML-документ складається з <code>&lt;!DOCTYPE&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> та <code>&lt;body&gt;</code>.</p></div></details>
-
-<!-- 3 -->
-<details class="faq"><summary><span class="chev">▸</span> 3. Що таке тег?</summary><div class="answer"><p>Тег — це елемент розмітки HTML, який описує структуру та зміст документа.</p></div></details>
-
-<!-- 4 -->
-<details class="faq"><summary><span class="chev">▸</span> 4. Що таке атрибут у HTML?</summary><div class="answer"><p>Атрибут додає додаткову інформацію до елемента, наприклад <code>href</code> для <code>&lt;a&gt;</code>.</p></div></details>
-
-<!-- 5 -->
-<details class="faq"><summary><span class="chev">▸</span> 5. Які є типи тегів у HTML?</summary><div class="answer"><p>Парні (мають відкриваючий і закриваючий) і самозакривні (наприклад, <code>&lt;img /&gt;</code>).</p></div></details>
-
-<!-- 6 -->
-<details class="faq"><summary><span class="chev">▸</span> 6. Що таке DOCTYPE?</summary><div class="answer"><p><code>&lt;!DOCTYPE html&gt;</code> вказує браузеру, що використовується HTML5.</p></div></details>
-
-<!-- 7 -->
-<details class="faq"><summary><span class="chev">▸</span> 7. Для чого використовується тег &lt;head&gt;?</summary><div class="answer"><p>Містить метадані: заголовок сторінки, підключення стилів, скриптів тощо.</p></div></details>
-
-<!-- 8 -->
-<details class="faq"><summary><span class="chev">▸</span> 8. Для чого використовується тег &lt;body&gt;?</summary><div class="answer"><p>Містить основний вміст сторінки, який відображається у браузері.</p></div></details>
-
-<!-- 9 -->
-<details class="faq"><summary><span class="chev">▸</span> 9. Як задати заголовки у HTML?</summary><div class="answer"><p>Використати теги <code>&lt;h1&gt;...&lt;h6&gt;</code>.</p></div></details>
-
-<!-- 10 -->
-<details class="faq"><summary><span class="chev">▸</span> 10. Як створити абзац?</summary><div class="answer"><p>Використати тег <code>&lt;p&gt;</code>.</p></div></details>
-
-<!-- 11 -->
-<details class="faq"><summary><span class="chev">▸</span> 11. Як вставити посилання у HTML?</summary><div class="answer"><p>За допомогою тега <code>&lt;a href="url"&gt;текст&lt;/a&gt;</code>.</p></div></details>
-
-<!-- 12 -->
-<details class="faq"><summary><span class="chev">▸</span> 12. Як додати зображення?</summary><div class="answer"><p>Тег <code>&lt;img src="шлях" alt="опис"&gt;</code>.</p></div></details>
-
-<!-- 13 -->
-<details class="faq"><summary><span class="chev">▸</span> 13. Що таке списки у HTML?</summary><div class="answer"><p>Нумеровані (<code>&lt;ol&gt;</code>) та марковані (<code>&lt;ul&gt;</code>) списки з елементами <code>&lt;li&gt;</code>.</p></div></details>
-
-<!-- 14 -->
-<details class="faq"><summary><span class="chev">▸</span> 14. Як створити таблицю?</summary><div class="answer"><p>Використати <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;th&gt;</code>.</p></div></details>
-
-<!-- 15 -->
-<details class="faq"><summary><span class="chev">▸</span> 15. Що таке семантичні теги?</summary><div class="answer"><p>Теги, які описують зміст: <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>.</p></div></details>
-
-<!-- 16 -->
-<details class="faq"><summary><span class="chev">▸</span> 16. Для чого тег &lt;nav&gt;?</summary><div class="answer"><p>Використовується для навігаційного меню.</p></div></details>
-
-<!-- 17 -->
-<details class="faq"><summary><span class="chev">▸</span> 17. Для чого тег &lt;main&gt;?</summary><div class="answer"><p>Містить основний унікальний контент сторінки.</p></div></details>
-
-<!-- 18 -->
-<details class="faq"><summary><span class="chev">▸</span> 18. Для чого тег &lt;aside&gt;?</summary><div class="answer"><p>Використовується для побічного вмісту (наприклад, бокове меню).</p></div></details>
-
-<!-- 19 -->
-<details class="faq"><summary><span class="chev">▸</span> 19. Що таке метадані?</summary><div class="answer"><p>Інформація про сторінку: <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code>.</p></div></details>
-
-<!-- 20 -->
-<details class="faq"><summary><span class="chev">▸</span> 20. Як додати favicon?</summary><div class="answer"><p><code>&lt;link rel="icon" href="favicon.ico"&gt;</code></p></div></details>
-
-<!-- 21 -->
-<details class="faq"><summary><span class="chev">▸</span> 21. Що таке iframe?</summary><div class="answer"><p>Елемент для вставки іншої веб-сторінки в поточну.</p></div></details>
-
-<!-- 22 -->
-<details class="faq"><summary><span class="chev">▸</span> 22. Що таке canvas?</summary><div class="answer"><p>HTML-елемент для малювання графіки за допомогою JavaScript.</p></div></details>
-
-<!-- 23 -->
-<details class="faq"><summary><span class="chev">▸</span> 23. Що таке SVG?</summary><div class="answer"><p>Мова розмітки для векторної графіки, яку можна вбудовувати в HTML.</p></div></details>
-
-<!-- 24 -->
-<details class="faq"><summary><span class="chev">▸</span> 24. Як відкрити посилання у новій вкладці?</summary><div class="answer"><p>Додати <code>target="_blank"</code> у <code>&lt;a&gt;</code>.</p></div></details>
-
-<!-- 25 -->
-<details class="faq"><summary><span class="chev">▸</span> 25. Що таке форма у HTML?</summary><div class="answer"><p>Елемент <code>&lt;form&gt;</code>, що збирає дані користувача.</p></div></details>
-
-<!-- 26 -->
-<details class="faq"><summary><span class="chev">▸</span> 26. Які є типи input?</summary><div class="answer"><p>text, password, email, number, checkbox, radio, date, file тощо.</p></div></details>
-
-<!-- 27 -->
-<details class="faq"><summary><span class="chev">▸</span> 27. Для чого використовується textarea?</summary><div class="answer"><p>Для введення багаторядкового тексту.</p></div></details>
-
-<!-- 28 -->
-<details class="faq"><summary><span class="chev">▸</span> 28. Що таке label?</summary><div class="answer"><p>Тег для підпису полів форми, пов’язується з input через атрибут <code>for</code>.</p></div></details>
-
-<!-- 29 -->
-<details class="faq"><summary><span class="chev">▸</span> 29. Що таке fieldset і legend?</summary><div class="answer"><p>Групують поля форми і додають заголовок для групи.</p></div></details>
-
-<!-- 30 -->
-<details class="faq"><summary><span class="chev">▸</span> 30. Що таке button у HTML?</summary><div class="answer"><p>Кнопка, яка може надсилати форму (<code>submit</code>) або бути простою (<code>button</code>).</p></div></details>
-
-<!-- 31 -->
-<details class="faq"><summary><span class="chev">▸</span> 31. Що таке атрибут required?</summary><div class="answer"><p>Робить поле обов’язковим для заповнення.</p></div></details>
-
-<!-- 32 -->
-<details class="faq"><summary><span class="chev">▸</span> 32. Що таке атрибут placeholder?</summary><div class="answer"><p>Відображає підказку всередині поля введення.</p></div></details>
-
-<!-- 33 -->
-<details class="faq"><summary><span class="chev">▸</span> 33. Що таке autocomplete?</summary><div class="answer"><p>Атрибут, що дозволяє браузеру підказувати дані для введення.</p></div></details>
-
-<!-- 34 -->
-<details class="faq"><summary><span class="chev">▸</span> 34. Що таке autofocus?</summary><div class="answer"><p>Автоматично ставить курсор у поле при завантаженні сторінки.</p></div></details>
-
-<!-- 35 -->
-<details class="faq"><summary><span class="chev">▸</span> 35. Що таке атрибут disabled?</summary><div class="answer"><p>Робить поле форми неактивним для введення.</p></div></details>
-
-<!-- 36 -->
-<details class="faq"><summary><span class="chev">▸</span> 36. Що таке hidden input?</summary><div class="answer"><p>Поле <code>&lt;input type="hidden"&gt;</code>, яке зберігає невидимі дані.</p></div></details>
-
-<!-- 37 -->
-<details class="faq"><summary><span class="chev">▸</span> 37. Що таке атрибут pattern?</summary><div class="answer"><p>Дозволяє перевіряти введення за регулярним виразом.</p></div></details>
-
-<!-- 38 -->
-<details class="faq"><summary><span class="chev">▸</span> 38. Що таке progress?</summary><div class="answer"><p>HTML-елемент для відображення прогресу виконання завдання.</p></div></details>
-
-<!-- 39 -->
-<details class="faq"><summary><span class="chev">▸</span> 39. Що таке meter?</summary><div class="answer"><p>Використовується для відображення кількісного значення в межах діапазону.</p></div></details>
-
-<!-- 40 -->
-<details class="faq"><summary><span class="chev">▸</span> 40. Що таке datalist?</summary><div class="answer"><p>Надає список підказок для поля введення.</p></div></details>
-
-<!-- 41 -->
-<details class="faq"><summary><span class="chev">▸</span> 41. Що таке audio у HTML?</summary><div class="answer"><p>Елемент <code>&lt;audio&gt;</code> використовується для відтворення звуку.</p></div></details>
-
-<!-- 42 -->
-<details class="faq"><summary><span class="chev">▸</span> 42. Що таке video у HTML?</summary><div class="answer"><p>Елемент <code>&lt;video&gt;</code> використовується для відтворення відео.</p></div></details>
-
-<!-- 43 -->
-<details class="faq"><summary><span class="chev">▸</span> 43. Як додати субтитри до відео?</summary><div class="answer"><p>Використати тег <code>&lt;track&gt;</code> всередині <code>&lt;video&gt;</code>.</p></div></details>
-
-<!-- 44 -->
-<details class="faq"><summary><span class="chev">▸</span> 44. Що таке source?</summary><div class="answer"><p>Тег <code>&lt;source&gt;</code> визначає кілька джерел для медіа (<code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code>).</p></div></details>
-
-<!-- 45 -->
-<details class="faq"><summary><span class="chev">▸</span> 45. Що таке responsive images?</summary><div class="answer"><p>Адаптивні зображення з атрибутами <code>srcset</code> і <code>sizes</code>.</p></div></details>
-
-<!-- 46 -->
-<details class="faq"><summary><span class="chev">▸</span> 46. Що таке picture?</summary><div class="answer"><p>Елемент <code>&lt;picture&gt;</code> дозволяє вказати кілька варіантів зображень для різних пристроїв.</p></div></details>
-
-<!-- 47 -->
-<details class="faq"><summary><span class="chev">▸</span> 47. Як вбудувати YouTube-відео?</summary><div class="answer"><p>За допомогою <code>&lt;iframe&gt;</code> з посиланням на YouTube.</p></div></details>
-
-<!-- 48 -->
-<details class="faq"><summary><span class="chev">▸</span> 48. Що таке accessibility (доступність)?</summary><div class="answer"><p>Це практика створення сайтів, зручних для людей із обмеженими можливостями.</p></div></details>
-
-<!-- 49 -->
-<details class="faq"><summary><span class="chev">▸</span> 49. Що таке alt у зображеннях?</summary><div class="answer"><p>Атрибут <code>alt</code> описує зображення для скрінрідерів і у випадку помилки завантаження.</p></div></details>
-
-<!-- 50 -->
-<details class="faq"><summary><span class="chev">▸</span> 50. Що таке role у HTML?</summary><div class="answer"><p>Атрибут <code>role</code> допомагає визначити роль елемента для assistive technology.</p></div></details>
-
-<!-- 51 -->
-<details class="faq"><summary><span class="chev">▸</span> 51. Що таке aria-label?</summary><div class="answer"><p>Атрибут для додаткового опису елемента у доступності.</p></div></details>
-
-<!-- 52 -->
-<details class="faq"><summary><span class="chev">▸</span> 52. Що таке tabindex?</summary><div class="answer"><p>Атрибут, що визначає порядок переходу між елементами за допомогою клавіші Tab.</p></div></details>
-
-<!-- 53 -->
-<details class="faq"><summary><span class="chev">▸</span> 53. Що таке semantic HTML?</summary><div class="answer"><p>Використання тегів за їхнім призначенням для кращої структури та доступності.</p></div></details>
-
-<!-- 54 -->
-<details class="faq"><summary><span class="chev">▸</span> 54. Що таке microdata?</summary><div class="answer"><p>Специфікація для додавання структурованих даних у HTML (для SEO).</p></div></details>
-
-<!-- 55 -->
-<details class="faq"><summary><span class="chev">▸</span> 55. Що таке JSON-LD?</summary><div class="answer"><p>Формат для опису структурованих даних у <code>&lt;script type="application/ld+json"&gt;</code>.</p></div></details>
-
-<!-- 56 -->
-<details class="faq"><summary><span class="chev">▸</span> 56. Що таке meta description?</summary><div class="answer"><p>Тег <code>&lt;meta name="description"&gt;</code> описує сторінку для пошукових систем.</p></div></details>
-
-<!-- 57 -->
-<details class="faq"><summary><span class="chev">▸</span> 57. Що таке viewport?</summary><div class="answer"><p>Тег <code>&lt;meta name="viewport"&gt;</code> керує адаптивністю сторінки.</p></div></details>
-
-<!-- 58 -->
-<details class="faq"><summary><span class="chev">▸</span> 58. Що таке Open Graph?</summary><div class="answer"><p>Метатеги (<code>og:title</code>, <code>og:image</code>) для відображення сторінки у соцмережах.</p></div></details>
-
-<!-- 59 -->
-<details class="faq"><summary><span class="chev">▸</span> 59. Що таке favicon?</summary><div class="answer"><p>Маленька іконка сайту, що відображається у вкладці браузера.</p></div></details>
-
-<!-- 60 -->
-<details class="faq"><summary><span class="chev">▸</span> 60. Що таке robots.txt?</summary><div class="answer"><p>Файл для керування індексацією сайту пошуковими системами.</p></div></details>
-
-<!-- 61 -->
-<details class="faq"><summary><span class="chev">▸</span> 61. Що таке sitemap.xml?</summary><div class="answer"><p>Файл зі списком усіх сторінок сайту для пошукових систем.</p></div></details>
-
-<!-- 62 -->
-<details class="faq"><summary><span class="chev">▸</span> 62. Що таке lazy loading зображень?</summary><div class="answer"><p>Використання атрибута <code>loading="lazy"</code> для завантаження картинок тільки при скролі.</p></div></details>
-
-<!-- 63 -->
-<details class="faq"><summary><span class="chev">▸</span> 63. Що таке defer у script?</summary><div class="answer"><p>Атрибут <code>defer</code> відкладає виконання скрипта до завантаження HTML.</p></div></details>
-
-<!-- 64 -->
-<details class="faq"><summary><span class="chev">▸</span> 64. Що таке async у script?</summary><div class="answer"><p>Атрибут <code>async</code> завантажує і виконує скрипт паралельно.</p></div></details>
-
-<!-- 65 -->
-<details class="faq"><summary><span class="chev">▸</span> 65. Що таке inline-скрипти?</summary><div class="answer"><p>Скрипти, які пишуться безпосередньо у <code>&lt;script&gt;</code> у HTML.</p></div></details>
-
-<!-- 66 -->
-<details class="faq"><summary><span class="chev">▸</span> 66. Чим inline-стилі відрізняються від зовнішніх?</summary><div class="answer"><p>Inline пишуться у тегах, зовнішні — у CSS-файлах через <code>&lt;link&gt;</code>.</p></div></details>
-
-<!-- 67 -->
-<details class="faq"><summary><span class="chev">▸</span> 67. Що таке custom data-атрибути?</summary><div class="answer"><p>Атрибути <code>data-*</code>, що дозволяють зберігати додаткові дані у елементах.</p></div></details>
-
-<!-- 68 -->
-<details class="faq"><summary><span class="chev">▸</span> 68. Що таке Shadow DOM?</summary><div class="answer"><p>Механізм ізоляції стилів і розмітки всередині Web Components.</p></div></details>
-
-<!-- 69 -->
-<details class="faq"><summary><span class="chev">▸</span> 69. Що таке Web Components?</summary><div class="answer"><p>Стандарт для створення власних HTML-елементів із Shadow DOM.</p></div></details>
-
-<!-- 70 -->
-<details class="faq"><summary><span class="chev">▸</span> 70. Що таке template у HTML?</summary><div class="answer"><p>Тег <code>&lt;template&gt;</code> містить невидимий фрагмент HTML для подальшого використання.</p></div></details>
-
-<!-- 71 -->
-<details class="faq"><summary><span class="chev">▸</span> 71. Що таке slot?</summary><div class="answer"><p>Місце для вставки контенту у Web Components.</p></div></details>
-
-<!-- 72 -->
-<details class="faq"><summary><span class="chev">▸</span> 72. Що таке contenteditable?</summary><div class="answer"><p>Атрибут, що робить елемент редагованим у браузері.</p></div></details>
-
-<!-- 73 -->
-<details class="faq"><summary><span class="chev">▸</span> 73. Що таке designMode?</summary><div class="answer"><p>Властивість документа, яка дозволяє редагувати весь HTML.</p></div></details>
-
-<!-- 74 -->
-<details class="faq"><summary><span class="chev">▸</span> 74. Що таке sandbox у iframe?</summary><div class="answer"><p>Атрибут <code>sandbox</code> обмежує права вбудованого контенту.</p></div></details>
-
-<!-- 75 -->
-<details class="faq"><summary><span class="chev">▸</span> 75. Що таке crossorigin у script?</summary><div class="answer"><p>Атрибут для завантаження ресурсів з інших доменів з CORS.</p></div></details>
-
-<!-- 76 -->
-<details class="faq"><summary><span class="chev">▸</span> 76. Що таке integrity у script?</summary><div class="answer"><p>Атрибут для перевірки цілісності ресурсу (Subresource Integrity).</p></div></details>
-
-<!-- 77 -->
-<details class="faq"><summary><span class="chev">▸</span> 77. Що таке CSP?</summary><div class="answer"><p>Content Security Policy — механізм безпеки для контролю ресурсів у браузері.</p></div></details>
-
-<!-- 78 -->
-<details class="faq"><summary><span class="chev">▸</span> 78. Що таке XSS?</summary><div class="answer"><p>Cross-Site Scripting — вразливість, що дозволяє виконувати шкідливий код у браузері.</p></div></details>
-
-<!-- 79 -->
-<details class="faq"><summary><span class="chev">▸</span> 79. Як захиститися від XSS?</summary><div class="answer"><p>Використовувати escaping, CSP, не довіряти введеним даним.</p></div></details>
-
-<!-- 80 -->
-<details class="faq"><summary><span class="chev">▸</span> 80. Що таке HTTPS?</summary><div class="answer"><p>Протокол передачі даних із шифруванням (HTTP + TLS).</p></div></details>
-
-<!-- 81 -->
-<details class="faq"><summary><span class="chev">▸</span> 81. Що таке Service Worker?</summary><div class="answer"><p>Скрипт, що працює у фоновому режимі для кешування та офлайн-режиму.</p></div></details>
-
-<!-- 82 -->
-<details class="faq"><summary><span class="chev">▸</span> 82. Що таке PWA?</summary><div class="answer"><p>Progressive Web App — веб-додаток з можливостями нативного.</p></div></details>
-
-<!-- 83 -->
-<details class="faq"><summary><span class="chev">▸</span> 83. Що таке manifest.json?</summary><div class="answer"><p>Файл конфігурації PWA: іконки, назва, кольори.</p></div></details>
-
-<!-- 84 -->
-<details class="faq"><summary><span class="chev">▸</span> 84. Що таке localStorage?</summary><div class="answer"><p>API браузера для збереження даних у вигляді ключ-значення.</p></div></details>
-
-<!-- 85 -->
-<details class="faq"><summary><span class="chev">▸</span> 85. Що таке sessionStorage?</summary><div class="answer"><p>API для збереження даних лише на час сесії.</p></div></details>
-
-<!-- 86 -->
-<details class="faq"><summary><span class="chev">▸</span> 86. Що таке cookies?</summary><div class="answer"><p>Невеликі дані, які зберігаються у браузері для сесій і налаштувань.</p></div></details>
-
-<!-- 87 -->
-<details class="faq"><summary><span class="chev">▸</span> 87. Що таке IndexedDB?</summary><div class="answer"><p>База даних у браузері для збереження структурованих даних.</p></div></details>
-
-<!-- 88 -->
-<details class="faq"><summary><span class="chev">▸</span> 88. Що таке Web Storage API?</summary><div class="answer"><p>Інтерфейси <code>localStorage</code> і <code>sessionStorage</code> для збереження даних.</p></div></details>
-
-<!-- 89 -->
-<details class="faq"><summary><span class="chev">▸</span> 89. Що таке Geolocation API?</summary><div class="answer"><p>API для визначення геолокації користувача.</p></div></details>
-
-<!-- 90 -->
-<details class="faq"><summary><span class="chev">▸</span> 90. Що таке Drag and Drop API?</summary><div class="answer"><p>API для перетягування елементів у браузері.</p></div></details>
-
-<!-- 91 -->
-<details class="faq"><summary><span class="chev">▸</span> 91. Що таке Fullscreen API?</summary><div class="answer"><p>API для перемикання елементів у повноекранний режим.</p></div></details>
-
-<!-- 92 -->
-<details class="faq"><summary><span class="chev">▸</span> 92. Що таке WebRTC?</summary><div class="answer"><p>Технологія для прямої передачі аудіо та відео між браузерами.</p></div></details>
-
-<!-- 93 -->
-<details class="faq"><summary><span class="chev">▸</span> 93. Що таке WebSockets?</summary><div class="answer"><p>Протокол для двостороннього з’єднання між клієнтом і сервером у реальному часі.</p></div></details>
-
-<!-- 94 -->
-<details class="faq"><summary><span class="chev">▸</span> 94. Що таке SSE?</summary><div class="answer"><p>Server-Sent Events — одностороннє з’єднання для надсилання даних від сервера.</p></div></details>
-
-<!-- 95 -->
-<details class="faq"><summary><span class="chev">▸</span> 95. Що таке HTTP/2?</summary><div class="answer"><p>Версія HTTP, яка дозволяє мультиплексування запитів.</p></div></details>
-
-<!-- 96 -->
-<details class="faq"><summary><span class="chev">▸</span> 96. Що таке HTTP/3?</summary><div class="answer"><p>Версія HTTP на основі протоколу QUIC для швидшої передачі даних.</p></div></details>
-
-<!-- 97 -->
-<details class="faq"><summary><span class="chev">▸</span> 97. Що таке prerender?</summary><div class="answer"><p>Попереднє завантаження сторінок для прискорення переходів.</p></div></details>
-
-<!-- 98 -->
-<details class="faq"><summary><span class="chev">▸</span> 98. Що таке prefetch?</summary><div class="answer"><p>Попереднє завантаження ресурсів, які можуть знадобитися.</p></div></details>
-
-<!-- 99 -->
-<details class="faq"><summary><span class="chev">▸</span> 99. Що таке preload?</summary><div class="answer"><p>Атрибут <code>&lt;link rel="preload"&gt;</code> для завантаження критичних ресурсів.</p></div></details>
-
-<!-- 100 -->
-<details class="faq"><summary><span class="chev">▸</span> 100. Що таке Shadow DOM v1?</summary><div class="answer"><p>Оновлена специфікація Shadow DOM, що використовується у сучасних браузерах для Web Components.</p></div></details>
-
-
-    <h3  id="Now" style="margin-top:22px;  color:teal">Наразі проєкт ще в розробці...</h3>
-  </div>
-
-  <footer>
-    <p style="font-size: 14px; color: gray; text-align: center; ">
-      Створено з ♥   |   Україна
-    </p>
-  </footer>
-</body>
+          </div>
+        </details>
+
+        <!-- 47 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 47. Що таке <code>&lt;caption&gt;</code> у таблиці і навіщо він потрібен?</summary>
+          <div class="answer">
+            <p><code>&lt;caption&gt;</code> — підпис таблиці, який описує її зміст. Розміщується всередині <code>&lt;table&gt;</code> перед рядками.</p>
+          </div>
+        </details>
+
+        <!-- 48 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 48. Як додати форми з <code>&lt;form&gt;</code> та <code>&lt;fieldset&gt;</code>?</summary>
+          <div class="answer">
+            <p>
+              <code>&lt;form&gt;</code> — контейнер для вводу даних. <code>&lt;fieldset&gt;</code> групує пов’язані поля, <code>&lt;legend&gt;</code> дає
+              заголовок групи.
+            </p>
+          </div>
+        </details>
+
+        <!-- 49 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 49. Що таке <code>&lt;label&gt;</code> і як він взаємодіє з <code>&lt;input&gt;</code>?</summary>
+          <div class="answer">
+            <p><code>&lt;label for="id"&gt;Текст&lt;/label&gt;</code> пов’язує підпис з полем вводу через атрибут <code>id</code> для кращої доступності.</p>
+          </div>
+        </details>
+
+        <!-- 50 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 50. Які типи полів <code>&lt;input&gt;</code> існують і для чого вони потрібні?</summary>
+          <div class="answer">
+            <ul>
+              <li><code>text</code> — звичайний текст</li>
+              <li><code>password</code> — пароль</li>
+              <li><code>email</code> — email</li>
+              <li><code>number</code> — числове значення</li>
+              <li><code>checkbox</code>, <code>radio</code> — прапорці та радіо-кнопки</li>
+              <li><code>submit</code> — кнопка відправки</li>
+              <li><code>file</code> — вибір файлу</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- 51 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 51. Що таке <code>&lt;img&gt;</code> і які основні атрибути він підтримує?</summary>
+          <div class="answer">
+            <p>
+              <code>&lt;img&gt;</code> вставляє зображення. Основні атрибути: <code>src</code> — шлях до зображення, <code>alt</code> — альтернативний текст,
+              <code>width</code>, <code>height</code>.
+            </p>
+          </div>
+        </details>
+
+        <!-- 52 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 52. Що таке <code>&lt;picture&gt;</code> і як він допомагає адаптивним зображенням?</summary>
+          <div class="answer">
+            <p><code>&lt;picture&gt;</code> дозволяє задавати різні джерела зображень для різних розмірів екрану через <code>&lt;source&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 53 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 53. Що таке <code>&lt;audio&gt;</code> і як додати альтернативні формати аудіо?</summary>
+          <div class="answer">
+            <p><code>&lt;audio controls&gt;</code> додає аудіо. Для підтримки всіх браузерів додають кілька <code>&lt;source&gt;</code> з різними форматами.</p>
+          </div>
+        </details>
+
+        <!-- 54 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 54. Що таке <code>&lt;video&gt;</code> і як працює атрибут <code>controls</code>?</summary>
+          <div class="answer">
+            <p><code>&lt;video controls&gt;</code> — відео з елементами керування: відтворити, пауза, гучність.</p>
+          </div>
+        </details>
+
+        <!-- 55 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 55. Як вставити зовнішнє відео за допомогою <code>&lt;iframe&gt;</code>?</summary>
+          <div class="answer">
+            <pre><code>&lt;iframe src="https://www.youtube.com/embed/VIDEO_ID" width="560" height="315" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+          </div>
+        </details>
+
+        <!-- 56 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 56. Що таке <code>&lt;source&gt;</code> і де його використовують?</summary>
+          <div class="answer">
+            <p>
+              <code>&lt;source&gt;</code> використовується всередині <code>&lt;audio&gt;</code> або <code>&lt;video&gt;</code> для підключення альтернативних
+              форматів.
+            </p>
+          </div>
+        </details>
+
+        <!-- 57 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 57. Як працює <code>&lt;track&gt;</code> для субтитрів у відео?</summary>
+          <div class="answer">
+            <p><code>&lt;track kind="subtitles" src="subtitles.vtt" srclang="ua" label="Українська"&gt;</code> додає субтитри до відео.</p>
+          </div>
+        </details>
+
+        <!-- 58 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 58. Що таке <code>&lt;canvas&gt;</code> і як створювати графіку за допомогою нього?</summary>
+          <div class="answer">
+            <p><code>&lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;</code> дозволяє малювати графіку через JavaScript.</p>
+          </div>
+        </details>
+
+        <!-- 59 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 59. Що таке <code>&lt;svg&gt;</code> і коли краще використовувати замість <code>&lt;img&gt;</code>?</summary>
+          <div class="answer">
+            <p><code>&lt;svg&gt;</code> — векторна графіка. Краще для логотипів, іконок та анімацій, де важлива масштабованість без втрати якості.</p>
+          </div>
+        </details>
+
+        <!-- 60 -->
+        <details class="faq">
+          <summary>
+            <span class="chev">▸</span> 60. Що таке <code>&lt;map&gt;</code> та <code>&lt;area&gt;</code> і як вони створюють клікабельні зони на зображенні?
+          </summary>
+          <div class="answer">
+            <p>
+              Створюють інтерактивні зони на зображенні. <code>&lt;map name="mapName"&gt;</code> містить
+              <code>&lt;area shape="rect" coords="x1,y1,x2,y2" href="#"&gt;</code>.
+            </p>
+          </div>
+        </details>
+
+        <!-- 61 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 61. Що таке абсолютні та відносні посилання?</summary>
+          <div class="answer">
+            <p>Абсолютні: повний URL (https://...). Відносні: шлях від поточної сторінки (./index.html, ../page.html).</p>
+          </div>
+        </details>
+
+        <!-- 62 -->
+        <details class="faq">
+          <summary>
+            <span class="chev">▸</span> 62. Як використовувати <code>&lt;a&gt;</code> з <code>target="_blank"</code> і <code>rel="noopener"</code>?
+          </summary>
+          <div class="answer">
+            <p>Відкриває посилання у новій вкладці. <code>rel="noopener"</code> підвищує безпеку та швидкодію.</p>
+          </div>
+        </details>
+
+        <!-- 63 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 63. Що таке якорі (<code>#id</code>) і як на них посилатися?</summary>
+          <div class="answer">
+            <p>Позначка в документі. Посилання: <code>&lt;a href="#section1"&gt;Перейти&lt;/a&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 64 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 64. Що таке маршрутизація через <code>&lt;base&gt;</code>?</summary>
+          <div class="answer">
+            <p><code>&lt;base href="https://example.com/"&gt;</code> встановлює базовий URL для всіх відносних посилань на сторінці.</p>
+          </div>
+        </details>
+
+        <!-- 65 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 65. Як створювати кнопки з <code>&lt;button&gt;</code> та <code>&lt;input type="button"&gt;</code>?</summary>
+          <div class="answer">
+            <p>
+              <code>&lt;button&gt;Натисни&lt;/button&gt;</code> або <code>&lt;input type="button" value="Натисни"&gt;</code>. Обидва створюють кнопки, але
+              <code>&lt;button&gt;</code> гнучкіший у розмітці.
+            </p>
+          </div>
+        </details>
+
+        <!-- 66 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 66. Що таке <code>&lt;nav&gt;</code> і для чого він потрібен?</summary>
+          <div class="answer">
+            <p>
+              Семантичний блок для навігації по сайту. Може містити списки посилань
+              (<code>&lt;ul&gt;&lt;li&gt;&lt;a&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</code>).
+            </p>
+          </div>
+        </details>
+
+        <!-- 67 -->
+        <details class="faq">
+          <summary>
+            <span class="chev">▸</span> 67. Як працюють списки навігації з <code>&lt;ul&gt;</code> і <code>&lt;li&gt;</code> у <code>&lt;nav&gt;</code>?
+          </summary>
+          <div class="answer">
+            <p>
+              Створюють структуроване меню: <code>&lt;nav&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="#"&gt;Посилання&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;</code>.
+            </p>
+          </div>
+        </details>
+
+        <!-- 68 -->
+        <details class="faq">
+          <summary>
+            <span class="chev">▸</span> 68. Що таке <code>&lt;menu&gt;</code> та <code>&lt;menuitem&gt;</code> і чи актуально їх використовувати?
+          </summary>
+          <div class="answer">
+            <p>За старим стандартом створювали меню. Сьогодні майже не використовуються через погану підтримку браузерами.</p>
+          </div>
+        </details>
+
+        <!-- 69 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 69. Як створити “кнопку назад” за допомогою HTML та JavaScript?</summary>
+          <div class="answer">
+            <p><code>&lt;button onclick="history.back()"&gt;Назад&lt;/button&gt;</code> повертає на попередню сторінку.</p>
+          </div>
+        </details>
+
+        <!-- 70 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 70. Що таке <code>&lt;link&gt;</code> і як він підключає стилі та інші ресурси?</summary>
+          <div class="answer">
+            <p>
+              <code>&lt;link rel="stylesheet" href="style.css"&gt;</code> підключає CSS. Може використовуватися для фавіконів, prefetch, альтернативних
+              ресурсів.
+            </p>
+          </div>
+        </details>
+
+        <!-- 71 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 71. Що таке <code>&lt;meta charset&gt;</code> і навіщо його вказувати?</summary>
+          <div class="answer">
+            <p>Встановлює кодування сторінки (зазвичай UTF-8) для правильного відображення символів.</p>
+          </div>
+        </details>
+
+        <!-- 72 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 72. Що таке <code>&lt;meta name="viewport"&gt;</code> і як він впливає на мобільні пристрої?</summary>
+          <div class="answer">
+            <p>
+              Контролює масштаб та ширину сторінки на мобільних пристроях, наприклад:
+              <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code>.
+            </p>
+          </div>
+        </details>
+
+        <!-- 73 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 73. Що таке <code>&lt;meta name="description"&gt;</code> для SEO?</summary>
+          <div class="answer">
+            <p>Короткий опис сторінки, який відображається в результатах пошуку. Допомагає пошуковим системам зрозуміти зміст.</p>
+          </div>
+        </details>
+
+        <!-- 74 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 74. Що таке <code>&lt;meta name="keywords"&gt;</code> і чи варто його використовувати?</summary>
+          <div class="answer">
+            <p>Список ключових слів для SEO. Сьогодні мало впливає на пошукові системи, тому використання необов’язкове.</p>
+          </div>
+        </details>
+
+        <!-- 75 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 75. Як працює <code>&lt;meta http-equiv&gt;</code> і які типи є?</summary>
+          <div class="answer">
+            <p>Дозволяє встановлювати заголовки HTTP через HTML, наприклад: <code>Content-Type</code>, <code>refresh</code>, <code>X-UA-Compatible</code>.</p>
+          </div>
+        </details>
+
+        <!-- 76 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 76. Що таке <code>&lt;title&gt;</code> і де його найкраще розміщувати?</summary>
+          <div class="answer">
+            <p>Задає заголовок вкладки/сторінки. Розміщується всередині <code>&lt;head&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 77 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 77. Що таке фавікон і як його додати за допомогою <code>&lt;link rel="icon"&gt;</code>?</summary>
+          <div class="answer">
+            <p>Маленька іконка сайту у вкладці браузера: <code>&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 78 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 78. Як підключити веб-шрифти за допомогою <code>&lt;link&gt;</code> або <code>&lt;style&gt;</code>?</summary>
+          <div class="answer">
+            <p>Через Google Fonts: <code>&lt;link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 79 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 79. Що таке <code>&lt;base&gt;</code> і як він впливає на посилання в документі?</summary>
+          <div class="answer">
+            <p>Встановлює базовий URL для всіх відносних посилань: <code>&lt;base href="https://example.com/"&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 80 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 80. Як використовувати <code>&lt;noscript&gt;</code> для альтернативного контенту?</summary>
+          <div class="answer">
+            <p>Відображає контент, якщо у користувача вимкнено JavaScript: <code>&lt;noscript&gt;Включіть JS&lt;/noscript&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 81 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 81. Що таке атрибут <code>hidden</code> і як він працює?</summary>
+          <div class="answer">
+            <p>Приховує елемент на сторінці: <code>&lt;div hidden&gt;Схований блок&lt;/div&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 82 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 82. Що таке <code>data-*</code> атрибути і для чого вони потрібні?</summary>
+          <div class="answer">
+            <p>Зберігають власні дані для JavaScript: <code>&lt;div data-id="123"&gt;&lt;/div&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 83 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 83. Як працює <code>contenteditable</code> і де його застосовують?</summary>
+          <div class="answer">
+            <p>Дозволяє редагувати текст елемента напряму на сторінці: <code>&lt;div contenteditable&gt;Редагуй мене&lt;/div&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 84 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 84. Що таке <code>draggable</code> і як додати перетягування елементів?</summary>
+          <div class="answer">
+            <p>Дозволяє перетягування елементів: <code>&lt;div draggable="true"&gt;Перетягни мене&lt;/div&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 85 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 85. Як використовувати <code>tabindex</code> для управління фокусом?</summary>
+          <div class="answer">
+            <p>Встановлює порядок фокусування через Tab: <code>&lt;button tabindex="1"&gt;Перша&lt;/button&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 86 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 86. Що таке ARIA-атрибути і як вони покращують доступність?</summary>
+          <div class="answer">
+            <p>ARIA додає семантику для допоміжних технологій: <code>role="button"</code>, <code>aria-label="Опис кнопки"</code>.</p>
+          </div>
+        </details>
+
+        <!-- 87 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 87. Що таке <code>spellcheck</code> і як його використовувати в текстових полях?</summary>
+          <div class="answer">
+            <p>Увімкнення перевірки орфографії: <code>&lt;input type="text" spellcheck="true"&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 88 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 88. Як працює атрибут <code>autofocus</code>?</summary>
+          <div class="answer">
+            <p>Автоматично встановлює фокус на елемент при завантаженні сторінки: <code>&lt;input autofocus&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 89 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 89. Що таке <code>required</code> у формах і як він контролює обов’язковість полів?</summary>
+          <div class="answer">
+            <p>Змушує користувача заповнити поле перед відправкою форми: <code>&lt;input required&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 90 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 90. Що таке <code>readonly</code> та <code>disabled</code> і в чому різниця між ними?</summary>
+          <div class="answer">
+            <p><code>readonly</code> — поле можна виділити, але не редагувати. <code>disabled</code> — поле неактивне і не відправляється з формою.</p>
+          </div>
+        </details>
+
+        <!-- 91 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 91. Як створити адаптивну картинку за допомогою атрибутів <code>srcset</code> і <code>sizes</code>?</summary>
+          <div class="answer">
+            <p>
+              Вказує різні зображення для різних розмірів екранів:
+              <code>&lt;img src="small.jpg" srcset="medium.jpg 600w, large.jpg 1200w" sizes="(max-width: 600px) 100vw, 50vw"&gt;</code>.
+            </p>
+          </div>
+        </details>
+
+        <!-- 92 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 92. Що таке <code>lazy loading</code> для зображень?</summary>
+          <div class="answer">
+            <p>Відкладене завантаження зображень для швидшого відображення сторінки: <code>&lt;img loading="lazy"&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 93 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 93. Як створювати чекбокси та радіокнопки у формі?</summary>
+          <div class="answer">
+            <p>Чекбокси: <code>&lt;input type="checkbox"&gt;</code>, радіо: <code>&lt;input type="radio" name="group"&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 94 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 94. Що таке <code>&lt;progress&gt;</code> і як його використовувати?</summary>
+          <div class="answer">
+            <p>Відображає прогрес: <code>&lt;progress value="50" max="100"&gt;&lt;/progress&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 95 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 95. Що таке <code>&lt;meter&gt;</code> і для чого він потрібен?</summary>
+          <div class="answer">
+            <p>Показує рівень або міру чогось: <code>&lt;meter value="0.6"&gt;60%&lt;/meter&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 96 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 96. Як додати фавікон різних форматів для всіх пристроїв?</summary>
+          <div class="answer">
+            <p>Використовують різні <code>&lt;link rel="icon"&gt;</code> та <code>rel="apple-touch-icon"</code> для iOS та Android.</p>
+          </div>
+        </details>
+
+        <!-- 97 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 97. Що таке <code>iframe sandbox</code> і як він підвищує безпеку?</summary>
+          <div class="answer">
+            <p>Атрибут <code>sandbox</code> обмежує функції в <code>&lt;iframe&gt;</code> (JS, форми, плагіни) для безпеки.</p>
+          </div>
+        </details>
+
+        <!-- 98 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 98. Як створити спойлер або розкривний блок за допомогою <code>&lt;details&gt;</code>?</summary>
+          <div class="answer">
+            <p>Створює блок, що можна відкривати/закривати: <code>&lt;details&gt;&lt;summary&gt;Показати&lt;/summary&gt;Контент&lt;/details&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 99 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 99. Як додати елементи для друку сторінки за допомогою CSS?</summary>
+          <div class="answer">
+            <p>Використовують медіа-запит <code>@media print { ... }</code> для стилів друку.</p>
+          </div>
+        </details>
+
+        <!-- 100 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 100. Як зробити сторінку доступною для людей з обмеженими можливостями?</summary>
+          <div class="answer">
+            <p>Використовують семантичні теги, ARIA-атрибути, контрастний текст, альтернативні описи для зображень, правильну навігацію клавіатурою.</p>
+          </div>
+        </details>
+
+        <details class="faq">
+          <summary><span class="chev">▸</span> Що робить <code>font-size: clamp(22px, 3.2vw, 32px);</code>?</summary>
+          <div class="answer">
+            <p>Властивість <code>clamp(MIN, PREFERRED, MAX)</code> задає значення, яке завжди буде між мінімумом і максимумом.</p>
+            <pre><code>font-size: clamp(22px, 3.2vw, 32px);</code></pre>
+            <ul>
+              <li><strong>22px</strong> → мінімальний розмір (менше ніколи не стане)</li>
+              <li><strong>3.2vw</strong> → бажане (динамічне, залежить від ширини вікна)</li>
+              <li><strong>32px</strong> → максимальний розмір (більше не виросте)</li>
+            </ul>
+            <p>Шрифт гнучко підлаштовується під екран: від 22px до 32px, а між ними масштабується через <code>vw</code>.</p>
+            <p>1vw = 1% від ширини вікна браузера (viewport width).</p>
+            <p>Якщо ширина вікна = 1000px, тоді 1vw = 10px.</p>
+            <p>Якщо ширина вікна = 500px, тоді 1vw = 5px.</p>
+          </div>
+        </details>
+
+        <!-- 1 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 1. Що таке HTML?</summary>
+          <div class="answer"><p>HTML (HyperText Markup Language) — це стандартна мова розмітки для створення веб-сторінок.</p></div>
+        </details>
+
+        <!-- 2 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 2. З чого складається HTML-документ?</summary>
+          <div class="answer">
+            <p>HTML-документ складається з <code>&lt;!DOCTYPE&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> та <code>&lt;body&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 3 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 3. Що таке тег?</summary>
+          <div class="answer"><p>Тег — це елемент розмітки HTML, який описує структуру та зміст документа.</p></div>
+        </details>
+
+        <!-- 4 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 4. Що таке атрибут у HTML?</summary>
+          <div class="answer">
+            <p>Атрибут додає додаткову інформацію до елемента, наприклад <code>href</code> для <code>&lt;a&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 5 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 5. Які є типи тегів у HTML?</summary>
+          <div class="answer">
+            <p>Парні (мають відкриваючий і закриваючий) і самозакривні (наприклад, <code>&lt;img /&gt;</code>).</p>
+          </div>
+        </details>
+
+        <!-- 6 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 6. Що таке DOCTYPE?</summary>
+          <div class="answer">
+            <p><code>&lt;!DOCTYPE html&gt;</code> вказує браузеру, що використовується HTML5.</p>
+          </div>
+        </details>
+
+        <!-- 7 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 7. Для чого використовується тег &lt;head&gt;?</summary>
+          <div class="answer"><p>Містить метадані: заголовок сторінки, підключення стилів, скриптів тощо.</p></div>
+        </details>
+
+        <!-- 8 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 8. Для чого використовується тег &lt;body&gt;?</summary>
+          <div class="answer"><p>Містить основний вміст сторінки, який відображається у браузері.</p></div>
+        </details>
+
+        <!-- 9 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 9. Як задати заголовки у HTML?</summary>
+          <div class="answer">
+            <p>Використати теги <code>&lt;h1&gt;...&lt;h6&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 10 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 10. Як створити абзац?</summary>
+          <div class="answer">
+            <p>Використати тег <code>&lt;p&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 11 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 11. Як вставити посилання у HTML?</summary>
+          <div class="answer">
+            <p>За допомогою тега <code>&lt;a href="url"&gt;текст&lt;/a&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 12 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 12. Як додати зображення?</summary>
+          <div class="answer">
+            <p>Тег <code>&lt;img src="шлях" alt="опис"&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 13 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 13. Що таке списки у HTML?</summary>
+          <div class="answer">
+            <p>Нумеровані (<code>&lt;ol&gt;</code>) та марковані (<code>&lt;ul&gt;</code>) списки з елементами <code>&lt;li&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 14 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 14. Як створити таблицю?</summary>
+          <div class="answer">
+            <p>Використати <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;th&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 15 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 15. Що таке семантичні теги?</summary>
+          <div class="answer">
+            <p>
+              Теги, які описують зміст: <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>.
+            </p>
+          </div>
+        </details>
+
+        <!-- 16 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 16. Для чого тег &lt;nav&gt;?</summary>
+          <div class="answer"><p>Використовується для навігаційного меню.</p></div>
+        </details>
+
+        <!-- 17 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 17. Для чого тег &lt;main&gt;?</summary>
+          <div class="answer"><p>Містить основний унікальний контент сторінки.</p></div>
+        </details>
+
+        <!-- 18 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 18. Для чого тег &lt;aside&gt;?</summary>
+          <div class="answer"><p>Використовується для побічного вмісту (наприклад, бокове меню).</p></div>
+        </details>
+
+        <!-- 19 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 19. Що таке метадані?</summary>
+          <div class="answer">
+            <p>Інформація про сторінку: <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 20 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 20. Як додати favicon?</summary>
+          <div class="answer">
+            <p><code>&lt;link rel="icon" href="favicon.ico"&gt;</code></p>
+          </div>
+        </details>
+
+        <!-- 21 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 21. Що таке iframe?</summary>
+          <div class="answer"><p>Елемент для вставки іншої веб-сторінки в поточну.</p></div>
+        </details>
+
+        <!-- 22 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 22. Що таке canvas?</summary>
+          <div class="answer"><p>HTML-елемент для малювання графіки за допомогою JavaScript.</p></div>
+        </details>
+
+        <!-- 23 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 23. Що таке SVG?</summary>
+          <div class="answer"><p>Мова розмітки для векторної графіки, яку можна вбудовувати в HTML.</p></div>
+        </details>
+
+        <!-- 24 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 24. Як відкрити посилання у новій вкладці?</summary>
+          <div class="answer">
+            <p>Додати <code>target="_blank"</code> у <code>&lt;a&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 25 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 25. Що таке форма у HTML?</summary>
+          <div class="answer">
+            <p>Елемент <code>&lt;form&gt;</code>, що збирає дані користувача.</p>
+          </div>
+        </details>
+
+        <!-- 26 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 26. Які є типи input?</summary>
+          <div class="answer"><p>text, password, email, number, checkbox, radio, date, file тощо.</p></div>
+        </details>
+
+        <!-- 27 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 27. Для чого використовується textarea?</summary>
+          <div class="answer"><p>Для введення багаторядкового тексту.</p></div>
+        </details>
+
+        <!-- 28 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 28. Що таке label?</summary>
+          <div class="answer">
+            <p>Тег для підпису полів форми, пов’язується з input через атрибут <code>for</code>.</p>
+          </div>
+        </details>
+
+        <!-- 29 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 29. Що таке fieldset і legend?</summary>
+          <div class="answer"><p>Групують поля форми і додають заголовок для групи.</p></div>
+        </details>
+
+        <!-- 30 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 30. Що таке button у HTML?</summary>
+          <div class="answer"><p>Кнопка, яка може надсилати форму (<code>submit</code>) або бути простою (<code>button</code>).</p></div>
+        </details>
+
+        <!-- 31 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 31. Що таке атрибут required?</summary>
+          <div class="answer"><p>Робить поле обов’язковим для заповнення.</p></div>
+        </details>
+
+        <!-- 32 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 32. Що таке атрибут placeholder?</summary>
+          <div class="answer"><p>Відображає підказку всередині поля введення.</p></div>
+        </details>
+
+        <!-- 33 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 33. Що таке autocomplete?</summary>
+          <div class="answer"><p>Атрибут, що дозволяє браузеру підказувати дані для введення.</p></div>
+        </details>
+
+        <!-- 34 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 34. Що таке autofocus?</summary>
+          <div class="answer"><p>Автоматично ставить курсор у поле при завантаженні сторінки.</p></div>
+        </details>
+
+        <!-- 35 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 35. Що таке атрибут disabled?</summary>
+          <div class="answer"><p>Робить поле форми неактивним для введення.</p></div>
+        </details>
+
+        <!-- 36 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 36. Що таке hidden input?</summary>
+          <div class="answer">
+            <p>Поле <code>&lt;input type="hidden"&gt;</code>, яке зберігає невидимі дані.</p>
+          </div>
+        </details>
+
+        <!-- 37 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 37. Що таке атрибут pattern?</summary>
+          <div class="answer"><p>Дозволяє перевіряти введення за регулярним виразом.</p></div>
+        </details>
+
+        <!-- 38 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 38. Що таке progress?</summary>
+          <div class="answer"><p>HTML-елемент для відображення прогресу виконання завдання.</p></div>
+        </details>
+
+        <!-- 39 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 39. Що таке meter?</summary>
+          <div class="answer"><p>Використовується для відображення кількісного значення в межах діапазону.</p></div>
+        </details>
+
+        <!-- 40 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 40. Що таке datalist?</summary>
+          <div class="answer"><p>Надає список підказок для поля введення.</p></div>
+        </details>
+
+        <!-- 41 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 41. Що таке audio у HTML?</summary>
+          <div class="answer">
+            <p>Елемент <code>&lt;audio&gt;</code> використовується для відтворення звуку.</p>
+          </div>
+        </details>
+
+        <!-- 42 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 42. Що таке video у HTML?</summary>
+          <div class="answer">
+            <p>Елемент <code>&lt;video&gt;</code> використовується для відтворення відео.</p>
+          </div>
+        </details>
+
+        <!-- 43 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 43. Як додати субтитри до відео?</summary>
+          <div class="answer">
+            <p>Використати тег <code>&lt;track&gt;</code> всередині <code>&lt;video&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 44 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 44. Що таке source?</summary>
+          <div class="answer">
+            <p>Тег <code>&lt;source&gt;</code> визначає кілька джерел для медіа (<code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code>).</p>
+          </div>
+        </details>
+
+        <!-- 45 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 45. Що таке responsive images?</summary>
+          <div class="answer">
+            <p>Адаптивні зображення з атрибутами <code>srcset</code> і <code>sizes</code>.</p>
+          </div>
+        </details>
+
+        <!-- 46 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 46. Що таке picture?</summary>
+          <div class="answer">
+            <p>Елемент <code>&lt;picture&gt;</code> дозволяє вказати кілька варіантів зображень для різних пристроїв.</p>
+          </div>
+        </details>
+
+        <!-- 47 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 47. Як вбудувати YouTube-відео?</summary>
+          <div class="answer">
+            <p>За допомогою <code>&lt;iframe&gt;</code> з посиланням на YouTube.</p>
+          </div>
+        </details>
+
+        <!-- 48 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 48. Що таке accessibility (доступність)?</summary>
+          <div class="answer"><p>Це практика створення сайтів, зручних для людей із обмеженими можливостями.</p></div>
+        </details>
+
+        <!-- 49 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 49. Що таке alt у зображеннях?</summary>
+          <div class="answer">
+            <p>Атрибут <code>alt</code> описує зображення для скрінрідерів і у випадку помилки завантаження.</p>
+          </div>
+        </details>
+
+        <!-- 50 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 50. Що таке role у HTML?</summary>
+          <div class="answer">
+            <p>Атрибут <code>role</code> допомагає визначити роль елемента для assistive technology.</p>
+          </div>
+        </details>
+
+        <!-- 51 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 51. Що таке aria-label?</summary>
+          <div class="answer"><p>Атрибут для додаткового опису елемента у доступності.</p></div>
+        </details>
+
+        <!-- 52 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 52. Що таке tabindex?</summary>
+          <div class="answer"><p>Атрибут, що визначає порядок переходу між елементами за допомогою клавіші Tab.</p></div>
+        </details>
+
+        <!-- 53 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 53. Що таке semantic HTML?</summary>
+          <div class="answer"><p>Використання тегів за їхнім призначенням для кращої структури та доступності.</p></div>
+        </details>
+
+        <!-- 54 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 54. Що таке microdata?</summary>
+          <div class="answer"><p>Специфікація для додавання структурованих даних у HTML (для SEO).</p></div>
+        </details>
+
+        <!-- 55 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 55. Що таке JSON-LD?</summary>
+          <div class="answer">
+            <p>Формат для опису структурованих даних у <code>&lt;script type="application/ld+json"&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 56 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 56. Що таке meta description?</summary>
+          <div class="answer">
+            <p>Тег <code>&lt;meta name="description"&gt;</code> описує сторінку для пошукових систем.</p>
+          </div>
+        </details>
+
+        <!-- 57 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 57. Що таке viewport?</summary>
+          <div class="answer">
+            <p>Тег <code>&lt;meta name="viewport"&gt;</code> керує адаптивністю сторінки.</p>
+          </div>
+        </details>
+
+        <!-- 58 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 58. Що таке Open Graph?</summary>
+          <div class="answer">
+            <p>Метатеги (<code>og:title</code>, <code>og:image</code>) для відображення сторінки у соцмережах.</p>
+          </div>
+        </details>
+
+        <!-- 59 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 59. Що таке favicon?</summary>
+          <div class="answer"><p>Маленька іконка сайту, що відображається у вкладці браузера.</p></div>
+        </details>
+
+        <!-- 60 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 60. Що таке robots.txt?</summary>
+          <div class="answer"><p>Файл для керування індексацією сайту пошуковими системами.</p></div>
+        </details>
+
+        <!-- 61 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 61. Що таке sitemap.xml?</summary>
+          <div class="answer"><p>Файл зі списком усіх сторінок сайту для пошукових систем.</p></div>
+        </details>
+
+        <!-- 62 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 62. Що таке lazy loading зображень?</summary>
+          <div class="answer">
+            <p>Використання атрибута <code>loading="lazy"</code> для завантаження картинок тільки при скролі.</p>
+          </div>
+        </details>
+
+        <!-- 63 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 63. Що таке defer у script?</summary>
+          <div class="answer">
+            <p>Атрибут <code>defer</code> відкладає виконання скрипта до завантаження HTML.</p>
+          </div>
+        </details>
+
+        <!-- 64 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 64. Що таке async у script?</summary>
+          <div class="answer">
+            <p>Атрибут <code>async</code> завантажує і виконує скрипт паралельно.</p>
+          </div>
+        </details>
+
+        <!-- 65 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 65. Що таке inline-скрипти?</summary>
+          <div class="answer">
+            <p>Скрипти, які пишуться безпосередньо у <code>&lt;script&gt;</code> у HTML.</p>
+          </div>
+        </details>
+
+        <!-- 66 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 66. Чим inline-стилі відрізняються від зовнішніх?</summary>
+          <div class="answer">
+            <p>Inline пишуться у тегах, зовнішні — у CSS-файлах через <code>&lt;link&gt;</code>.</p>
+          </div>
+        </details>
+
+        <!-- 67 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 67. Що таке custom data-атрибути?</summary>
+          <div class="answer">
+            <p>Атрибути <code>data-*</code>, що дозволяють зберігати додаткові дані у елементах.</p>
+          </div>
+        </details>
+
+        <!-- 68 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 68. Що таке Shadow DOM?</summary>
+          <div class="answer"><p>Механізм ізоляції стилів і розмітки всередині Web Components.</p></div>
+        </details>
+
+        <!-- 69 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 69. Що таке Web Components?</summary>
+          <div class="answer"><p>Стандарт для створення власних HTML-елементів із Shadow DOM.</p></div>
+        </details>
+
+        <!-- 70 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 70. Що таке template у HTML?</summary>
+          <div class="answer">
+            <p>Тег <code>&lt;template&gt;</code> містить невидимий фрагмент HTML для подальшого використання.</p>
+          </div>
+        </details>
+
+        <!-- 71 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 71. Що таке slot?</summary>
+          <div class="answer"><p>Місце для вставки контенту у Web Components.</p></div>
+        </details>
+
+        <!-- 72 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 72. Що таке contenteditable?</summary>
+          <div class="answer"><p>Атрибут, що робить елемент редагованим у браузері.</p></div>
+        </details>
+
+        <!-- 73 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 73. Що таке designMode?</summary>
+          <div class="answer"><p>Властивість документа, яка дозволяє редагувати весь HTML.</p></div>
+        </details>
+
+        <!-- 74 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 74. Що таке sandbox у iframe?</summary>
+          <div class="answer">
+            <p>Атрибут <code>sandbox</code> обмежує права вбудованого контенту.</p>
+          </div>
+        </details>
+
+        <!-- 75 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 75. Що таке crossorigin у script?</summary>
+          <div class="answer"><p>Атрибут для завантаження ресурсів з інших доменів з CORS.</p></div>
+        </details>
+
+        <!-- 76 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 76. Що таке integrity у script?</summary>
+          <div class="answer"><p>Атрибут для перевірки цілісності ресурсу (Subresource Integrity).</p></div>
+        </details>
+
+        <!-- 77 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 77. Що таке CSP?</summary>
+          <div class="answer"><p>Content Security Policy — механізм безпеки для контролю ресурсів у браузері.</p></div>
+        </details>
+
+        <!-- 78 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 78. Що таке XSS?</summary>
+          <div class="answer"><p>Cross-Site Scripting — вразливість, що дозволяє виконувати шкідливий код у браузері.</p></div>
+        </details>
+
+        <!-- 79 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 79. Як захиститися від XSS?</summary>
+          <div class="answer"><p>Використовувати escaping, CSP, не довіряти введеним даним.</p></div>
+        </details>
+
+        <!-- 80 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 80. Що таке HTTPS?</summary>
+          <div class="answer"><p>Протокол передачі даних із шифруванням (HTTP + TLS).</p></div>
+        </details>
+
+        <!-- 81 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 81. Що таке Service Worker?</summary>
+          <div class="answer"><p>Скрипт, що працює у фоновому режимі для кешування та офлайн-режиму.</p></div>
+        </details>
+
+        <!-- 82 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 82. Що таке PWA?</summary>
+          <div class="answer"><p>Progressive Web App — веб-додаток з можливостями нативного.</p></div>
+        </details>
+
+        <!-- 83 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 83. Що таке manifest.json?</summary>
+          <div class="answer"><p>Файл конфігурації PWA: іконки, назва, кольори.</p></div>
+        </details>
+
+        <!-- 84 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 84. Що таке localStorage?</summary>
+          <div class="answer"><p>API браузера для збереження даних у вигляді ключ-значення.</p></div>
+        </details>
+
+        <!-- 85 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 85. Що таке sessionStorage?</summary>
+          <div class="answer"><p>API для збереження даних лише на час сесії.</p></div>
+        </details>
+
+        <!-- 86 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 86. Що таке cookies?</summary>
+          <div class="answer"><p>Невеликі дані, які зберігаються у браузері для сесій і налаштувань.</p></div>
+        </details>
+
+        <!-- 87 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 87. Що таке IndexedDB?</summary>
+          <div class="answer"><p>База даних у браузері для збереження структурованих даних.</p></div>
+        </details>
+
+        <!-- 88 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 88. Що таке Web Storage API?</summary>
+          <div class="answer">
+            <p>Інтерфейси <code>localStorage</code> і <code>sessionStorage</code> для збереження даних.</p>
+          </div>
+        </details>
+
+        <!-- 89 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 89. Що таке Geolocation API?</summary>
+          <div class="answer"><p>API для визначення геолокації користувача.</p></div>
+        </details>
+
+        <!-- 90 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 90. Що таке Drag and Drop API?</summary>
+          <div class="answer"><p>API для перетягування елементів у браузері.</p></div>
+        </details>
+
+        <!-- 91 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 91. Що таке Fullscreen API?</summary>
+          <div class="answer"><p>API для перемикання елементів у повноекранний режим.</p></div>
+        </details>
+
+        <!-- 92 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 92. Що таке WebRTC?</summary>
+          <div class="answer"><p>Технологія для прямої передачі аудіо та відео між браузерами.</p></div>
+        </details>
+
+        <!-- 93 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 93. Що таке WebSockets?</summary>
+          <div class="answer"><p>Протокол для двостороннього з’єднання між клієнтом і сервером у реальному часі.</p></div>
+        </details>
+
+        <!-- 94 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 94. Що таке SSE?</summary>
+          <div class="answer"><p>Server-Sent Events — одностороннє з’єднання для надсилання даних від сервера.</p></div>
+        </details>
+
+        <!-- 95 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 95. Що таке HTTP/2?</summary>
+          <div class="answer"><p>Версія HTTP, яка дозволяє мультиплексування запитів.</p></div>
+        </details>
+
+        <!-- 96 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 96. Що таке HTTP/3?</summary>
+          <div class="answer"><p>Версія HTTP на основі протоколу QUIC для швидшої передачі даних.</p></div>
+        </details>
+
+        <!-- 97 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 97. Що таке prerender?</summary>
+          <div class="answer"><p>Попереднє завантаження сторінок для прискорення переходів.</p></div>
+        </details>
+
+        <!-- 98 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 98. Що таке prefetch?</summary>
+          <div class="answer"><p>Попереднє завантаження ресурсів, які можуть знадобитися.</p></div>
+        </details>
+
+        <!-- 99 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 99. Що таке preload?</summary>
+          <div class="answer">
+            <p>Атрибут <code>&lt;link rel="preload"&gt;</code> для завантаження критичних ресурсів.</p>
+          </div>
+        </details>
+
+        <!-- 100 -->
+        <details class="faq">
+          <summary><span class="chev">▸</span> 100. Що таке Shadow DOM v1?</summary>
+          <div class="answer"><p>Оновлена специфікація Shadow DOM, що використовується у сучасних браузерах для Web Components.</p></div>
+        </details>
+      </div>
+    </main>
+
+    <footer class="footer container" id="footer">
+      <p>Створено з <span class="heart">♥</span> | Україна</p>
+    </footer>
+  </body>
 </html>

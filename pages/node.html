@@ -1,84 +1,115 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FAQ, Питання-відповіді для співбесіди">
-  <meta name="author" content="Козюбра Руслан">
-  <title>100 Node...</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FAQ, Питання-відповіді для співбесіди" />
+    <meta name="author" content="Козюбра Руслан" />
+    <title>100 FAQ Node...</title>
 
-  <!-- Підключення фавіконки -->
-  <link rel="icon" href="../icons/node.ico" type="image/x-icon">
-  <link rel="icon" href="../icons/nodejs-2.png" type="image/png">
+    <!-- Підключення шрифта -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
 
-  <!-- Підключення скрипта -->
-  <script src="../script/script_theme.js" defer></script>
-  <script src="../script/script_search.js" defer></script>
-  <script src="../script/script_open_close.js" defer></script>
+    <!-- Підключення фавіконки -->
+    <link rel="icon" href="../icons/node.ico" type="image/x-icon" />
+    <link rel="icon" href="../icons/nodejs-2.png" type="image/png" />
 
-      <!-- Підключення нормалайз -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css">
+    <!-- Підключення скрипта -->
+    <script src="../script/script_theme.js" defer></script>
+    <script src="../script/script_search.js" defer></script>
+    <script src="../script/script_open_close.js" defer></script>
 
-  <!-- Підключення CSS -->
-  <link rel="stylesheet" href="../css/style.css">
+    <!-- Підключення нормалайз -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" />
 
-</head>
-<body>
+    <!-- Підключення CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="header container" id="top">
+      <!-- #region theme -->
+      <div class="theme-circle">
+        <button
+          class="circle"
+          data-color="red"
+          style="background: red"
+          onclick="setTheme('red')"
+          aria-label="Встановити червону тему"
+          title="Червона тема"
+        ></button>
+        <button
+          class="circle"
+          data-color="orange"
+          style="background: orange"
+          onclick="setTheme('orange')"
+          aria-label="Встановити помаранчеву тему"
+          title="Помаранчева тема"
+        ></button>
+        <button
+          class="circle"
+          data-color="yellow"
+          style="background: yellow"
+          onclick="setTheme('yellow')"
+          aria-label="Встановити жовту тему"
+          title="Жовта тема"
+        ></button>
+        <button
+          class="circle"
+          data-color="green"
+          style="background: green"
+          onclick="setTheme('green')"
+          aria-label="Встановити зелену тему"
+          title="Зелена тема"
+        ></button>
+        <button
+          class="circle"
+          data-color="skyblue"
+          style="background: skyblue"
+          onclick="setTheme('skyblue')"
+          aria-label="Встановити блакитну тему"
+          title="Блакитна тема"
+        ></button>
+        <button
+          class="circle"
+          data-color="blue"
+          style="background: blue"
+          onclick="setTheme('blue')"
+          aria-label="Встановити синю тему"
+          title="Синя тема"
+        ></button>
+        <button
+          class="circle"
+          data-color="purple"
+          style="background: purple"
+          onclick="setTheme('purple')"
+          aria-label="Встановити фіолетову тему"
+          title="Фіолетоватема"
+        ></button>
+        <button
+          class="circle"
+          data-color="light"
+          style="background: whitesmoke"
+          onclick="setTheme('light')"
+          aria-label="Встановити білу тему"
+          title="Біла тема"
+        ></button>
+        <button
+          class="circle"
+          data-color="dark"
+          style="background: black"
+          onclick="setTheme('dark')"
+          aria-label="Встановити чорну тему"
+          title="Чорна тема"
+        ></button>
+      </div>
+      <!-- #endregion theme -->
+      <h1>Перевірка знань по темі "Node"</h1>
+    </header>
 
- <!-- #region theme+header -->
-   <div class="theme-circle">
-<button class="circle" data-color="red" style="background:red;" onclick="setTheme('red')"  aria-label="Встановити червону тему"
-        title="Червона тема"></button>
-<button class="circle" data-color="orange" style="background:orange;" onclick="setTheme('orange')"  aria-label="Встановити помаранчеву тему"
-        title="Помаранчева тема"></button>
-<button class="circle" data-color="yellow" style="background:yellow;" onclick="setTheme('yellow')"  aria-label="Встановити жовту тему"
-        title="Жовта тема"></button>
-<button class="circle" data-color="green" style="background:green" onclick="setTheme('green')"  aria-label="Встановити зелену тему"
-        title="Зелена тема"></button>
-<button class="circle" data-color="skyblue" style="background:skyblue" onclick="setTheme('skyblue')"  aria-label="Встановити блакитну тему"
-        title="Блакитна тема"></button>
-<button class="circle" data-color="blue" style="background:blue;" onclick="setTheme('blue')"  aria-label="Встановити синю тему"
-        title="Синя тема"></button>
-<button class="circle" data-color="purple" style="background:purple;" onclick="setTheme('purple')"  aria-label="Встановити фіолетову тему"
-        title="Фіолетоватема"></button>
-<button class="circle" data-color="light" style="background:whitesmoke;" onclick="setTheme('light')"  aria-label="Встановити білу тему"
-        title="Біла тема"></button>
-<button class="circle" data-color="dark" style="background:black;" onclick="setTheme('dark')"  aria-label="Встановити чорну тему"
-        title="Чорна тема"></button>
-</div>
-
-<header class="header container">
-
-  <h1>Перевірка знань по темі "Node"</h1>
-
-</div>
-    <!-- <ul class="header-menu">
-      <li class="header-item">
-        <a class="header-link" href="../pages/html.html">
-              <svg class="icon" width="24" height="24">
-                <use href="../icons/sprite-logo.svg#icon-html-5-logo-svg-1"></use>
-              </svg>
-            HTML 5 </a></li>
-      <li class="header-item"><a class="header-link" href="../pages/css.html"><svg class="icon" width="24" height="24">
-                <use href="../icons/sprite-logo.svg#icon-css-3"></use>
-              </svg>CSS</a></li>
-      <li class="header-item"><a class="header-link" href="../pages/java-script.html"><svg class="icon" width="24" height="24">
-                <use href="../icons/sprite-logo.svg#icon-javascript-1"></use>
-              </svg>Java Script</a></li>
-<li class="header-item"><a class="header-link" href="../pages/react.html"><svg class="icon" width="24" height="24">
-                <use href="../icons/sprite-logo.svg#icon-react-2"></use>
-              </svg>React</a></li>
- <li class="header-item"><a class="header-link" href="../pages/node.html"><svg class="icon" width="24" height="24">
-                <use href="../icons/sprite-logo.svg#icon-nodejs-2"></use>
-              </svg>Node</a></li>
- </ul> -->
- </header>
-<!-- #endregion theme+header -->
-
- <!-- #region scroll -->
-  <div>
+    <!-- #region scroll -->
+    <div>
       <div class="icon-scroll-back">
-        <a href="/" aria-label="На головну" title="На головну">
+        <a href="../index.html" aria-label="На головну" title="На головну">
           <span class="swim-scroll">
             <svg class="icon-scroll-svg" width="15" height="15">
               <use href="../img/sprite.svg#arrow-scroll-down"></use>
@@ -98,7 +129,7 @@
       </div>
 
       <div class="icon-scroll-down">
-        <a href="#Now" aria-label="В кінець сторінки" title="В кінець сторінки">
+        <a href="#footer" aria-label="В кінець сторінки" title="В кінець сторінки">
           <span class="swim-scroll">
             <svg class="icon-scroll-svg" width="15" height="15">
               <use href="../img/sprite.svg#arrow-scroll-down"></use>
@@ -107,325 +138,704 @@
         </a>
       </div>
     </div>
- <!-- endregion scroll -->
-  
-  <div class="wrap-content">
-        <!-- <h2>Node — Шпаргалка</h2> -->
-      <div class="tools">
-        <input id="q" type="search" placeholder="Пошук по питаннях і відповідях…" />
-        <button id="openAll" class="btn" type="button">Відкрити всі</button>
-        <button id="closeAll" class="btn" type="button">Закрити всі</button>
+    <!-- endregion scroll -->
+
+    <main class="container">
+      <div class="wrap-content">
+        <div class="input-buttons">
+          <input
+            id="q"
+            type="search"
+            placeholder="Пошук по питаннях і відповідях…"
+            aria-label="Поле пошуку по питаннях і відповідях"
+            title="Введіть ключове слово для пошуку"
+          />
+
+          <button id="openAll" class="btn" type="button" aria-label="Відкрити всі питання і відповіді" title="Розгорнути всі">Відкрити всі</button>
+
+          <button id="closeAll" class="btn" type="button" aria-label="Закрити всі питання і відповіді" title="Згорнути всі">Закрити всі</button>
+        </div>
+        <div>
+          <!-- 1 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 1. Що таке Node.js?</summary>
+            <div class="answer"><p>Node.js — це середовище виконання JavaScript на сервері, побудоване на рушії V8.</p></div>
+          </details>
+
+          <!-- 2 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 2. Яка основна перевага Node.js?</summary>
+            <div class="answer"><p>Немасивна, подієва архітектура і асинхронність роблять його ефективним для високонавантажених додатків.</p></div>
+          </details>
+
+          <!-- 3 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 3. Як встановити Node.js?</summary>
+            <div class="answer">
+              <p>З офіційного сайту <a href="https://nodejs.org/">nodejs.org</a> або через менеджери пакетів (nvm, brew).</p>
+            </div>
+          </details>
+
+          <!-- 4 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 4. Що таке npm?</summary>
+            <div class="answer"><p>Node Package Manager — менеджер пакетів для Node.js.</p></div>
+          </details>
+
+          <!-- 5 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 5. Що таке модуль у Node.js?</summary>
+            <div class="answer"><p>Файл або набір файлів, який експортує функції, об’єкти чи змінні.</p></div>
+          </details>
+
+          <!-- 6 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 6. Як імпортувати модуль?</summary>
+            <div class="answer">
+              <p>За допомогою <code>require('module')</code> або <code>import</code> у ES-модулях.</p>
+            </div>
+          </details>
+
+          <!-- 7 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 7. Що таке global object?</summary>
+            <div class="answer"><p>Об’єкт, доступний у будь-якому модулі Node.js без імпорту (<code>global</code>).</p></div>
+          </details>
+
+          <!-- 8 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 8. Що таке process?</summary>
+            <div class="answer"><p>Об’єкт, що надає інформацію про поточний процес Node.js і дозволяє взаємодіяти з ним.</p></div>
+          </details>
+
+          <!-- 9 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 9. Як отримати аргументи командного рядка?</summary>
+            <div class="answer">
+              <p>Через <code>process.argv</code>.</p>
+            </div>
+          </details>
+
+          <!-- 10 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 10. Що таке модуль fs?</summary>
+            <div class="answer"><p>Модуль для роботи з файловою системою.</p></div>
+          </details>
+
+          <!-- 11 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 11. Як прочитати файл синхронно?</summary>
+            <div class="answer">
+              <p><code>fs.readFileSync('file.txt', 'utf-8')</code></p>
+            </div>
+          </details>
+
+          <!-- 12 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 12. Як прочитати файл асинхронно?</summary>
+            <div class="answer">
+              <p><code>fs.readFile('file.txt', 'utf-8', callback)</code></p>
+            </div>
+          </details>
+
+          <!-- 13 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 13. Що таке callback?</summary>
+            <div class="answer"><p>Функція, передана в іншу функцію для виконання після завершення операції.</p></div>
+          </details>
+
+          <!-- 14 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 14. Що таке promise?</summary>
+            <div class="answer"><p>Об’єкт, який представляє завершення або невдачу асинхронної операції.</p></div>
+          </details>
+
+          <!-- 15 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 15. Як використовувати async/await?</summary>
+            <div class="answer">
+              <p>Позначаємо функцію як <code>async</code> і використовуємо <code>await</code> перед промісами.</p>
+            </div>
+          </details>
+
+          <!-- 16 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 16. Що таке event loop?</summary>
+            <div class="answer"><p>Цикл подій, який обробляє асинхронні операції в Node.js.</p></div>
+          </details>
+
+          <!-- 17 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 17. Що таке buffer?</summary>
+            <div class="answer"><p>Об’єкт для роботи з двійковими даними.</p></div>
+          </details>
+
+          <!-- 18 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 18. Що таке stream?</summary>
+            <div class="answer"><p>Об’єкт для обробки даних по частинах (readable, writable, duplex, transform).</p></div>
+          </details>
+
+          <!-- 19 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 19. Що таке module.exports?</summary>
+            <div class="answer"><p>Об’єкт, який експортує функції або змінні з модуля.</p></div>
+          </details>
+
+          <!-- 20 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 20. Що таке require?</summary>
+            <div class="answer"><p>Функція для імпорту модулів CommonJS.</p></div>
+          </details>
+
+          <!-- 21 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 21. Як створити HTTP сервер?</summary>
+            <div class="answer">
+              <p>За допомогою модуля <code>http.createServer()</code>.</p>
+            </div>
+          </details>
+
+          <!-- 22 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 22. Що таке middleware?</summary>
+            <div class="answer"><p>Функція, яка обробляє запит перед передачею до наступної функції у стеку.</p></div>
+          </details>
+
+          <!-- 23 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 23. Що таке Express.js?</summary>
+            <div class="answer"><p>Фреймворк для побудови веб-серверів у Node.js.</p></div>
+          </details>
+
+          <!-- 24 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 24. Як обробити маршрути в Express?</summary>
+            <div class="answer">
+              <p>Через <code>app.get('/route', handler)</code>, <code>app.post</code> тощо.</p>
+            </div>
+          </details>
+
+          <!-- 25 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 25. Що таке npm package.json?</summary>
+            <div class="answer"><p>Файл конфігурації проекту, що містить залежності та скрипти.</p></div>
+          </details>
+
+          <!-- 26 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 26. Що таке nodemon?</summary>
+            <div class="answer"><p>Утиліта для автоматичного перезапуску сервера при зміні коду.</p></div>
+          </details>
+
+          <!-- 27 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 27. Що таке cluster?</summary>
+            <div class="answer"><p>Модуль для запуску кількох процесів Node.js для використання всіх ядер CPU.</p></div>
+          </details>
+
+          <!-- 28 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 28. Що таке process.env?</summary>
+            <div class="answer"><p>Об’єкт для доступу до змінних середовища.</p></div>
+          </details>
+
+          <!-- 29 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 29. Що таке crypto?</summary>
+            <div class="answer"><p>Модуль для криптографічних операцій (хеші, шифрування).</p></div>
+          </details>
+
+          <!-- 30 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 30. Що таке EventEmitter?</summary>
+            <div class="answer"><p>Клас для роботи з подіями та підписками на них.</p></div>
+          </details>
+
+          <!-- 31 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 31. Як підписатися на подію EventEmitter?</summary>
+            <div class="answer">
+              <p>Через <code>emitter.on('event', callback)</code> або <code>emitter.once</code>.</p>
+            </div>
+          </details>
+
+          <!-- 32 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 32. Що таке readable stream?</summary>
+            <div class="answer"><p>Потік, з якого можна читати дані частинами.</p></div>
+          </details>
+
+          <!-- 33 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 33. Що таке writable stream?</summary>
+            <div class="answer"><p>Потік, в який можна записувати дані частинами.</p></div>
+          </details>
+
+          <!-- 34 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 34. Що таке duplex stream?</summary>
+            <div class="answer"><p>Потік, який одночасно читає і записує дані.</p></div>
+          </details>
+
+          <!-- 35 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 35. Що таке transform stream?</summary>
+            <div class="answer"><p>Дуплекс-потік, який змінює дані під час проходження через нього.</p></div>
+          </details>
+
+          <!-- 36 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 36. Як обробляти помилки у потоках?</summary>
+            <div class="answer">
+              <p>Підпискою на подію <code>'error'</code> (<code>stream.on('error', callback)</code>).</p>
+            </div>
+          </details>
+
+          <!-- 37 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 37. Що таке buffer pool?</summary>
+            <div class="answer"><p>Попередньо виділена пам’ять для буферів, щоб уникнути частих алокацій.</p></div>
+          </details>
+
+          <!-- 38 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 38. Що таке process.nextTick?</summary>
+            <div class="answer"><p>Метод для планування колбеку на наступну ітерацію циклу подій перед промісами.</p></div>
+          </details>
+
+          <!-- 39 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 39. Що таке setImmediate?</summary>
+            <div class="answer"><p>Запускає колбек на наступній ітерації event loop, після I/O подій.</p></div>
+          </details>
+
+          <!-- 40 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 40. Як працює timers module?</summary>
+            <div class="answer">
+              <p>Надає <code>setTimeout</code>, <code>setInterval</code>, <code>setImmediate</code> для відкладеного виконання коду.</p>
+            </div>
+          </details>
+
+          <!-- 41 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 41. Що таке cluster.fork()?</summary>
+            <div class="answer"><p>Метод для створення нового процесу Node.js у кластері.</p></div>
+          </details>
+
+          <!-- 42 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 42. Що таке IPC у Node.js?</summary>
+            <div class="answer"><p>Міжпроцесна комунікація для обміну повідомленнями між процесами.</p></div>
+          </details>
+
+          <!-- 43 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 43. Що таке child_process?</summary>
+            <div class="answer"><p>Модуль для запуску інших процесів з Node.js.</p></div>
+          </details>
+
+          <!-- 44 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 44. Як використовувати exec?</summary>
+            <div class="answer">
+              <p>Через <code>child_process.exec('command', callback)</code> для запуску команд shell.</p>
+            </div>
+          </details>
+
+          <!-- 45 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 45. Як використовувати spawn?</summary>
+            <div class="answer">
+              <p>Через <code>child_process.spawn('command', args)</code> для потокової роботи з процесом.</p>
+            </div>
+          </details>
+
+          <!-- 46 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 46. Що таке cluster master?</summary>
+            <div class="answer"><p>Головний процес, який створює і контролює воркер-процеси.</p></div>
+          </details>
+
+          <!-- 47 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 47. Що таке worker?</summary>
+            <div class="answer"><p>Процес у кластері, що обробляє запити.</p></div>
+          </details>
+
+          <!-- 48 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 48. Як підключати Express middleware?</summary>
+            <div class="answer">
+              <p>Через <code>app.use(middlewareFunction)</code>.</p>
+            </div>
+          </details>
+
+          <!-- 49 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 49. Як обробляти JSON запити у Express?</summary>
+            <div class="answer">
+              <p>За допомогою <code>app.use(express.json())</code>.</p>
+            </div>
+          </details>
+
+          <!-- 50 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 50. Як підключати статичні файли у Express?</summary>
+            <div class="answer">
+              <p><code>app.use(express.static('public'))</code></p>
+            </div>
+          </details>
+
+          <!-- 51 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 51. Що таке routing params?</summary>
+            <div class="answer">
+              <p>Динамічні частини URL, які можна отримати через <code>req.params</code>.</p>
+            </div>
+          </details>
+
+          <!-- 52 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 52. Що таке query params?</summary>
+            <div class="answer">
+              <p>Параметри URL після <code>?</code>, доступні через <code>req.query</code>.</p>
+            </div>
+          </details>
+
+          <!-- 53 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 53. Що таке cookie-parser?</summary>
+            <div class="answer"><p>Middleware для обробки cookie в Express.</p></div>
+          </details>
+
+          <!-- 54 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 54. Що таке session?</summary>
+            <div class="answer"><p>Механізм збереження стану користувача між запитами.</p></div>
+          </details>
+
+          <!-- 55 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 55. Що таке CORS?</summary>
+            <div class="answer"><p>Cross-Origin Resource Sharing — політика доступу до ресурсів з інших доменів.</p></div>
+          </details>
+
+          <!-- 56 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 56. Як обробляти помилки у Express?</summary>
+            <div class="answer">
+              <p>Через middleware з чотирма параметрами <code>(err, req, res, next)</code>.</p>
+            </div>
+          </details>
+
+          <!-- 57 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 57. Що таке helmet?</summary>
+            <div class="answer"><p>Middleware для безпеки HTTP заголовків.</p></div>
+          </details>
+
+          <!-- 58 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 58. Що таке morgan?</summary>
+            <div class="answer"><p>Middleware для логування HTTP запитів.</p></div>
+          </details>
+
+          <!-- 59 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 59. Що таке dotenv?</summary>
+            <div class="answer">
+              <p>Модуль для завантаження змінних середовища з файлу <code>.env</code>.</p>
+            </div>
+          </details>
+
+          <!-- 60 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 60. Що таке body-parser?</summary>
+            <div class="answer"><p>Middleware для парсингу тіла запиту (JSON, URL-encoded).</p></div>
+          </details>
+
+          <!-- 61 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 61. Що таке WebSocket у Node.js?</summary>
+            <div class="answer"><p>Протокол для двостороннього зв’язку між сервером і клієнтом у реальному часі.</p></div>
+          </details>
+
+          <!-- 62 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 62. Який модуль використовується для WebSocket?</summary>
+            <div class="answer">
+              <p>Наприклад, <code>ws</code> або <code>socket.io</code>.</p>
+            </div>
+          </details>
+
+          <!-- 63 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 63. Що таке socket.emit?</summary>
+            <div class="answer"><p>Метод для відправки події від сервера до клієнта або навпаки.</p></div>
+          </details>
+
+          <!-- 64 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 64. Як обробляти події socket.on?</summary>
+            <div class="answer">
+              <p>За допомогою <code>socket.on('event', callback)</code> для отримання подій.</p>
+            </div>
+          </details>
+
+          <!-- 65 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 65. Що таке REPL у Node.js?</summary>
+            <div class="answer"><p>Read-Eval-Print Loop — інтерактивна консоль Node.js для виконання коду.</p></div>
+          </details>
+
+          <!-- 66 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 66. Як використовувати REPL?</summary>
+            <div class="answer">
+              <p>Запустити командою <code>node</code> без аргументів у терміналі.</p>
+            </div>
+          </details>
+
+          <!-- 67 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 67. Що таке global.setTimeout?</summary>
+            <div class="answer"><p>Метод для відкладеного виконання коду через певний час.</p></div>
+          </details>
+
+          <!-- 68 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 68. Що таке global.setInterval?</summary>
+            <div class="answer"><p>Метод для циклічного виконання коду через заданий інтервал.</p></div>
+          </details>
+
+          <!-- 69 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 69. Як обробляти uncaughtException?</summary>
+            <div class="answer">
+              <p>Через <code>process.on('uncaughtException', callback)</code> для глобального перехоплення помилок.</p>
+            </div>
+          </details>
+
+          <!-- 70 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 70. Як обробляти unhandledRejection?</summary>
+            <div class="answer">
+              <p>Через <code>process.on('unhandledRejection', callback)</code>.</p>
+            </div>
+          </details>
+
+          <!-- 71 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 71. Що таке REPLServer?</summary>
+            <div class="answer"><p>Клас Node.js для створення кастомних REPL-консолей.</p></div>
+          </details>
+
+          <!-- 72 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 72. Що таке setImmediate vs setTimeout?</summary>
+            <div class="answer">
+              <p><code>setImmediate</code> виконується після I/O, а <code>setTimeout</code> після заданого часу.</p>
+            </div>
+          </details>
+
+          <!-- 73 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 73. Як використовувати fs.promises?</summary>
+            <div class="answer">
+              <p>Через <code>const fs = require('fs').promises</code> для асинхронної роботи з файлами з промісами.</p>
+            </div>
+          </details>
+
+          <!-- 74 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 74. Що таке readFileSync vs readFile?</summary>
+            <div class="answer">
+              <p><code>readFileSync</code> — синхронне читання, блокує event loop, <code>readFile</code> — асинхронне.</p>
+            </div>
+          </details>
+
+          <!-- 75 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 75. Що таке writeFileSync vs writeFile?</summary>
+            <div class="answer"><p>Аналогічно, синхронне і асинхронне записування файлів.</p></div>
+          </details>
+
+          <!-- 76 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 76. Що таке path module?</summary>
+            <div class="answer"><p>Модуль для роботи з шляхами файлів і директорій.</p></div>
+          </details>
+
+          <!-- 77 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 77. Як об’єднати шляхи у Node.js?</summary>
+            <div class="answer">
+              <p>Через <code>path.join('dir', 'file.txt')</code>.</p>
+            </div>
+          </details>
+
+          <!-- 78 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 78. Як отримати розширення файлу?</summary>
+            <div class="answer">
+              <p>Через <code>path.extname('file.txt')</code>.</p>
+            </div>
+          </details>
+
+          <!-- 79 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 79. Що таке os module?</summary>
+            <div class="answer"><p>Модуль для отримання інформації про операційну систему.</p></div>
+          </details>
+
+          <!-- 80 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 80. Як отримати кількість ядер CPU?</summary>
+            <div class="answer">
+              <p><code>require('os').cpus().length</code></p>
+            </div>
+          </details>
+
+          <!-- 81 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 81. Що таке cluster для масштабування?</summary>
+            <div class="answer"><p>Використання кількох процесів для обробки запитів на всіх ядрах CPU.</p></div>
+          </details>
+
+          <!-- 82 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 82. Як працює EventEmitter.emit?</summary>
+            <div class="answer"><p>Запускає усі колбеки, підписані на певну подію.</p></div>
+          </details>
+
+          <!-- 83 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 83. Що таке process.argv?</summary>
+            <div class="answer"><p>Масив аргументів командного рядка.</p></div>
+          </details>
+
+          <!-- 84 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 84. Як дізнатися версію Node.js?</summary>
+            <div class="answer">
+              <p><code>node -v</code> або <code>process.version</code></p>
+            </div>
+          </details>
+
+          <!-- 85 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 85. Як отримати platform?</summary>
+            <div class="answer">
+              <p><code>process.platform</code> повертає ОС, наприклад <code>'win32'</code> або <code>'linux'</code>.</p>
+            </div>
+          </details>
+
+          <!-- 86 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 86. Що таке require.cache?</summary>
+            <div class="answer"><p>Об’єкт, який кешує модулі, щоб не підвантажувати їх повторно.</p></div>
+          </details>
+
+          <!-- 87 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 87. Як очистити кеш модуля?</summary>
+            <div class="answer">
+              <p>Через <code>delete require.cache[require.resolve('module')]</code></p>
+            </div>
+          </details>
+
+          <!-- 88 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 88. Що таке globalThis?</summary>
+            <div class="answer"><p>Глобальний об’єкт, доступний у будь-якому контексті.</p></div>
+          </details>
+
+          <!-- 89 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 89. Що таке crypto.randomUUID?</summary>
+            <div class="answer"><p>Метод для генерації унікального UUID.</p></div>
+          </details>
+
+          <!-- 90 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 90. Що таке worker_threads?</summary>
+            <div class="answer"><p>Модуль для паралельного виконання коду у фонових потоках.</p></div>
+          </details>
+
+          <!-- 91 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 91. Як створити worker thread?</summary>
+            <div class="answer">
+              <p>Через <code>new Worker('file.js')</code> з модуля <code>worker_threads</code>.</p>
+            </div>
+          </details>
+
+          <!-- 92 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 92. Як обмінюватися даними з worker?</summary>
+            <div class="answer">
+              <p>Через <code>postMessage</code> та події <code>'message'</code>.</p>
+            </div>
+          </details>
+
+          <!-- 93 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 93. Що таке performance module?</summary>
+            <div class="answer"><p>Модуль для вимірювання продуктивності коду.</p></div>
+          </details>
+
+          <!-- 94 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 94. Як використовувати perf_hooks?</summary>
+            <div class="answer">
+              <p>Через <code>const { performance } = require('perf_hooks')</code> і <code>performance.now()</code>.</p>
+            </div>
+          </details>
+
+          <!-- 95 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 95. Що таке inspector?</summary>
+            <div class="answer"><p>Модуль для відладки Node.js через Chrome DevTools.</p></div>
+          </details>
+
+          <!-- 96 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 96. Як підключити inspector?</summary>
+            <div class="answer">
+              <p>Запуском Node.js з <code>--inspect</code> або <code>--inspect-brk</code>.</p>
+            </div>
+          </details>
+
+          <!-- 97 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 97. Що таке domains (deprecated)?</summary>
+            <div class="answer"><p>Модуль для обробки помилок у групах асинхронних операцій, застарілий.</p></div>
+          </details>
+
+          <!-- 98 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 98. Як захищати Node.js додатки?</summary>
+            <div class="answer"><p>Використовувати helmet, rate-limit, перевірку даних і HTTPS.</p></div>
+          </details>
+
+          <!-- 99 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 99. Що таке process.memoryUsage?</summary>
+            <div class="answer"><p>Метод для отримання статистики використаної пам’яті Node.js.</p></div>
+          </details>
+
+          <!-- 100 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 100. Як оптимізувати Node.js додаток?</summary>
+            <div class="answer"><p>Профілювання, використання асинхронного коду, кешування, кластеризація, оптимізація запитів і I/O.</p></div>
+          </details>
+        </div>
       </div>
-<!-- 1 -->
-<details class="faq"><summary><span class="chev">▸</span> 1. Що таке Node.js?</summary><div class="answer"><p>Node.js — це середовище виконання JavaScript на сервері, побудоване на рушії V8.</p></div></details>
-
-<!-- 2 -->
-<details class="faq"><summary><span class="chev">▸</span> 2. Яка основна перевага Node.js?</summary><div class="answer"><p>Немасивна, подієва архітектура і асинхронність роблять його ефективним для високонавантажених додатків.</p></div></details>
-
-<!-- 3 -->
-<details class="faq"><summary><span class="chev">▸</span> 3. Як встановити Node.js?</summary><div class="answer"><p>З офіційного сайту <a href="https://nodejs.org/">nodejs.org</a> або через менеджери пакетів (nvm, brew).</p></div></details>
-
-<!-- 4 -->
-<details class="faq"><summary><span class="chev">▸</span> 4. Що таке npm?</summary><div class="answer"><p>Node Package Manager — менеджер пакетів для Node.js.</p></div></details>
-
-<!-- 5 -->
-<details class="faq"><summary><span class="chev">▸</span> 5. Що таке модуль у Node.js?</summary><div class="answer"><p>Файл або набір файлів, який експортує функції, об’єкти чи змінні.</p></div></details>
-
-<!-- 6 -->
-<details class="faq"><summary><span class="chev">▸</span> 6. Як імпортувати модуль?</summary><div class="answer"><p>За допомогою <code>require('module')</code> або <code>import</code> у ES-модулях.</p></div></details>
-
-<!-- 7 -->
-<details class="faq"><summary><span class="chev">▸</span> 7. Що таке global object?</summary><div class="answer"><p>Об’єкт, доступний у будь-якому модулі Node.js без імпорту (<code>global</code>).</p></div></details>
-
-<!-- 8 -->
-<details class="faq"><summary><span class="chev">▸</span> 8. Що таке process?</summary><div class="answer"><p>Об’єкт, що надає інформацію про поточний процес Node.js і дозволяє взаємодіяти з ним.</p></div></details>
-
-<!-- 9 -->
-<details class="faq"><summary><span class="chev">▸</span> 9. Як отримати аргументи командного рядка?</summary><div class="answer"><p>Через <code>process.argv</code>.</p></div></details>
-
-<!-- 10 -->
-<details class="faq"><summary><span class="chev">▸</span> 10. Що таке модуль fs?</summary><div class="answer"><p>Модуль для роботи з файловою системою.</p></div></details>
-
-<!-- 11 -->
-<details class="faq"><summary><span class="chev">▸</span> 11. Як прочитати файл синхронно?</summary><div class="answer"><p><code>fs.readFileSync('file.txt', 'utf-8')</code></p></div></details>
-
-<!-- 12 -->
-<details class="faq"><summary><span class="chev">▸</span> 12. Як прочитати файл асинхронно?</summary><div class="answer"><p><code>fs.readFile('file.txt', 'utf-8', callback)</code></p></div></details>
-
-<!-- 13 -->
-<details class="faq"><summary><span class="chev">▸</span> 13. Що таке callback?</summary><div class="answer"><p>Функція, передана в іншу функцію для виконання після завершення операції.</p></div></details>
-
-<!-- 14 -->
-<details class="faq"><summary><span class="chev">▸</span> 14. Що таке promise?</summary><div class="answer"><p>Об’єкт, який представляє завершення або невдачу асинхронної операції.</p></div></details>
-
-<!-- 15 -->
-<details class="faq"><summary><span class="chev">▸</span> 15. Як використовувати async/await?</summary><div class="answer"><p>Позначаємо функцію як <code>async</code> і використовуємо <code>await</code> перед промісами.</p></div></details>
-
-<!-- 16 -->
-<details class="faq"><summary><span class="chev">▸</span> 16. Що таке event loop?</summary><div class="answer"><p>Цикл подій, який обробляє асинхронні операції в Node.js.</p></div></details>
-
-<!-- 17 -->
-<details class="faq"><summary><span class="chev">▸</span> 17. Що таке buffer?</summary><div class="answer"><p>Об’єкт для роботи з двійковими даними.</p></div></details>
-
-<!-- 18 -->
-<details class="faq"><summary><span class="chev">▸</span> 18. Що таке stream?</summary><div class="answer"><p>Об’єкт для обробки даних по частинах (readable, writable, duplex, transform).</p></div></details>
-
-<!-- 19 -->
-<details class="faq"><summary><span class="chev">▸</span> 19. Що таке module.exports?</summary><div class="answer"><p>Об’єкт, який експортує функції або змінні з модуля.</p></div></details>
-
-<!-- 20 -->
-<details class="faq"><summary><span class="chev">▸</span> 20. Що таке require?</summary><div class="answer"><p>Функція для імпорту модулів CommonJS.</p></div></details>
-
-<!-- 21 -->
-<details class="faq"><summary><span class="chev">▸</span> 21. Як створити HTTP сервер?</summary><div class="answer"><p>За допомогою модуля <code>http.createServer()</code>.</p></div></details>
-
-<!-- 22 -->
-<details class="faq"><summary><span class="chev">▸</span> 22. Що таке middleware?</summary><div class="answer"><p>Функція, яка обробляє запит перед передачею до наступної функції у стеку.</p></div></details>
-
-<!-- 23 -->
-<details class="faq"><summary><span class="chev">▸</span> 23. Що таке Express.js?</summary><div class="answer"><p>Фреймворк для побудови веб-серверів у Node.js.</p></div></details>
-
-<!-- 24 -->
-<details class="faq"><summary><span class="chev">▸</span> 24. Як обробити маршрути в Express?</summary><div class="answer"><p>Через <code>app.get('/route', handler)</code>, <code>app.post</code> тощо.</p></div></details>
-
-<!-- 25 -->
-<details class="faq"><summary><span class="chev">▸</span> 25. Що таке npm package.json?</summary><div class="answer"><p>Файл конфігурації проекту, що містить залежності та скрипти.</p></div></details>
-
-<!-- 26 -->
-<details class="faq"><summary><span class="chev">▸</span> 26. Що таке nodemon?</summary><div class="answer"><p>Утиліта для автоматичного перезапуску сервера при зміні коду.</p></div></details>
-
-<!-- 27 -->
-<details class="faq"><summary><span class="chev">▸</span> 27. Що таке cluster?</summary><div class="answer"><p>Модуль для запуску кількох процесів Node.js для використання всіх ядер CPU.</p></div></details>
-
-<!-- 28 -->
-<details class="faq"><summary><span class="chev">▸</span> 28. Що таке process.env?</summary><div class="answer"><p>Об’єкт для доступу до змінних середовища.</p></div></details>
-
-<!-- 29 -->
-<details class="faq"><summary><span class="chev">▸</span> 29. Що таке crypto?</summary><div class="answer"><p>Модуль для криптографічних операцій (хеші, шифрування).</p></div></details>
-
-<!-- 30 -->
-<details class="faq"><summary><span class="chev">▸</span> 30. Що таке EventEmitter?</summary><div class="answer"><p>Клас для роботи з подіями та підписками на них.</p></div></details>
-
-<!-- 31 -->
-<details class="faq"><summary><span class="chev">▸</span> 31. Як підписатися на подію EventEmitter?</summary><div class="answer"><p>Через <code>emitter.on('event', callback)</code> або <code>emitter.once</code>.</p></div></details>
-
-<!-- 32 -->
-<details class="faq"><summary><span class="chev">▸</span> 32. Що таке readable stream?</summary><div class="answer"><p>Потік, з якого можна читати дані частинами.</p></div></details>
-
-<!-- 33 -->
-<details class="faq"><summary><span class="chev">▸</span> 33. Що таке writable stream?</summary><div class="answer"><p>Потік, в який можна записувати дані частинами.</p></div></details>
-
-<!-- 34 -->
-<details class="faq"><summary><span class="chev">▸</span> 34. Що таке duplex stream?</summary><div class="answer"><p>Потік, який одночасно читає і записує дані.</p></div></details>
-
-<!-- 35 -->
-<details class="faq"><summary><span class="chev">▸</span> 35. Що таке transform stream?</summary><div class="answer"><p>Дуплекс-потік, який змінює дані під час проходження через нього.</p></div></details>
-
-<!-- 36 -->
-<details class="faq"><summary><span class="chev">▸</span> 36. Як обробляти помилки у потоках?</summary><div class="answer"><p>Підпискою на подію <code>'error'</code> (<code>stream.on('error', callback)</code>).</p></div></details>
-
-<!-- 37 -->
-<details class="faq"><summary><span class="chev">▸</span> 37. Що таке buffer pool?</summary><div class="answer"><p>Попередньо виділена пам’ять для буферів, щоб уникнути частих алокацій.</p></div></details>
-
-<!-- 38 -->
-<details class="faq"><summary><span class="chev">▸</span> 38. Що таке process.nextTick?</summary><div class="answer"><p>Метод для планування колбеку на наступну ітерацію циклу подій перед промісами.</p></div></details>
-
-<!-- 39 -->
-<details class="faq"><summary><span class="chev">▸</span> 39. Що таке setImmediate?</summary><div class="answer"><p>Запускає колбек на наступній ітерації event loop, після I/O подій.</p></div></details>
-
-<!-- 40 -->
-<details class="faq"><summary><span class="chev">▸</span> 40. Як працює timers module?</summary><div class="answer"><p>Надає <code>setTimeout</code>, <code>setInterval</code>, <code>setImmediate</code> для відкладеного виконання коду.</p></div></details>
-
-<!-- 41 -->
-<details class="faq"><summary><span class="chev">▸</span> 41. Що таке cluster.fork()?</summary><div class="answer"><p>Метод для створення нового процесу Node.js у кластері.</p></div></details>
-
-<!-- 42 -->
-<details class="faq"><summary><span class="chev">▸</span> 42. Що таке IPC у Node.js?</summary><div class="answer"><p>Міжпроцесна комунікація для обміну повідомленнями між процесами.</p></div></details>
-
-<!-- 43 -->
-<details class="faq"><summary><span class="chev">▸</span> 43. Що таке child_process?</summary><div class="answer"><p>Модуль для запуску інших процесів з Node.js.</p></div></details>
-
-<!-- 44 -->
-<details class="faq"><summary><span class="chev">▸</span> 44. Як використовувати exec?</summary><div class="answer"><p>Через <code>child_process.exec('command', callback)</code> для запуску команд shell.</p></div></details>
-
-<!-- 45 -->
-<details class="faq"><summary><span class="chev">▸</span> 45. Як використовувати spawn?</summary><div class="answer"><p>Через <code>child_process.spawn('command', args)</code> для потокової роботи з процесом.</p></div></details>
-
-<!-- 46 -->
-<details class="faq"><summary><span class="chev">▸</span> 46. Що таке cluster master?</summary><div class="answer"><p>Головний процес, який створює і контролює воркер-процеси.</p></div></details>
-
-<!-- 47 -->
-<details class="faq"><summary><span class="chev">▸</span> 47. Що таке worker?</summary><div class="answer"><p>Процес у кластері, що обробляє запити.</p></div></details>
-
-<!-- 48 -->
-<details class="faq"><summary><span class="chev">▸</span> 48. Як підключати Express middleware?</summary><div class="answer"><p>Через <code>app.use(middlewareFunction)</code>.</p></div></details>
-
-<!-- 49 -->
-<details class="faq"><summary><span class="chev">▸</span> 49. Як обробляти JSON запити у Express?</summary><div class="answer"><p>За допомогою <code>app.use(express.json())</code>.</p></div></details>
-
-<!-- 50 -->
-<details class="faq"><summary><span class="chev">▸</span> 50. Як підключати статичні файли у Express?</summary><div class="answer"><p><code>app.use(express.static('public'))</code></p></div></details>
-
-<!-- 51 -->
-<details class="faq"><summary><span class="chev">▸</span> 51. Що таке routing params?</summary><div class="answer"><p>Динамічні частини URL, які можна отримати через <code>req.params</code>.</p></div></details>
-
-<!-- 52 -->
-<details class="faq"><summary><span class="chev">▸</span> 52. Що таке query params?</summary><div class="answer"><p>Параметри URL після <code>?</code>, доступні через <code>req.query</code>.</p></div></details>
-
-<!-- 53 -->
-<details class="faq"><summary><span class="chev">▸</span> 53. Що таке cookie-parser?</summary><div class="answer"><p>Middleware для обробки cookie в Express.</p></div></details>
-
-<!-- 54 -->
-<details class="faq"><summary><span class="chev">▸</span> 54. Що таке session?</summary><div class="answer"><p>Механізм збереження стану користувача між запитами.</p></div></details>
-
-<!-- 55 -->
-<details class="faq"><summary><span class="chev">▸</span> 55. Що таке CORS?</summary><div class="answer"><p>Cross-Origin Resource Sharing — політика доступу до ресурсів з інших доменів.</p></div></details>
-
-<!-- 56 -->
-<details class="faq"><summary><span class="chev">▸</span> 56. Як обробляти помилки у Express?</summary><div class="answer"><p>Через middleware з чотирма параметрами <code>(err, req, res, next)</code>.</p></div></details>
-
-<!-- 57 -->
-<details class="faq"><summary><span class="chev">▸</span> 57. Що таке helmet?</summary><div class="answer"><p>Middleware для безпеки HTTP заголовків.</p></div></details>
-
-<!-- 58 -->
-<details class="faq"><summary><span class="chev">▸</span> 58. Що таке morgan?</summary><div class="answer"><p>Middleware для логування HTTP запитів.</p></div></details>
-
-<!-- 59 -->
-<details class="faq"><summary><span class="chev">▸</span> 59. Що таке dotenv?</summary><div class="answer"><p>Модуль для завантаження змінних середовища з файлу <code>.env</code>.</p></div></details>
-
-<!-- 60 -->
-<details class="faq"><summary><span class="chev">▸</span> 60. Що таке body-parser?</summary><div class="answer"><p>Middleware для парсингу тіла запиту (JSON, URL-encoded).</p></div></details>
-
-<!-- 61 -->
-<details class="faq"><summary><span class="chev">▸</span> 61. Що таке WebSocket у Node.js?</summary><div class="answer"><p>Протокол для двостороннього зв’язку між сервером і клієнтом у реальному часі.</p></div></details>
-
-<!-- 62 -->
-<details class="faq"><summary><span class="chev">▸</span> 62. Який модуль використовується для WebSocket?</summary><div class="answer"><p>Наприклад, <code>ws</code> або <code>socket.io</code>.</p></div></details>
-
-<!-- 63 -->
-<details class="faq"><summary><span class="chev">▸</span> 63. Що таке socket.emit?</summary><div class="answer"><p>Метод для відправки події від сервера до клієнта або навпаки.</p></div></details>
-
-<!-- 64 -->
-<details class="faq"><summary><span class="chev">▸</span> 64. Як обробляти події socket.on?</summary><div class="answer"><p>За допомогою <code>socket.on('event', callback)</code> для отримання подій.</p></div></details>
-
-<!-- 65 -->
-<details class="faq"><summary><span class="chev">▸</span> 65. Що таке REPL у Node.js?</summary><div class="answer"><p>Read-Eval-Print Loop — інтерактивна консоль Node.js для виконання коду.</p></div></details>
-
-<!-- 66 -->
-<details class="faq"><summary><span class="chev">▸</span> 66. Як використовувати REPL?</summary><div class="answer"><p>Запустити командою <code>node</code> без аргументів у терміналі.</p></div></details>
-
-<!-- 67 -->
-<details class="faq"><summary><span class="chev">▸</span> 67. Що таке global.setTimeout?</summary><div class="answer"><p>Метод для відкладеного виконання коду через певний час.</p></div></details>
-
-<!-- 68 -->
-<details class="faq"><summary><span class="chev">▸</span> 68. Що таке global.setInterval?</summary><div class="answer"><p>Метод для циклічного виконання коду через заданий інтервал.</p></div></details>
-
-<!-- 69 -->
-<details class="faq"><summary><span class="chev">▸</span> 69. Як обробляти uncaughtException?</summary><div class="answer"><p>Через <code>process.on('uncaughtException', callback)</code> для глобального перехоплення помилок.</p></div></details>
-
-<!-- 70 -->
-<details class="faq"><summary><span class="chev">▸</span> 70. Як обробляти unhandledRejection?</summary><div class="answer"><p>Через <code>process.on('unhandledRejection', callback)</code>.</p></div></details>
-
-<!-- 71 -->
-<details class="faq"><summary><span class="chev">▸</span> 71. Що таке REPLServer?</summary><div class="answer"><p>Клас Node.js для створення кастомних REPL-консолей.</p></div></details>
-
-<!-- 72 -->
-<details class="faq"><summary><span class="chev">▸</span> 72. Що таке setImmediate vs setTimeout?</summary><div class="answer"><p><code>setImmediate</code> виконується після I/O, а <code>setTimeout</code> після заданого часу.</p></div></details>
-
-<!-- 73 -->
-<details class="faq"><summary><span class="chev">▸</span> 73. Як використовувати fs.promises?</summary><div class="answer"><p>Через <code>const fs = require('fs').promises</code> для асинхронної роботи з файлами з промісами.</p></div></details>
-
-<!-- 74 -->
-<details class="faq"><summary><span class="chev">▸</span> 74. Що таке readFileSync vs readFile?</summary><div class="answer"><p><code>readFileSync</code> — синхронне читання, блокує event loop, <code>readFile</code> — асинхронне.</p></div></details>
-
-<!-- 75 -->
-<details class="faq"><summary><span class="chev">▸</span> 75. Що таке writeFileSync vs writeFile?</summary><div class="answer"><p>Аналогічно, синхронне і асинхронне записування файлів.</p></div></details>
-
-<!-- 76 -->
-<details class="faq"><summary><span class="chev">▸</span> 76. Що таке path module?</summary><div class="answer"><p>Модуль для роботи з шляхами файлів і директорій.</p></div></details>
-
-<!-- 77 -->
-<details class="faq"><summary><span class="chev">▸</span> 77. Як об’єднати шляхи у Node.js?</summary><div class="answer"><p>Через <code>path.join('dir', 'file.txt')</code>.</p></div></details>
-
-<!-- 78 -->
-<details class="faq"><summary><span class="chev">▸</span> 78. Як отримати розширення файлу?</summary><div class="answer"><p>Через <code>path.extname('file.txt')</code>.</p></div></details>
-
-<!-- 79 -->
-<details class="faq"><summary><span class="chev">▸</span> 79. Що таке os module?</summary><div class="answer"><p>Модуль для отримання інформації про операційну систему.</p></div></details>
-
-<!-- 80 -->
-<details class="faq"><summary><span class="chev">▸</span> 80. Як отримати кількість ядер CPU?</summary><div class="answer"><p><code>require('os').cpus().length</code></p></div></details>
-
-<!-- 81 -->
-<details class="faq"><summary><span class="chev">▸</span> 81. Що таке cluster для масштабування?</summary><div class="answer"><p>Використання кількох процесів для обробки запитів на всіх ядрах CPU.</p></div></details>
-
-<!-- 82 -->
-<details class="faq"><summary><span class="chev">▸</span> 82. Як працює EventEmitter.emit?</summary><div class="answer"><p>Запускає усі колбеки, підписані на певну подію.</p></div></details>
-
-<!-- 83 -->
-<details class="faq"><summary><span class="chev">▸</span> 83. Що таке process.argv?</summary><div class="answer"><p>Масив аргументів командного рядка.</p></div></details>
-
-<!-- 84 -->
-<details class="faq"><summary><span class="chev">▸</span> 84. Як дізнатися версію Node.js?</summary><div class="answer"><p><code>node -v</code> або <code>process.version</code></p></div></details>
-
-<!-- 85 -->
-<details class="faq"><summary><span class="chev">▸</span> 85. Як отримати platform?</summary><div class="answer"><p><code>process.platform</code> повертає ОС, наприклад <code>'win32'</code> або <code>'linux'</code>.</p></div></details>
-
-<!-- 86 -->
-<details class="faq"><summary><span class="chev">▸</span> 86. Що таке require.cache?</summary><div class="answer"><p>Об’єкт, який кешує модулі, щоб не підвантажувати їх повторно.</p></div></details>
-
-<!-- 87 -->
-<details class="faq"><summary><span class="chev">▸</span> 87. Як очистити кеш модуля?</summary><div class="answer"><p>Через <code>delete require.cache[require.resolve('module')]</code></p></div></details>
-
-<!-- 88 -->
-<details class="faq"><summary><span class="chev">▸</span> 88. Що таке globalThis?</summary><div class="answer"><p>Глобальний об’єкт, доступний у будь-якому контексті.</p></div></details>
-
-<!-- 89 -->
-<details class="faq"><summary><span class="chev">▸</span> 89. Що таке crypto.randomUUID?</summary><div class="answer"><p>Метод для генерації унікального UUID.</p></div></details>
-
-<!-- 90 -->
-<details class="faq"><summary><span class="chev">▸</span> 90. Що таке worker_threads?</summary><div class="answer"><p>Модуль для паралельного виконання коду у фонових потоках.</p></div></details>
-
-<!-- 91 -->
-<details class="faq"><summary><span class="chev">▸</span> 91. Як створити worker thread?</summary><div class="answer"><p>Через <code>new Worker('file.js')</code> з модуля <code>worker_threads</code>.</p></div></details>
-
-<!-- 92 -->
-<details class="faq"><summary><span class="chev">▸</span> 92. Як обмінюватися даними з worker?</summary><div class="answer"><p>Через <code>postMessage</code> та події <code>'message'</code>.</p></div></details>
-
-<!-- 93 -->
-<details class="faq"><summary><span class="chev">▸</span> 93. Що таке performance module?</summary><div class="answer"><p>Модуль для вимірювання продуктивності коду.</p></div></details>
-
-<!-- 94 -->
-<details class="faq"><summary><span class="chev">▸</span> 94. Як використовувати perf_hooks?</summary><div class="answer"><p>Через <code>const { performance } = require('perf_hooks')</code> і <code>performance.now()</code>.</p></div></details>
-
-<!-- 95 -->
-<details class="faq"><summary><span class="chev">▸</span> 95. Що таке inspector?</summary><div class="answer"><p>Модуль для відладки Node.js через Chrome DevTools.</p></div></details>
-
-<!-- 96 -->
-<details class="faq"><summary><span class="chev">▸</span> 96. Як підключити inspector?</summary><div class="answer"><p>Запуском Node.js з <code>--inspect</code> або <code>--inspect-brk</code>.</p></div></details>
-
-<!-- 97 -->
-<details class="faq"><summary><span class="chev">▸</span> 97. Що таке domains (deprecated)?</summary><div class="answer"><p>Модуль для обробки помилок у групах асинхронних операцій, застарілий.</p></div></details>
-
-<!-- 98 -->
-<details class="faq"><summary><span class="chev">▸</span> 98. Як захищати Node.js додатки?</summary><div class="answer"><p>Використовувати helmet, rate-limit, перевірку даних і HTTPS.</p></div></details>
-
-<!-- 99 -->
-<details class="faq"><summary><span class="chev">▸</span> 99. Що таке process.memoryUsage?</summary><div class="answer"><p>Метод для отримання статистики використаної пам’яті Node.js.</p></div></details>
-
-<!-- 100 -->
-<details class="faq"><summary><span class="chev">▸</span> 100. Як оптимізувати Node.js додаток?</summary><div class="answer"><p>Профілювання, використання асинхронного коду, кешування, кластеризація, оптимізація запитів і I/O.</p></div></details>
-
-  </div>
- 
-   <h3  id="Now" style="margin-top:22px;  color:teal">Наразі проєкт ще в розробці...</h3>
-  </div>
-
-  <footer>
-    <p style="font-size: 14px; color: gray; text-align: center; ">
-      Створено з ♥   |   Україна
-    </p>
-  </footer>
-  
-</body> 
+    </main>
+    <footer class="footer container" id="footer">
+      <p>Створено з <span class="heart">♥</span> | Україна</p>
+    </footer>
+  </body>
 </html>

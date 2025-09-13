@@ -466,7 +466,7 @@ pre {
     z-index: 4;
     transform: scale(0.7);
   }
-  .hero-icon-scroll-down {
+  .icon-scroll-svg {
     position: absolute;
     content: '';
     top: 50%;

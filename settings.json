@@ -1,3 +1,14 @@
 {
 	"liveServer.settings.port": 5502
 }
+{
+"[css]": {
+  "editor.colorDecorators": false
+},
+"[html]": {
+  "editor.colorDecorators": false
+},
+"[scss]": {
+  "editor.colorDecorators": false
+}
+}

@@ -33,6 +33,7 @@ body {
   font-size: 16px;
   line-height: 1.4;
   background: var(--bg);
+  border: none;
   color: var(--text);
 }
 /* #endregion basic */
@@ -452,7 +453,7 @@ pre {
   width: 100%;
   padding: 15px;
   background-color: var(--card-alt);
-  border: 1px solid teal;
+  border: none;
 }
 
 .footer h3 {
@@ -548,7 +549,6 @@ pre {
     }
     h3 {
       font-size: 1.3rem;
-      /* padding: 40px 8px 15px 8px; */
     }
     .section {
       margin-top: 5px;
@@ -579,50 +579,122 @@ pre {
     .icon-scroll-down {
       bottom: 5px;
       right: 5px;
+      transform: scale(0.8);
     }
   }
   /* -------------------------------------------------1024- */
-  /* 
+
   @media (min-width: 1024px) {
-    .container {
+    body {
       max-width: 1200px;
       margin: 0 auto;
-    }
-
-    .header-menu {
-      gap: 1.5em;
-    }
-
-    .header-link {
-      min-width: 120px;
-      font-size: 1.1rem;
-    }
-
-    h1 {
-      font-size: 2.4rem;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-    }
-
-    h3 {
-      font-size: 1.3rem;
-    }
-
-    .footer {
-      padding: 30px;
+      font-size: 20px;
+      line-height: 1.4;
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      box-shadow: inset var(--bshadow);
+      background-image: linear-gradient(rgba(30, 24, 35, 0.6), rgba(30, 24, 35, 0.2)), url('/img/bg/teksturi-zavitushek_.jpg');
+      background-size: 45%;
+      background-color: #1e1823;
+      /* background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; */
+      /* background-attachment: fixed; */
     }
   }
 
-  @media print {
-    .theme-circle,
-    .btn {
-      display: none;
-    }
+  .container {
+    padding: 0 0;
   }
+
+  .header {
+    box-shadow: inset var(--bshadow);
+    border-right: none;
+    border-left: none;
+  }
+  .header-link {
+    min-width: 120px;
+    font-size: 1.1rem;
+  }
+  /* .wrap-content { */
+  /* background: var(--card); */
+  /* } */
+  .input-buttons {
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .input-buttons input[type='search'] {
+    padding: 8px;
+    font-size: 22px;
+  }
+
+  .section {
+    margin-top: 5px;
+    padding: 0 180px;
+  }
+  .wrap-content {
+    padding: 0 40px;
+    background: var(--card);
+  }
+  details.faq {
+    margin: 10px auto;
+    padding: 8px;
+  }
+  .icon-scroll-back {
+    position: fixed;
+    transform: rotate(90deg) scale(0.8);
+    top: 0;
+    left: 0;
+    z-index: 4;
+  }
+
+  h1 {
+    font-size: 2rem;
+    padding: 80px 10px 40px 10px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+}
+.footer {
+  padding: 30px;
+  box-shadow: inset var(--bshadow);
+  border-top: 1px solid var(--stroke);
+  border-bottom: 1px solid var(--stroke);
+}
+.icon-scroll-back {
+  position: fixed;
+  transform: rotate(90deg) scale(0.8);
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+
+.icon-scroll-up {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: rotate(180deg) scale(0.8);
+}
+
+.icon-scroll-down {
+  bottom: 5px;
+  right: 5px;
+}
+
+@media print {
+  .theme-circle,
+  .btn {
+    display: none;
+  }
+
   h1 {
     font-size: 1.6rem;
   }
-} */
 }

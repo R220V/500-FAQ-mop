@@ -627,9 +627,9 @@ pre {
     position: fixed;
     top: 0;
     bottom: 0;
-    width: 320px;
+    width: 917.5px;
     background: url('/img/bg/teksturi-zavitushek_.jpg') center/cover no-repeat;
-    opacity: 0.2;
+    opacity: 0.15;
     z-index: -1;
   }
 
@@ -716,6 +716,12 @@ pre {
   .section {
     margin-top: 5px;
     padding: 0 180px;
+  }
+  section ul {
+    background-image: linear-gradient(var(--code-bg), var(--card-accent));
+    padding: 10px 30px;
+    outline: 1px solid var(--stroke);
+    border-radius: 6px;
   }
   .wrap-content {
     padding: 0;

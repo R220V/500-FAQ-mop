@@ -128,7 +128,7 @@ section li::before {
   content: '✔ ';
   color: var(--text);
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .highlight {
@@ -170,7 +170,7 @@ section li::before {
 header {
   margin-bottom: 0;
   border-radius: 0;
-  border: 1px solid var(--text);
+  border: 1px solid var(--stroke);
   box-shadow: var(--bshadow);
   width: 100%;
   background: var(--card-alt);
@@ -401,6 +401,7 @@ summary {
   display: inline-block;
   transition: transform 0.3s ease;
   scale: 1;
+  margin: 0 5px;
 }
 
 details[open] .chev {
@@ -486,11 +487,14 @@ pre {
   }
   .theme-circle {
     gap: clamp(8px, calc((100vw - 320px) / 10), 20px);
-    padding: 8px 0;
+    padding: 6;
   }
   .circle {
     width: 18px;
     height: 18px;
+  }
+  section ul {
+    padding: 0;
   }
 
   .btn {
@@ -501,110 +505,167 @@ pre {
     font-size: 1.6rem;
     padding: 40px 8px 15px 8px;
   }
-  /* -------------------------------------------------768- */
-  @media (min-width: 768px) {
-    body {
-      font-size: 18px;
-      line-height: 1.2;
-    }
-    .header-menu {
-      justify-content: center;
-      padding: 0 20px 20px 20px;
-      gap: 1.5em;
-    }
-    .icon {
-      width: 22px;
-      height: 22px;
-      margin-right: 8px;
-    }
-    .header-link {
-      min-width: 110px;
-      font-weight: 500;
-      height: 34px;
-    }
-    .circle {
-      width: 20px;
-      height: 20px;
-    }
-    .input-buttons {
-      top: 37px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-    .input-buttons input[type='search'] {
-      padding: 6px;
-      font-size: 20px;
-    }
-    .btn {
-      flex: 0 0 auto;
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      padding: 60px 10px 30px 10px;
-    }
-
-    h2 {
-      font-size: 1.6rem;
-    }
-    h3 {
-      font-size: 1.3rem;
-    }
-    .section {
-      margin-top: 5px;
-      padding: 0 30px;
-    }
-    .wrap-content {
-      padding: 0 40px;
-    }
-    details.faq {
-      margin: 8px auto;
-      padding: 5px;
-    }
-    .icon-scroll-back {
-      position: fixed;
-      transform: rotate(90deg) scale(0.8);
-      top: 0;
-      left: 0;
-      z-index: 4;
-    }
-
-    .icon-scroll-up {
-      position: fixed;
-      top: 0;
-      right: 0;
-      transform: rotate(180deg) scale(0.8);
-    }
-
-    .icon-scroll-down {
-      bottom: 5px;
-      right: 5px;
-      transform: scale(0.8);
-    }
+  .footer {
+    border-top: 1px solid var(--stroke);
   }
-  /* -------------------------------------------------1024- */
+}
 
-  @media (min-width: 1024px) {
-    body {
-      max-width: 1200px;
-      margin: 0 auto;
-      font-size: 20px;
-      line-height: 1.4;
-      background: var(--card);
-      border: 1px solid var(--stroke);
-      box-shadow: inset var(--bshadow);
-      background-image: linear-gradient(rgba(30, 24, 35, 0.6), rgba(30, 24, 35, 0.2)), url('/img/bg/teksturi-zavitushek_.jpg');
-      background-size: 45%;
-      background-color: #1e1823;
-      /* background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center; */
-      /* background-attachment: fixed; */
-    }
+/* -------------------------------------------------768- */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    line-height: 1.2;
   }
+  .header {
+    box-shadow: inset var(--bshadow);
+  }
+  .header-menu {
+    justify-content: center;
+    padding: 0 20px 20px 20px;
+    gap: 1.5em;
+  }
+  .icon {
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+  }
+  .header-link {
+    min-width: 110px;
+    font-weight: 500;
+    height: 34px;
+  }
+  .circle {
+    width: 20px;
+    height: 20px;
+  }
+  .input-buttons {
+    top: 37px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .input-buttons input[type='search'] {
+    padding: 6px;
+    font-size: 20px;
+  }
+  .btn {
+    flex: 0 0 auto;
+  }
+
+  .chev {
+    scale: 1.1;
+  }
+  h1 {
+    font-size: 1.8rem;
+    padding: 60px 10px 30px 10px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+  .section {
+    margin-top: 5px;
+    padding: 0 30px;
+  }
+  .wrap-content {
+    padding: 0 40px;
+  }
+  details.faq {
+    margin: 8px auto;
+    padding: 5px;
+  }
+  .icon-scroll-back {
+    position: fixed;
+    transform: rotate(90deg) scale(0.8);
+    top: 0;
+    left: 0;
+    z-index: 4;
+  }
+
+  .icon-scroll-up {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: rotate(180deg) scale(0.8);
+  }
+
+  .icon-scroll-down {
+    bottom: 5px;
+    right: 5px;
+    transform: scale(0.8);
+  }
+  .footer {
+    border-top: 1px solid var(--stroke);
+    box-shadow: inset var(--bshadow);
+  }
+}
+/* -------------------------------------------------1024- */
+@media (min-width: 1024px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 1.4;
+    background: var(--card);
+    border: 1px solid var(--stroke);
+    box-shadow: inset var(--bshadow);
+    background-image: linear-gradient(var(--card), var(--card));
+    /* url('/img/bg/teksturi-zavitushek_.jpg'); */
+    background-size: 45%;
+    /* background-color: #1e1823; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-attachment: fixed; */
+  }
+
+  body::before,
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 320px;
+    background: url('/img/bg/teksturi-zavitushek_.jpg') center/cover no-repeat;
+    opacity: 0.2;
+    z-index: -1;
+  }
+
+  body::before {
+    left: 0;
+  }
+
+  body::after {
+    right: 0;
+  }
+  /* ---------------cool */
+  /* body {
+    background: var(--card);
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: url('/img/bg/teksturi-zavitushek_.jpg') repeat-y left center/ 300px auto;
+    opacity: 0.4;
+    z-index: -1;
+    animation: parallax 60s linear infinite;
+  }
+
+  @keyframes parallax {
+    from {
+      background-position-y: 0;
+    }
+    to {
+      background-position-y: 100%;
+    }
+  } */
 
   .container {
-    padding: 0 0;
+    padding: 0 50px;
   }
 
   .header {
@@ -612,14 +673,37 @@ pre {
     border-right: none;
     border-left: none;
   }
-  .header-link {
-    min-width: 120px;
-    font-size: 1.1rem;
+  .header-menu {
+    justify-content: center;
+    padding: 0 20px 20px 20px;
+    gap: 1.5em;
   }
-  /* .wrap-content { */
-  /* background: var(--card); */
-  /* } */
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+  .header-link {
+    font-weight: 600;
+    height: 40px;
+    min-width: 140px;
+    font-size: 1.2rem;
+  }
+
+  .theme-circle {
+    max-width: 1200px;
+    gap: clamp(8px, calc((100vw - 320px) / 10), 30px);
+    padding: 10px 0;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.53), inset 0 -4px 10px rgba(34, 34, 34, 0.53);
+    border: 1px solid var(--stroke);
+  }
+  .circle {
+    width: 22px;
+    height: 22px;
+  }
+
   .input-buttons {
+    top: 44px;
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -634,21 +718,17 @@ pre {
     padding: 0 180px;
   }
   .wrap-content {
-    padding: 0 40px;
+    padding: 0;
     background: var(--card);
   }
   details.faq {
     margin: 10px auto;
     padding: 8px;
   }
-  .icon-scroll-back {
-    position: fixed;
-    transform: rotate(90deg) scale(0.8);
-    top: 0;
-    left: 0;
-    z-index: 4;
-  }
 
+  .chev {
+    scale: 1.35;
+  }
   h1 {
     font-size: 2rem;
     padding: 80px 10px 40px 10px;
@@ -661,40 +741,41 @@ pre {
   h3 {
     font-size: 1.3rem;
   }
-}
-.footer {
-  padding: 30px;
-  box-shadow: inset var(--bshadow);
-  border-top: 1px solid var(--stroke);
-  border-bottom: 1px solid var(--stroke);
-}
-.icon-scroll-back {
-  position: fixed;
-  transform: rotate(90deg) scale(0.8);
-  top: 0;
-  left: 0;
-  z-index: 4;
-}
 
-.icon-scroll-up {
-  position: fixed;
-  top: 0;
-  right: 0;
-  transform: rotate(180deg) scale(0.8);
-}
-
-.icon-scroll-down {
-  bottom: 5px;
-  right: 5px;
-}
-
-@media print {
-  .theme-circle,
-  .btn {
-    display: none;
+  .footer {
+    padding: 30px;
+    box-shadow: inset var(--bshadow);
+    border-top: 1px solid var(--stroke);
+    border-bottom: 1px solid var(--stroke);
+  }
+  .icon-scroll-back {
+    transform: rotate(90deg) scale(0.9);
+    top: 0;
+    left: 4px;
+    z-index: 4;
   }
 
-  h1 {
-    font-size: 1.6rem;
+  .icon-scroll-up {
+    position: fixed;
+    top: 4px;
+    right: 5px;
+    transform: rotate(180deg) scale(0.9);
+  }
+
+  .icon-scroll-down {
+    bottom: 5px;
+    right: 5px;
+    transform: scale(0.9);
+  }
+
+  @media print {
+    .theme-circle,
+    .btn {
+      display: none;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+    }
   }
 }

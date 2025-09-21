@@ -1,5 +1,3 @@
-/* GLOBAL STYLES (mobile-first) */
-
 /* #region basic */
 html {
   scroll-behavior: smooth;
@@ -18,7 +16,7 @@ html {
   --nonopacity: #c0d4e7ff;
   --bshadow-alt: 0 0 20px 2px rgba(196, 243, 237, 0.527);
   --bshadow: 0 0 20px 2px rgba(42, 43, 42, 0.527);
-  --transition-speed: 0.3s;
+  --transition-speed: 0.35s;
 }
 
 *,
@@ -759,7 +757,7 @@ pre {
     top: 0;
     bottom: 0;
     width: 917.5px;
-    background: url('../img/bg/zavitushkі.jpg') center/cover no-repeat;
+    background: url('../img/bg/zavitushki.jpg') center/cover no-repeat;
     opacity: 0.15;
     z-index: -1;
   }
@@ -780,13 +778,13 @@ pre {
     content: '';
     position: fixed;
     inset: 0;
-    background: url('/img/bg/teksturi-zavitushek_.jpg') repeat-y left center/ 300px auto;
+    background: url('../') repeat-y left center/ 300px auto;
     opacity: 0.4;
     z-index: -1;
-    animation: parallax 60s linear infinite;
+    animation: bgscroll 60s linear infinite;
   }
 
-  @keyframes parallax {
+  @keyframes bgscroll {
     from {
       background-position-y: 0;
     }

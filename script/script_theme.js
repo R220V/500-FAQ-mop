@@ -66,7 +66,7 @@ function setTheme(theme) {
       '--accent': '#4394ffff',
       '--stroke': '#6a84ecff',
       '--code-bg': '#b4cffdff',
-      '--nonopacity': '#d9f8f8ff',
+      '--nonopacity': '#d9e3ecff',
     },
     blue: {
       '--bg': '#a7cdffff',

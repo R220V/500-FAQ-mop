@@ -13,6 +13,7 @@ function setTheme(theme) {
       '--accent': '#da4848ff',
       '--stroke': '#d10202ff',
       '--code-bg': '#ecc3c3ff',
+      '--nonopacity': '#faededff',
     },
 
     orange: {
@@ -26,6 +27,7 @@ function setTheme(theme) {
       '--accent': '#4e2c00ff',
       '--stroke': '#ca6500ff',
       '--code-bg': '#fce3caff',
+      '--nonopacity': '#fce7d4ff',
     },
     yellow: {
       '--bg': '#ffffe3ff',
@@ -38,6 +40,7 @@ function setTheme(theme) {
       '--accent': '#6b6a14ff',
       '--stroke': '#b8a926ff',
       '--code-bg': '#fffeddff',
+      '--nonopacity': '#f8f5d9ff',
     },
     green: {
       '--bg': '#ebffebff',
@@ -50,6 +53,7 @@ function setTheme(theme) {
       '--accent': '#2f8d1cff',
       '--stroke': '#079b07ff',
       '--code-bg': '#c8e0c5ff',
+      '--nonopacity': '#f3fff0ff',
     },
     skyblue: {
       '--bg': '#d9e9ffff',
@@ -62,6 +66,7 @@ function setTheme(theme) {
       '--accent': '#4394ffff',
       '--stroke': '#6a84ecff',
       '--code-bg': '#b4cffdff',
+      '--nonopacity': '#d9f8f8ff',
     },
     blue: {
       '--bg': '#a7cdffff',
@@ -74,6 +79,7 @@ function setTheme(theme) {
       '--accent': '#3388cc',
       '--stroke': '#1231aaff',
       '--code-bg': '#b4cffdff',
+      '--nonopacity': '#b7d0f0ff',
     },
     purple: {
       '--bg': '#f4e6fd',
@@ -83,9 +89,10 @@ function setTheme(theme) {
       '--text': '#581058ff',
       '--text-logo': '#611485ff ',
       '--text-alt': '#fdfdfdff',
-      '--accent': '#cc00ffff',
+      '--accent': '#7d079bff',
       '--stroke': '#750775ff',
       '--code-bg': '#8f588f44',
+      '--nonopacity': '#f3d9f8ff',
     },
 
     light: {
@@ -99,6 +106,7 @@ function setTheme(theme) {
       '--accent': '#5f5f5fff',
       '--stroke': '#4b4b4bff',
       '--code-bg': '#ffffffff',
+      '--nonopacity': '#eeeeeeff',
     },
 
     dark: {
@@ -112,6 +120,7 @@ function setTheme(theme) {
       '--accent': '#e2ecffff',
       '--stroke': '#26304a',
       '--code-bg': '#050505af',
+      '--nonopacity': '#23283aff',
       '--bshadow': '0 0 10px 2px rgba(196, 243, 237, 0.56)',
     },
   };

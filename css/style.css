@@ -109,7 +109,7 @@ p {
 
 ul,
 ol {
-  margin-top: 0;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -173,7 +173,6 @@ header {
   margin-bottom: 0;
   border-radius: 0;
   border: 1px solid var(--stroke);
-  box-shadow: var(--bshadow);
   width: 100%;
   background: var(--card-alt);
 }
@@ -182,8 +181,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.6em;
-  padding: 0 10px 10px 10px;
+  gap: clamp(6px, calc((1024px - 320px) / 10), 12px);
 }
 
 .header-link {
@@ -201,16 +199,28 @@ header {
   border-radius: 6px;
   background: var(--card);
   color: var(--text);
-  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.3);
-  transition: background 0.3s, color 0.3s, transform 0.3s;
+  transition: background 0.5s, color 0.5s, transform 0.3s;
 }
 
 .header-link:hover {
   background: var(--code-bg);
   color: var(--text);
   transform: translateY(-2px);
+  outline: 1px solid #a50909ff;
 }
 /* #endregion header */
+
+.nav-menu {
+  position: sticky;
+  top: 43px;
+  padding: 15px;
+  margin: 10px 149px;
+  border: 1px solid var(--stroke);
+  box-shadow: inset 0 0 5px var(--accent);
+  background-color: var(--bg);
+  border-radius: 6px;
+  z-index: 5;
+}
 
 /* #region theme switcher */
 .theme-circle {
@@ -349,10 +359,11 @@ header {
   outline: none;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
+.input-buttons input[type='search']:hover,
 .input-buttons input[type='search']:focus {
   border-color: var(--accent);
   box-shadow: 0 0 6px var(--accent);
+  outline: 1px solid var(--accent);
 }
 
 .btn {
@@ -368,10 +379,12 @@ header {
   transition: transform 0.1s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background: var(--card-alt);
   border-color: var(--accent);
   border-collapse: collapse;
+  outline: 1px solid var(--accent);
 }
 
 .btn:active {
@@ -527,8 +540,23 @@ pre {
     gap: 0.8em;
   }
   .header {
-    box-shadow: inset 0 0 10px var(--text);
+    box-shadow: none;
+    border: none;
   }
+
+  .header-menu {
+    justify-content: center;
+    gap: clamp(6px, calc(320px / 10), 12px);
+  }
+  .nav-menu {
+    top: 31px;
+    margin: 0;
+    padding: 5px;
+    border: 1px solid var(--stroke);
+    border-radius: 0;
+    box-shadow: 0 0 8px var(--accent);
+  }
+
   .theme-circle {
     padding: 6px 0;
   }
@@ -608,11 +636,20 @@ pre {
   }
   .header {
     box-shadow: inset var(--bshadow);
+    border-bottom: 1px solid var(--stroke);
   }
   .header-menu {
     justify-content: center;
-    padding: 0 20px 20px 20px;
-    gap: 1.5em;
+    gap: clamp(6px, calc((768px - 320px) / 10), 12px);
+  }
+  .nav-menu {
+    top: 37px;
+    padding: 15px;
+    margin: 10px 39px;
+    border: 1px solid var(--stroke);
+    box-shadow: inset 0 0 5px var(--accent);
+    background-color: var(--bg);
+    border-radius: 6px;
   }
   .icon {
     width: 22px;
@@ -680,7 +717,7 @@ pre {
     border-radius: 6px;
     margin: 30px 30px;
     padding: 20px;
-    box-shadow: 0 0 15px var(--accent);
+    box-shadow: 0 0 8px var(--accent);
   }
 
   .wrap-content {
@@ -774,15 +811,21 @@ pre {
   }
 
   .header {
-    box-shadow: inset var(--bshadow);
     border-right: none;
     border-left: none;
+    border-bottom: 1px solid var(--stroke);
   }
   .header-menu {
     justify-content: center;
-    padding: 0 20px 20px 20px;
-    gap: 1.5em;
+    gap: clamp(6px, calc((1024px - 320px) / 10), 18px);
   }
+
+  .nav-menu {
+    top: 43px;
+    padding: 20px 0;
+    margin: 20px 149px;
+  }
+
   .icon {
     width: 24px;
     height: 24px;

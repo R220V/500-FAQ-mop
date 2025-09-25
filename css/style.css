@@ -4,17 +4,17 @@ html {
 }
 
 :root {
-  --bg: #d2dbe4;
+  --bg: #d8d8d8ff;
   --card: #ecececff;
-  --card-alt: #b5ecf33a;
+  --card-alt: #77777713;
   --card-accent: #e8ecf0;
   --text: #303030;
   --text-alt: #ffffff;
   --accent: #5c5c5c;
   --stroke: #0e1426;
-  --code-bg: #abd7dd3b;
+  --code-bg: #ececec9a;
   --nonopacity: #d8dbddff;
-  --bshadow-alt: 0 0 20px 2px rgba(196, 243, 237, 0.527);
+  --bshadow-alt: 0 0 20px 2px rgba(124, 124, 124, 0.53);
   --bshadow: 0 0 20px 2px rgba(42, 43, 42, 0.527);
   --transition-speed: 0.35s;
 }
@@ -206,7 +206,7 @@ header {
   background: var(--code-bg);
   color: var(--text);
   transform: translateY(-2px);
-  outline: 1px solid #a50909ff;
+  outline: 1px solid #000000ff;
 }
 /* #endregion header */
 
@@ -376,14 +376,14 @@ header {
   color: var(--text);
   cursor: pointer;
   user-select: none;
-  transition: transform 0.1s ease, background 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
 }
 
 .btn:hover,
 .btn:focus {
   background: var(--card-alt);
-  border-color: var(--accent);
-  border-collapse: collapse;
+  border-color: #0e1426;
+  /* border-collapse: collapse; */
   outline: 1px solid var(--accent);
 }
 
@@ -408,6 +408,7 @@ details.faq {
 summary {
   display: inline-block;
   gap: 5px;
+  padding-right: 60px;
   font-weight: 600;
   letter-spacing: 0.2px;
   user-select: none;
@@ -467,6 +468,7 @@ pre {
 
 /* #region footer */
 .footer {
+  position: relative;
   background: var(--card-alt);
   border-top: 1px solid var(--stroke);
   width: 100%;
@@ -530,6 +532,24 @@ pre {
   color: var(--accent);
 }
 /* #endregion footer */
+
+/* #region  logo */
+.logo {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-30px, -80px);
+  cursor: pointer;
+  border: 2px solid rgba(190, 190, 190, 1);
+  box-shadow: 0 0 5px 2px #000000ff, inset 0 0 18px #5f5f5fff;
+  border-radius: 4px;
+  transition: ease 350ms;
+}
+.logo:hover {
+  outline: 1px solid rgba(255, 255, 255, 1);
+}
+/* #endregion  logo */
+
 /* -------------------------------------------------320- */
 @media (min-width: 320px) {
   body {
@@ -592,6 +612,9 @@ pre {
   h1 {
     font-size: 1.6rem;
     padding: 40px 8px 15px 8px;
+  }
+  summary {
+    padding-right: 0;
   }
 
   .footer {
@@ -727,6 +750,7 @@ pre {
     margin: 8px auto;
     padding: 5px;
   }
+
   .icon-scroll-back {
     position: fixed;
     transform: rotate(90deg) scale(0.8);
@@ -888,7 +912,9 @@ pre {
     margin: 10px auto;
     padding: 8px;
   }
-
+  summary {
+    padding-right: 260px;
+  }
   .chev {
     scale: 1.35;
   }
@@ -904,49 +930,49 @@ pre {
   h3 {
     font-size: 1.3rem;
   }
+}
+.footer {
+  padding: 15px;
+  box-shadow: inset var(--bshadow);
+  border-top: 1px solid var(--stroke);
+  border-bottom: 1px solid var(--stroke);
+}
+.icon-scroll-back {
+  transform: rotate(90deg) scale(0.9);
+  top: 0;
+  left: 4px;
+  z-index: 4;
+}
 
-  .footer {
-    padding: 15px;
-    box-shadow: inset var(--bshadow);
-    border-top: 1px solid var(--stroke);
-    border-bottom: 1px solid var(--stroke);
-  }
-  .icon-scroll-back {
-    transform: rotate(90deg) scale(0.9);
-    top: 0;
-    left: 4px;
-    z-index: 4;
+.icon-scroll-up {
+  position: fixed;
+  top: 4px;
+  right: 5px;
+  transform: rotate(180deg) scale(0.9);
+}
+
+.icon-scroll-down {
+  bottom: 5px;
+  right: 5px;
+  transform: scale(0.9);
+}
+
+.footer-top {
+  font-size: 1.2rem;
+}
+
+.footer-left p,
+.footer-right p {
+  line-height: 1.6;
+}
+
+@media print {
+  .theme-circle,
+  .btn {
+    display: none;
   }
 
-  .icon-scroll-up {
-    position: fixed;
-    top: 4px;
-    right: 5px;
-    transform: rotate(180deg) scale(0.9);
-  }
-
-  .icon-scroll-down {
-    bottom: 5px;
-    right: 5px;
-    transform: scale(0.9);
-  }
-
-  .footer-top {
-    font-size: 1.2rem;
-  }
-
-  .footer-left p,
-  .footer-right p {
-    line-height: 1.6;
-  }
-  @media print {
-    .theme-circle,
-    .btn {
-      display: none;
-    }
-
-    h1 {
-      font-size: 1.6rem;
-    }
+  h1 {
+    font-size: 1.6rem;
   }
 }

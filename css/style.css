@@ -544,6 +544,7 @@ pre {
   box-shadow: 0 0 5px 2px #000000ff, inset 0 0 18px #5f5f5fff;
   border-radius: 4px;
   transition: ease 350ms;
+  z-index: 6;
 }
 .logo:hover {
   outline: 1px solid rgba(255, 255, 255, 1);
@@ -648,6 +649,18 @@ pre {
   .footer .copy {
     margin-top: 0;
     font-size: 0.9rem;
+  }
+
+  .logo {
+    /* position: absolute; */
+    bottom: 48px;
+    left: 0;
+    transform: rotate(270deg); /* cursor: pointer; */
+    /* border: 2px solid rgba(190, 190, 190, 1);
+    box-shadow: 0 0 5px 2px #000000ff, inset 0 0 18px #5f5f5fff; */
+    /* border-radius: 4px; */
+    /* transition: ease 350ms; */
+    /* z-index: 6; */
   }
 }
 

@@ -826,7 +826,7 @@ pre {
     content: '';
     position: fixed;
     inset: 0;
-    background: url('/img/bg/zavitushki.jpg') center / 105%;
+    background: url('img/bg/zavitushki.jpg') center / 105%;
     opacity: 0.12;
     z-index: -1;
     animation: bgscroll 40s linear infinite alternate;

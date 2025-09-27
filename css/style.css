@@ -284,7 +284,6 @@ header {
   bottom: 6px;
   right: 4px;
   z-index: 4;
-  box-shadow: #000000ff;
 }
 
 .icon-scroll-svg {
@@ -815,13 +814,7 @@ pre {
     background: var(--card);
     border: 1px solid var(--stroke);
     box-shadow: inset var(--bshadow);
-    /* background-image: linear-gradient(var(--card), var(--card)); */
-    /* background-size: 45%; */
-    /* background-size: contain; */
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
   }
-
   body::before {
     content: '';
     position: fixed;

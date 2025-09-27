@@ -1,3 +1,7 @@
 // авторство
 const author = 'Ruslan Koziubra';
-document.getElementById('author-name').textContent = author;
+const el = document.getElementById('author-name');
+
+if (el) {
+  el.textContent = author;
+}

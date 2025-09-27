@@ -265,35 +265,35 @@ header {
 
 .icon-scroll-back {
   position: fixed;
-  transform: rotate(90deg) scale(0.7);
-  top: -3px;
-  left: -1px;
+  transform: rotate(90deg);
+  top: 1px;
+  left: 6px;
   z-index: 4;
 }
 
 .icon-scroll-up {
   position: fixed;
-  top: -4px;
-  right: 0;
-  transform: rotate(180deg) scale(0.7);
+  top: 2px;
+  right: 4px;
+  transform: rotate(180deg);
   z-index: 4;
 }
 
 .icon-scroll-down {
   position: fixed;
-  bottom: 0;
-  right: 0;
-  transform: scale(0.7);
+  bottom: 6px;
+  right: 4px;
   z-index: 4;
+  box-shadow: #000000ff;
 }
 
 .icon-scroll-svg {
-  position: absolute;
+  position: fixed;
   top: 50%;
   right: 50%;
   color: #000000ff;
   content: '';
-  transform: translate(50%, -50%);
+  transform: translate(50%, -50%) scale(0.7);
 }
 
 .icon-scroll-svg:hover {
@@ -305,8 +305,8 @@ header {
   display: inline-flex;
   position: relative;
   justify-content: end;
-  width: 32px;
-  height: 32px;
+  width: 23px;
+  height: 23px;
   border: 1px solid rgba(0, 0, 0, 1);
   border-radius: 50%;
   background-color: #ffffff;
@@ -756,31 +756,31 @@ pre {
     margin: 8px auto;
     padding: 5px;
   }
-
+  /* ------------------- */
   .icon-scroll-back {
-    position: fixed;
-    transform: rotate(90deg) scale(0.8);
-    top: 0;
-    left: 0;
-    z-index: 4;
+    top: 2px;
+    left: 10px;
   }
 
   .icon-scroll-up {
-    position: fixed;
-    top: 0;
-    right: 0;
-    transform: rotate(180deg) scale(0.8);
+    top: 2px;
+    right: 10px;
   }
 
   .icon-scroll-down {
-    bottom: 5px;
-    right: 5px;
-    transform: scale(0.8);
-  }
-  .footer {
-    padding: 20px;
+    bottom: 6px;
+    right: 10px;
   }
 
+  .icon-scroll-svg {
+    transform: translate(50%, -50%) scale(0.8);
+  }
+
+  .swim-scroll {
+    width: 27px;
+    height: 27px;
+  }
+  /* ------------------- */
   .footer p {
     text-align: left;
     color: var(--accent);
@@ -947,49 +947,51 @@ pre {
   h3 {
     font-size: 1.3rem;
   }
-}
-.footer {
-  padding: 15px;
-  box-shadow: inset var(--bshadow);
-  border-top: 1px solid var(--stroke);
-  border-bottom: 1px solid var(--stroke);
-}
-.icon-scroll-back {
-  transform: rotate(90deg) scale(0.9);
-  top: 0;
-  left: 4px;
-  z-index: 4;
-}
 
-.icon-scroll-up {
-  position: fixed;
-  top: 4px;
-  right: 5px;
-  transform: rotate(180deg) scale(0.9);
-}
-
-.icon-scroll-down {
-  bottom: 5px;
-  right: 5px;
-  transform: scale(0.9);
-}
-
-.footer-top {
-  font-size: 1.2rem;
-}
-
-.footer-left p,
-.footer-right p {
-  line-height: 1.6;
-}
-
-@media print {
-  .theme-circle,
-  .btn {
-    display: none;
+  .footer {
+    padding: 15px;
+    box-shadow: inset var(--bshadow);
+    border-top: 1px solid var(--stroke);
+    border-bottom: 1px solid var(--stroke);
   }
 
-  h1 {
-    font-size: 1.6rem;
+  .footer-left p,
+  .footer-right p {
+    line-height: 1.6;
+  }
+  /* ---------------- */
+  .icon-scroll-back {
+    top: 3px;
+    left: 10px;
+  }
+
+  .icon-scroll-up {
+    top: 3px;
+    right: 10px;
+  }
+
+  .icon-scroll-down {
+    bottom: 6px;
+    right: 10px;
+  }
+
+  .icon-scroll-svg {
+    transform: translate(50%, -50%) scale(0.9);
+  }
+
+  .swim-scroll {
+    width: 28px;
+    height: 28px;
+  }
+  /* ---------------- */
+  @media print {
+    .theme-circle,
+    .btn {
+      display: none;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+    }
   }
 }

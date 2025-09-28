@@ -324,7 +324,8 @@
 </code></pre>
   </div>
 </details>
-    <!-- 9 -->
+
+<!-- 9 -->
           <details class="faq">
             <summary><span class="chev">▸</span> 9. Що таке DOCTYPE і навіщо його використовують?</summary>
             <div class="answer">
@@ -341,7 +342,7 @@
             </div>
           </details>
 
-        <!-- 10 -->
+<!-- 10 -->
          <details class="faq">
   <summary><span class="chev">▸</span> 10. Що містить &lt;head&gt; і яка його роль?</summary>
   <div class="answer">
@@ -355,7 +356,6 @@
       <li><code>&lt;script&gt;</code> — підключення зовнішніх JS-файлів (якщо не в кінці <code>&lt;body&gt;</code>);</li>
       <li><code>&lt;style&gt;</code> — внутрішні стилі CSS (якщо потрібні).</li>
     </ul>
-   
     <hr>
     <p>Приклад:</p>
     <pre><code>&lt;head&gt;
@@ -368,7 +368,7 @@
   </div>
 </details>
 
-          <!-- 11 -->
+<!-- 11 -->
          <details class="faq">
   <summary><span class="chev">▸</span> 11. Що таке &lt;body&gt; і яка його роль у HTML-документі?</summary>
   <div class="answer">
@@ -394,10 +394,183 @@
   </div>
 </details>
 
+<!-- 12 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 12. Що таке метатеги &lt;meta&gt; і для чого вони потрібні?</summary>
+  <div class="answer">
+    <p>Метатеги<strong> <code>&lt;meta&gt;</code></strong>  — це елементи в <code>&lt;head&gt;</code>, які містять мета-інформацію про сторінку для браузерів і пошукових систем. Метатеги не відображаються на сторінці, але впливають на:</p>
+    <ul>
+      <li>SEO (оптимізацію для пошуку)</li>
+      <li>Кодування</li>
+      <li>Адаптивність</li>
+      <li>Поведіку браузера</li>
+    </ul>
+    <p>Види метатегів і їх призначення:</p>
+ 
+      <pre><code>&lt;meta charset="UTF-8"&gt; — задає кодування сторінки, </code></pre>
+        <pre><code>&lt;meta name="description" content="Опис сторінки для пошукових систем"&gt; — короткий опис для SEO, </code></pre>
+        <pre><code>&lt;meta name="keywords" content="HTML, CSS, SEO"&gt; — ключові слова (в сучасному SEO майже не використовуються)</code></pre>
+      
+        <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; — адаптивність для мобільних пристроїв</code></pre>
+        <pre><code>&lt;meta http-equiv="refresh" content="30"&gt; — автоматичне оновлення сторінки через 30 секунд</code></pre>
+        <pre><code>&lt;meta property="og:title" content="Назва сторінки"&gt; — для Facebook, LinkedIn</code></pre>
+<pre><code>&lt;meta name="twitter:card" content="summary"&gt; — для Twitter </code></pre>
+<pre><code>&lt;meta name="author" content="Ім’я автора"&gt;</code></pre>
+  </div>
+</details>
 
-          <!-- 12 -->
-           <details class="faq">
-  <summary><span class="chev">▸</span> 12. Що таке семантичні та несемантичні теги HTML?</summary>
+<!-- 13 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 13. Що таке фавікон і як його підключають у &lt;head&gt;?</summary>
+  <div class="answer">
+    <p><strong>Фавікон</strong>
+     — це маленька іконка сайту, що відображається у вкладці браузера, закладках або історії. Підключається через тег <code>&lt;link&gt;</code> у <code>&lt;head&gt;</code>.</p> 
+     <p>Він 
+      <em>покращує</em> впізнаваність сайту,
+    <em>виділяє</em> вкладку серед багатьох відкритих,
+      <em>додає</em> професійний вигляд веб-сторінці.
+   </p>
+    <pre><code>&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</code></pre>
+<hr>
+    <p>Основні атрибути:</p>
+    <ul>
+      <li><code>rel="icon"</code> — вказує, що це фавікон</li>
+      <li><code>href</code> — шлях до файлу іконки</li>
+      <li><code>type</code> — тип файлу (image/x-icon, image/png тощо)</li>
+    </ul> 
+  </div>
+</details>
+
+<!-- 14 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 14. Що таке атрибут class і як його використовують?</summary>
+  <div class="answer">
+    <p>Атрибут<strong> <code>class</code></strong>  використовується для групування елементів для стилізації або маніпуляцій через CSS і JavaScript і дозволяє призначати один або кілька класів елементу.</p>
+    <p>Приклад:</p>
+    <pre><code>&lt;p class="highlight important"&gt;Це важливий абзац.&lt;/p&gt;</code></pre>
+    <p>Можна звертатись у CSS:</p>
+    <pre><code>.highlight { color: red; }
+.important { font-weight: bold; }</code></pre>
+    <p>Атрибут <code>class</code> використовується для повторного застосування стилів та зручної взаємодії через JavaScript.</p>
+  </div>
+</details>
+
+<!-- 15 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 15. Що таке атрибут id і чим він відрізняється від class?</summary>
+  <div class="answer">
+    <p>Атрибут<strong> <code>id</code></strong>  надає елементу унікальний ідентифікатор, тоді як <code>class</code> може бути спільним для кількох елементів.</p>
+  
+    <p><code>id</code> повинен бути унікальним на сторінці і використовується для:</p>
+    <ul>
+      <li>Стилізації через CSS: <code>#elementID { ... }</code></li>
+      <li>Доступу через JavaScript: <code>document.getElementById('elementID')</code></li>
+      <li>Як анкер для навігації сторінки: <code>&lt;a href="#section1"&gt;Перейти&lt;/a&gt;</code></li>
+    </ul>
+    <p>Приклад:</p>
+    <pre><code>&lt;div id="header"&gt;Верхня частина сторінки&lt;/div&gt;</code></pre>
+  </div>
+</details>
+
+<!-- 16 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 16. Як підключають CSS до HTML-документа?</summary>
+  <div class="answer">
+    <p>Існує 3 типи підключення CSS: </p>
+
+    <p><u>Зовнішній CSS</u> (рекомендований для великих сайтів). Розміщується у <code>&lt;head&gt;</code>, всі стилі виносяться в окремий файл:
+    <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre></p>
+  
+    <p><u>Внутрішній CSS</u> (у <code>&lt;head&gt;</code> у блоці <code>&lt;style&gt;</code>):
+    <pre><code>&lt;style&gt;
+  body { background-color: #f0f0f0; }
+  p { color: blue; }
+&lt;/style&gt;</code></pre></p>
+    <p><u>Інлайн-стилі</u> (усередині тегу через атрибут <code>style</code> ).  Використовуються рідко, тільки для швидких змін.
+    <pre><code>&lt;p style="color: red; font-size: 16px;"&gt;Текст червоним&lt;/p&gt;</code></pre></p>
+    <hr>
+    <p><strong>Висновок:</strong> зовнішній CSS дозволяє розділяти контент і стиль, що спрощує підтримку і масштабування сайту.</p>
+  </div>
+</details>
+
+<!-- 17 -->
+
+ <details class="faq">
+  <summary><span class="chev">▸</span> 17. Як підключають JavaScript до HTML-документа?</summary>
+  <div class="answer">
+    <p>Існує 2 типи підключення JavaScript: </p>
+
+    <p><u>Зовнішній скрипт</u> (рекомендований спосіб):<br>
+    JavaScript підключають через тег <code>&lt;script&gt;</code> для додавання інтерактивності на веб-сторінку. Розміщується в <code>&lt;head&gt;</code> або перед закриваючим <code>&lt;/body&gt;</code> (краще внизу для швидшого завантаження).</p>
+    <pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+    
+    <p><u>Внутрішній скрипт</u> (безпосередньо у HTML):</p>
+    <pre><code>&lt;script&gt;
+  console.log("Привіт, світ!");
+&lt;/script&gt;</code></pre>
+<hr>
+<p>Атрибут <code>defer</code> каже браузеру завантажувати скрипт у фоновому режимі та виконати його після того, як HTML-документ буде повністю побудований.</p>
+ <pre><code>&lt;script src="script.js" defer&gt;&lt;/script&gt; &lt;!-- підключення скрипта з defer --&gt;</code></pre>
+
+<hr>
+    <p>Можливості JavaScript:</p>
+    <ul>
+      <li>Змінювати вміст сторінки динамічно</li>
+      <li>Обробляти події користувача</li>
+      <li>Створювати анімації та інтерактивні ефекти</li>
+    </ul>
+  </div>
+</details>
+
+
+<!-- 18 -->
+ <details class="faq">
+  <summary><span class="chev">▸</span> 18. Що таке заголовки в HTML &lt;h1&gt;–&lt;h6&gt; і їх роль?</summary>
+  <div class="answer">
+    <p><strong>Заголовки</strong>  в HTML — це теги <code>&lt;h1&gt;–&lt;h6&gt;</code>, які використовуються для позначення заголовків різних рівнів на веб-сторінці.</p>
+    <ul>
+      <li><code>&lt;h1&gt;</code> — найважливіший заголовок (зазвичай основна тема сторінки)</li>
+      <li><code>&lt;h2&gt;–&lt;h6&gt;</code> — підзаголовки, де <code>&lt;h6&gt;</code> має найменшу важливість</li>
+    </ul>
+    <p>Роль заголовків:</p>
+    <ul>
+      <li>Структурування контенту — дозволяють логічно розбити текст на розділи та підрозділи.</li>
+      <li>SEO — пошукові системи враховують заголовки для розуміння теми сторінки.</li>
+      <li>Доступність — допомагають скрінрідерам орієнтуватися у змісті для людей із порушенням зору.</li>
+      <li>Візуальне виділення — заголовки виділяють важливі частини тексту, полегшуючи читання.</li>
+    </ul>
+    <hr>
+    <p>Приклад використання:</p>
+    <pre><code>&lt;h1&gt;Моя сторінка&lt;/h1&gt;
+&lt;h2&gt;Розділ 1&lt;/h2&gt;
+&lt;h3&gt;Підрозділ 1.1&lt;/h3&gt;
+&lt;h2&gt;Розділ 2&lt;/h2&gt;
+</code></pre>
+    <p>Використання заголовків впливає на SEO, доступність і логіку структури контенту.</p>
+  </div>
+</details>
+
+<!-- 19 -->
+<details class="faq">
+            <summary><span class="chev">▸</span> 19. Що таке порожні елементи в HTML?</summary>
+            <div class="answer">
+              <p>Порожні (void) елементи не мають контенту і закриваючого тега.</p>
+              <ul>
+                <li><code>&lt;br&gt;</code> — розрив рядка</li>
+                <li><code>&lt;hr&gt;</code> — горизонтальна лінія</li>
+                <li><code>&lt;img&gt;</code> — зображення</li>
+                <li><code>&lt;input&gt;</code> — поле вводу</li>
+                <li><code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code> — метадані/ресурси</li>
+              </ul>
+              <pre><code>&lt;img src="photo.jpg" alt="Фото" /&gt;
+&lt;br /&gt;
+&lt;input type="text" name="name" /&gt;</code></pre>
+            </div>
+          </details>
+
+<!-- 20 -->
+  <details class="faq">
+  <summary><span class="chev">▸</span> 20. Що таке семантичні та несемантичні теги HTML?</summary>
   <div class="answer">
     <p><strong>Семантичні теги</strong>  — це теги, які мають зрозуміле значення і призначення для контенту. Браузер, пошукові системи та допоміжні технології (наприклад, скрінрідери) розуміють їхній зміст без додаткових пояснень.</p>
     <p>Приклади семантичних тегів і їх призначення:</p>
@@ -448,50 +621,10 @@
           </details>
 
           <!-- 12 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 12. Що таке порожні елементи в HTML?</summary>
-            <div class="answer">
-              <p>Порожні (void) елементи не мають контенту і закриваючого тега.</p>
-              <ul>
-                <li><code>&lt;br&gt;</code> — розрив рядка</li>
-                <li><code>&lt;hr&gt;</code> — горизонтальна лінія</li>
-                <li><code>&lt;img&gt;</code> — зображення</li>
-                <li><code>&lt;input&gt;</code> — поле вводу</li>
-                <li><code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code> — метадані/ресурси</li>
-              </ul>
-              <pre><code>&lt;img src="photo.jpg" alt="Фото" /&gt;
-&lt;br /&gt;
-&lt;input type="text" name="name" /&gt;</code></pre>
-            </div>
-          </details>
+          
 
           <!-- 13 -->
-        <details class="faq">
-  <summary><span class="chev">▸</span> 13. Що таке заголовки в HTML (&lt;h1&gt;–&lt;h6&gt;) і їх роль?</summary>
-  <div class="answer">
-    <p><strong>Заголовки</strong>  в HTML — це теги <code>&lt;h1&gt;–&lt;h6&gt;</code>, які використовуються для позначення заголовків різних рівнів на веб-сторінці.</p>
-    <ul>
-      <li><code>&lt;h1&gt;</code> — найважливіший заголовок (зазвичай основна тема сторінки)</li>
-      <li><code>&lt;h2&gt;–&lt;h6&gt;</code> — підзаголовки, де <code>&lt;h6&gt;</code> має найменшу важливість</li>
-    </ul>
-    <p>Роль заголовків:</p>
-    <ul>
-      <li>Структурування контенту — дозволяють логічно розбити текст на розділи та підрозділи.</li>
-      <li>SEO — пошукові системи враховують заголовки для розуміння теми сторінки.</li>
-      <li>Доступність — допомагають скрінрідерам орієнтуватися у змісті для людей із порушенням зору.</li>
-      <li>Візуальне виділення — заголовки виділяють важливі частини тексту, полегшуючи читання.</li>
-    </ul>
-    <hr>
-    <p>Приклад використання:</p>
-    <pre><code>&lt;h1&gt;Моя сторінка&lt;/h1&gt;
-&lt;h2&gt;Розділ 1&lt;/h2&gt;
-&lt;h3&gt;Підрозділ 1.1&lt;/h3&gt;
-&lt;h2&gt;Розділ 2&lt;/h2&gt;
-</code></pre>
-    <p>Використання заголовків впливає на SEO, доступність і логіку структури контенту.</p>
-  </div>
-</details>
-
+       
 
 
           <!-- 14 -->
@@ -578,62 +711,10 @@
 </details>
 
 <!-- 18 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 18. Що таке атрибут class і як його використовують?</summary>
-  <div class="answer">
-    <p>Атрибут<strong> <code>class</code></strong>  використовується для групування елементів для стилізації або маніпуляцій через CSS і JavaScript і дозволяє призначати один або кілька класів елементу.</p>
-    <p>Приклад:</p>
-    <pre><code>&lt;p class="highlight important"&gt;Це важливий абзац.&lt;/p&gt;</code></pre>
-    <p>Можна звертатись у CSS:</p>
-    <pre><code>.highlight { color: red; }
-.important { font-weight: bold; }</code></pre>
-    <p>Атрибут <code>class</code> використовується для повторного застосування стилів та зручної взаємодії через JavaScript.</p>
-  </div>
-</details>
 
-<!-- 19 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 19. Що таке атрибут id і чим він відрізняється від class?</summary>
-  <div class="answer">
-    <p>Атрибут<strong> <code>id</code></strong>  надає елементу унікальний ідентифікатор, тоді як <code>class</code> може бути спільним для кількох елементів.</p>
-  
-    <p><code>id</code> повинен бути унікальним на сторінці і використовується для:</p>
-    <ul>
-      <li>Стилізації через CSS: <code>#elementID { ... }</code></li>
-      <li>Доступу через JavaScript: <code>document.getElementById('elementID')</code></li>
-      <li>Як анкер для навігації сторінки: <code>&lt;a href="#section1"&gt;Перейти&lt;/a&gt;</code></li>
-    </ul>
-    <p>Приклад:</p>
-    <pre><code>&lt;div id="header"&gt;Верхня частина сторінки&lt;/div&gt;</code></pre>
-  </div>
-</details>
 
 <!-- 20 -->
- <details class="faq">
-  <summary><span class="chev">▸</span> 20. Що таке метатеги &lt;meta&gt; і для чого вони потрібні?</summary>
-  <div class="answer">
-    <p>Метатеги<strong> <code>&lt;meta&gt;</code></strong>  — це елементи в <code>&lt;head&gt;</code>, які містять мета-інформацію про сторінку для браузерів і пошукових систем. Метатеги не відображаються на сторінці, але впливають на:</p>
-    <ul>
-      <li>SEO (оптимізацію для пошуку)</li>
-      <li>Кодування</li>
-      <li>Адаптивність</li>
-      <li>Поведіку браузера</li>
-    </ul>
-    <p>Види метатегів і їх призначення:</p>
  
-      <pre><code>&lt;meta charset="UTF-8"&gt; — задає кодування сторінки, </code></pre>
-        <pre><code>&lt;meta name="description" content="Опис сторінки для пошукових систем"&gt; — короткий опис для SEO, </code></pre>
-        <pre><code>&lt;meta name="keywords" content="HTML, CSS, SEO"&gt; — ключові слова (в сучасному SEO майже не використовуються)</code></pre>
-      
-        <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; — адаптивність для мобільних пристроїв</code></pre>
-        <pre><code>&lt;meta http-equiv="refresh" content="30"&gt; — автоматичне оновлення сторінки через 30 секунд</code></pre>
-        <pre><code>&lt;meta property="og:title" content="Назва сторінки"&gt; — для Facebook, LinkedIn</code></pre>
-<pre><code>&lt;meta name="twitter:card" content="summary"&gt; — для Twitter </code></pre>
-<pre><code>&lt;meta name="author" content="Ім’я автора"&gt;</code></pre>
-      
-    
-  </div>
-</details>
 
 
 <!-- 21 -->

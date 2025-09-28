@@ -88,7 +88,7 @@ function setTheme(theme) {
       '--bshadow': '0 0 10px 2px rgba(65, 63, 190, 0.51)',
     },
     purple: {
-      '--bg': '#b57ed636',
+      '--bg': '#f1e5f8fd',
       '--card': '#fae5fc7c',
       '--card-alt': '#faebfcff',
       '--card-accent': '#fce5ffff',

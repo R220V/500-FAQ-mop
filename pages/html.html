@@ -160,81 +160,174 @@
         <div>
           <!-- 1 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 1. Що означає абревіатура HTML і яке її призначення?</summary>
+            <summary><span class="chev">▸</span> 1. Що означає абревіатура <strong>HTML</strong> і яке її призначення?</summary>
             <div class="answer">
-              <p><strong>HTML</strong> — HyperText Markup Language, мова розмітки для структурування вмісту вебсторінок (текст, зображення, посилання тощо).</p>
-              <p>Призначення — описувати структуру та семантику контенту, який браузер відображає користувачу.</p>
+              <p>
+                <em>HTML — HyperText Markup Language</em>, мова розмітки для структурування та семантики вебсторінок (текст, зображення,
+                посилання).
+              </p>
+              <p>Не є мовою програмування, а декларативною мовою розмітки.</p>
+              <p>
+                Cучасна версія <em>HTML5 — Living Standard</em> (живий стандарт), що постійно оновлюється. Використовується з <em>CSS</em> ( для оформлення) і
+                <em>JavaScript</em> (для поведінки).
+              </p>
+              Призначення — описувати структуру та семантику контенту, який браузер відображає користувачеві.</p>
             </div>
           </details>
 
           <!-- 2 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 2. Чим HTML відрізняється від CSS та JavaScript?</summary>
-            <div class="answer">
-              <ul>
-                <li><strong>HTML</strong> — описує структуру веб-сторінки.Визначає структуру веб-сторінки, розміщує текст, зображення, посилання та таблиці</li>
-                <li>
-                  <strong>CSS</strong> — відповідає за оформлення і стиль. Використовується для оформлення цієї структури: кольори, шрифти, відступи та
-                  позиціонування.
-                </li>
-                <li><strong>JavaScript</strong> — додає інтерактивність і дозволяє динамічно змінювати контент і реагувати на дії користувача.</li>
-              </ul>
-              <p>Разом вони формують основу фронтенд-розробки: HTML — кістяк, CSS — одяг, JavaScript — поведінка.</p>
-            </div>
-          </details>
+            <summary><span class="chev">▸</span> 2. Чим <strong>HTML</strong> відрізняється від <strong>CSS</strong> та <strong>JavaScript</strong>?</summary>
+  <div class="answer">
+    <ul>
+      <li><strong>HTML</strong> — описує структуру веб-сторінки. Створює «скелет»: заголовки, абзаци, списки, таблиці, зображення, посилання, форми.</li>
+      <li><strong>CSS</strong> — відповідає за оформлення та стиль. Визначає, як цей «скелет» виглядає: кольори, шрифти, відступи, розміщення елементів, анімації.</li>
+      <li><strong>JavaScript</strong> — додає інтерактивність і динамічну поведінку: зміну контенту без перезавантаження сторінки, обробку подій користувача, динамічні ефекти.</li>
+    </ul>
+    <hr>
+     <p>Разом вони формують основу фронтенд-розробки: <br>
+     <em>HTML</em> — «кістяк»,<br><em>CSS</em> — «одяг»,<br><em>JavaScript</em> — «поведінка».</p>
+  </div>
+</details>
 
           <!-- 3 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 3. Що таке HTML теги?</summary>
-            <div class="answer">
-              <p>HTML теги — це інструкції (команди), які визначають структуру та зміст веб-сторінки. Теги пишуться у кутових дужках <code>&lt; &gt;</code>.</p>
-              <p>Більшість тегів мають відкриваючу та закриваючу частини:</p>
-              <pre><code>&lt;p&gt;Текст абзацу&lt;/p&gt;</code></pre>
-              <p>Деякі теги самозакриваючі:</p>
-              <pre><code>&lt;br /&gt;
-&lt;img src="image.jpg" alt="Зображення" /&gt;</code></pre>
-              <p>Теги можуть мати атрибути:</p>
-              <pre><code>&lt;a href="https://example.com"&gt;Посилання&lt;/a&gt;</code></pre>
-            </div>
-          </details>
+  <summary><span class="chev">▸</span> 3. Що таке HTML <strong>теги</strong> і як вони працюють?</summary>
+  <div class="answer">
+    <p>HTML теги — це елементи мови розмітки (інструкції,команди), які визначають структуру і зміст веб-сторінки.</p>
+    <p>Теги записуються у кутових дужках: <code>&lt;tagname&gt;</code>.</p>
+    <p>Більшість тегів мають відкриваючу (<code>&lt;p&gt;</code>) і закриваючу (<code>&lt;/p&gt;</code>) частину.</p>
+    <p>Через теги браузер розуміє, що є заголовок, абзац, список, таблиця, посилання, зображення чи інший елемент сторінки.</p>
+    <p>Деякі теги є самозакриваючимися (<em>void tags</em>), наприклад <code>&lt;img&gt;</code>, <code>&lt;br&gt;</code>, <code>&lt;hr&gt;</code>, які не мають закриваючого тегу.</p>
+  </div>
+</details>
 
           <!-- 4 -->
+           <details class="faq">
+  <summary><span class="chev">▸</span> 4. Що таке <strong>атрибути</strong> HTML тегів?</summary>
+  <div class="answer">
+    Атрибути — це додаткові властивості тегів, які визначають їхню поведінку або налаштовують зовнішній вигляд/дані елемента.</p>
+   
+    <p>Атрибути пишуться всередині відкриваючого тегу: <code>&lt;tagname attribute="value"&gt;</code>.</p>
+    <p>Вони надають елементу додаткову інформацію, наприклад:</p>
+    <ul>
+      <li><code>id</code> — унікальний ідентифікатор елемента</li>
+      <li><code>class</code> — класи для стилів CSS</li>
+      <li><code>src</code> — шлях до зображення чи медіа</li>
+      <li><code>href</code> — посилання для <code>&lt;a&gt;</code> тегу</li>
+    </ul>
+    <p>Деякі атрибути є обов’язковими, інші — необов’язковими.</p>
+    <hr>
+    <p>Завдяки атрибутам HTML стає більш гнучким і функціональним, дозволяючи стилізувати і взаємодіяти з елементами через CSS та JavaScript.</p>
+  </div>
+</details>
+
+        <!-- 5 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 5. Чим відрізняються <strong>блокові</strong> та <strong>рядкові</strong> (inline) елементи в HTML?</summary>
+  <div class="answer">    
+    <p><strong>Блокові елементи</strong> ( <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;–&lt;h6&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code> ):</p>
+    <ul>
+      <li>займають 100% ширини контейнера;</li>
+      <li>починаються з нового рядка;</li>
+      <li>можуть містити інші блокові й рядкові елементи.</li>
+    </ul>
+    <p><strong>Рядкові (inline) елементи</strong> ( <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;img&gt;</code> ):</p>
+    <ul>
+      <li>займають лише стільки місця, скільки потрібно для контенту;</li>
+      <li>не переносять текст на новий рядок;</li>
+      <li>використовуються для виділення частини тексту або вставки невеликих елементів у рядку.</li>
+    </ul>
+    <hr>
+    <p>Тип відображення можна змінювати через CSS: <code>display: block;</code>, <code>display: inline;</code>, <code>display: inline-block;</code> тощо.</p>
+  </div>
+</details>
+
+
+        <!-- 6 -->    
+<details class="faq">
+  <summary><span class="chev">▸</span> 6. У чому різниця між <code>&lt;div&gt;</code> і <code>&lt;span&gt;</code> в HTML?</summary>
+  <div class="answer">
+    <ul>
+      <li><code><strong>&lt;div&gt;</strong></code> (division): — блоковий елемент для групування великих фрагментів контенту.</li>
+      <li>займає всю ширину контейнера;</li>
+      <li>часто використовується для структурування макета сторінки;</li>
+      <li>може містити інші блокові й рядкові елементи.</li>
+    </ul>
+    <pre><code>&lt;div class="card"&gt;
+  &lt;h2&gt;Заголовок&lt;/h2&gt;
+  &lt;p&gt;Опис всередині блоку.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+      <ul>
+      <li><code><strong>&lt;span&gt;</strong></code> — рядковий елемент для виділення чи стилізації невеликої частини тексту або контенту.</li>
+      <li>займає лише ширину свого вмісту;</li>
+      <li>застосовується для стилізації або виділення частини тексту.</li>
+    </ul>
+    <pre><code>&lt;p&gt;Це &lt;span class="highlight"&gt;важливе слово&lt;/span&gt; у реченні.&lt;/p&gt;
+</code></pre>
+<hr>
+    <p>Обидва елементи не мають власного семантичного значення, а використовуються як «контейнери» для стилізації та групування контенту через CSS або JavaScript.</p>
+  </div>
+</details>
+
+<!-- 7 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 4. Що таке HTML елементи?</summary>
+            <summary><span class="chev">▸</span> 7. Що таке HTML <strong> елементи</strong>?</summary>
             <div class="answer">
               <p>HTML елемент — це відкриваючий тег + контент + закриваючий тег.</p>
-              <pre><code>&lt;tagname attribute="value"&gt;контент&lt;/tagname&gt;</code></pre>
-              <p>Приклади:</p>
-              <pre><code>&lt;h1&gt;Заголовок&lt;/h1&gt; — елемент заголовка
+    <p>Елементи можуть бути:</p>
+    <ul>
+      <li><em>Контейнерні</em> (мають вміст): <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;h1&gt;</code></li>
+      <li><em>Порожні / самозакриваючі</em> (не мають вмісту): <code>&lt;img&gt;</code>, <code>&lt;br&gt;</code>, <code>&lt;hr&gt;</code></li>
+    </ul>
+    <p>Елементи утворюють ієрархію (дерево DOM), де один елемент може містити інші, формуючи <em>батьківські та дочірні</em> відносини.</p>
+  </div>
+  <hr>
+    <p>Приклади:</p>
+    <pre><code>&lt;h1&gt;Заголовок&lt;/h1&gt; — елемент заголовка
 &lt;p&gt;Абзац тексту&lt;/p&gt; — елемент абзацу
 &lt;img src="photo.jpg" alt="Фото"&gt; — елемент зображення (самозакриваючий)</code></pre>
             </div>
           </details>
+         
+ <!-- 8 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 8. Опишіть базову <strong>структуру HTML</strong>-сторінки</summary>
+  <div class="answer">
+    <p> Базова структура HTML-документа містить:
+    <ul>
+      <li><code>&lt;!DOCTYPE html&gt;</code> — оголошення типу документа, вказує браузеру, що використовується HTML5.</li>
+      <li><code>&lt;html&gt;</code> — кореневий елемент всього документа.</li>
+      <li><code>&lt;head&gt;</code> — мета-дані сторінки:
+        <ul>
+          <li><code>&lt;title&gt;</code> — заголовок у вкладці браузера</li>
+          <li><code>&lt;meta&gt;</code> — кодування, ключові слова, автор, viewport для адаптивності</li>
+          <li>підключення CSS/скриптів через <code>&lt;link&gt;</code> і <code>&lt;script&gt;</code></li>
+        </ul>
+      </li>
+      <li><code>&lt;body&gt;</code> — вміст сторінки, що відображається користувачу: текст, зображення, посилання, таблиці, форми, скрипти.</li>
+    </ul>
+    <hr>
+    <p>Приклад мінімальної HTML-сторінки:</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Моя сторінка&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Привіт, світ!&lt;/h1&gt;
+  &lt;p&gt;Це мій перший HTML-документ.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+  </div>
+</details>
 
-          <!-- 5 -->
+<!-- 9 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 5. Опишіть базову структуру HTML-сторінки?</summary>
-            <div class="answer">
-              <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;title&gt;Назва сторінки&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;!-- Вміст сторінки --&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-              <p>
-                <strong>Складові:</strong> <code>&lt;!DOCTYPE html&gt;</code> — HTML5; <code>&lt;html&gt;</code> — кореневий елемент;
-                <code>&lt;head&gt;</code> — метадані; <code>&lt;body&gt;</code> — видимий контент.
-              </p>
-            </div>
-          </details>
-
-          <!-- 6 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 6. Що таке DOCTYPE і навіщо його використовують?</summary>
+            <summary><span class="chev">▸</span> 9. Що таке <strong>DOCTYPE</strong> і навіщо його використовують?</summary>
             <div class="answer">
               <p>
                 <strong>DOCTYPE</strong> (Document Type Declaration) — декларація типу документа, яка повідомляє браузеру, яку версію HTML використовує
@@ -249,62 +342,299 @@
             </div>
           </details>
 
-          <!-- 7 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 7. Яка поточна версія HTML?</summary>
-            <div class="answer">
-              <p>Поточна версія — <strong>HTML5</strong>. Це <em>Living Standard</em> (живий стандарт), що постійно оновлюється.</p>
-            </div>
-          </details>
+<!-- 10 -->
+         <details class="faq">
+  <summary><span class="chev">▸</span> 10. Що містить <code>&lt;head&gt;</code> і яка його роль?</summary>
+  <div class="answer">
+    <p><strong><code>&lt;head&gt;</code></strong> містить метаінформацію та підключає зовнішні ресурси, що не видно на сторінці, але важливі для браузера, оптимізації, SEO та коректного відображення веб-сторінки.</p>
+    <p>Найчастіше зустрічаються елементи:</p>
+    <ul>
+      <li><code>&lt;title&gt;</code> — заголовок сторінки у вкладці браузера;</li>
+      <li><code>&lt;meta&gt;</code> — кодування (charset), опис сторінки, ключові слова, автор, viewport для адаптивності;</li>
+      <li><code>&lt;link&gt;</code> — підключення CSS;</li>
+      <li><code>&lt;link rel="icon"&gt;</code> — підключення фавіконки;</li>
+      <li><code>&lt;script&gt;</code> — підключення зовнішніх JS-файлів (якщо не в кінці <code>&lt;body&gt;</code>);</li>
+      <li><code>&lt;style&gt;</code> — внутрішні стилі CSS (якщо потрібні).</li>
+    </ul>
+    <hr>
+    <p>Приклад:</p>
+    <pre><code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Моя сторінка&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+</code></pre>
+  </div>
+</details>
 
-          <!-- 8 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 8. Що роблять атрибути DOCTYPE та <code>html lang</code>?</summary>
-            <div class="answer">
-              <pre><code>&lt;!DOCTYPE html&gt;  — вказує стандарт HTML5
-&lt;html lang="uk"&gt; — вказує мову вмісту</code></pre>
-              <p>Покращують доступність, SEO та коректність відображення сторінки.</p>
-            </div>
-          </details>
+<!-- 11 -->
+         <details class="faq">
+  <summary><span class="chev">▸</span> 11. Що таке <code>&lt;body&gt;</code> і яка його роль у HTML-документі?</summary>
+  <div class="answer">
+    <p><strong><code>&lt;body&gt;</code></strong>  — головний контейнер, який містить весь видимий контент сторінки, розбитий на блоки та елементи для структурування та відображення.</p>
+    <p>Структура &lt;body&gt;:</p>
+    <ul>
+      <li>Блокові елементи: <code>&lt;div&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code></li>
+      <li>Рядкові елементи: <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code></li>
+      <li>Текстові елементи: <code>&lt;h1&gt;–&lt;h6&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;span&gt;</code></li>
+      <li>Мультимедіа: <code>&lt;img&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code></li>
+      <li>Посилання та навігація: <code>&lt;a&gt;</code>, <code>&lt;nav&gt;</code></li>
+      <li>Списки та таблиці: <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;table&gt;</code></li>
+      <li>Форми та інтерактивні елементи: <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;button&gt;</code></li>
+    </ul>
+    <hr>
+    <p>Приклад:</p>
+    <pre><code>&lt;body&gt;
+  &lt;h1&gt;Привіт, світ!&lt;/h1&gt;
+  &lt;p&gt;Це мій перший HTML-документ.&lt;/p&gt;
+  &lt;img src="image.jpg" alt="Приклад зображення"&gt;
+&lt;/body&gt;
+</code></pre>
+  </div>
+</details>
 
-          <!-- 9 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 9. Що описується в тегу <code>&lt;head&gt;</code>?</summary>
+<!-- 12 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 12. Що таке метатеги <code>&lt;meta&gt;</code> і для чого вони потрібні?</summary>
+  <div class="answer">
+    <p>Метатеги<strong> <code>&lt;meta&gt;</code></strong>  — це елементи в <code>&lt;head&gt;</code>, які містять мета-інформацію про сторінку для браузерів і пошукових систем. Метатеги не відображаються на сторінці, але впливають на:</p>
+    <ul>
+      <li>SEO (оптимізацію для пошуку)</li>
+      <li>Кодування</li>
+      <li>Адаптивність</li>
+      <li>Поведіку браузера</li>
+    </ul>
+    <p>Види метатегів і їх призначення:</p>
+ 
+      <pre><code>&lt;meta charset="UTF-8"&gt; — задає кодування сторінки, </code></pre>
+        <pre><code>&lt;meta name="description" content="Опис сторінки для пошукових систем"&gt; — короткий опис для SEO, </code></pre>
+        <pre><code>&lt;meta name="keywords" content="HTML, CSS, SEO"&gt; — ключові слова (в сучасному SEO майже не використовуються)</code></pre>
+      
+        <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; — адаптивність для мобільних пристроїв</code></pre>
+        <pre><code>&lt;meta http-equiv="refresh" content="30"&gt; — автоматичне оновлення сторінки через 30 секунд</code></pre>
+        <pre><code>&lt;meta property="og:title" content="Назва сторінки"&gt; — для Facebook, LinkedIn</code></pre>
+<pre><code>&lt;meta name="twitter:card" content="summary"&gt; — для Twitter </code></pre>
+<pre><code>&lt;meta name="author" content="Ім’я автора"&gt;</code></pre>
+  </div>
+</details>
+
+<!-- 13 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 13. Що таке <strong>фавікон</strong> і як його підключають у &lt;head&gt;?</summary>
+  <div class="answer">
+    <p><strong>Фавікон</strong>
+     — це маленька іконка сайту, що відображається у вкладці браузера, закладках або історії. Підключається через тег <code>&lt;link&gt;</code> у <code>&lt;head&gt;</code>.</p> 
+     <p>Він 
+      <em>покращує</em> впізнаваність сайту,
+    <em>виділяє</em> вкладку серед багатьох відкритих,
+      <em>додає</em> професійний вигляд веб-сторінці.
+   </p>
+    <pre><code>&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</code></pre>
+<hr>
+    <p>Основні атрибути:</p>
+    <ul>
+      <li><code>rel="icon"</code> — вказує, що це фавікон</li>
+      <li><code>href</code> — шлях до файлу іконки</li>
+      <li><code>type</code> — тип файлу (image/x-icon, image/png тощо)</li>
+    </ul> 
+  </div>
+</details>
+
+<!-- 14 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 14. Що таке атрибут <code>class</code> і як його використовують?</summary>
+  <div class="answer">
+    <p>Атрибут<strong> <code>class</code></strong>  використовується для групування елементів для стилізації або маніпуляцій через CSS і JavaScript і дозволяє призначати один або кілька класів елементу.</p>
+    <p>Приклад:</p>
+    <pre><code>&lt;p class="highlight important"&gt;Це важливий абзац.&lt;/p&gt;</code></pre>
+    <p>Можна звертатись у CSS:</p>
+    <pre><code>.highlight { color: red; }
+.important { font-weight: bold; }</code></pre>
+    <p>Атрибут <code>class</code> використовується для повторного застосування стилів та зручної взаємодії через JavaScript.</p>
+  </div>
+</details>
+
+<!-- 15 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 15. Що таке атрибут <code>id</code> і чим він відрізняється від <code>class</code>?</summary>
+  <div class="answer">
+    <p>Атрибут<strong> <code>id</code></strong>  надає елементу унікальний ідентифікатор, тоді як <code>class</code> може бути спільним для кількох елементів.</p>
+  
+    <p><code>id</code> повинен бути унікальним на сторінці і використовується для:</p>
+    <ul>
+      <li>Стилізації через CSS: <code>#elementID { ... }</code></li>
+      <li>Доступу через JavaScript: <code>document.getElementById('elementID')</code></li>
+      <li>Як анкер для навігації сторінки: <code>&lt;a href="#section1"&gt;Перейти&lt;/a&gt;</code></li>
+    </ul>
+    <p>Приклад:</p>
+    <pre><code>&lt;div id="header"&gt;Верхня частина сторінки&lt;/div&gt;</code></pre>
+  </div>
+</details>
+
+<!-- 16 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 16. Як підключають <strong>CSS</strong> до HTML-документа?</summary>
+  <div class="answer">
+    <p>Існує 3 типи підключення CSS: </p>
+
+    <p><u>Зовнішній CSS</u> (рекомендований для великих сайтів). Розміщується у <code>&lt;head&gt;</code>, всі стилі виносяться в окремий файл:
+    <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre></p>
+  
+    <p><u>Внутрішній CSS</u> (у <code>&lt;head&gt;</code> у блоці <code>&lt;style&gt;</code>):
+    <pre><code>&lt;style&gt;
+  body { background-color: #f0f0f0; }
+  p { color: blue; }
+&lt;/style&gt;</code></pre></p>
+    <p><u>Інлайн-стилі</u> (усередині тегу через атрибут <code>style</code> ).  Використовуються рідко, тільки для швидких змін.
+    <pre><code>&lt;p style="color: red; font-size: 16px;"&gt;Текст червоним&lt;/p&gt;</code></pre></p>
+    <hr>
+    <p><strong>Висновок:</strong> зовнішній CSS дозволяє розділяти контент і стиль, що спрощує підтримку і масштабування сайту.</p>
+  </div>
+</details>
+
+<!-- 17 -->
+
+ <details class="faq">
+  <summary><span class="chev">▸</span> 17. Як підключають <strong>JavaScript</strong> до HTML-документа?</summary>
+  <div class="answer">
+    <p>Існує 2 типи підключення JavaScript: </p>
+
+    <p><u>Зовнішній скрипт</u> (рекомендований спосіб):<br>
+    JavaScript підключають через тег <code>&lt;script&gt;</code> для додавання інтерактивності на веб-сторінку. Розміщується в <code>&lt;head&gt;</code> або перед закриваючим <code>&lt;/body&gt;</code> (краще внизу для швидшого завантаження).</p>
+    <pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+    
+    <p><u>Внутрішній скрипт</u> (безпосередньо у HTML):</p>
+    <pre><code>&lt;script&gt;
+  console.log("Привіт, світ!");
+&lt;/script&gt;</code></pre>
+<hr>
+<p>Атрибут <code>defer</code> каже браузеру завантажувати скрипт у фоновому режимі та виконати його після того, як HTML-документ буде повністю побудований.</p>
+ <pre><code>&lt;script src="script.js" defer&gt;&lt;/script&gt; &lt;!-- підключення скрипта з defer --&gt;</code></pre>
+
+<hr>
+    <p>Можливості JavaScript:</p>
+    <ul>
+      <li>Змінювати вміст сторінки динамічно</li>
+      <li>Обробляти події користувача</li>
+      <li>Створювати анімації та інтерактивні ефекти</li>
+    </ul>
+  </div>
+</details>
+
+
+<!-- 18 -->
+ <details class="faq">
+  <summary><span class="chev">▸</span> 18. Що таке заголовки в HTML <code>&lt;h1&gt;–&lt;h6&gt;</code> і їх роль?</summary>
+  <div class="answer">
+    <p><strong>Заголовки</strong>  в HTML — це теги <code>&lt;h1&gt;–&lt;h6&gt;</code>, які використовуються для позначення заголовків різних рівнів на веб-сторінці.</p>
+    <ul>
+      <li><code>&lt;h1&gt;</code> — найважливіший заголовок (зазвичай основна тема сторінки)</li>
+      <li><code>&lt;h2&gt;–&lt;h6&gt;</code> — підзаголовки, де <code>&lt;h6&gt;</code> має найменшу важливість</li>
+    </ul>
+    <p>Роль заголовків:</p>
+    <ul>
+      <li>Структурування контенту — дозволяють логічно розбити текст на розділи та підрозділи.</li>
+      <li>SEO — пошукові системи враховують заголовки для розуміння теми сторінки.</li>
+      <li>Доступність — допомагають скрінрідерам орієнтуватися у змісті для людей із порушенням зору.</li>
+      <li>Візуальне виділення — заголовки виділяють важливі частини тексту, полегшуючи читання.</li>
+    </ul>
+    <hr>
+    <p>Приклад використання:</p>
+    <pre><code>&lt;h1&gt;Моя сторінка&lt;/h1&gt;
+&lt;h2&gt;Розділ 1&lt;/h2&gt;
+&lt;h3&gt;Підрозділ 1.1&lt;/h3&gt;
+&lt;h2&gt;Розділ 2&lt;/h2&gt;
+</code></pre>
+    <p>Використання заголовків впливає на SEO, доступність і логіку структури контенту.</p>
+  </div>
+</details>
+
+<!-- 19 -->
+<details class="faq">
+            <summary><span class="chev">▸</span> 19. Що таке порожні <strong>void</strong> елементи в HTML?</summary>
             <div class="answer">
-              <p>Тег <code>&lt;head&gt;</code> містить метаінформацію про документ:</p>
+              <p>Порожні (void) елементи не мають контенту і закриваючого тега.</p>
               <ul>
-                <li>Назва сторінки — <code>&lt;title&gt;</code></li>
-                <li>Мета-теги — <code>&lt;meta&gt;</code></li>
-                <li>Підключення стилів — <code>&lt;link&gt;</code></li>
-                <li>Скрипти — <code>&lt;script&gt;</code></li>
-                <li>Фавікон — <code>&lt;link rel="icon"&gt;</code></li>
+                <li><code>&lt;br&gt;</code> — розрив рядка</li>
+                <li><code>&lt;hr&gt;</code> — горизонтальна лінія</li>
+                <li><code>&lt;img&gt;</code> — зображення</li>
+                <li><code>&lt;input&gt;</code> — поле вводу</li>
+                <li><code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code> — метадані/ресурси</li>
               </ul>
-              <pre><code>&lt;head&gt;
-  &lt;meta charset="UTF-8" /&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
-  &lt;title&gt;Назва сторінки&lt;/title&gt;
-  &lt;link rel="stylesheet" href="styles.css" /&gt;
-  &lt;script src="script.js"&gt;&lt;/script&gt;
-&lt;/head&gt;</code></pre>
+              <hr>
+              <pre><code>&lt;img src="photo.jpg" alt="Фото" /&gt;
+&lt;br /&gt;
+&lt;input type="text" name="name" /&gt;</code></pre>
             </div>
           </details>
 
-          <!-- 10 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 10. Яка різниця між тегами <code>&lt;head&gt;</code> та <code>&lt;body&gt;</code>?</summary>
-            <div class="answer">
-              <p>
-                <strong>&lt;head&gt;</strong> — метадані (не відображаються напряму). <strong>&lt;body&gt;</strong> — видимий контент (текст, зображення, кнопки
-                тощо).
-              </p>
-            </div>
-          </details>
+<!-- 20 -->
+  <details class="faq">
+  <summary><span class="chev">▸</span> 20. Що таке <strong>семантичні</strong> та <strong>несемантичні</strong> теги HTML?</summary>
+  <div class="answer">
+    <p><strong>Семантичні теги</strong>  — це теги, які мають зрозуміле значення і призначення для контенту. Браузер, пошукові системи та допоміжні технології (наприклад, скрінрідери) розуміють їхній зміст без додаткових пояснень.</p>
+    <p>Приклади семантичних тегів і їх призначення:</p>
+    <ul>
+      <li><code>&lt;header&gt;</code> — шапка сторінки або секції</li>
+      <li><code>&lt;nav&gt;</code> — навігаційне меню</li>
+      <li><code>&lt;main&gt;</code> — головний вміст сторінки</li>
+      <li><code>&lt;article&gt;</code> — окремий змістовний блок (стаття, пост)</li>
+      <li><code>&lt;section&gt;</code> — розділ сторінки</li>
+      <li><code>&lt;aside&gt;</code> — бічна панель або додаткова інформація</li>
+      <li><code>&lt;footer&gt;</code> — підвал сторінки або секції</li>
+      <li><code>&lt;h1&gt;–&lt;h6&gt;</code> — заголовки різних рівнів</li>
+      <li><code>&lt;figure&gt;</code> — ілюстрація або графіка з підписом</li>
+      <li><code>&lt;figcaption&gt;</code> — підпис до <code>&lt;figure&gt;</code></li>
+      <li><code>&lt;mark&gt;</code> — виділений текст, важливий для користувача</li>
+      <li><code>&lt;time&gt;</code> — дата або час</li>
+      <li><code>&lt;address&gt;</code> — контактна інформація</li>
+      <li><code>&lt;summary&gt;</code> — заголовок для елемента <code>&lt;details&gt;</code></li>
+      <li><code>&lt;details&gt;</code> — деталі, які можна розкривати/згортати</li>
+      <li><code>&lt;blockquote&gt;</code> — цитата з іншого джерела</li>
+      <li><code>&lt;q&gt;</code> — коротка цитата</li>
+    </ul>
+    <p><strong>Несемантичні теги:</strong> це теги, які не дають інформації про зміст. Вони просто контейнер без конкретного значення і визначають структуру або зовнішній вигляд контенту, але не пояснюють, що всередині. Пошукові системи та скрінрідери не розуміють їхнього значення.</p>
+    <ul>
+      <li><code>&lt;div&gt;</code> — просто контейнер</li>
+      <li><code>&lt;span&gt;</code> — виділення частини тексту</li>
+    </ul>
+  </div>
+</details>
 
-          <!-- <div class="section">Основи роботи з текстом і структурою</div> -->
+<!-- 21 -->
+        <details class="faq">
 
-          <!-- 11 -->
+  <summary><span class="chev">▸</span> 21. Що таке <strong>форматування тексту</strong> у HTML <code>&lt;strong&gt;</code>,<code>&lt;b&gt;</code>,  <code>&lt;em&gt;</code>,<code>&lt;i&gt;</code>, <code>&lt;u&gt;</code>, <code>&lt;mark&gt;</code> і коли їх використовують?</summary>
+  <div class="answer">
+    <p>HTML-теги для форматування тексту змінюють його вигляд без зміни семантики:</p>
+     <ul>
+      <li><code>&lt;strong&gt;</code> — важливий текст (жирний, з акцентом на значенні  - семантичний).</li>
+       <ul>
+       <li><code>&lt;b&gt;</code> — жирний текст (без семантичного значення).</li>
+      <li><code>&lt;em&gt;</code> — наголошений текст (курсив, підкреслює інтонацію - семантичний).</li>
+     
+      <li><code>&lt;i&gt;</code> — курсивний текст (без семантики, наприклад для назв).</li>
+      <li><code>&lt;u&gt;</code> — підкреслений текст.</li>
+      <li><code>&lt;mark&gt;</code> — виділений маркером (жовтим за замовчуванням).</li>
+    </ul>
+    <hr>
+    <hr>
+    <pre><code>&lt;p&gt;Це &lt;b&gt;жирний&lt;/b&gt; текст.&lt;/p&gt;
+&lt;p&gt;Це &lt;i&gt;курсив&lt;/i&gt; текст.&lt;/p&gt;
+&lt;p&gt;Це &lt;u&gt;підкреслений&lt;/u&gt; текст.&lt;/p&gt;
+&lt;p&gt;Це &lt;mark&gt;виділений&lt;/mark&gt; текст.&lt;/p&gt;</code></pre>
+    <p>Результат на сторінці:</p>
+    <p>Це <b>жирний</b> текст.</p>
+    <p>Це <i>курсив</i> текст.</p>
+    <p>Це <u>підкреслений</u> текст.</p>
+    <p>Це <mark>виділений</mark> текст.</p>
+  </div>
+</details>
+
+          <!-- 22 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 11. Що таке пробільний простір в HTML?</summary>
+            <summary><span class="chev">▸</span> 22. Що таке <strong>пробільний простір</strong> в HTML?</summary>
             <div class="answer">
               <p>
                 Пробільний простір — пробіли, табуляції та переноси рядків. Браузер зазвичай <em>схлопує</em> кілька пробілів до одного, кілька переносів — до
@@ -317,40 +647,696 @@
             </div>
           </details>
 
-          <!-- 12 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 12. Що таке порожні елементи в HTML?</summary>
-            <div class="answer">
-              <p>Порожні (void) елементи не мають контенту і закриваючого тега.</p>
-              <ul>
-                <li><code>&lt;br&gt;</code> — розрив рядка</li>
-                <li><code>&lt;hr&gt;</code> — горизонтальна лінія</li>
-                <li><code>&lt;img&gt;</code> — зображення</li>
-                <li><code>&lt;input&gt;</code> — поле вводу</li>
-                <li><code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code> — метадані/ресурси</li>
-              </ul>
-              <pre><code>&lt;img src="photo.jpg" alt="Фото" /&gt;
-&lt;br /&gt;
-&lt;input type="text" name="name" /&gt;</code></pre>
-            </div>
-          </details>
+          <!-- 23 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 23. Що таке абзаци <code>&lt;p&gt;</code> і як їх використовують?</summary>
+  <div class="answer">
+    <p><strong><code>&lt;p&gt;</code></strong>  — тег для створення абзаців тексту на веб-сторінці. Він відокремлює логічні блоки тексту та додає вертикальні відступи між ними. Використовується для структурування текстового контенту, щоб він був читабельним.</p>
+    <hr>
+    <p>Приклад:</p>
+   <pre><code>&lt;p&gt;Це перший абзац тексту на сторінці.&lt;/p&gt;</code></pre>
+<pre><code>&lt;p&gt; А це другий абзац, який відокремлений від першого.&lt;/p&gt;
+</code></pre>
+    <p><code>&lt;p&gt;</code> — блоковий елемент, займає всю ширину контейнера і починається з нового рядка. Можна комбінувати з CSS для стилізації: кольори, шрифти, відступи, міжрядковий інтервал.</p>
+  </div>
+</details>
 
-          <!-- 13 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 13. У чому різниця між елементами <code>&lt;div&gt;</code> і <code>&lt;span&gt;</code>?</summary>
-            <div class="answer">
-              <ul>
-                <li><code>&lt;div&gt;</code> — <em>блоковий</em> елемент (повна ширина, з нового рядка) — для великих блоків.</li>
-                <li><code>&lt;span&gt;</code> — <em>вбудований</em> елемент (лише потрібна ширина, в рядку) — для невеликих фрагментів.</li>
-              </ul>
-              <pre><code>&lt;div&gt;Це блоковий елемент&lt;/div&gt;
-&lt;div&gt;Він займає всю ширину&lt;/div&gt;
+<!-- 24 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 24. Які бувають списки <code>OL</code> та <code>UL</code> у HTML і як їх створюють?</summary>
+  <div class="answer">
+    <p>В HTML існують два основні типи списків для впорядкування елементів:</p>
+    <ul>
+      <li><code>&lt;ul&gt;</code> — ненумерований список (маркери/bullet points).</li>
+      <li><code>&lt;ol&gt;</code> — нумерований список (цифри або букви).</li>
+      <li><code>&lt;li&gt;</code> — елемент списку, використовується всередині <code>&lt;ul&gt;</code> або <code>&lt;ol&gt;</code>.</li>
+    </ul>
+    <hr>
+    <pre><code>&lt;ul&gt;
+  &lt;li&gt;Яблуко&lt;/li&gt;
+  &lt;li&gt;Банан&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Це &lt;span&gt;вбудований елемент&lt;/span&gt; всередині абзацу.&lt;/p&gt;</code></pre>
-            </div>
-          </details>
+&lt;ol&gt;
+  &lt;li&gt;Підготовка&lt;/li&gt;
+  &lt;li&gt;Виконання&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+  </div>
+</details>
 
-          <!-- 14 -->
+<!-- 25 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 25. Що таке описові списки <code>DL</code>, <code>DT</code>, <code>DD</code> і як їх використовують?</summary>
+  <div class="answer">
+    <p>Описові списки дозволяють створювати пари «термін — опис»:</p>
+    <ul>
+      <li><code>&lt;dl&gt;</code> — контейнер описового списку.</li>
+      <li><code>&lt;dt&gt;</code> — термін.</li>
+      <li><code>&lt;dd&gt;</code> — опис терміну.</li>
+    </ul>
+    <hr>
+    <pre><code>&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;Мова розмітки для створення веб-сторінок.&lt;/dd&gt;
+
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Мова стилів для оформлення веб-сторінок.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+    <p>Результат на сторінці:</p>
+    <dl>
+      <dt>HTML</dt>
+      <dd>Мова розмітки для створення веб-сторінок.</dd>
+
+      <dt>CSS</dt>
+      <dd>Мова стилів для оформлення веб-сторінок.</dd>
+    </dl>
+  </div>
+</details>
+
+<!-- 26 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 26. Що таке <strong>таблиці</strong> в HTML і як їх створюють?</summary>
+  <div class="answer">
+    <p>Таблиці використовуються для впорядкування даних у рядки та стовпці:</p>
+    <ul>
+      <li><code>&lt;table&gt;</code> — контейнер таблиці.</li>
+      <li><code>&lt;tr&gt;</code> — рядок таблиці.</li>
+      <li><code>&lt;th&gt;</code> — заголовочна комірка (жирна, по центру).</li>
+      <li><code>&lt;td&gt;</code> — звичайна комірка з даними.</li>
+    </ul>
+    <hr>
+    <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Ім’я&lt;/th&gt;
+    &lt;th&gt;Вік&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Оля&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Іван&lt;/td&gt;
+    &lt;td&gt;30&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+    <p>Результат на сторінці:</p>
+    <table border="1" cellpadding="5">
+      <tr>
+        <th>Ім’я</th>
+        <th>Вік</th>
+      </tr>
+      <tr>
+        <td>Оля</td>
+        <td>25</td>
+      </tr>
+      <tr>
+        <td>Іван</td>
+        <td>30</td>
+      </tr>
+    </table>
+  </div>
+</details>
+
+
+<!-- 27 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 27. Які додаткові теги використовують для <strong>структурування таблиць</strong> в HTML?</summary>
+  <div class="answer">
+    <p>Для поліпшення семантики та структури таблиць використовують додаткові теги:</p>
+    <ul>
+      <li><code>&lt;caption&gt;</code> — заголовок таблиці. Дає семантичний опис таблиці,покращує доступність (для читалок) та відображається над таблицею за замовчуванням.
+</li>
+      <li><code>&lt;thead&gt;</code> — група рядків заголовків таблиці.</li>
+      <li><code>&lt;tbody&gt;</code> — група основних рядків таблиці.</li>
+      <li><code>&lt;tfoot&gt;</code> — група рядків підвалу таблиці (підсумки, підсумкові дані).</li>
+      <li><code>&lt;th&gt;</code> — заголовочна комірка (по горизонталі або вертикалі).</li>
+      <li><code>&lt;td&gt;</code> — звичайна комірка даних.</li>
+      <li><code>colspan="N"</code> — комірка займає (об'єднує) <em>N</em> стовпців.</li>
+      <li><code>rowspan="N"</code> — комірка займає (об'єднує) <em>N</em> рядків.</li>
+    </ul>
+    <hr>
+    </ul>
+    <hr>
+    <pre><code>&lt;table border="1"&gt;
+  &lt;caption&gt;Таблиця користувачів&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Ім’я&lt;/th&gt;
+      &lt;th&gt;Вік&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Оля&lt;/td&gt;
+      &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Іван&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td colspan="2"&gt;Всього: 2 користувачі&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+    <p>Результат на сторінці:</p>
+    <table border="1" cellpadding="5">
+      <caption>Таблиця користувачів</caption>
+      <thead>
+        <tr>
+          <th>Ім’я</th>
+          <th>Вік</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Оля</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>Іван</td>
+          <td>30</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Всього: 2 користувачі</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</details>
+
+<!-- 28 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 28. Що таке тег <code>&lt;article&gt;</code> у HTML?</summary>
+  <div class="answer">
+    <p><code>&lt;article&gt;</code> — семантичний тег, який використовується для <strong>самостійного, незалежного блоку контенту</strong>, що може існувати окремо від іншої частини сторінки.</p>
+    <ul>
+      <li>Зазвичай використовується для статей, постів у блозі, коментарів, новинних блоків.</li>
+      <li>Може містити заголовки, текст, зображення, списки тощо.</li>
+      <li>Може повторюватися кілька разів на сторінці (наприклад, список статей).</li>
+    </ul>
+    <hr>
+    <pre><code>&lt;article&gt;
+  &lt;h2&gt;Новина дня&lt;/h2&gt;
+  &lt;p&gt;Сьогодні відбулася важлива подія у світі технологій...&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+    <p>Результат на сторінці:</p>
+    <article>
+      <h2>Новина дня</h2>
+      <p>Сьогодні відбулася важлива подія у світі технологій...</p>
+    </article>
+  </div>
+</details>
+
+
+<!-- 29 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 29. Як створювати <strong>вкладені списки</strong> (&lt;ul&gt; або &lt;ol&gt; всередині &lt;li&gt;) у HTML?</summary>
+  <div class="answer">
+    <p>Вкладені списки дозволяють створювати ієрархічну структуру елементів:</p>
+    <hr>
+    <pre><code>
+      &lt;p&gt;Продукти:&lt;/p&gt;
+      &lt;ul&gt;
+  &lt;li&gt;&lt;u&gt;Фрукти&lt;/u&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Яблуко&lt;/li&gt;
+      &lt;li&gt;Банан&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;u&gt;Овочі&lt;/u&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Морква&lt;/li&gt;
+      &lt;li&gt;Буряк&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    <p>Результат на сторінці:</p>
+    <p>Продукти:</p>
+    <ul>
+      <li><u>Фрукти</u>
+        <ul>
+          <li>Яблуко</li>
+          <li>Банан</li>
+        </ul>
+      </li>
+      <li><u>Овочі</u>
+        <ul>
+          <li>Морква</li>
+          <li>Буряк</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</details>
+
+<!-- 30 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 30. Як робити <strong>коментарі</strong> у HTML і для чого вони потрібні &lt;!-- comment --&gt;?</summary>
+  <div class="answer">
+    <p>Коментарі в HTML використовуються для пояснень у коді, які не відображаються на сторінці:</p>
+    <ul>
+      <li>Допомагають розробникам зрозуміти структуру або логіку.</li>
+      <li>Можна тимчасово відключати частину коду.</li>
+    </ul>
+    <hr>
+    <pre><code>&lt;!-- Це коментар, він не відображається на сторінці --&gt;
+&lt;p&gt;Цей абзац відобразиться.&lt;/p&gt;
+&lt;!-- &lt;p&gt;Цей абзац прихований.&lt;/p&gt; --&gt;</code></pre>
+    <p>Результат на сторінці:</p>
+    <p>Цей абзац відобразиться.</p>
+  </div>
+</details>
+
+<!-- 31 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 31. Що таке абревіатури та скорочення <code>&lt;abbr&gt;</code> та <code>&lt;acronym&gt;</code> і як їх використовувати?</summary>
+  <div class="answer">
+    <p>Теги для скорочень надають користувачу додаткову інформацію при наведенні:</p>
+    <ul>
+      <li><code>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</code> — абревіатура з підказкою.</li>
+      <li><code>&lt;acronym&gt;</code> — аналогічно, але застарілий у HTML5 (рекомендовано <code>&lt;abbr&gt;</code>).</li>
+    </ul>
+    <hr>
+    <pre><code>&lt;p&gt;Мова розмітки: &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;&lt;/p&gt;</code></pre>
+    <p>Результат на сторінці:</p>
+    <p>Мова розмітки: <abbr title="HyperText Markup Language">HTML</abbr></p>
+  </div>
+</details>
+
+<!-- 32 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 32. Як вставляти код у HTML <code>&lt;code&gt;</code>, <code>&lt;pre&gt;</code>?</summary>
+  <div class="answer">
+    <p>Для відображення коду використовують спеціальні теги:</p>
+    <ul>
+      <li><code>&lt;code&gt;</code> — короткий фрагмент коду всередині абзацу.</li>
+      <li><code>&lt;pre&gt;</code> — блок коду з форматуванням пробілів і переносів рядків.</li>
+      </ul>
+    <hr>
+    <pre><code>&lt;p&gt;Приклад функції: &lt;code&gt;alert('Hello');&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;
+function greet() {
+  alert('Привіт!');
+}
+&lt;/pre&gt;</code></pre>
+    <p>Результат на сторінці:</p>
+    <p>Приклад функції: <code>alert('Hello');</code></p>
+    <pre>
+function greet() {
+  alert('Привіт!');
+}
+    </pre>
+  </div>
+</details>
+
+<!-- 33 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 33. Що таке цитати у HTML <code>&lt;q&gt;</code> і <code>&lt;blockquote&gt;</code>?</summary>
+  <div class="answer">
+    <p>Для вставки цитат використовуються два основні теги:</p>
+    <ul>
+      <li><code>&lt;q&gt;</code> — короткі цитати в тексті, вставляє лапки автоматично.</li>
+      <li><code>&lt;blockquote&gt;</code> — довгі цитати або виділені абзаци.</li>
+    </ul>
+    <hr>
+    <pre><code>&lt;p&gt;Як сказав Вінстон Черчілль: &lt;q&gt;Never give up.&lt;/q&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;Це приклад довгої цитати, яка виділяється блоком.&lt;/blockquote&gt;</code></pre>
+    <p><strong>Результат на сторінці:</strong></p>
+    <p>Як сказав Вінстон Черчілль: <q>Never give up.</q></p>
+    <blockquote>Це приклад довгої цитати, яка виділяється блоком.</blockquote>
+  </div>
+</details>
+
+<!-- 34 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 34. Що таке горизонтальна лінія <code>&lt;hr&gt;</code> і як її використовують?</summary>
+  <div class="answer">
+    <p>Тег <code>&lt;hr&gt;</code> створює горизонтальну лінію, яка використовується для візуального розділення контенту.</p>
+    <hr>
+    <pre><code>&lt;p&gt;Розділ 1&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Розділ 2&lt;/p&gt;</code></pre>
+    <p>Результат на сторінці:</p>
+    <p>Розділ 1</p>
+    <hr>
+    <p>Розділ 2</p>
+  </div>
+</details>
+
+<!-- 35 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 35. Як робити <strong>нумерацію та маркери</strong> у списках &lt;ul&gt; та &lt;ol&gt;?</summary>
+  <div class="answer">
+    <ul>
+      <li><strong>Маркерований список</strong> (<code>&lt;ul&gt;</code>):
+        <ul>
+          <li>Використовує крапки (●) або інші маркери за замовчуванням.</li>
+          <li>Можна змінювати тип маркерів через CSS (<code>list-style-type</code>).</li>
+          <li>Приклад:
+            <pre><code>&lt;ul&gt;
+  &lt;li&gt;Пункт 1&lt;/li&gt;
+  &lt;li&gt;Пункт 2&lt;/li&gt;
+  &lt;li&gt;Пункт 3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Нумерований список</strong> (<code>&lt;ol&gt;</code>):
+        <ul>
+          <li>Автоматично додає числа (1, 2, 3…) перед пунктами.</li>
+          <li>Можна змінювати тип нумерації через атрибут <code>type</code> або CSS (<code>list-style-type</code>).</li>
+          <li>Приклад:
+            <pre><code>&lt;ol&gt;
+  &lt;li&gt;Перший пункт&lt;/li&gt;
+  &lt;li&gt;Другий пункт&lt;/li&gt;
+  &lt;li&gt;Третій пункт&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>Поради:</p>
+    <ul>
+      <li>Для вкладених списків можна комбінувати <code>&lt;ul&gt;</code> та <code>&lt;ol&gt;</code>.</li>
+      <li>CSS властивість <code>list-style-type</code> дозволяє змінювати стиль маркерів (disc, circle, square, decimal, lower-alpha тощо).</li>
+    </ul>
+  </div>
+</details>
+
+<!-- 36 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 36. Що таке теги <code>&lt;small&gt;</code> і <code>&lt;strong&gt;</code> у HTML?</summary>
+  <div class="answer">
+    <p>Ці теги використовуються для <strong>семантичного виділення тексту</strong>:</p>
+    <ul>
+      <li><code>&lt;small&gt;</code> — відображає текст меншим розміром, використовується для приміток, уточнень, ліцензійних текстів.</li>
+      <li><code>&lt;strong&gt;</code> — означає важливий текст, семантично виділяє його. Браузери за замовчуванням роблять його жирним.</li>
+    </ul>
+    <hr>
+    <pre><code>&lt;p&gt;Це звичайний текст. &lt;small&gt; А це примітка дрібним шрифтом.&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;Важливе повідомлення: &lt;strong&gt;Увага!&lt;/strong&gt;&lt;/p&gt;</code></pre>
+    <p>Результат на сторінці:</p>
+    <p>Це звичайний текст. <small>А це примітка дрібним шрифтом.</small></p>
+    <p>Важливе повідомлення: <strong>Увага!</strong></p>
+  </div>
+</details>
+
+<!-- 37 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 37. Як використовуються теги <code>&lt;sub&gt;</code> і <code>&lt;sup&gt;</code>?</summary>
+  <div class="answer">
+    <p>Теги застосовуються для відображення тексту у вигляді <em>нижніх</em> або <em>верхніх</em> індексів:</p>
+    <ul>
+      <li><code>&lt;sub&gt;</code> — нижній індекс (наприклад, у хімічних формулах).</li>
+      <li><code>&lt;sup&gt;</code> — верхній індекс (наприклад, степені чи примітки).</li>
+    </ul>
+    <hr>
+    <pre><code>&lt;p&gt;Хімічна формула: H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
+&lt;p&gt;Математика: x&lt;sup&gt;2&lt;/sup&gt; + y&lt;sup&gt;2&lt;/sup&gt; = r&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</code></pre>
+    <p>Результат на сторінці:</p>
+    <p>Хімічна формула: H<sub>2</sub>O</p>
+    <p>Математика: x<sup>2</sup> + y<sup>2</sup> = r<sup>2</sup></p>
+  </div>
+</details>
+
+<!-- 38 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 38. Що таке теги <code>&lt;details&gt;</code> і <code>&lt;summary&gt;</code> у HTML?</summary>
+  <div class="answer">
+    <p><code>&lt;details&gt;</code> і <code>&lt;summary&gt;</code> дозволяють створювати <strong>розкривні блоки</strong>, які користувач може відкрити або закрити.</p>
+    <ul>
+      <li><code>&lt;details&gt;</code> — контейнер, який приховує/показує вміст.</li>
+      <li><code>&lt;summary&gt;</code> — заголовок блоку, на який можна натиснути, щоб розкрити вміст.</li>
+    </ul>
+    <p>За замовчуванням вміст прихований, а після кліку на заголовок — відображається.</p>
+    <hr>
+    <pre><code>&lt;details&gt;
+  &lt;summary&gt;Натисни, щоб дізнатися більше&lt;/summary&gt;
+  &lt;p&gt;Цей текст з’являється після розкриття.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+    <p>Результат на сторінці:</p>
+    <details>
+      <summary>Натисни, щоб дізнатися більше</summary>
+      <p>Цей текст з’являється після розкриття.</p>
+    </details>
+  </div>
+</details>
+
+<!-- 39 -->
+ <details class="faq">
+  <summary><span class="chev">▸</span> 39. Що таке тег <code>&lt;address&gt;</code> у HTML?</summary>
+  <div class="answer">
+    <p><code>&lt;address&gt;</code> використовується для позначення контактної інформації автора чи власника документа або статті.</p>
+    <ul>
+      <li>Може містити ім’я, email, телефон, посилання на профілі чи адресу.</li>
+      <li>Браузери за замовчуванням відображають текст курсивом.</li>
+      <li>Використовується в футері або в секції з інформацією про автора.</li>
+    </ul>
+    <hr>
+    <pre><code>&lt;footer&gt;
+  &lt;address&gt;
+    Автор: Іван Петренко&lt;br&gt;
+    Email: &lt;a href="mailto:ivan@example.com"&gt;ivan@example.com&lt;/a&gt;&lt;br&gt;
+    Київ, Україна
+  &lt;/address&gt;
+&lt;/footer&gt;</code></pre>
+    <p>Результат на сторінці:</p>
+    <footer>
+      <address>
+        Автор: Іван Петренко<br>
+        Email: <a href="mailto:ivan@example.com">ivan@example.com</a><br>
+        Київ, Україна
+      </address>
+    </footer>
+  </div>
+</details>
+
+<!-- 40 -->
+ <details class="faq">
+  <summary><span class="chev">▸</span> 40. Що таке тег <code>&lt;aside&gt;</code> у HTML?</summary>
+  <div class="answer">
+    <p><code>&lt;aside&gt;</code> — семантичний тег, який використовується для контенту, <strong>пов’язаного з основним змістом, але не є його частиною</strong>.</p>
+    <ul>
+      <li>Часто використовується для бокових панелей, приміток, реклами, посилань на додаткові ресурси.</li>
+      <li>Семантично показує, що вміст є другорядним.</li>
+      <li>Може бути розташований зліва, справа або всередині статті.</li>
+    </ul>
+    <hr>
+    <pre><code>&lt;article&gt;
+  &lt;h2&gt;Основний текст статті&lt;/h2&gt;
+  &lt;p&gt;Це головний контент сторінки.&lt;/p&gt;
+
+  &lt;aside&gt;
+    &lt;h3&gt;Додаткова інформація&lt;/h3&gt;
+    &lt;p&gt;Це примітка або корисне посилання.&lt;/p&gt;
+  &lt;/aside&gt;
+&lt;/article&gt;</code></pre>
+    <p>Результат на сторінці:</p>
+    <article>
+      <h2>Основний текст статті</h2>
+      <p>Це головний контент сторінки.</p>
+      <aside>
+        <h3>Додаткова інформація</h3>
+        <p>Це примітка або корисне посилання.</p>
+      </aside>
+    </article>
+  </div>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<details class="faq">
+  <summary><span class="chev">▸</span> 40. Як поєднувати текст, списки та таблиці для структурованого контенту?</summary>
+  <div class="answer">
+    <p>Можна комбінувати різні елементи для зручного та зрозумілого відображення інформації:</p>
+    <ul>
+      <li>Абзаци (<code>&lt;p&gt;</code>) для тексту.</li>
+      <li>Списки (<code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>) для переліків.</li>
+      <li>Таблиці (<code>&lt;table&gt;</code>) для даних у рядках і стовпцях.</li>
+    </ul>
+    <hr>
+    <pre><code>&lt;p&gt;Завдання команди:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Підготовка документації&lt;/li&gt;
+  &lt;li&gt;Розробка дизайну&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Завдання&lt;/th&gt;
+    &lt;th&gt;Відповідальний&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Підготовка документації&lt;/td&gt;
+    &lt;td&gt;Оля&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Розробка дизайну&lt;/td&gt;
+    &lt;td&gt;Іван&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+    <p><strong>Результат на сторінці:</strong></p>
+    <p>Завдання команди:</p>
+    <ul>
+      <li>Підготовка документації</li>
+      <li>Розробка дизайну</li>
+    </ul>
+    <table border="1" cellpadding="5">
+      <tr>
+        <th>Завдання</th>
+        <th>Відповідальний</th>
+      </tr>
+      <tr>
+        <td>Підготовка документації</td>
+        <td>Оля</td>
+      </tr>
+      <tr>
+        <td>Розробка дизайну</td>
+        <td>Іван</td>
+      </tr>
+    </table>
+  </div>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 16 -->
+
+<details class="faq">
+  <summary><span class="chev">▸</span> . Що таке атрибут alt у &lt;img&gt;?</summary>
+  <div class="answer">
+    <p><strong>Визначення:</strong> Атрибут <code>alt</code> (alternative text) у тегу <code>&lt;img&gt;</code> задає альтернативний текст для зображення, який відображається, якщо зображення не завантажилося або не може бути показане.</p>
+    <p>Навіщо потрібен <code>alt</code>:</p>
+    <ul>
+      <li><strong>Доступність:</strong> допомагає скрінрідерам описати зображення людям із порушенням зору.</li>
+      <li><strong>SEO:</strong> пошукові системи враховують текст <code>alt</code> для розуміння змісту зображень.</li>
+      <li><strong>Покриття помилок:</strong> текст показується, якщо зображення не завантажилося.</li>
+    </ul>
+    <hr>
+    <p>Приклад:</p>
+    <pre><code>&lt;img src="logo.png" alt="Логотип компанії"&gt;</code></pre>
+    <p>Хороший <code>alt</code> повинен бути коротким, змістовним і описувати зображення, а не містити слова «зображення» чи «картинка».</p>
+  </div>
+</details>
+
+<!-- 16 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 16. Що таке гіперпосилання &lt;a&gt; та атрибут href?</summary>
+  <div class="answer">
+    <p><strong>Гіперпосилання</strong>  забезпечують навігацію між сторінками, підвищують взаємодію користувача та допомагають пошуковим системам індексувати сайт.</p>
+    <p>Тег<strong> <code>&lt;a&gt;</code></strong>  використовується для створення гіперпосилань, які дозволяють переходити на інші сторінки, ресурси або секції на тій же сторінці.</p>
+    <p>Атрибут <code>href</code>: задає URL або адресу ресурсу, на який веде посилання.</p>
+    <hr>
+    <ul>
+      <li>Посилання на зовнішній сайт:
+        <pre><code>&lt;a href="https://example.com"&gt;Перейти на Example&lt;/a&gt;</code></pre>
+        <pre><code>&lt;a href="file.pdf" download>Завантажити PDF&lt;/a&gt;</code></pre>
+      </li>
+      <li>Посилання на внутрішню сторінку:
+        <pre><code>&lt;a href="about.html"&gt;Про нас&lt;/a&gt;</code></pre>
+      </li>
+      <li>Посилання на секцію на тій же сторінці:
+        <pre><code>&lt;a href="#contact"&gt;Контакти&lt;/a&gt;</code></pre>
+      </li>
+    </ul>
+     <p>Посилання — основа навігації вебсайтів і важлива складова SEO.</p>
+    <hr>
+    <p>Додаткові атрибути:</p>
+    <ul>
+      <li><code>target="_blank"</code> — відкривати посилання у новій вкладці.</li>
+      <li><code>rel="nofollow"</code> — інструкція пошуковим системам не передавати рейтинг цього посилання.</li>
+    </ul>
+   
+  </div>
+</details>
+
+<!-- 17 -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 17. Що таке зображення в HTML &lt;img&gt; і як їх правильно вставляти?</summary>
+  <div class="answer">
+    <p>Тег<strong> <code>&lt;img&gt;</strong></code> використовується для вставки зображень на веб-сторінку.</p>
+     <p>Важливо: завжди використовувати <code>alt</code>, оптимізувати розмір файлу і враховувати адаптивність.</p>
+    <p>Зображення можна стилізувати через CSS: розмір, обтікання текстом, тіні, фільтри.</p>
+    <p>Це самозакриваючийся (void) тег - не має закриваючого тегу.</p>
+    <p>Основні атрибути:</p>
+    <ul>
+      <li><code>src</code> — шлях до зображення (локальний або URL)</li>
+      <li><code>alt</code> — альтернативний текст для доступності та SEO</li>
+      <li><code>width</code> / <code>height</code> — розміри зображення (опційно)</li>
+    </ul>
+    <p>Приклад:</p>
+    <pre><code>&lt;img src="logo.png" alt="Логотип компанії" width="150" height="100"&gt;</code></pre>
+   
+  </div>
+</details>
+
+<!-- 18 -->
+
+
+<!-- 20 -->
+ 
+
+
+<!-- 21 -->
+
           <details class="faq">
             <summary><span class="chev">▸</span> 14. Яка різниця між тегами <code>&lt;b&gt;</code> та <code>&lt;strong&gt;</code>?</summary>
             <div class="answer">
@@ -1222,6 +2208,33 @@
               <p>Використовують медіа-запит <code>@media print { ... }</code> для стилів друку.</p>
             </div>
           </details>
+<!-- -----------
+  -->
+<details class="faq">
+  <summary><span class="chev">▸</span> 18. Що таке SEO?</summary>
+  <div class="answer">
+    <p><strong>Визначення:</strong> SEO (Search Engine Optimization) — оптимізація сайту для пошукових систем, щоб він краще ранжувався у пошуку і привертав більше відвідувачів.</p>
+    <p>Мета SEO — зробити сторінку зручною для користувачів і зрозумілою для пошукових систем (Google, Bing тощо).</p>
+    <p><strong>Основні складові SEO:</strong></p>
+    <ul>
+      <li><strong>Контент:</strong> якісний текст, заголовки, ключові слова, семантика;</li>
+      <li><strong>Структура:</strong> семантичні теги (<code>&lt;header&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>), заголовки (<code>&lt;h1&gt;–&lt;h6&gt;</code>), абзаци (<code>&lt;p&gt;</code>);</li>
+      <li><strong>Метадані:</strong> <code>&lt;title&gt;</code>, <code>&lt;meta name="description"&gt;</code>, <code>alt</code> для зображень;</li>
+      <li><strong>Посилання:</strong> внутрішні та зовнішні;</li>
+      <li><strong>Швидкість завантаження та адаптивність:</strong> сторінка повинна швидко відкриватися на всіх пристроях.</li>
+    </ul>
+    <p><strong>SEO допомагає:</strong></p>
+    <ul>
+      <li>підвищити видимість сайту в пошуку;</li>
+      <li>залучити більше відвідувачів;</li>
+      <li>покращити користувацький досвід.</li>
+    </ul>
+  </div>
+</details>
+
+<!-- ----------------- -->
+
+
 
           <!-- 100 -->
           <details class="faq">

@@ -1180,6 +1180,7 @@ function greet() {
   <summary><span class="chev">▸</span> 42. Які основні атрибути має &lt;form&gt;?</summary>
   <div class="answer">
     <ul>
+     
       <li><code>action</code> — адреса, куди надсилаються дані. Вже не використовується</li>
       <li><code>method</code> — спосіб передачі: <code>GET</code> або <code>POST</code>.</li>
       <li><code>enctype</code> — кодування даних (важливо для завантаження файлів).</li>
@@ -1188,6 +1189,7 @@ function greet() {
   &lt;input type="file" name="photo" /&gt;
   &lt;button&gt;Завантажити&lt;/button&gt;
 &lt;/form&gt;</code></pre>
+ <p><code>readonly</code> — поле можна виділити, але не редагувати. <code>disabled</code> — поле неактивне і не відправляється з формою.</p>
   </div>
 </details>
 
@@ -1278,7 +1280,7 @@ function greet() {
 
 <!-- 49 -->
 <details class="faq">
-  <summary><span class="chev">▸</span> Як додати аудіо та відео на сторінку і які атрибути можна використовувати?</summary>
+  <summary><span class="chev">▸</span> 49. Як додати аудіо та відео на сторінку і які атрибути можна використовувати?</summary>
   <div class="answer">
     <p>Для вставки аудіо використовується тег <code>&lt;audio&gt;</code>, а для відео — тег <code>&lt;video&gt;</code>.</p>
 
@@ -1306,19 +1308,86 @@ function greet() {
   </div>
 </details>
 
-50
-51
-52
+<!-- 50 --> <details class="faq">
+  <summary><span class="chev">▸</span> 50. Що таке посилання в HTML та які атрибути вони підтримують?</summary>
+  <div class="answer">
+    <p>Посилання створюються тегом <code>&lt;a&gt;</code> з атрибутом <code>href</code>, щоб переходити на інші сторінки, файли чи секції.</p>
+    <ul>
+      <li><strong>Абсолютні</strong> — повний шлях із протоколом (<code>https://site.com/page.html</code>).</li>
+      <li><strong>Відносні</strong> — шлях відносно поточного файлу (<code>about.html</code>, <code>../img/pic.jpg</code>).</li>
+    </ul>
+    <p>Основні атрибути:</p>
+    <ul>
+      <li><code>href</code> — адреса ресурсу.</li>
+      <li><code>target</code> — спосіб відкриття (наприклад, <code>_blank</code> — у новій вкладці).</li>
+      <li><code>rel</code> — відношення до ресурсу (<code>nofollow</code>, <code>noopener</code>).</li>
+      <li><code>download</code> — вказує на завантаження файлу.</li>
+      <li><code>title</code> — підказка при наведенні.</li>
+    </ul>
+    <pre><code>&lt;a href="about.html" title="Про нас"&gt;Відносне посилання&lt;/a&gt;
+&lt;a href="https://google.com" target="_blank" rel="noopener"&gt;Абсолютне посилання&lt;/a&gt;
+&lt;a href="file.pdf" download&gt;Завантажити PDF&lt;/a&gt;</code></pre>
+  </div>
+</details>
+
+<!-- 52 -->
+ <details class="faq">
+  <summary><span class="chev">▸</span> 52. Деякі основні атрибути.</summary>
+ <ul>
+  <li>Required — робить поле обов’язковим для заповнення.</li>
+  <li>Button — кнопка, яка може надсилати форму (<code>submit</code>) або бути простою (<code>button</code>).</li>
+  <li>Fieldset і Legend — групують поля форми і додають заголовок для групи.</li>
+  <li>Textarea — для введення багаторядкового тексту.</li>
+  <li>Placeholder — відображає підказку всередині поля введення.</li>
+  <li>Autocomplete — дозволяє браузеру підказувати дані для введення.</li>
+  <li>Autofocus — автоматично ставить курсор у поле при завантаженні сторінки.</li>
+  <li>Disabled — робить поле форми неактивним для введення.</li>
+  <li>Hidden input — поле <code>&lt;input type="hidden"&gt;</code>, яке зберігає невидимі дані.</li>
+  <li>Pattern — дозволяє перевіряти введення за регулярним виразом.</li>
+  <li>Progress — елемент для відображення прогресу виконання завдання.</li>
+  <li>Meter — використовується для відображення кількісного значення в межах діапазону.</li>
+  <li>Datalist — надає список підказок для поля введення.</li>
+  <li>Track — додає субтитри до відео (<code>&lt;video&gt;</code>).</li>
+  <li>Source — визначає кілька джерел для медіа (<code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code>).</li>
+  <li>Tabindex — визначає порядок переходу між елементами за допомогою клавіші Tab.</li>
+  <li>Microdata — специфікація для додавання структурованих даних у HTML (для SEO).</li>
+  <li>JSON-LD — формат для опису структурованих даних у <code>&lt;script type="application/ld+json"&gt;</code>.</li>
+  <li>Meta description — тег <code>&lt;meta name="description"&gt;</code>, описує сторінку для пошукових систем.</li>
+  <li>Robots.txt — файл для керування індексацією сайту пошуковими системами.</li>
+  <li>Sitemap.xml — файл зі списком усіх сторінок сайту для пошукових систем.</li>
+  <li>DesignMode — властивість документа, яка дозволяє редагувати весь HTML.</li>
+  <li>Sandbox — атрибут, який обмежує права вбудованого контенту у <code>&lt;iframe&gt;</code>.</li>
+  <li>CSP — Content Security Policy, механізм безпеки для контролю ресурсів у браузері.</li>
+  <li>XSS — Cross-Site Scripting, вразливість, що дозволяє виконувати шкідливий код у браузері.</li>
+  <li>Захист від XSS — використовувати escaping, CSP, не довіряти введеним даним.</li>
+  <li>HTTPS — протокол передачі даних із шифруванням (HTTP + TLS).</li>
+  <li>Cookies — невеликі дані, які зберігаються у браузері для сесій і налаштувань.</li>
+  <li>Web Storage API — інтерфейси <code>localStorage</code> і <code>sessionStorage</code> для збереження даних.</li>
+  <li>WebSockets — протокол для двостороннього з’єднання між клієнтом і сервером у реальному часі.</li>
+  <li>SSE — Server-Sent Events, одностороннє з’єднання для надсилання даних від сервера.</li>
+  <li>Preload — атрибут <code>&lt;link rel="preload"&gt;</code> для завантаження критичних ресурсів.</li>
+</ul>
+ </details>
+
 <!-- 53 -->
 <details class="faq">
   <summary><span class="chev">▸</span> 53. Як у HTML вставляють зовнішній контент?</summary>
   <div class="answer">
-    <p>Для вставки стороннього контенту використовується тег <code>&lt;iframe&gt;</code>.</p>
-    <pre><code>&lt;iframe width="560" height="315"
-  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-  frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+    <p>Зовнішній контент можна вставляти за допомогою тегів <code>&lt;iframe&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;object&gt;</code> або <code>&lt;script&gt;</code> для скриптів.</p>
+    <ul>
+      <li><code>&lt;iframe&gt;</code> — вбудовує інший HTML-документ у сторінку.</li>
+      <li><code>&lt;embed&gt;</code> — вставляє мультимедійний або плагінний контент.</li>
+      <li><code>&lt;object&gt;</code> — вставляє будь-який ресурс, включаючи HTML, SVG або мультимедіа.</li>
+      <li><code>&lt;script src="...">&lt;/script&gt;</code> — підключає зовнішній JavaScript.</li>
+      <li>Важливо використовувати атрибути безпеки, наприклад <code>sandbox</code> для <code>&lt;iframe&gt;</code>.</li>
+    </ul>
+    <pre><code>&lt;iframe src="https://example.com" width="600" height="400" sandbox&gt;&lt;/iframe&gt;
+&lt;embed src="video.mp4" type="video/mp4"&gt;
+&lt;object data="graphic.svg" type="image/svg+xml"&gt;&lt;/object&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
   </div>
 </details>
+
 
 <!-- 54 -->
 <details class="faq">
@@ -1385,15 +1454,21 @@ function greet() {
 
 <!-- 59 -->
 <details class="faq">
-  <summary><span class="chev">▸</span> 59. Яка роль тегу &lt;main&gt;?</summary>
+  <summary><span class="chev">▸</span> 59. Яка роль тегу <code>&lt;main&gt;</code>?</summary>
   <div class="answer">
-    <p><code>&lt;main&gt;</code> містить основний контент сторінки, який унікальний і стосується головної теми.</p>
+    <p>Тег <code>&lt;main&gt;</code> визначає основний зміст сторінки, унікальний для цієї сторінки, відмінний від заголовків, навігації та футера.</p>
+    <ul>
+      <li>Має бути лише один на сторінці.</li>
+      <li>Допомагає скрінрідерам і пошуковим системам швидко зрозуміти головний контент.</li>
+      <li>Покращує семантику HTML та доступність.</li>
+    </ul>
     <pre><code>&lt;main&gt;
-  &lt;h1&gt;Ласкаво просимо&lt;/h1&gt;
-  &lt;p&gt;Основна інформація...&lt;/p&gt;
+  &lt;h1&gt;Заголовок статті&lt;/h1&gt;
+  &lt;p&gt;Основний текст статті...&lt;/p&gt;
 &lt;/main&gt;</code></pre>
   </div>
 </details>
+
 
 <!-- 60 -->
 <details class="faq">
@@ -1452,10 +1527,32 @@ function greet() {
 </details>
 
 <!-- 63 -->
-63
-64
+          <details class="faq">
+            <summary>
+              <span class="chev">▸</span> 63. Що таке <code>&lt;map&gt;</code> та <code>&lt;area&gt;</code> і як вони створюють клікабельні зони на зображенні?
+            </summary>
+            <div class="answer">
+              <p>
+                Створюють інтерактивні зони на зображенні. <code>&lt;map name="mapName"&gt;</code> містить
+                <code>&lt;area shape="rect" coords="x1,y1,x2,y2" href="#"&gt;</code>.
+              </p>
+            </div>
+          </details>
 
 <!-- 64 -->
+          <details class="faq">
+  <summary><span class="chev">▸</span> 64. Що таке <code>&lt;time&gt;</code> і як його правильно використовувати?</summary>
+  <div class="answer">
+    <p>Тег <code>&lt;time&gt;</code> використовується для позначення дати або часу у машиночитному форматі, що допомагає браузерам, пошуковим системам і додаткам правильно обробляти часові дані.</p>
+    <ul>
+      <li>Може містити атрибут <code>datetime</code> у форматі ISO 8601 (<code>YYYY-MM-DD</code>, <code>YYYY-MM-DDThh:mm</code>).</li>
+      <li>Покращує SEO та доступність контенту.</li>
+      <li>Використовується для подій, публікацій, дедлайнів тощо.</li>
+    </ul>
+    <pre><code>&lt;time datetime="2025-09-28T14:30"&gt;28 вересня 2025, 14:30&lt;/time&gt;
+&lt;time datetime="2025-09-28"&gt;28 вересня 2025&lt;/time&gt;</code></pre>
+  </div>
+</details>
 
 
 <!-- 65 -->
@@ -1473,14 +1570,23 @@ function greet() {
 
 <!-- 66 -->
 <details class="faq">
-  <summary><span class="chev">▸</span> 66. Що таке SEO та яку роль воно відіграє у HTML?</summary>
+  <summary><span class="chev">▸</span> 66. Що таке SEO?</summary>
   <div class="answer">
-    <p>SEO (Search Engine Optimization) — оптимізація сторінки для пошукових систем.</p>
+    <p><strong>Визначення:</strong> SEO (Search Engine Optimization) — оптимізація сайту для пошукових систем, щоб він краще ранжувався у пошуку і привертав більше відвідувачів.</p>
+    <p>Мета SEO — зробити сторінку зручною для користувачів і зрозумілою для пошукових систем (Google, Bing тощо).</p>
+    <p><strong>Основні складові SEO:</strong></p>
     <ul>
-      <li>Правильна структура HTML.</li>
-      <li>Семантичні теги.</li>
-      <li>Атрибути alt, title, метатеги.</li>
-      <li>Зручність і швидкість сторінки.</li>
+      <li><strong>Контент:</strong> якісний текст, заголовки, ключові слова, семантика;</li>
+      <li><strong>Структура:</strong> семантичні теги (<code>&lt;header&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>), заголовки (<code>&lt;h1&gt;–&lt;h6&gt;</code>), абзаци (<code>&lt;p&gt;</code>);</li>
+      <li><strong>Метадані:</strong> <code>&lt;title&gt;</code>, <code>&lt;meta name="description"&gt;</code>, <code>alt</code> для зображень;</li>
+      <li><strong>Посилання:</strong> внутрішні та зовнішні;</li>
+      <li><strong>Швидкість завантаження та адаптивність:</strong> сторінка повинна швидко відкриватися на всіх пристроях.</li>
+    </ul>
+    <p><strong>SEO допомагає:</strong></p>
+    <ul>
+      <li>підвищити видимість сайту в пошуку;</li>
+      <li>залучити більше відвідувачів;</li>
+      <li>покращити користувацький досвід.</li>
     </ul>
   </div>
 </details>
@@ -1545,13 +1651,13 @@ function greet() {
   </div>
 </details>
 
-<!-- 72 -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 72. Як впливають атрибути alt і title у зображеннях на SEO?</summary>
-  <div class="answer">
-    <p>Атрибути <code>alt</code> та <code>title</code> допомагають пошуковим системам розпізнати зміст зображень і покращують індексацію.</p>
-  </div>
-</details>
+  <!-- 78 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 72. Як підключити веб-шрифти за допомогою <code>&lt;link&gt;</code> або <code>&lt;style&gt;</code>?</summary>
+            <div class="answer">
+              <p>Через Google Fonts: <code>&lt;link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"&gt;</code>.</p>
+            </div>
+          </details>
 
 <!-- 73 -->
 <details class="faq">
@@ -1721,25 +1827,51 @@ socket.onmessage = (event) =&gt; console.log(event.data);</code></pre>
 
 <!-- 87 -->
 <details class="faq">
-  <summary><span class="chev">▸</span> 87. Як забезпечити безпеку форм у HTML?</summary>
+  <summary><span class="chev">▸</span> Як захистити форми в HTML?</summary>
   <div class="answer">
     <ul>
-      <li>Використовувати HTTPS.</li>
-      <li>Валідувати дані на сервері і на клієнті.</li>
-      <li>Захищати від XSS через атрибути <code>type</code> і escape.</li>
-      <li>CSRF-токени для POST-запитів.</li>
+      <li>Використовувати HTTPS для захищеного передавання даних.</li>
+      <li>Валідувати дані на сервері, а не тільки на клієнті.</li>
+      <li>Застосовувати HTML-атрибути: <code>required</code>, <code>pattern</code>, <code>maxlength</code> для базової перевірки.</li>
+      <li>Не зберігайте паролі в явному вигляді.</li>
+      <li>Хешуйте і сольте паролі на сервері.</li>
+      <li>Використовуйте <code>type="password"</code> для полів введення пароля.</li>
+      <li>Захищати від CSRF за допомогою токенів (<code>csrf-token</code>).</li>
+      <li>Не зберігати чутливі дані у <code>localStorage</code> чи cookie без шифрування.</li>
+      <li>Використання CAPTCHA — додатковий захист від автоматизованих ботів.</li>
+      <li>Просте правило: безпека форм — це комбінація правильного HTML, серверної обробки та захищеного з’єднання.</li>
     </ul>
+    <pre><code>&lt;form action="/submit" method="POST"&gt;
+  &lt;input type="text" name="username" required pattern="[A-Za-z0-9]{3,20}"&gt;
+  &lt;input type="password" name="password" required&gt;
+  &lt;button type="submit"&gt;Відправити&lt;/button&gt;
+&lt;/form&gt;</code></pre>
   </div>
 </details>
+
 
 <!-- 88 -->
 <details class="faq">
   <summary><span class="chev">▸</span> 88. Що таке Content Security Policy (CSP)?</summary>
   <div class="answer">
-    <p>CSP — механізм безпеки для обмеження джерел скриптів, стилів та ресурсів, щоб уникнути XSS.</p>
-    <pre><code>&lt;meta http-equiv="Content-Security-Policy" content="default-src 'self';"&gt;</code></pre>
+    <p><strong>Content Security Policy (CSP)</strong> — це механізм безпеки, який дозволяє веб-розробнику контролювати, які ресурси (скрипти, стилі, зображення, фрейми) можуть завантажуватися та виконуватися на сторінці.</p>
+    <ul>
+      <li>Захищає від атак типу XSS (Cross-Site Scripting).</li>
+      <li>Обмежує виконання скриптів лише з дозволених джерел.</li>
+      <li>Дозволяє забороняти inline-скрипти та eval.</li>
+      <li>Може окремо контролювати зображення, стилі, шрифти, фрейми тощо.</li>
+    </ul>
+    <p><strong>Приклад заголовка CSP:</strong></p>
+    <pre><code>Content-Security-Policy: default-src 'self'; img-src https://cdn.example.com; script-src 'self' https://apis.google.com</code></pre>
+    <p>У цьому прикладі:</p>
+    <ul>
+      <li>За замовчуванням ресурси завантажуються тільки з того ж домену (<code>'self'</code>).</li>
+      <li>Зображення дозволені з <code>cdn.example.com</code>.</li>
+      <li>Скрипти дозволені з поточного сайту і з <code>apis.google.com</code>.</li>
+    </ul>
   </div>
 </details>
+
 
 <!-- 89 -->
 <details class="faq">
@@ -1766,12 +1898,17 @@ socket.onmessage = (event) =&gt; console.log(event.data);</code></pre>
 
 <!-- 91 -->
 <details class="faq">
-  <summary><span class="chev">▸</span> 91. Що таке Service Workers?</summary>
+  <summary><span class="chev">▸</span> 91. Які бувають типи кешу в веб-розробці?</summary>
   <div class="answer">
-    <p>Скрипти, що працюють у фоновому режимі, дозволяють кешувати ресурси і створювати PWA (Progressive Web Apps).</p>
-    <pre><code>navigator.serviceWorker.register('/sw.js');</code></pre>
+    <ul>
+      <li><strong>Браузерний кеш</strong> — зберігає статичні файли (HTML, CSS, JS, зображення) локально у браузері.</li>
+      <li><strong>CDN кеш</strong> — розподіляє ресурси між серверами по всьому світу для швидшої доставки.</li>
+      <li><strong>Service Worker кеш</strong> — працює у PWA, дозволяє створювати офлайн-режим та кешувати динамічні запити.</li>
+    </ul>
+    <p>Налаштовується через HTTP-заголовки, конфігурацію CDN або скрипти Service Workers.</p>
   </div>
 </details>
+
 
 <!-- 92 -->
 <details class="faq">
@@ -1785,30 +1922,56 @@ socket.onmessage = (event) =&gt; console.log(event.data);</code></pre>
 <details class="faq">
   <summary><span class="chev">▸</span> 93. Що таке кешування ресурсів у браузері?</summary>
   <div class="answer">
-    <p>Збереження файлів (HTML, CSS, JS, зображення) у браузері для швидшого завантаження сторінки при повторному відвідуванні.</p>
+    <p>Кешування — це збереження браузером статичних ресурсів (зображень, CSS, JS, шрифтів) на комп’ютері користувача для швидшого завантаження сторінок.</p>
+    <ul>
+      <li>Зменшує кількість запитів до сервера.</li>
+      <li>Прискорює повторне відкриття сторінки.</li>
+      <li>Може керуватись HTTP-заголовками (<code>Cache-Control</code>, <code>Expires</code>).</li>
+      <li>Використовується Service Workers для офлайн-доступу.</li>
+    </ul>
+    <pre><code>Cache-Control: max-age=31536000
+Expires: Wed, 21 Oct 2025 07:28:00 GMT</code></pre>
   </div>
 </details>
+
 
 <!-- 94 -->
 <details class="faq">
   <summary><span class="chev">▸</span> 94. Як оптимізувати завантаження зображень?</summary>
   <div class="answer">
     <ul>
-      <li>Використовувати сучасні формати (WebP).</li>
-      <li>Відкладене завантаження (`loading="lazy"`).</li>
-      <li>Адаптивні зображення (`srcset`, `sizes`).</li>
-      <li>Стискати файли без втрат.</li>
+      <li>Використовувати сучасні формати (<code>WebP</code>, <code>AVIF</code>).</li>
+      <li>Задавати атрибут <code>loading="lazy"</code> для відкладеного завантаження.</li>
+      <li>Використовувати <code>srcset</code> і <code>&lt;picture&gt;</code> для адаптивних картинок.</li>
+      <li>Стискати зображення без значної втрати якості (TinyPNG, Squoosh).</li>
+      <li>Встановлювати правильні <code>width</code> і <code>height</code>, щоб уникати «стрибків» макета.</li>
+      <li>Кешувати зображення через HTTP-заголовки або CDN.</li>
     </ul>
+    <pre><code>&lt;img src="photo.webp" alt="Фото" loading="lazy" width="600" height="400"&gt;</code></pre>
   </div>
 </details>
+
 
 <!-- 95 -->
 <details class="faq">
   <summary><span class="chev">▸</span> 95. Що таке критичний CSS?</summary>
   <div class="answer">
-    <p>CSS, який потрібен для первинного відображення сторінки, завантажується спочатку, інший CSS — асинхронно.</p>
+    <p><strong>Критичний CSS</strong> — це мінімальний набір стилів, необхідний для відображення видимої частини сторінки (above the fold) під час першого завантаження.</p>
+    <ul>
+      <li>Вбудовується прямо у <code>&lt;head&gt;</code>, щоб зменшити час до першого рендерингу.</li>
+      <li>Допомагає уникати «білих екранів» і прискорює LCP (Largest Contentful Paint).</li>
+      <li>Нестратегічні стилі завантажуються асинхронно через <code>&lt;link rel="stylesheet" media="print"&gt;</code> або <code>preload</code>.</li>
+    </ul>
+    <pre><code>&lt;style&gt;
+/* критичні стилі */
+body { font-family: Arial, sans-serif; }
+header { background: #333; color: #fff; padding: 1rem; }
+&lt;/style&gt;
+
+&lt;link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'"&gt;</code></pre>
   </div>
 </details>
+
 
 <!-- 96 -->
 <details class="faq">
@@ -1848,9 +2011,25 @@ const token = sessionStorage.getItem('token');</code></pre>
 <details class="faq">
   <summary><span class="chev">▸</span> 98. Що таке HTTPS і чому він важливий?</summary>
   <div class="answer">
-    <p>HTTPS — захищений протокол передачі даних. Важливий для безпеки користувачів і SEO.</p>
+    <p><strong>HTTPS (HyperText Transfer Protocol Secure)</strong> — це протокол обміну даними між браузером і сервером з використанням шифрування TLS/SSL.</p>
+    <ul>
+      <li>Захищає дані від перехоплення та підміни.</li>
+      <li>Підтверджує автентичність сайту (SSL-сертифікат).</li>
+      <li>Підвищує довіру користувачів (замок у браузері).</li>
+      <li>Є фактором ранжування в SEO (Google надає перевагу HTTPS-сайтам).</li>
+      <li>Необхідний для роботи сучасних API (наприклад, Service Workers, Geolocation).</li>
+    </ul>
+    <p><strong>Різниця між HTTP і HTTPS:</strong></p>
+    <ul>
+      <li><code>HTTP</code> — передає дані у відкритому вигляді, легко перехопити.</li>
+      <li><code>HTTPS</code> — всі дані шифруються (TLS/SSL), захищені від атак.</li>
+    </ul>
+    <pre><code>http://example.com   ❌ незахищене з’єднання
+https://example.com  ✅ захищене з’єднання</code></pre>
   </div>
 </details>
+
+
 
 <!-- 99 -->
 <details class="faq">
@@ -1868,409 +2047,6 @@ const token = sessionStorage.getItem('token');</code></pre>
     <p>Покращення швидкості відображення сторінки за рахунок завантаження лише критично важливих ресурсів спочатку (CSS, JS, шрифти).</p>
   </div>
 </details>
-
-
-
-
-
-
-
-
-
-
-  
-
-          <!-- 24 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 24. Що таке посилання в HTML?</summary>
-            <div class="answer">
-              <p>Посилання створюється тегом <code>&lt;a&gt;</code> з атрибутом <code>href</code>:</p>
-              <pre><code>&lt;a href="https://example.com"&gt;Відкрити сайт&lt;/a&gt;</code></pre>
-              <p>Атрибут <code>target="_blank"</code> відкриває посилання в новій вкладці.</p>
-            </div>
-          </details>
-
-          <!-- 25 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 25. Що таке форма в HTML і які основні елементи вона містить?</summary>
-            <div class="answer">
-              <p>Форма збирає дані від користувача:</p>
-              <ul>
-                <li><code>&lt;form&gt;</code> — контейнер форми</li>
-                <li><code>&lt;input&gt;</code> — поле вводу</li>
-                <li><code>&lt;textarea&gt;</code> — текстове поле</li>
-                <li><code>&lt;button&gt;</code> — кнопка відправки</li>
-                <li><code>&lt;select&gt;</code> — випадаючий список</li>
-              </ul>
-              <pre><code>&lt;form action="/submit" method="post"&gt;
-  &lt;input type="text" name="name" /&gt;
-  &lt;button type="submit"&gt;Відправити&lt;/button&gt;
-&lt;/form&gt;</code></pre>
-            </div>
-          </details>
-
-         
-
-          <!-- 27 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 27. Що таке атрибут <code>title</code>?</summary>
-            <div class="answer">
-              <p>Атрибут <code>title</code> надає підказку при наведенні курсора на елемент:</p>
-              <pre><code>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</code></pre>
-              <p>Допомагає зрозуміти значення абревіатур та складних термінів.</p>
-            </div>
-          </details>
-
-
-      
-
-      
-          <!-- 34 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 34. Що таке <code>&lt;time&gt;</code> і як його правильно використовувати?</summary>
-            <div class="answer">
-              <p><code>&lt;time&gt;</code> — відображає дату або час. Має атрибут <code>datetime</code> для стандартизованого формату.</p>
-              <pre><code>&lt;time datetime="2025-09-04"&gt;4 вересня 2025&lt;/time&gt;</code></pre>
-            </div>
-          </details>
-
-         
-          </details>
-
-      
-
-          <!-- 50 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 50. Які типи полів <code>&lt;input&gt;</code> існують і для чого вони потрібні?</summary>
-            <div class="answer">
-              <ul>
-                <li><code>text</code> — звичайний текст</li>
-                <li><code>password</code> — пароль</li>
-                <li><code>email</code> — email</li>
-                <li><code>number</code> — числове значення</li>
-                <li><code>checkbox</code>, <code>radio</code> — прапорці та радіо-кнопки</li>
-                <li><code>submit</code> — кнопка відправки</li>
-                <li><code>file</code> — вибір файлу</li>
-              </ul>
-            </div>
-          </details>
-
-
-          <!-- 57 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 57. Як працює <code>&lt;track&gt;</code> для субтитрів у відео?</summary>
-            <div class="answer">
-              <p><code>&lt;track kind="subtitles" src="subtitles.vtt" srclang="ua" label="Українська"&gt;</code> додає субтитри до відео.</p>
-            </div>
-          </details>
-
-     
-
-          <!-- 60 -->
-          <details class="faq">
-            <summary>
-              <span class="chev">▸</span> 60. Що таке <code>&lt;map&gt;</code> та <code>&lt;area&gt;</code> і як вони створюють клікабельні зони на зображенні?
-            </summary>
-            <div class="answer">
-              <p>
-                Створюють інтерактивні зони на зображенні. <code>&lt;map name="mapName"&gt;</code> містить
-                <code>&lt;area shape="rect" coords="x1,y1,x2,y2" href="#"&gt;</code>.
-              </p>
-            </div>
-          </details>
-
-          <!-- 61 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 61. Що таке абсолютні та відносні посилання?</summary>
-            <div class="answer">
-              <p>Абсолютні: повний URL (https://...). Відносні: шлях від поточної сторінки (./index.html, ../page.html).</p>
-            </div>
-          </details>
-
-         
-          <!-- 63 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 63. Що таке якорі (<code>#id</code>) і як на них посилатися?</summary>
-            <div class="answer">
-              <p>Позначка в документі. Посилання: <code>&lt;a href="#section1"&gt;Перейти&lt;/a&gt;</code>.</p>
-            </div>
-          </details>
-
-          <!-- 64 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 64. Що таке маршрутизація через <code>&lt;base&gt;</code>?</summary>
-            <div class="answer">
-              <p><code>&lt;base href="https://example.com/"&gt;</code> встановлює базовий URL для всіх відносних посилань на сторінці.</p>
-            </div>
-          </details>
-
-          <!-- 65 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 65. Як створювати кнопки з <code>&lt;button&gt;</code> та <code>&lt;input type="button"&gt;</code>?</summary>
-            <div class="answer">
-              <p>
-                <code>&lt;button&gt;Натисни&lt;/button&gt;</code> або <code>&lt;input type="button" value="Натисни"&gt;</code>. Обидва створюють кнопки, але
-                <code>&lt;button&gt;</code> гнучкіший у розмітці.
-              </p>
-            </div>
-          </details>
-
-          <!-- 66 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 66. Що таке <code>&lt;nav&gt;</code> і для чого він потрібен?</summary>
-            <div class="answer">
-              <p>
-                Семантичний блок для навігації по сайту. Може містити списки посилань
-                (<code>&lt;ul&gt;&lt;li&gt;&lt;a&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</code>).
-              </p>
-            </div>
-          </details>
-
-         
-
-          <!-- 69 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 69. Як створити “кнопку назад” за допомогою HTML та JavaScript?</summary>
-            <div class="answer">
-              <p><code>&lt;button onclick="history.back()"&gt;Назад&lt;/button&gt;</code> повертає на попередню сторінку.</p>
-            </div>
-          </details>
-
-          
-          <!-- 71 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 71. Що таке <code>&lt;meta charset&gt;</code> і навіщо його вказувати?</summary>
-            <div class="answer">
-              <p>Встановлює кодування сторінки (зазвичай UTF-8) для правильного відображення символів.</p>
-            </div>
-          </details>
-
-
-         
-
-          <!-- 78 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 78. Як підключити веб-шрифти за допомогою <code>&lt;link&gt;</code> або <code>&lt;style&gt;</code>?</summary>
-            <div class="answer">
-              <p>Через Google Fonts: <code>&lt;link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"&gt;</code>.</p>
-            </div>
-          </details>
-
-          <!-- 79 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 79. Що таке <code>&lt;base&gt;</code> і як він впливає на посилання в документі?</summary>
-            <div class="answer">
-              <p>Встановлює базовий URL для всіх відносних посилань: <code>&lt;base href="https://example.com/"&gt;</code>.</p>
-            </div>
-          </details>
-
-          <!-- 80 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 80. Як використовувати <code>&lt;noscript&gt;</code> для альтернативного контенту?</summary>
-            <div class="answer">
-              <p>Відображає контент, якщо у користувача вимкнено JavaScript: <code>&lt;noscript&gt;Включіть JS&lt;/noscript&gt;</code>.</p>
-            </div>
-          </details>
-
-          <!-- 81 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 81. Що таке атрибут <code>hidden</code> і як він працює?</summary>
-            <div class="answer">
-              <p>Приховує елемент на сторінці: <code>&lt;div hidden&gt;Схований блок&lt;/div&gt;</code>.</p>
-            </div>
-          </details>
-
-          
-          <!-- 83 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 83. Як працює <code>contenteditable</code> і де його застосовують?</summary>
-            <div class="answer">
-              <p>Дозволяє редагувати текст елемента напряму на сторінці: <code>&lt;div contenteditable&gt;Редагуй мене&lt;/div&gt;</code>.</p>
-            </div>
-          </details>
-
-          <!-- 84 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 84. Що таке <code>draggable</code> і як додати перетягування елементів?</summary>
-            <div class="answer">
-              <p>Дозволяє перетягування елементів: <code>&lt;div draggable="true"&gt;Перетягни мене&lt;/div&gt;</code>.</p>
-            </div>
-          </details>
-
-          <!-- 85 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 85. Як використовувати <code>tabindex</code> для управління фокусом?</summary>
-            <div class="answer">
-              <p>Встановлює порядок фокусування через Tab: <code>&lt;button tabindex="1"&gt;Перша&lt;/button&gt;</code>.</p>
-            </div>
-          </details>
-
-          <!-- 86 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 86. Що таке ARIA-атрибути і як вони покращують доступність?</summary>
-            <div class="answer">
-              <p>ARIA додає семантику для допоміжних технологій: <code>role="button"</code>, <code>aria-label="Опис кнопки"</code>.</p>
-            </div>
-          </details>
-
-          <!-- 87 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 87. Що таке <code>spellcheck</code> і як його використовувати в текстових полях?</summary>
-            <div class="answer">
-              <p>Увімкнення перевірки орфографії: <code>&lt;input type="text" spellcheck="true"&gt;</code>.</p>
-            </div>
-          </details>
-
-          <!-- 88 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 88. Як працює атрибут <code>autofocus</code>?</summary>
-            <div class="answer">
-              <p>Автоматично встановлює фокус на елемент при завантаженні сторінки: <code>&lt;input autofocus&gt;</code>.</p>
-            </div>
-          </details>
-
-          <!-- 89 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 89. Що таке <code>required</code> у формах і як він контролює обов’язковість полів?</summary>
-            <div class="answer">
-              <p>Змушує користувача заповнити поле перед відправкою форми: <code>&lt;input required&gt;</code>.</p>
-            </div>
-          </details>
-
-          <!-- 90 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 90. Що таке <code>readonly</code> та <code>disabled</code> і в чому різниця між ними?</summary>
-            <div class="answer">
-              <p><code>readonly</code> — поле можна виділити, але не редагувати. <code>disabled</code> — поле неактивне і не відправляється з формою.</p>
-            </div>
-          </details>
-
-          <!-- 91 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 91. Як створити адаптивну картинку за допомогою атрибутів <code>srcset</code> і <code>sizes</code>?</summary>
-            <div class="answer">
-              <p>
-                Вказує різні зображення для різних розмірів екранів:
-                <code>&lt;img src="small.jpg" srcset="medium.jpg 600w, large.jpg 1200w" sizes="(max-width: 600px) 100vw, 50vw"&gt;</code>.
-              </p>
-            </div>
-          </details>
-
-          <!-- 92 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 92. Що таке <code>lazy loading</code> для зображень?</summary>
-            <div class="answer">
-              <p>Відкладене завантаження зображень для швидшого відображення сторінки: <code>&lt;img loading="lazy"&gt;</code>.</p>
-            </div>
-          </details>
-
-          <!-- 93 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 93. Як створювати чекбокси та радіокнопки у формі?</summary>
-            <div class="answer">
-              <p>Чекбокси: <code>&lt;input type="checkbox"&gt;</code>, радіо: <code>&lt;input type="radio" name="group"&gt;</code>.</p>
-            </div>
-          </details>
-
-          <!-- 94 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 94. Що таке <code>&lt;progress&gt;</code> і як його використовувати?</summary>
-            <div class="answer">
-              <p>Відображає прогрес: <code>&lt;progress value="50" max="100"&gt;&lt;/progress&gt;</code>.</p>
-            </div>
-          </details>
-
-          <!-- 95 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 95. Що таке <code>&lt;meter&gt;</code> і для чого він потрібен?</summary>
-            <div class="answer">
-              <p>Показує рівень або міру чогось: <code>&lt;meter value="0.6"&gt;60%&lt;/meter&gt;</code>.</p>
-            </div>
-          </details>
-
-          <!-- 96 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 96. Як додати фавікон різних форматів для всіх пристроїв?</summary>
-            <div class="answer">
-              <p>Використовують різні <code>&lt;link rel="icon"&gt;</code> та <code>rel="apple-touch-icon"</code> для iOS та Android.</p>
-            </div>
-          </details>
-
-          <!-- 97 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 97. Що таке <code>iframe sandbox</code> і як він підвищує безпеку?</summary>
-            <div class="answer">
-              <p>Атрибут <code>sandbox</code> обмежує функції в <code>&lt;iframe&gt;</code> (JS, форми, плагіни) для безпеки.</p>
-            </div>
-          </details>
-
-          <!-- 99 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 99. Як додати елементи для друку сторінки за допомогою CSS?</summary>
-            <div class="answer">
-              <p>Використовують медіа-запит <code>@media print { ... }</code> для стилів друку.</p>
-            </div>
-          </details>
-<!-- -----------
-  -->
-<details class="faq">
-  <summary><span class="chev">▸</span> 18. Що таке SEO?</summary>
-  <div class="answer">
-    <p><strong>Визначення:</strong> SEO (Search Engine Optimization) — оптимізація сайту для пошукових систем, щоб він краще ранжувався у пошуку і привертав більше відвідувачів.</p>
-    <p>Мета SEO — зробити сторінку зручною для користувачів і зрозумілою для пошукових систем (Google, Bing тощо).</p>
-    <p><strong>Основні складові SEO:</strong></p>
-    <ul>
-      <li><strong>Контент:</strong> якісний текст, заголовки, ключові слова, семантика;</li>
-      <li><strong>Структура:</strong> семантичні теги (<code>&lt;header&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>), заголовки (<code>&lt;h1&gt;–&lt;h6&gt;</code>), абзаци (<code>&lt;p&gt;</code>);</li>
-      <li><strong>Метадані:</strong> <code>&lt;title&gt;</code>, <code>&lt;meta name="description"&gt;</code>, <code>alt</code> для зображень;</li>
-      <li><strong>Посилання:</strong> внутрішні та зовнішні;</li>
-      <li><strong>Швидкість завантаження та адаптивність:</strong> сторінка повинна швидко відкриватися на всіх пристроях.</li>
-    </ul>
-    <p><strong>SEO допомагає:</strong></p>
-    <ul>
-      <li>підвищити видимість сайту в пошуку;</li>
-      <li>залучити більше відвідувачів;</li>
-      <li>покращити користувацький досвід.</li>
-    </ul>
-  </div>
-</details>
-
-<!-- ----------------- -->
-
-
-          <details class="faq">
-            <summary><span class="chev">▸</span> Що робить <code>font-size: clamp(22px, 3.2vw, 32px);</code>?</summary>
-            <div class="answer">
-              <p>Властивість <code>clamp(MIN, PREFERRED, MAX)</code> задає значення, яке завжди буде між мінімумом і максимумом.</p>
-              <pre><code>font-size: clamp(22px, 3.2vw, 32px);</code></pre>
-              <ul>
-                <li><strong>22px</strong> → мінімальний розмір (менше ніколи не стане)</li>
-                <li><strong>3.2vw</strong> → бажане (динамічне, залежить від ширини вікна)</li>
-                <li><strong>32px</strong> → максимальний розмір (більше не виросте)</li>
-              </ul>
-              <p>Шрифт гнучко підлаштовується під екран: від 22px до 32px, а між ними масштабується через <code>vw</code>.</p>
-              <p>1vw = 1% від ширини вікна браузера (viewport width).</p>
-              <p>Якщо ширина вікна = 1000px, тоді 1vw = 10px.</p>
-              <p>Якщо ширина вікна = 500px, тоді 1vw = 5px.</p>
-            </div>
-          </details>
-
-
-          <!-- 16 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 16. Для чого тег &lt;nav&gt;?</summary>
-            <div class="answer"><p>Використовується для навігаційного меню.</p></div>
-          </details>
-
-          <!-- 17 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 17. Для чого тег &lt;main&gt;?</summary>
-            <div class="answer"><p>Містить основний унікальний контент сторінки.</p></div>
-          </details>
-
-       
-
-
         </div>
       </div>
     </main>

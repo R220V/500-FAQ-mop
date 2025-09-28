@@ -1683,6 +1683,23 @@
           </details>
         </div>
       </div>
+
+      <details class="faq">
+        <summary><span class="chev">▸</span> Що робить <code>font-size: clamp(22px, 3.2vw, 32px);</code>?</summary>
+        <div class="answer">
+          <p>Властивість <code>clamp(MIN, PREFERRED, MAX)</code> задає значення, яке завжди буде між мінімумом і максимумом.</p>
+          <pre><code>font-size: clamp(22px, 3.2vw, 32px);</code></pre>
+          <ul>
+            <li><strong>22px</strong> → мінімальний розмір (менше ніколи не стане)</li>
+            <li><strong>3.2vw</strong> → бажане (динамічне, залежить від ширини вікна)</li>
+            <li><strong>32px</strong> → максимальний розмір (більше не виросте)</li>
+          </ul>
+          <p>Шрифт гнучко підлаштовується під екран: від 22px до 32px, а між ними масштабується через <code>vw</code>.</p>
+          <p>1vw = 1% від ширини вікна браузера (viewport width).</p>
+          <p>Якщо ширина вікна = 1000px, тоді 1vw = 10px.</p>
+          <p>Якщо ширина вікна = 500px, тоді 1vw = 5px.</p>
+        </div>
+      </details>
     </main>
 
     <footer class="footerok container" id="footer">

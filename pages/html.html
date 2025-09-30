@@ -483,11 +483,13 @@
     <p><u>Зовнішній CSS</u> (рекомендований для великих сайтів). Розміщується у <code>&lt;head&gt;</code>, всі стилі виносяться в окремий файл:
     <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre></p>
   
-    <p><u>Внутрішній CSS</u> (у <code>&lt;head&gt;</code> у блоці <code>&lt;style&gt;</code>):
+    <p><u>Внутрішній CSS</u> (у <code>&lt;head&gt;</code> у блоці <code>&lt;style&gt;</code>)</br>
+      Зручно для невеликих проєктів або тестування:
     <pre><code>&lt;style&gt;
   body { background-color: #f0f0f0; }
   p { color: blue; }
 &lt;/style&gt;</code></pre></p>
+
     <p><u>Інлайн-стилі</u> (усередині тегу через атрибут <code>style</code> ).  Використовуються рідко, тільки для швидких змін.
     <pre><code>&lt;p style="color: red; font-size: 16px;"&gt;Текст червоним&lt;/p&gt;</code></pre></p>
     <hr>
@@ -591,7 +593,7 @@
       <li><code>&lt;mark&gt;</code> — виділений текст, важливий для користувача</li>
       <li><code>&lt;time&gt;</code> — дата або час</li>
       <li><code>&lt;address&gt;</code> — контактна інформація</li>
-      <li><code>&lt;summary&gt;</code> — заголовок для елемента <code>&lt;details&gt;</code></li>
+      <li><code>&lt;summary&gt;</code> — заголовок для елемента <code>&lt;details&gt;.</code></li>
       <li><code>&lt;details&gt;</code> — деталі, які можна розкривати/згортати</li>
       <li><code>&lt;blockquote&gt;</code> — цитата з іншого джерела</li>
       <li><code>&lt;q&gt;</code> — коротка цитата</li>
@@ -607,7 +609,7 @@
 <!-- 21 -->
         <details class="faq">
 
-  <summary><span class="chev">▸</span> 21. Що таке <strong>форматування тексту</strong> у HTML <code>&lt;strong&gt;</code>,<code>&lt;b&gt;</code>,  <code>&lt;em&gt;</code>,<code>&lt;i&gt;</code>, <code>&lt;u&gt;</code>, <code>&lt;mark&gt;</code> і коли їх використовують?</summary>
+  <summary><span class="chev">▸</span> 21. Що таке <strong>форматування тексту</strong> у HTML ?</summary>
   <div class="answer">
     <p>HTML-теги для форматування тексту змінюють його вигляд без зміни семантики:</p>
      <ul>
@@ -619,6 +621,16 @@
       <li><code>&lt;i&gt;</code> — курсивний текст (без семантики, наприклад для назв).</li>
       <li><code>&lt;u&gt;</code> — підкреслений текст.</li>
       <li><code>&lt;mark&gt;</code> — виділений маркером (жовтим за замовчуванням).</li>
+      
+        <li><code>&lt;s&gt;</code> — перекреслений текст.</li>
+
+<li><code>&lt;big&gt;</code> — збільшує розмір шрифту.</li>
+
+<li><code>&lt;small&gt;</code> — зменшує розмір шрифту.</li>
+
+<li><code>&lt;sub&gt;</code> — нижній індекс (H₂O).</li>
+
+<li><code>&lt;sup&gt;</code> — верхній індекс (x²).</li>
     </ul>
     <hr>
     <hr>
@@ -835,7 +847,7 @@
 <details class="faq">
   <summary><span class="chev">▸</span> 28. Що таке тег <code>&lt;article&gt;</code> у HTML?</summary>
   <div class="answer">
-    <p><code>&lt;article&gt;</code> — семантичний тег, який використовується для <strong>самостійного, незалежного блоку контенту</strong>, що може існувати окремо від іншої частини сторінки.</p>
+    <p><code>&lt;article&gt;</code> — семантичний тег, який використовується для <u>самостійного, незалежного блоку контенту</u>, що може існувати окремо від іншої частини сторінки.</p>
     <ul>
       <li>Зазвичай використовується для статей, постів у блозі, коментарів, новинних блоків.</li>
       <li>Може містити заголовки, текст, зображення, списки тощо.</li>
@@ -843,12 +855,12 @@
     </ul>
     <hr>
     <pre><code>&lt;article&gt;
-  &lt;h2&gt;Новина дня&lt;/h2&gt;
+  &lt;h3&gt;Новина дня&lt;/h3&gt;
   &lt;p&gt;Сьогодні відбулася важлива подія у світі технологій...&lt;/p&gt;
 &lt;/article&gt;</code></pre>
     <p>Результат на сторінці:</p>
     <article>
-      <h2>Новина дня</h2>
+      <h3>Новина дня</h3>
       <p>Сьогодні відбулася важлива подія у світі технологій...</p>
     </article>
   </div>

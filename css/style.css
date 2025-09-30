@@ -266,7 +266,7 @@ header {
 .icon-scroll-back {
   position: fixed;
   transform: rotate(90deg);
-  top: 1px;
+  top: 2px;
   left: 6px;
   z-index: 4;
 }
@@ -274,7 +274,7 @@ header {
 .icon-scroll-up {
   position: fixed;
   top: 2px;
-  right: 4px;
+  right: 6px;
   transform: rotate(180deg);
   z-index: 4;
 }
@@ -282,7 +282,7 @@ header {
 .icon-scroll-down {
   position: fixed;
   bottom: 6px;
-  right: 4px;
+  right: 6px;
   z-index: 4;
 }
 
@@ -304,8 +304,8 @@ header {
   display: inline-flex;
   position: relative;
   justify-content: end;
-  width: 23px;
-  height: 23px;
+  width: 21px;
+  height: 21px;
   border: 1px solid rgba(0, 0, 0, 1);
   border-radius: 50%;
   background-color: #ffffff;
@@ -616,6 +616,11 @@ pre {
     padding-right: 0;
   }
 
+  pre,
+  code {
+    font-size: 0.95em;
+  }
+
   .footer {
     padding: 5px;
   }
@@ -914,7 +919,7 @@ pre {
   }
   details.faq {
     margin: 10px auto;
-    padding: 8px;
+    padding: 5px;
   }
   summary {
     padding-right: 260px;

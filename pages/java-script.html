@@ -159,1344 +159,1405 @@
         </div>
 
         <div>
+          <!--====== 1-20 Основи JS (синтаксис, змінні, типи, оператори, умови, цикли, функції)====== -->
           <!-- 1 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 1. Що таке JavaScript?</summary>
+            <summary><span class="chev">▸</span>1. Що таке JavaScript?</summary>
             <div class="answer">
-              <p>JavaScript — це мова програмування для вебу, яка дозволяє робити сторінки інтерактивними.</p>
+              <p>JavaScript — це мова програмування, яка робить веб-сторінки інтерактивними.</p>
+              <ul>
+                <li>Працює в браузері та на сервері (Node.js)</li>
+                <li>Може змінювати DOM (структуру сторінки)</li>
+                <li>Дозволяє обробляти події (клік, натискання клавіш тощо)</li>
+              </ul>
+              <pre><code>// приклад
+document.body.style.background = "lightblue"; // змінює фон сторінки</code></pre>
             </div>
           </details>
 
           <!-- 2 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 2. Як підключити JavaScript до HTML?</summary>
+            <summary><span class="chev">▸</span>2. Як підключити JavaScript до HTML?</summary>
             <div class="answer">
-              <p>
-                За допомогою тегу <code>&lt;script src="file.js"&gt;&lt;/script&gt;</code> або вставити код всередині
-                <code>&lt;script&gt;&lt;/script&gt;</code>.
-              </p>
+              <p>Є кілька способів:</p>
+              <ul>
+                <li>Всередині HTML:</li>
+              </ul>
+              <pre><code>&lt;script&gt;
+  alert("Привіт!");
+&lt;/script&gt;</code></pre>
+              <ul>
+                <li>Зовнішній файл:</li>
+              </ul>
+              <pre><code>&lt;script src="app.js"&gt;&lt;/script&gt;</code></pre>
+              <p>Щоб не блокувати завантаження сторінки, часто додають <code>defer</code>:</p>
+              <pre><code>&lt;script src="app.js" defer&gt;&lt;/script&gt;</code></pre>
             </div>
           </details>
 
           <!-- 3 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 3. Що таке змінні в JS?</summary>
+            <summary><span class="chev">▸</span>3. Що таке змінна в JavaScript?</summary>
             <div class="answer">
-              <p>Змінні зберігають дані. Оголошуються через <code>let</code>, <code>const</code>, або <code>var</code>.</p>
+              <p>Змінна — це контейнер для збереження значення.</p>
+              <pre><code>let name = "Оля";
+const age = 20;
+var city = "Київ";</code></pre>
+              <p>Можна змінювати <code>let</code> і <code>var</code>, але <code>const</code> — ні.</p>
             </div>
           </details>
 
           <!-- 4 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 4. Чим різняться let, const і var?</summary>
+            <summary><span class="chev">▸</span>4. У чому різниця між let, const і var?</summary>
             <div class="answer">
               <ul>
-                <li><code>var</code> – стара декларація, функціональна область видимості.</li>
-                <li><code>let</code> – блочна область видимості, змінна.</li>
-                <li><code>const</code> – блочна область видимості, константа (незмінна).</li>
+                <li><code>let</code> — блочна область, можна змінювати значення.</li>
+                <li><code>const</code> — блочна область, не можна перевизначати.</li>
+                <li><code>var</code> — функціональна область, застарілий спосіб.</li>
               </ul>
+              <pre><code>if (true) {
+  let x = 10;
+  var y = 20;
+}
+console.log(typeof x); // undefined
+console.log(y);        // 20</code></pre>
             </div>
           </details>
 
           <!-- 5 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 5. Які типи даних є в JavaScript?</summary>
+            <summary><span class="chev">▸</span>5. Які основні типи даних у JS?</summary>
             <div class="answer">
-              <p>
-                Основні типи: <code>string</code>, <code>number</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>, <code>symbol</code>,
-                <code>object</code>.
-              </p>
+              <p>Є <b>примітиви</b> та <b>об’єкти</b>.</p>
+              <ul>
+                <li>
+                  Примітиви: <code>string</code>, <code>number</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>, <code>symbol</code>,
+                  <code>bigint</code>.
+                </li>
+                <li>Об’єкти: <code>{}</code>, <code>[]</code>, <code>function(){}</code>.</li>
+              </ul>
+              <pre><code>let str = "Привіт";   // string
+let num = 42;         // number
+let flag = true;      // boolean
+let arr = [1, 2, 3];  // object</code></pre>
             </div>
           </details>
 
           <!-- 6 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 6. Що таке оператори в JS?</summary>
+            <summary><span class="chev">▸</span>6. Як перевірити тип змінної?</summary>
             <div class="answer">
-              <p>Оператори виконують дії над значеннями: арифметичні, порівняння, логічні, присвоєння.</p>
-              <pre><code>let a = 10; let b = 3;
-
-console.log(a + b); // 13 (додавання)
-console.log(a - b); // 7  (віднімання)
-console.log(a * b); // 30 (множення)
-console.log(a / b); // 3.333... (ділення)
-console.log(a % b); // 1  (остача від ділення)
-console.log(a ** b); // 1000 (степінь: 10^3)</code></pre>
+              <p>Основний спосіб — оператор <code>typeof</code>.</p>
+              <pre><code>typeof "abc"  // "string"
+typeof 123    // "number"
+typeof []     // "object"</code></pre>
+              <p>Для масивів краще:</p>
+              <pre><code>Array.isArray([1,2,3]); // true</code></pre>
             </div>
           </details>
 
           <!-- 7 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 7. Що таке масиви?</summary>
+            <summary><span class="chev">▸</span>7. Що таке оператори?</summary>
             <div class="answer">
-              <p>Масиви — це упорядковані колекції елементів, наприклад: <code>let arr = [1, 2, 3];</code></p>
+              <p>Оператори виконують дії над значеннями:</p>
+              <ul>
+                <li>Арифметичні: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></li>
+                <li>Порівняння: <code>==</code>, <code>===</code>, <code>!=</code>, <code>&gt;</code></li>
+                <li>Логічні: <code>&&</code>, <code>||</code>, <code>!</code></li>
+              </ul>
+              <pre><code>let a = 5, b = 10;
+console.log(a + b);   // 15
+console.log(a > b);   // false
+console.log(a < b && b > 0); // true</code></pre>
             </div>
           </details>
 
           <!-- 8 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 8. Як отримати довжину масиву?</summary>
+            <summary><span class="chev">▸</span>8. У чому різниця між == і ===?</summary>
             <div class="answer">
-              <p>Властивість <code>length</code>: <code>arr.length</code>.</p>
+              <ul>
+                <li><code>==</code> — порівнює значення з приведенням типів.</li>
+                <li><code>===</code> — суворе порівняння (тип + значення).</li>
+              </ul>
+              <pre><code>console.log(5 == "5");  // true
+console.log(5 === "5"); // false</code></pre>
             </div>
           </details>
 
           <!-- 9 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 9. Що таке об’єкти?</summary>
+            <summary><span class="chev">▸</span>9. Як працюють умовні оператори?</summary>
             <div class="answer">
-              <p>Об’єкти зберігають дані у вигляді ключ-значення, наприклад: <code>let user = {name: 'John', age: 30};</code></p>
+              <p>В JS є кілька способів виконати код залежно від умови:</p>
+              <pre><code>let age = 18;
+
+if (age >= 18) {
+  console.log("Дорослий");
+} else {
+  console.log("Дитина");
+}
+
+switch (age) {
+  case 18: console.log("Повноліття!"); break;
+  default: console.log("Інший вік");
+}
+
+let status = (age >= 18) ? "Adult" : "Child";</code></pre>
             </div>
           </details>
 
           <!-- 10 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 10. Як звернутися до властивостей об’єкта?</summary>
+            <summary><span class="chev">▸</span>10. Які є цикли в JS?</summary>
             <div class="answer">
-              <p>Через крапку або квадратні дужки: <code>user.name</code> або <code>user['name']</code>.</p>
+              <ul>
+                <li><code>for</code>, <code>while</code>, <code>do...while</code></li>
+                <li><code>for...of</code> — значення</li>
+                <li><code>for...in</code> — ключі</li>
+              </ul>
+              <pre><code>for (let i=0; i<3; i++) {
+  console.log(i); // 0,1,2
+}
+
+let arr = ["a","b"];
+for (let el of arr) console.log(el); // a, b</code></pre>
             </div>
           </details>
 
           <!-- 11 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 11. Що таке функції?</summary>
+            <summary><span class="chev">▸</span>11. Що таке функція?</summary>
             <div class="answer">
-              <p>Функції — це блоки коду для повторного використання: <code>function greet() { console.log('Hi'); }</code></p>
+              <p>Функція — це блок коду, який можна викликати багато разів.</p>
+              <pre><code>function greet(name) {
+  return "Привіт, " + name;
+}
+
+console.log(greet("Оля")); // Привіт, Оля</code></pre>
             </div>
           </details>
 
           <!-- 12 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 12. Як створити функцію-вираз (function expression)?</summary>
+            <summary><span class="chev">▸</span>12. Які є види функцій?</summary>
             <div class="answer">
-              <p><code>const greet = function() { console.log('Hi'); };</code></p>
+              <pre><code>// оголошення
+function add(a, b) { return a+b; }
+
+// функціональний вираз
+const sum = function(a, b) { return a+b; };
+
+// стрілкова
+const mult = (a, b) => a*b;</code></pre>
             </div>
           </details>
 
           <!-- 13 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 13. Що таке arrow function?</summary>
+            <summary><span class="chev">▸</span>13. Що таке параметри за замовчуванням?</summary>
             <div class="answer">
-              <p>Скорочений запис функції: <code>const sum = (a, b) => a + b;</code></p>
+              <p>Якщо значення не передано — використовується стандартне.</p>
+              <pre><code>function greet(name = "Гість") {
+  console.log("Привіт, " + name);
+}
+
+greet();        // Привіт, Гість
+greet("Іра");   // Привіт, Іра</code></pre>
             </div>
           </details>
 
           <!-- 14 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 14. Що таке callback-функції?</summary>
+            <summary><span class="chev">▸</span>14. Що таке область видимості?</summary>
             <div class="answer">
-              <p>Функції, передані як аргумент іншій функції, для виклику пізніше.</p>
+              <p>Scope визначає, де можна використовувати змінні:</p>
+              <ul>
+                <li>Глобальна</li>
+                <li>Функціональна</li>
+                <li>Блочна</li>
+              </ul>
+              <pre><code>let x = 10; // глобальна
+
+function test() {
+  let y = 20; // функціональна
+  if (true) {
+    let z = 30; // блочна
+  }
+}</code></pre>
             </div>
           </details>
 
           <!-- 15 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 15. Що таке проміси (Promise)?</summary>
+            <summary><span class="chev">▸</span>15. Що таке hoisting?</summary>
             <div class="answer">
-              <p>Об’єкт для асинхронних операцій, який може бути: <code>pending</code>, <code>fulfilled</code>, або <code>rejected</code>.</p>
+              <p>JS «піднімає» оголошення змінних і функцій нагору області.</p>
+              <pre><code>console.log(a); // undefined
+var a = 5;
+
+foo(); // працює
+function foo() { console.log("ok"); }</code></pre>
+              <p><code>let</code> і <code>const</code> піднімаються, але не ініціалізуються → <i>Temporal Dead Zone</i>.</p>
             </div>
           </details>
 
           <!-- 16 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 16. Як створити проміс?</summary>
+            <summary><span class="chev">▸</span>16. Що таке замикання?</summary>
             <div class="answer">
-              <p><code>let p = new Promise((resolve, reject) =&gt; { /* async code */ });</code></p>
+              <p>Замикання — це функція, яка пам’ятає змінні з оточення, навіть після завершення зовнішньої функції.</p>
+              <pre><code>function outer() {
+  let count = 0;
+  return function() {
+    count++;
+    return count;
+  }
+}
+
+let counter = outer();
+console.log(counter()); // 1
+console.log(counter()); // 2</code></pre>
             </div>
           </details>
 
           <!-- 17 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 17. Що таке async/await?</summary>
+            <summary><span class="chev">▸</span>17. Що таке стрілкові функції?</summary>
             <div class="answer">
-              <p>Синтаксис для зручної роботи з промісами. <code>async function fetchData() { let data = await fetch(url); }</code></p>
+              <p>Вони коротші та не мають власного <code>this</code>.</p>
+              <pre><code>const square = x => x * x;
+console.log(square(4)); // 16</code></pre>
+              <p>Зручно використовувати в <code>map</code>, <code>filter</code>, <code>reduce</code>.</p>
             </div>
           </details>
 
           <!-- 18 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 18. Що таке DOM?</summary>
+            <summary><span class="chev">▸</span>18. Що таке оператор typeof?</summary>
             <div class="answer">
-              <p>Document Object Model — структура HTML-документа, до якої можна звертатися через JavaScript.</p>
+              <p>Визначає тип значення:</p>
+              <pre><code>typeof "Привіт"  // string
+typeof 42        // number
+typeof null      // object (історична помилка)</code></pre>
             </div>
           </details>
 
           <!-- 19 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 19. Як знайти елемент за id?</summary>
+            <summary><span class="chev">▸</span>19. Що таке NaN?</summary>
             <div class="answer">
-              <p><code>document.getElementById('myId')</code></p>
+              <p><code>NaN</code> означає "Not a Number".</p>
+              <pre><code>let result = 0 / 0;
+console.log(result); // NaN
+console.log(typeof NaN); // number</code></pre>
+              <p>Перевірка: <code>Number.isNaN(value)</code>.</p>
             </div>
           </details>
 
           <!-- 20 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 20. Як знайти елементи за класом?</summary>
+            <summary><span class="chev">▸</span>20. Що таке шаблонні рядки?</summary>
             <div class="answer">
-              <p><code>document.getElementsByClassName('myClass')</code> або <code>document.querySelectorAll('.myClass')</code></p>
+              <p>Це рядки в зворотних лапках (``), які підтримують інтерполяцію.</p>
+              <pre><code>let name = "Андрій";
+console.log(`Привіт, ${name}!`); // Привіт, Андрій!</code></pre>
             </div>
           </details>
 
+          <!-- ===== 21–40 Масиви, об’єкти, this, JSON, деструктуризація, spread/rest===== -->
+
           <!-- 21 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 21. Як додати елемент до масиву?</summary>
+            <summary><span class="chev">▸</span>21. Що таке масив у JavaScript?</summary>
             <div class="answer">
-              <p>Через <code>push()</code> для кінця або <code>unshift()</code> для початку: <code>arr.push(4);</code></p>
+              <p>Масив — це впорядкований список значень.</p>
+              <pre><code>let fruits = ["яблуко", "банан", "вишня"];
+console.log(fruits[1]); // банан</code></pre>
+              <p>Масив може містити різні типи значень, навіть інші масиви чи об’єкти.</p>
             </div>
           </details>
 
           <!-- 22 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 22. Як видалити елемент з масиву?</summary>
+            <summary><span class="chev">▸</span>22. Як отримати доступ до елементів масиву?</summary>
             <div class="answer">
-              <p><code>pop()</code> видаляє останній, <code>shift()</code> – перший елемент.</p>
+              <pre><code>let arr = [10, 20, 30];
+console.log(arr[0]); // 10
+arr[1] = 25;
+console.log(arr); // [10, 25, 30]</code></pre>
+              <p>Якщо індекса немає → <code>undefined</code>.</p>
             </div>
           </details>
 
           <!-- 23 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 23. Як знайти індекс елемента?</summary>
+            <summary><span class="chev">▸</span>23. Які основні методи масивів?</summary>
             <div class="answer">
-              <p><code>arr.indexOf(value)</code> повертає індекс або -1.</p>
+              <p>Часто використовують:</p>
+              <pre><code>let arr = [1, 2, 3, 4];
+
+arr.push(5);      // [1,2,3,4,5]
+arr.pop();        // [1,2,3,4]
+arr.shift();      // [2,3,4]
+arr.unshift(0);   // [0,2,3,4]
+
+let doubled = arr.map(x => x*2); // [0,4,6,8]
+let even = arr.filter(x => x%2===0); // [0,2,4]</code></pre>
             </div>
           </details>
 
           <!-- 24 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 24. Як перевірити, чи є значення в масиві?</summary>
+            <summary><span class="chev">▸</span>24. Чим відрізняється for...of від for...in?</summary>
             <div class="answer">
-              <p><code>arr.includes(value)</code> повертає true або false.</p>
+              <p><code>for...of</code> ітерує значення, <code>for...in</code> — ключі.</p>
+              <pre><code>let arr = ["a","b","c"];
+for (let val of arr) console.log(val);   // a,b,c
+for (let i in arr) console.log(i);       // 0,1,2</code></pre>
             </div>
           </details>
 
           <!-- 25 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 25. Що таке метод map()?</summary>
+            <summary><span class="chev">▸</span>25. Що таке об’єкт у JavaScript?</summary>
             <div class="answer">
-              <p>Створює новий масив, застосовуючи функцію до кожного елемента: <code>arr.map(x => x*2)</code></p>
+              <p>Об’єкт — набір пар "ключ: значення".</p>
+              <pre><code>let user = {
+  name: "Оля",
+  age: 25,
+  isAdmin: true
+};
+
+console.log(user.name); // Оля</code></pre>
             </div>
           </details>
 
           <!-- 26 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 26. Що таке filter()?</summary>
+            <summary><span class="chev">▸</span>26. Як звернутися до властивостей об’єкта?</summary>
             <div class="answer">
-              <p>Створює новий масив з елементів, що проходять умову: <code>arr.filter(x =&gt; x > 5)</code></p>
+              <pre><code>let car = {brand: "BMW", year: 2020};
+
+console.log(car.brand);   // BMW
+console.log(car["year"]); // 2020</code></pre>
+              <p>Квадратні дужки зручні, якщо ключ — змінна.</p>
             </div>
           </details>
 
           <!-- 27 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 27. Що таке reduce()?</summary>
+            <summary><span class="chev">▸</span>27. Як перебирати об’єкти?</summary>
             <div class="answer">
-              <p>Акумулює значення масиву в одне: <code>arr.reduce((sum, x) =&gt; sum + x, 0)</code></p>
+              <pre><code>let user = {name: "Іра", age: 20};
+
+for (let key in user) {
+  console.log(key, user[key]);
+}</code></pre>
+              <p>Або сучасні методи:</p>
+              <pre><code>Object.keys(user);   // ["name","age"]
+Object.values(user); // ["Іра",20]
+Object.entries(user);// [["name","Іра"],["age",20]]</code></pre>
             </div>
           </details>
 
           <!-- 28 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 28. Як об’єднати масиви?</summary>
+            <summary><span class="chev">▸</span>28. Що таке this у JavaScript?</summary>
             <div class="answer">
-              <p>Через <code>concat()</code> або спред-оператор: <code>[...arr1, ...arr2]</code></p>
+              <p><code>this</code> вказує на контекст виконання.</p>
+              <pre><code>let user = {
+  name: "Оля",
+  sayHi() {
+    console.log("Привіт, " + this.name);
+  }
+};
+user.sayHi(); // Привіт, Оля</code></pre>
+              <p>В стрілкових функціях <code>this</code> не прив’язується.</p>
             </div>
           </details>
 
           <!-- 29 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 29. Як перетворити рядок на масив?</summary>
+            <summary><span class="chev">▸</span>29. Як прив’язати this?</summary>
             <div class="answer">
-              <p><code>str.split(',')</code> розділяє рядок по роздільнику.</p>
+              <p>Можна використати <code>bind</code>, <code>call</code> або <code>apply</code>.</p>
+              <pre><code>function greet() { console.log(this.name); }
+
+let user = {name:"Іра"};
+let bound = greet.bind(user);
+
+bound(); // Іра</code></pre>
             </div>
           </details>
 
           <!-- 30 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 30. Як об’єднати масив у рядок?</summary>
+            <summary><span class="chev">▸</span>30. Що таке JSON?</summary>
             <div class="answer">
-              <p><code>arr.join(', ')</code> повертає рядок з елементів масиву.</p>
+              <p>JSON (JavaScript Object Notation) — текстовий формат для обміну даними.</p>
+              <pre><code>let user = {name:"Оля", age:25};
+
+let json = JSON.stringify(user);
+console.log(json); // '{"name":"Оля","age":25}'
+
+let obj = JSON.parse(json);
+console.log(obj.name); // Оля</code></pre>
             </div>
           </details>
 
           <!-- 31 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 31. Що таке деструктуризація масивів?</summary>
+            <summary><span class="chev">▸</span>31. Що таке деструктуризація?</summary>
             <div class="answer">
-              <p>Витягування елементів масиву у змінні: <code>let [a, b] = [1, 2];</code></p>
+              <p>Це зручний спосіб отримати значення з об’єкта чи масиву.</p>
+              <pre><code>let arr = [1,2];
+let [a,b] = arr; // a=1, b=2
+
+let user = {name:"Оля", age:20};
+let {name, age} = user; // name="Оля", age=20</code></pre>
             </div>
           </details>
 
           <!-- 32 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 32. Що таке деструктуризація об’єктів?</summary>
+            <summary><span class="chev">▸</span>32. Що таке оператор spread (...)?</summary>
             <div class="answer">
-              <p>Витягування властивостей об’єкта у змінні: <code>let {name, age} = user;</code></p>
+              <p>Розгортає масив або об’єкт.</p>
+              <pre><code>let arr = [1,2,3];
+let newArr = [...arr, 4, 5]; // [1,2,3,4,5]
+
+let obj = {a:1};
+let copy = {...obj, b:2}; // {a:1, b:2}</code></pre>
             </div>
           </details>
 
           <!-- 33 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 33. Як перевірити тип даних?</summary>
+            <summary><span class="chev">▸</span>33. Що таке rest (...)?</summary>
             <div class="answer">
-              <p><code>typeof value</code> повертає тип: string, number, boolean, object, function.</p>
+              <p>Збирає залишок у масив.</p>
+              <pre><code>function sum(...nums) {
+  return nums.reduce((a,b)=>a+b);
+}
+console.log(sum(1,2,3)); // 6</code></pre>
             </div>
           </details>
 
           <!-- 34 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 34. Що таке шаблонні рядки?</summary>
+            <summary><span class="chev">▸</span>34. Як скопіювати масив чи об’єкт?</summary>
             <div class="answer">
-              <p>Рядки з інтерполяцією: <code>`Hello ${name}`</code></p>
+              <pre><code>let arr = [1,2,3];
+let copyArr = [...arr];
+
+let obj = {a:1};
+let copyObj = {...obj};</code></pre>
+              <p>Але це <b>поверхнева</b> копія. Для глибокої — <code>structuredClone()</code> або <code>JSON.parse(JSON.stringify())</code>.</p>
             </div>
           </details>
 
           <!-- 35 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 35. Що таке метод includes() для рядків?</summary>
+            <summary><span class="chev">▸</span>35. Що таке метод map()?</summary>
             <div class="answer">
-              <p>Перевіряє, чи міститься підрядок: <code>str.includes('text')</code></p>
+              <p>Створює новий масив, застосовуючи функцію до кожного елемента.</p>
+              <pre><code>let nums = [1,2,3];
+let doubled = nums.map(n => n*2);
+console.log(doubled); // [2,4,6]</code></pre>
             </div>
           </details>
 
           <!-- 36 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 36. Як знайти підрядок у рядку?</summary>
+            <summary><span class="chev">▸</span>36. Що таке filter()?</summary>
             <div class="answer">
-              <p><code>str.indexOf('text')</code> повертає позицію або -1.</p>
+              <p>Фільтрує елементи за умовою.</p>
+              <pre><code>let nums = [1,2,3,4];
+let even = nums.filter(n => n%2===0);
+console.log(even); // [2,4]</code></pre>
             </div>
           </details>
 
           <!-- 37 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 37. Що таке slice() для рядків?</summary>
+            <summary><span class="chev">▸</span>37. Що таке reduce()?</summary>
             <div class="answer">
-              <p>Виділяє частину рядка: <code>str.slice(0,5)</code></p>
+              <p>Агрегує значення в одне.</p>
+              <pre><code>let nums = [1,2,3];
+let sum = nums.reduce((acc,n)=>acc+n, 0);
+console.log(sum); // 6</code></pre>
             </div>
           </details>
 
           <!-- 38 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 38. Що таке trim()?</summary>
+            <summary><span class="chev">▸</span>38. Що таке find() і some()/every()?</summary>
             <div class="answer">
-              <p>Видаляє пробіли з початку та кінця рядка: <code>str.trim()</code></p>
+              <pre><code>let arr = [1,2,3,4];
+
+arr.find(n => n>2);      // 3
+arr.some(n => n>3);      // true
+arr.every(n => n>0);     // true</code></pre>
             </div>
           </details>
 
           <!-- 39 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 39. Що таке replace()?</summary>
+            <summary><span class="chev">▸</span>39. Як об’єднати масиви?</summary>
             <div class="answer">
-              <p>Замінює частину рядка: <code>str.replace('old','new')</code></p>
+              <pre><code>let a = [1,2];
+let b = [3,4];
+
+let merged = [...a, ...b]; // [1,2,3,4]
+let concat = a.concat(b);  // [1,2,3,4]</code></pre>
             </div>
           </details>
 
           <!-- 40 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 40. Що таке split() для рядків?</summary>
+            <summary><span class="chev">▸</span>40. Як відсортувати масив?</summary>
             <div class="answer">
-              <p>Перетворює рядок у масив: <code>str.split(',')</code></p>
+              <p>За замовчуванням сортує як рядки.</p>
+              <pre><code>let nums = [10, 2, 5];
+nums.sort(); // [10,2,5] → ["10","2","5"]
+
+nums.sort((a,b)=>a-b); // [2,5,10]</code></pre>
             </div>
           </details>
 
+          <!-- 41–60 (асинхронність, callback, проміси, async/await, event loop) -->
           <!-- 41 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 41. Як знайти елемент за селектором CSS?</summary>
+            <summary><span class="chev">▸</span>41. Що таке синхронний і асинхронний код?</summary>
             <div class="answer">
-              <p><code>document.querySelector('.myClass')</code> або <code>document.querySelectorAll('div')</code></p>
+              <p>
+                Синхронний код виконується по черзі, рядок за рядком. Асинхронний дозволяє виконувати інші задачі, поки чекаємо результат (наприклад, відповідь
+                сервера).
+              </p>
+              <pre><code>// синхронний
+console.log("1");
+console.log("2");
+
+// асинхронний
+console.log("1");
+setTimeout(()=>console.log("2"), 1000);
+console.log("3");
+// результат: 1, 3, 2</code></pre>
             </div>
           </details>
 
           <!-- 42 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 42. Як змінити текст елемента?</summary>
+            <summary><span class="chev">▸</span>42. Що таке callback?</summary>
             <div class="answer">
-              <p><code>element.textContent = 'Новий текст';</code></p>
+              <p>Callback — це функція, передана іншій функції як аргумент і викликана пізніше.</p>
+              <pre><code>function greet(name, callback) {
+  console.log("Привіт, " + name);
+  callback();
+}
+
+greet("Оля", () => console.log("Як справи?"));
+// Привіт, Оля
+// Як справи?</code></pre>
             </div>
           </details>
 
           <!-- 43 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 43. Як змінити HTML всередині елемента?</summary>
+            <summary><span class="chev">▸</span>43. У чому проблема callback hell?</summary>
             <div class="answer">
-              <p><code>element.innerHTML = '&lt;p&gt;Новий HTML&lt;/p&gt;';</code></p>
+              <p>Якщо є багато вкладених callback-ів, код стає важким для читання та підтримки.</p>
+              <pre><code>getUser(1, user => {
+  getPosts(user.id, posts => {
+    getComments(posts[0].id, comments => {
+      console.log(comments);
+    });
+  });
+});</code></pre>
+              <p>Вирішення → <b>Promise</b> або <b>async/await</b>.</p>
             </div>
           </details>
 
           <!-- 44 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 44. Як змінити стиль елемента через JS?</summary>
+            <summary><span class="chev">▸</span>44. Що таке Promise?</summary>
             <div class="answer">
-              <p><code>element.style.color = 'red';</code> або <code>element.classList.add('active');</code></p>
+              <p>
+                Promise — це об’єкт, який представляє результат асинхронної операції: виконаний (<code>resolved</code>) або з помилкою (<code>rejected</code>).
+              </p>
+              <pre><code>let promise = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Готово!"), 1000);
+});
+
+promise.then(result => console.log(result));
+// Готово!</code></pre>
             </div>
           </details>
 
           <!-- 45 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 45. Як додати обробник події?</summary>
+            <summary><span class="chev">▸</span>45. Які стани має Promise?</summary>
             <div class="answer">
-              <p><code>element.addEventListener('click', () =&gt; { alert('clicked'); });</code></p>
+              <ul>
+                <li><code>pending</code> — очікування</li>
+                <li><code>fulfilled</code> — успіх</li>
+                <li><code>rejected</code> — помилка</li>
+              </ul>
+              <pre><code>let p = Promise.resolve(123);
+p.then(val => console.log(val)); // 123</code></pre>
             </div>
           </details>
 
           <!-- 46 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 46. Що таке event object?</summary>
+            <summary><span class="chev">▸</span>46. Як обробити помилки в Promise?</summary>
             <div class="answer">
-              <p>Об’єкт, що передається в обробник події і містить інформацію про подію.</p>
+              <pre><code>let p = new Promise((res, rej) => rej("Помилка"));
+
+p.then(val => console.log(val))
+ .catch(err => console.log("Сталася помилка:", err))
+ .finally(() => console.log("Завжди виконається"));</code></pre>
             </div>
           </details>
 
           <!-- 47 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 47. Як зупинити стандартну поведінку події?</summary>
+            <summary><span class="chev">▸</span>47. Що таке Promise.all()?</summary>
             <div class="answer">
-              <p><code>event.preventDefault();</code></p>
+              <p>Виконує кілька промісів паралельно. Якщо один завершується з помилкою → весь ланцюг <code>rejected</code>.</p>
+              <pre><code>Promise.all([
+  Promise.resolve(1),
+  Promise.resolve(2),
+  Promise.resolve(3)
+]).then(values => console.log(values)); // [1,2,3]</code></pre>
             </div>
           </details>
 
           <!-- 48 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 48. Як зупинити поширення події?</summary>
+            <summary><span class="chev">▸</span>48. Що таке Promise.race()?</summary>
             <div class="answer">
-              <p><code>event.stopPropagation();</code></p>
+              <p>Повертає результат першого виконаного проміса.</p>
+              <pre><code>Promise.race([
+  new Promise(res => setTimeout(()=>res("A"), 1000)),
+  new Promise(res => setTimeout(()=>res("B"), 500))
+]).then(val => console.log(val)); // B</code></pre>
             </div>
           </details>
 
           <!-- 49 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 49. Що таке bubbling і capturing?</summary>
+            <summary><span class="chev">▸</span>49. Що таке async/await?</summary>
             <div class="answer">
-              <p>Поширення події через DOM: bubbling – від цільового елемента до кореня, capturing – від кореня до цілі.</p>
+              <p>Синтаксичний цукор над Promise, що робить асинхронний код більш схожим на синхронний.</p>
+              <pre><code>async function fetchData() {
+  let res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+  let data = await res.json();
+  console.log(data);
+}
+fetchData();</code></pre>
             </div>
           </details>
 
           <!-- 50 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 50. Як отримати значення input?</summary>
+            <summary><span class="chev">▸</span>50. Як обробити помилки з async/await?</summary>
             <div class="answer">
-              <p><code>document.querySelector('input').value</code></p>
+              <pre><code>async function getData() {
+  try {
+    let res = await fetch("wrong_url");
+    let data = await res.json();
+  } catch (err) {
+    console.log("Помилка:", err.message);
+  }
+}</code></pre>
             </div>
           </details>
 
           <!-- 51 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 51. Як змінити атрибут елемента?</summary>
+            <summary><span class="chev">▸</span>51. Що таке setTimeout і setInterval?</summary>
             <div class="answer">
-              <p><code>element.setAttribute('src', 'image.jpg');</code></p>
+              <p>Це функції браузера для запуску коду з затримкою або регулярно.</p>
+              <pre><code>setTimeout(()=>console.log("1 раз"), 1000);
+
+let id = setInterval(()=>console.log("кожні 2с"), 2000);
+clearInterval(id);</code></pre>
             </div>
           </details>
 
           <!-- 52 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 52. Як видалити елемент з DOM?</summary>
+            <summary><span class="chev">▸</span>52. Що таке Event Loop?</summary>
             <div class="answer">
-              <p><code>element.remove();</code></p>
+              <p>Event Loop — механізм, який керує виконанням асинхронного коду в JS.</p>
+              <pre><code>console.log("A");
+setTimeout(()=>console.log("B"), 0);
+console.log("C");
+// порядок: A, C, B</code></pre>
             </div>
           </details>
 
           <!-- 53 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 53. Як створити новий елемент?</summary>
+            <summary><span class="chev">▸</span>53. Що таке мікрозадачі й макрозадачі?</summary>
             <div class="answer">
-              <p><code>let div = document.createElement('div');</code></p>
+              <p><b>Макрозадачі:</b> setTimeout, setInterval, I/O. <b>Мікрозадачі:</b> Promise, queueMicrotask.</p>
+              <pre><code>setTimeout(()=>console.log("timeout"));
+Promise.resolve().then(()=>console.log("promise"));
+// результат: promise, timeout</code></pre>
             </div>
           </details>
 
           <!-- 54 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 54. Як додати елемент до DOM?</summary>
+            <summary><span class="chev">▸</span>54. Що таке генератори?</summary>
             <div class="answer">
-              <p><code>parent.appendChild(div);</code></p>
+              <p>Це функції, які можна "призупиняти" та "відновлювати". Повертають об’єкт-ітератор.</p>
+              <pre><code>function* gen() {
+  yield 1;
+  yield 2;
+  return 3;
+}
+
+let g = gen();
+console.log(g.next()); // {value:1, done:false}
+console.log(g.next()); // {value:2, done:false}
+console.log(g.next()); // {value:3, done:true}</code></pre>
             </div>
           </details>
 
           <!-- 55 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 55. Як додати клас до елемента?</summary>
+            <summary><span class="chev">▸</span>55. Як зупинити асинхронний процес?</summary>
             <div class="answer">
-              <p><code>element.classList.add('active');</code></p>
+              <p>Для fetch існує <code>AbortController</code>.</p>
+              <pre><code>let controller = new AbortController();
+
+fetch("https://api", {signal: controller.signal});
+controller.abort();</code></pre>
             </div>
           </details>
 
           <!-- 56 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 56. Як видалити клас?</summary>
+            <summary><span class="chev">▸</span>56. Чим відрізняється синхронний for від for await...of?</summary>
             <div class="answer">
-              <p><code>element.classList.remove('active');</code></p>
+              <pre><code>async function* gen() {
+  yield Promise.resolve(1);
+  yield Promise.resolve(2);
+}
+
+(async ()=>{
+  for await (let val of gen()) {
+    console.log(val); // 1, 2
+  }
+})();</code></pre>
+              <p><code>for await...of</code> зручно для асинхронних ітерацій.</p>
             </div>
           </details>
 
           <!-- 57 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 57. Як переключати клас?</summary>
+            <summary><span class="chev">▸</span>57. Як створити власний Promise?</summary>
             <div class="answer">
-              <p><code>element.classList.toggle('active');</code></p>
+              <pre><code>function delay(ms) {
+  return new Promise(res => setTimeout(res, ms));
+}
+
+delay(1000).then(()=>console.log("Через 1с"));
+// Через 1с</code></pre>
             </div>
           </details>
 
           <!-- 58 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 58. Як отримати батьківський елемент?</summary>
+            <summary><span class="chev">▸</span>58. Що таке async iterator?</summary>
             <div class="answer">
-              <p><code>element.parentElement</code></p>
+              <p>Це ітератор, метод <code>next()</code> якого повертає Promise.</p>
+              <pre><code>let asyncIterable = {
+  async *[Symbol.asyncIterator]() {
+    yield "A";
+    yield "B";
+  }
+};
+
+(async ()=>{
+  for await (let v of asyncIterable) {
+    console.log(v); // A, B
+  }
+})();</code></pre>
             </div>
           </details>
 
           <!-- 59 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 59. Як отримати наступний сусідній елемент?</summary>
+            <summary><span class="chev">▸</span>59. Що таке queueMicrotask?</summary>
             <div class="answer">
-              <p><code>element.nextElementSibling</code></p>
+              <p>Додає завдання у чергу мікрозадач.</p>
+              <pre><code>queueMicrotask(()=>console.log("Мікрозадача"));
+console.log("Звичайний код");
+// порядок: Звичайний код, Мікрозадача</code></pre>
             </div>
           </details>
 
           <!-- 60 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 60. Як отримати попередній сусідній елемент?</summary>
+            <summary><span class="chev">▸</span>60. Як паралельно виконати кілька асинхронних функцій?</summary>
             <div class="answer">
-              <p><code>element.previousElementSibling</code></p>
+              <pre><code>async function getA() {
+  return "A";
+}
+async function getB() {
+  return "B";
+}
+
+async function main() {
+  let [a,b] = await Promise.all([getA(), getB()]);
+  console.log(a,b); // A B
+}
+main();</code></pre>
             </div>
           </details>
 
-          <!-- 81 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 81. Що таке Promise?</summary>
-            <div class="answer">
-              <p>Об’єкт для асинхронних операцій з <code>resolve</code> та <code>reject</code>.</p>
-            </div>
-          </details>
-
-          <!-- 82 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 82. Як створити Promise?</summary>
-            <div class="answer">
-              <p><code>new Promise((resolve,reject) =&gt; { ... });</code></p>
-            </div>
-          </details>
-
-          <!-- 83 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 83. Як обробляти успішний результат Promise?</summary>
-            <div class="answer">
-              <p><code>promise.then(result =&gt; { ... });</code></p>
-            </div>
-          </details>
-
-          <!-- 84 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 84. Як обробляти помилки Promise?</summary>
-            <div class="answer">
-              <p><code>promise.catch(error =&gt; { ... });</code></p>
-            </div>
-          </details>
-
-          <!-- 85 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 85. Що таке async/await?</summary>
-            <div class="answer">
-              <p>Синтаксис для роботи з промісами як із синхронним кодом.</p>
-            </div>
-          </details>
-
-          <!-- 86 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 86. Як зробити async функцію?</summary>
-            <div class="answer">
-              <p><code>async function f(){ let res = await fetch(url); }</code></p>
-            </div>
-          </details>
-
-          <!-- 87 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 87. Що таке fetch?</summary>
-            <div class="answer">
-              <p>Метод для HTTP-запитів: <code>fetch('url').then(res =&gt; res.json())</code></p>
-            </div>
-          </details>
-
-          <!-- 88 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 88. Як отримати JSON через fetch?</summary>
-            <div class="answer">
-              <p><code>fetch(url).then(res =&gt; res.json()).then(data =&gt; console.log(data))</code></p>
-            </div>
-          </details>
-
-          <!-- 89 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 89. Що таке try/catch?</summary>
-            <div class="answer">
-              <p>Блок для обробки помилок у синхронному або async коді.</p>
-            </div>
-          </details>
-
-          <!-- 90 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 90. Як працювати з localStorage?</summary>
-            <div class="answer">
-              <p><code>localStorage.setItem('key','value'); localStorage.getItem('key');</code></p>
-            </div>
-          </details>
-
-          <!-- 91 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 91. Як видалити item з localStorage?</summary>
-            <div class="answer">
-              <p><code>localStorage.removeItem('key');</code></p>
-            </div>
-          </details>
-
-          <!-- 92 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 92. Як очистити localStorage?</summary>
-            <div class="answer">
-              <p><code>localStorage.clear();</code></p>
-            </div>
-          </details>
-
-          <!-- 93 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 93. Що таке регулярний вираз?</summary>
-            <div class="answer">
-              <p>Шаблон для пошуку або заміни в рядках: <code>/abc/i</code></p>
-            </div>
-          </details>
-
-          <!-- 94 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 94. Як створити регулярний вираз у JS?</summary>
-            <div class="answer">
-              <p><code>let re = /pattern/flags;</code> або <code>let re = new RegExp('pattern','i');</code></p>
-            </div>
-          </details>
-
-          <!-- 95 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 95. Як перевірити рядок на відповідність regex?</summary>
-            <div class="answer">
-              <p><code>/abc/.test('abcdef') → true</code></p>
-            </div>
-          </details>
-
-          <!-- 96 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 96. Як отримати збіги regex?</summary>
-            <div class="answer">
-              <p><code>'abc123'.match(/\d+/g)</code> → ["123"]</p>
-            </div>
-          </details>
-
-          <!-- 97 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 97. Як замінити за regex?</summary>
-            <div class="answer">
-              <p><code>'abc123'.replace(/\d+/,'456')</code> → "abc456"</p>
-            </div>
-          </details>
-
-          <!-- 98 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 98. Що таке JSON.stringify і JSON.parse?</summary>
-            <div class="answer">
-              <p>Перетворення об’єкта в рядок і назад: <code>JSON.stringify(obj), JSON.parse(str)</code></p>
-            </div>
-          </details>
-
-          <!-- 99 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 99. Як працювати з sessionStorage?</summary>
-            <div class="answer">
-              <p>Аналог localStorage, але дані видаляються після закриття вкладки: <code>sessionStorage.setItem('key','value')</code></p>
-            </div>
-          </details>
-
-          <!-- 100 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 100. Як зробити deep copy об’єкта?</summary>
-            <div class="answer">
-              <p>Через JSON: <code>let copy = JSON.parse(JSON.stringify(obj));</code></p>
-            </div>
-          </details>
-
-          <!-- 1 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 1. Що таке JavaScript?</summary>
-            <div class="answer"><p>Мова програмування для веб-браузерів та серверів (Node.js), що дозволяє робити інтерактивні веб-сторінки.</p></div>
-          </details>
-
-          <!-- 2 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 2. Які типи даних є в JavaScript?</summary>
-            <div class="answer"><p>Number, String, Boolean, null, undefined, Symbol, BigInt, Object.</p></div>
-          </details>
-
-          <!-- 3 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 3. Що таке змінна?</summary>
-            <div class="answer">
-              <p>Місце в пам’яті для зберігання даних, оголошується через <code>var</code>, <code>let</code> або <code>const</code>.</p>
-            </div>
-          </details>
-
-          <!-- 4 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 4. Різниця між var, let і const?</summary>
-            <div class="answer">
-              <p>
-                <code>var</code> – функціональна область, <code>let</code> і <code>const</code> – блочна область; <code>const</code> не можна переназначити.
-              </p>
-            </div>
-          </details>
-
-          <!-- 5 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 5. Що таке функція?</summary>
-            <div class="answer"><p>Блок коду, який можна викликати багаторазово.</p></div>
-          </details>
-
-          <!-- 6 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 6. Що таке arrow function?</summary>
-            <div class="answer">
-              <p>Скорочений синтаксис функцій: <code>() => {}</code>, зберігає контекст <code>this</code>.</p>
-            </div>
-          </details>
-
-          <!-- 7 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 7. Що таке Hoisting?</summary>
-            <div class="answer"><p>Підняття оголошень змінних і функцій на початок області видимості.</p></div>
-          </details>
-
-          <!-- 8 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 8. Що таке closure?</summary>
-            <div class="answer"><p>Функція, яка має доступ до змінних зовнішньої функції навіть після її виконання.</p></div>
-          </details>
-
-          <!-- 9 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 9. Що таке callback?</summary>
-            <div class="answer"><p>Функція, яка передається як аргумент і виконується пізніше.</p></div>
-          </details>
-
-          <!-- 10 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 10. Що таке promise?</summary>
-            <div class="answer">
-              <p>Об’єкт, який представляє результат асинхронної операції: <code>pending</code>, <code>fulfilled</code>, <code>rejected</code>.</p>
-            </div>
-          </details>
-
-          <!-- 11 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 11. Що таке async/await?</summary>
-            <div class="answer"><p>Синтаксис для роботи з промісами, який дозволяє писати асинхронний код як синхронний.</p></div>
-          </details>
-
-          <!-- 12 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 12. Що таке event loop?</summary>
-            <div class="answer"><p>Механізм обробки асинхронних операцій у JS, що дозволяє неблокуючий код.</p></div>
-          </details>
-
-          <!-- 13 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 13. Різниця між synchronous і asynchronous кодом?</summary>
-            <div class="answer"><p>Synchronous виконується по черзі, asynchronous – може відкладатися і виконуватись пізніше.</p></div>
-          </details>
-
-          <!-- 14 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 14. Що таке JSON?</summary>
-            <div class="answer"><p>Формат обміну даними: текстовий, зручний для зберігання об’єктів.</p></div>
-          </details>
-
-          <!-- 15 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 15. Як перетворити JSON у JS об’єкт?</summary>
-            <div class="answer">
-              <p><code>JSON.parse(jsonString)</code></p>
-            </div>
-          </details>
-
-          <!-- 16 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 16. Як перетворити JS об’єкт у JSON?</summary>
-            <div class="answer">
-              <p><code>JSON.stringify(obj)</code></p>
-            </div>
-          </details>
-
-          <!-- 17 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 17. Що таке typeof?</summary>
-            <div class="answer"><p>Оператор для визначення типу змінної.</p></div>
-          </details>
-
-          <!-- 18 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 18. Що таке instanceof?</summary>
-            <div class="answer"><p>Оператор для перевірки, чи є об’єкт екземпляром певного класу.</p></div>
-          </details>
-
-          <!-- 19 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 19. Що таке Array methods?</summary>
-            <div class="answer">
-              <p>Методи для роботи з масивами: <code>map</code>, <code>filter</code>, <code>reduce</code>, <code>forEach</code>.</p>
-            </div>
-          </details>
-
-          <!-- 20 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 20. Що таке destructuring?</summary>
-            <div class="answer"><p>Синтаксис для витягування значень з масивів або об’єктів у змінні.</p></div>
-          </details>
-
-          <!-- 21 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 21. Що таке spread operator?</summary>
-            <div class="answer">
-              <p><code>...</code> дозволяє розкривати масиви або об’єкти.</p>
-            </div>
-          </details>
-
-          <!-- 22 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 22. Що таке rest operator?</summary>
-            <div class="answer">
-              <p><code>...args</code> збирає залишкові аргументи у масив.</p>
-            </div>
-          </details>
-
-          <!-- 23 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 23. Що таке IIFE?</summary>
-            <div class="answer"><p>Immediately Invoked Function Expression — функція, що виконується одразу після створення.</p></div>
-          </details>
-
-          <!-- 24 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 24. Що таке this?</summary>
-            <div class="answer"><p>Контекст виклику функції.</p></div>
-          </details>
-
-          <!-- 25 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 25. Різниця this у arrow function і звичайній?</summary>
-            <div class="answer"><p>Arrow function наслідує this з зовнішньої області, звичайна функція має власний this.</p></div>
-          </details>
-
-          <!-- 26 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 26. Що таке call, apply, bind?</summary>
-            <div class="answer">
-              <p>
-                Методи для контролю this і виклику функцій: <code>call</code> і <code>apply</code> викликають одразу, <code>bind</code> повертає нову функцію.
-              </p>
-            </div>
-          </details>
-
-          <!-- 27 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 27. Що таке prototype?</summary>
-            <div class="answer"><p>Об’єкт, з якого наслідуються властивості у JS об’єктів.</p></div>
-          </details>
-
-          <!-- 28 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 28. Що таке class?</summary>
-            <div class="answer"><p>Синтаксис для створення об’єктів і наслідування (ES6).</p></div>
-          </details>
-
-          <!-- 29 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 29. Що таке module в JS?</summary>
-            <div class="answer">
-              <p>Файл з кодом, який можна експортувати та імпортувати через <code>export</code>/<code>import</code>.</p>
-            </div>
-          </details>
-
-          <!-- 30 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 30. Що таке import/export?</summary>
-            <div class="answer"><p>Синтаксис для роботи з модулями ES6.</p></div>
-          </details>
-
-          <!-- 31 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 31. Що таке event delegation?</summary>
-            <div class="answer"><p>Техніка, коли один обробник подій на батьківському елементі обробляє події дочірніх елементів.</p></div>
-          </details>
-
-          <!-- 32 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 32. Що таке DOM?</summary>
-            <div class="answer"><p>Document Object Model — об’єктна модель HTML документа, яку можна змінювати через JS.</p></div>
-          </details>
-
-          <!-- 33 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 33. Що таке BOM?</summary>
-            <div class="answer"><p>Browser Object Model — об’єктна модель браузера (window, navigator, screen).</p></div>
-          </details>
-
-          <!-- 34 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 34. Що таке localStorage?</summary>
-            <div class="answer"><p>Механізм збереження даних у браузері на стороні клієнта без терміну дії.</p></div>
-          </details>
-
-          <!-- 35 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 35. Що таке sessionStorage?</summary>
-            <div class="answer"><p>Механізм збереження даних у браузері протягом однієї сесії.</p></div>
-          </details>
-
-          <!-- 36 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 36. Що таке cookie?</summary>
-            <div class="answer"><p>Дані, що зберігаються у браузері і відправляються на сервер при кожному запиті.</p></div>
-          </details>
-
-          <!-- 37 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 37. Як працює JSONP?</summary>
-            <div class="answer">
-              <p>Метод отримання даних з іншого домену через тег <code>&lt;script&gt;</code>.</p>
-            </div>
-          </details>
-
-          <!-- 38 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 38. Що таке fetch API?</summary>
-            <div class="answer"><p>Сучасний метод для роботи з HTTP-запитами, повертає проміс.</p></div>
-          </details>
-
-          <!-- 39 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 39. Різниця між fetch і XMLHttpRequest?</summary>
-            <div class="answer"><p>Fetch більш сучасний, працює на промісах; XHR старий, на callback.</p></div>
-          </details>
-
-          <!-- 40 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 40. Що таке JSON.stringify replacer?</summary>
-            <div class="answer"><p>Функція або масив, що дозволяє контролювати, які властивості серіалізуються.</p></div>
-          </details>
-
-          <!-- 41 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 41. Що таке JSON.parse reviver?</summary>
-            <div class="answer"><p>Функція, що обробляє значення під час десеріалізації JSON.</p></div>
-          </details>
-
-          <!-- 42 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 42. Що таке event bubbling?</summary>
-            <div class="answer"><p>Коли подія спливає з дочірнього елементу до батьківського.</p></div>
-          </details>
-
-          <!-- 43 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 43. Що таке event capturing?</summary>
-            <div class="answer"><p>Коли подія спочатку обробляється на батьківському елементі, а потім на дочірньому.</p></div>
-          </details>
-
-          <!-- 44 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 44. Що таке mutable і immutable об’єкти?</summary>
-            <div class="answer"><p>Mutable можна змінювати після створення, immutable — ні (наприклад, рядки в JS immutable).</p></div>
-          </details>
-
-          <!-- 45 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 45. Що таке shallow copy?</summary>
-            <div class="answer"><p>Копія об’єкта або масиву, яка копіює лише перший рівень властивостей.</p></div>
-          </details>
-
-          <!-- 46 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 46. Що таке deep copy?</summary>
-            <div class="answer"><p>Повна копія об’єкта або масиву, включаючи всі вкладені об’єкти.</p></div>
-          </details>
-
-          <!-- 47 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 47. Що таке Symbol?</summary>
-            <div class="answer"><p>Унікальний та незмінний примітив, часто використовується як ключ об’єкта.</p></div>
-          </details>
-
-          <!-- 48 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 48. Що таке BigInt?</summary>
-            <div class="answer">
-              <p>Тип для дуже великих чисел, що перевищують <code>Number.MAX_SAFE_INTEGER</code>.</p>
-            </div>
-          </details>
-
-          <!-- 49 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 49. Що таке Map?</summary>
-            <div class="answer"><p>Колекція ключ-значення, де ключі можуть бути будь-якого типу.</p></div>
-          </details>
-
-          <!-- 50 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 50. Що таке Set?</summary>
-            <div class="answer"><p>Колекція унікальних значень.</p></div>
-          </details>
-
-          <!-- 51 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 51. Різниця між Map і Object?</summary>
-            <div class="answer"><p>Object обмежений типом ключів (рядки, символи), Map — будь-які ключі; Map зберігає порядок.</p></div>
-          </details>
-
-          <!-- 52 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 52. Що таке WeakMap?</summary>
-            <div class="answer"><p>Map, який не перешкоджає збору сміття об’єктів у ключах.</p></div>
-          </details>
-
-          <!-- 53 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 53. Що таке WeakSet?</summary>
-            <div class="answer"><p>Set, що зберігає лише об’єкти і не заважає їх видаленню збирачем сміття.</p></div>
-          </details>
-
-          <!-- 54 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 54. Що таке template literals?</summary>
-            <div class="answer">
-              <p>Рядки з можливістю вставки виразів: <code>`Hello ${name}`</code>.</p>
-            </div>
-          </details>
-
-          <!-- 55 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 55. Що таке tagged template?</summary>
-            <div class="answer"><p>Функція, що обробляє template literals для кастомного форматування.</p></div>
-          </details>
-
-          <!-- 56 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 56. Що таке optional chaining?</summary>
-            <div class="answer">
-              <p>Оператор <code>?.</code>, що дозволяє безпечно звертатися до властивостей.</p>
-            </div>
-          </details>
-
-          <!-- 57 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 57. Що таке nullish coalescing?</summary>
-            <div class="answer">
-              <p>Оператор <code>??</code>, що повертає праву сторону лише якщо ліва <code>null</code> або <code>undefined</code>.</p>
-            </div>
-          </details>
-
-          <!-- 58 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 58. Що таке dynamic import?</summary>
-            <div class="answer">
-              <p>Імпорт модуля всередині функції за допомогою <code>import()</code>, повертає проміс.</p>
-            </div>
-          </details>
-
-          <!-- 59 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 59. Що таке service worker?</summary>
-            <div class="answer"><p>Скрипт, що працює у фоновому режимі для кешування і push notifications.</p></div>
-          </details>
-
-          <!-- 60 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 60. Що таке WebSocket?</summary>
-            <div class="answer"><p>Протокол для двостороннього зв’язку між клієнтом і сервером у реальному часі.</p></div>
-          </details>
-
+          <!-- DOM і браузерне API (події, storage, fetch, таймери, форми) -->
           <!-- 61 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 61. Що таке generator function?</summary>
+            <summary><span class="chev">▸</span>61. Що таке DOM?</summary>
             <div class="answer">
-              <p>Функція, що повертає ітератор та може призупиняти виконання через <code>yield</code>.</p>
+              <p>
+                DOM (Document Object Model) — це об’єктне представлення HTML-документа. Завдяки DOM JavaScript може змінювати елементи, стилі та структуру
+                сторінки.
+              </p>
+              <pre><code>document.title; // Отримати заголовок сторінки
+document.body.style.background = "lightblue";</code></pre>
             </div>
           </details>
 
           <!-- 62 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 62. Що таке iterator?</summary>
+            <summary><span class="chev">▸</span>62. Як отримати елемент з DOM?</summary>
             <div class="answer">
-              <p>Об’єкт з методом <code>next()</code>, який повертає {value, done}.</p>
+              <p>Основні методи:</p>
+              <pre><code>document.getElementById("id");
+document.getElementsByClassName("class");
+document.getElementsByTagName("div");
+
+document.querySelector(".class"); // перший
+document.querySelectorAll("p");   // всі</code></pre>
             </div>
           </details>
 
           <!-- 63 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 63. Що таке for…of?</summary>
-            <div class="answer"><p>Цикл для ітерації по ітерабельних об’єктах (масиви, Map, Set).</p></div>
+            <summary><span class="chev">▸</span>63. Як змінити текст або HTML елемента?</summary>
+            <div class="answer">
+              <pre><code>let el = document.getElementById("demo");
+el.textContent = "Новий текст";
+el.innerHTML = "&lt;b&gt;Жирний текст&lt;/b&gt;";</code></pre>
+            </div>
           </details>
 
           <!-- 64 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 64. Що таке for…in?</summary>
-            <div class="answer"><p>Цикл для перебору ключів об’єкта.</p></div>
+            <summary><span class="chev">▸</span>64. Як змінити атрибути елемента?</summary>
+            <div class="answer">
+              <pre><code>let img = document.querySelector("img");
+img.setAttribute("alt", "Фото");
+console.log(img.getAttribute("src"));
+img.removeAttribute("width");</code></pre>
+            </div>
           </details>
 
           <!-- 65 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 65. Що таке generator delegation?</summary>
+            <summary><span class="chev">▸</span>65. Як створити і додати новий елемент?</summary>
             <div class="answer">
-              <p>Використання <code>yield*</code> для передачі управління іншому генератору.</p>
+              <pre><code>let div = document.createElement("div");
+div.textContent = "Привіт!";
+document.body.appendChild(div);</code></pre>
+              <p>Або:</p>
+              <pre><code>document.body.insertAdjacentHTML("beforeend", "&lt;p&gt;Hello&lt;/p&gt;");</code></pre>
             </div>
           </details>
 
           <!-- 66 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 66. Що таке promise chaining?</summary>
+            <summary><span class="chev">▸</span>66. Як видалити елемент з DOM?</summary>
             <div class="answer">
-              <p>Послідовне виконання промісів через <code>.then()</code>.</p>
+              <pre><code>let el = document.querySelector("#demo");
+el.remove();</code></pre>
+              <p>Або через батьківський елемент:</p>
+              <pre><code>el.parentNode.removeChild(el);</code></pre>
             </div>
           </details>
 
           <!-- 67 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 67. Що таке promise.all?</summary>
-            <div class="answer"><p>Метод, який повертає проміс, що виконується, коли всі проміси у масиві виконані.</p></div>
+            <summary><span class="chev">▸</span>67. Що таке події в JS?</summary>
+            <div class="answer">
+              <p>Подія — це дія користувача або браузера (клік, клавіша, завантаження).</p>
+              <pre><code>let btn = document.querySelector("button");
+btn.addEventListener("click", () => alert("Клік!"));</code></pre>
+            </div>
           </details>
 
           <!-- 68 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 68. Що таке promise.race?</summary>
-            <div class="answer"><p>Метод, який виконується, коли перший проміс завершиться.</p></div>
+            <summary><span class="chev">▸</span>68. У чому різниця між onclick і addEventListener?</summary>
+            <div class="answer">
+              <p><code>onclick</code> замінює обробник, а <code>addEventListener</code> дозволяє додавати кілька.</p>
+              <pre><code>btn.onclick = () => console.log("1");
+btn.onclick = () => console.log("2"); // перезаписує
+
+btn.addEventListener("click", ()=>console.log("1"));
+btn.addEventListener("click", ()=>console.log("2")); // обидва спрацюють</code></pre>
+            </div>
           </details>
 
           <!-- 69 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 69. Що таке promise.allSettled?</summary>
-            <div class="answer"><p>Метод, який чекає завершення всіх промісів і повертає їх статуси.</p></div>
+            <summary><span class="chev">▸</span>69. Що таке об’єкт події?</summary>
+            <div class="answer">
+              <p>Коли виконується обробник, передається об’єкт події з інформацією.</p>
+              <pre><code>btn.addEventListener("click", (event)=>{
+  console.log(event.type);   // click
+  console.log(event.target); // сам елемент
+});</code></pre>
+            </div>
           </details>
 
           <!-- 70 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 70. Що таке promise.any?</summary>
-            <div class="answer"><p>Метод, який виконується, коли перший проміс успішний.</p></div>
+            <summary><span class="chev">▸</span>70. Що таке делегування подій?</summary>
+            <div class="answer">
+              <p>Обробник ставиться на батьківський елемент, а події ловляться через <code>event.target</code>.</p>
+              <pre><code>document.getElementById("list")
+.addEventListener("click", e=>{
+  if(e.target.tagName==="LI"){
+    console.log("Клік по", e.target.textContent);
+  }
+});</code></pre>
+            </div>
           </details>
 
           <!-- 71 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 71. Що таке async/await?</summary>
+            <summary><span class="chev">▸</span>71. Як працює localStorage?</summary>
             <div class="answer">
-              <p>
-                Синтаксис для роботи з промісами у вигляді синхронного коду. <code>async</code> робить функцію промісом, <code>await</code> чекає його
-                виконання.
-              </p>
+              <p>Це сховище браузера для ключ-значення (рядки), зберігається навіть після перезавантаження.</p>
+              <pre><code>localStorage.setItem("name","Оля");
+console.log(localStorage.getItem("name")); // Оля
+localStorage.removeItem("name");
+localStorage.clear();</code></pre>
             </div>
           </details>
 
           <!-- 72 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 72. Що таке try/catch/finally?</summary>
+            <summary><span class="chev">▸</span>72. У чому різниця між localStorage і sessionStorage?</summary>
             <div class="answer">
-              <p>Конструкція для обробки помилок: <code>try</code> виконує код, <code>catch</code> ловить помилки, <code>finally</code> виконується завжди.</p>
+              <ul>
+                <li><code>localStorage</code> — зберігає дані безстроково.</li>
+                <li><code>sessionStorage</code> — зберігає лише на час сесії (закриєш вкладку — видаляється).</li>
+              </ul>
             </div>
           </details>
 
           <!-- 73 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 73. Що таке Error object?</summary>
+            <summary><span class="chev">▸</span>73. Як працює fetch API?</summary>
             <div class="answer">
-              <p>Об’єкт, який містить інформацію про помилку: <code>name</code>, <code>message</code>, <code>stack</code>.</p>
+              <p><code>fetch()</code> використовується для HTTP-запитів.</p>
+              <pre><code>fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then(res => res.json())
+  .then(data => console.log(data));</code></pre>
             </div>
           </details>
 
           <!-- 74 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 74. Що таке custom error?</summary>
+            <summary><span class="chev">▸</span>74. Як відправити POST-запит через fetch?</summary>
             <div class="answer">
-              <p>Власний клас, що успадковує <code>Error</code>, наприклад <code>class ValidationError extends Error</code>.</p>
+              <pre><code>fetch("https://jsonplaceholder.typicode.com/posts", {
+  method: "POST",
+  headers: {"Content-Type":"application/json"},
+  body: JSON.stringify({title:"Привіт", body:"Текст"})
+})
+.then(res => res.json())
+.then(data => console.log(data));</code></pre>
             </div>
           </details>
 
           <!-- 75 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 75. Що таке fetch with async/await?</summary>
+            <summary><span class="chev">▸</span>75. Як працювати з формами в JS?</summary>
             <div class="answer">
-              <p>Використання <code>await fetch(url)</code> для зручного отримання даних з сервера.</p>
+              <pre><code>let form = document.querySelector("form");
+form.addEventListener("submit", e=>{
+  e.preventDefault(); // відміняє перезавантаження
+  let data = new FormData(form);
+  console.log(data.get("username"));
+});</code></pre>
             </div>
           </details>
 
           <!-- 76 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 76. Що таке destructuring assignment?</summary>
-            <div class="answer"><p>Деструктуризація масивів або об’єктів для зручного присвоєння змінних.</p></div>
+            <summary><span class="chev">▸</span>76. Що таке події input і change?</summary>
+            <div class="answer">
+              <p><code>input</code> — спрацьовує при кожній зміні. <code>change</code> — коли елемент втратив фокус.</p>
+              <pre><code>let inp = document.querySelector("input");
+inp.addEventListener("input", ()=>console.log("Змінюється"));
+inp.addEventListener("change", ()=>console.log("Закінчено")); </code></pre>
+            </div>
           </details>
 
           <!-- 77 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 77. Що таке rest operator?</summary>
+            <summary><span class="chev">▸</span>77. Як зберегти дані у cookies?</summary>
             <div class="answer">
-              <p>Оператор <code>...</code> для збору решти елементів у масив або об’єкт.</p>
+              <pre><code>document.cookie = "user=Olya; path=/; max-age=3600"; // 1 година
+console.log(document.cookie);</code></pre>
+              <p>Для зручності зазвичай використовують бібліотеки (наприклад, js-cookie).</p>
             </div>
           </details>
 
           <!-- 78 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 78. Що таке spread operator?</summary>
+            <summary><span class="chev">▸</span>78. Як працювати з таймерами requestAnimationFrame?</summary>
             <div class="answer">
-              <p>Оператор <code>...</code> для розгортання масиву або об’єкта у місці використання.</p>
+              <p>Це метод для плавних анімацій у браузері.</p>
+              <pre><code>function animate() {
+  console.log("Кадр");
+  requestAnimationFrame(animate);
+}
+requestAnimationFrame(animate);</code></pre>
             </div>
           </details>
 
           <!-- 79 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 79. Що таке default parameters?</summary>
+            <summary><span class="chev">▸</span>79. Як відслідковувати події клавіатури?</summary>
             <div class="answer">
-              <p>Значення параметрів функції за замовчуванням: <code>function f(a = 1)</code>.</p>
+              <pre><code>document.addEventListener("keydown", e=>{
+  console.log("Натиснуто:", e.key);
+});
+document.addEventListener("keyup", e=>{
+  console.log("Відпущено:", e.key);
+});</code></pre>
             </div>
           </details>
 
           <!-- 80 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 80. Що таке rest vs arguments?</summary>
+            <summary><span class="chev">▸</span>80. Як визначити координати кліка на сторінці?</summary>
             <div class="answer">
-              <p><code>arguments</code> — старий об’єкт, <code>rest</code> — масив сучасний ES6, працює тільки з параметрами функції.</p>
+              <pre><code>document.addEventListener("click", e=>{
+  console.log("X:", e.clientX, "Y:", e.clientY);
+});</code></pre>
+              <p><code>clientX/Y</code> — відносно вікна, <code>pageX/Y</code> — відносно всієї сторінки.</p>
             </div>
           </details>
 
+          <!-- 81–100 (сучасний JS: ES6+, класи, модулі, патерни, оптимізація) -->
           <!-- 81 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 81. Що таке function hoisting?</summary>
-            <div class="answer"><p>Підняття оголошень функцій у верхню частину скоупу.</p></div>
+            <summary><span class="chev">▸</span>81. Що таке ES6?</summary>
+            <div class="answer">
+              <p>ES6 (ECMAScript 2015) — це велике оновлення JavaScript, яке додало:</p>
+              <ul>
+                <li>let/const</li>
+                <li>стрілкові функції</li>
+                <li>класи</li>
+                <li>шаблонні рядки</li>
+                <li>деструктуризацію</li>
+                <li>Promise</li>
+                <li>модулі</li>
+              </ul>
+            </div>
           </details>
 
           <!-- 82 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 82. Що таке variable hoisting?</summary>
+            <summary><span class="chev">▸</span>82. Як працюють шаблонні рядки?</summary>
             <div class="answer">
-              <p>Підняття оголошень змінних у верхню частину скоупу. <code>var</code> піднімається без значення, <code>let/const</code> — у TDZ.</p>
+              <p>Використовуються бектики <code>`</code> і дозволяють вставляти змінні через <code>${}</code>.</p>
+              <pre><code>let name = "Оля";
+console.log(`Привіт, ${name}!`); // Привіт, Оля!</code></pre>
             </div>
           </details>
 
           <!-- 83 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 83. Що таке temporal dead zone?</summary>
+            <summary><span class="chev">▸</span>83. Що таке стрілкові функції?</summary>
             <div class="answer">
-              <p>Період між підняттям змінної <code>let/const</code> і її оголошенням, під час якого доступ заборонений.</p>
+              <p>Коротший синтаксис функцій. Не мають власного <code>this</code> та <code>arguments</code>.</p>
+              <pre><code>let add = (a,b) => a+b;
+console.log(add(2,3)); // 5</code></pre>
             </div>
           </details>
 
           <!-- 84 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 84. Що таке closure memory leak?</summary>
-            <div class="answer"><p>Коли замикання утримує непотрібні об’єкти в пам’яті довше, ніж потрібно.</p></div>
+            <summary><span class="chev">▸</span>84. Як працює деструктуризація?</summary>
+            <div class="answer">
+              <pre><code>let [a,b] = [1,2];
+console.log(a,b); // 1 2
+
+let {name, age} = {name:"Іра", age:22};
+console.log(name, age); // Іра 22</code></pre>
+            </div>
           </details>
 
           <!-- 85 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 85. Що таке Immediately Invoked Function Expression (IIFE)?</summary>
+            <summary><span class="chev">▸</span>85. Що таке spread і rest оператори?</summary>
             <div class="answer">
-              <p>Функція, що викликається одразу після оголошення: <code>(function(){})()</code>.</p>
+              <pre><code>// spread (...)
+let arr = [1,2,3];
+let arr2 = [...arr, 4,5];
+console.log(arr2); // [1,2,3,4,5]
+
+// rest (...)
+function sum(...nums) {
+  return nums.reduce((a,b)=>a+b,0);
+}
+console.log(sum(1,2,3)); // 6</code></pre>
             </div>
           </details>
 
           <!-- 86 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 86. Що таке module pattern?</summary>
-            <div class="answer"><p>Шаблон для створення модулів із приватними змінними та методами.</p></div>
+            <summary><span class="chev">▸</span>86. Що таке клас у JS?</summary>
+            <div class="answer">
+              <p>Синтаксичний цукор над прототипами.</p>
+              <pre><code>class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  greet() {
+    console.log("Привіт, я " + this.name);
+  }
+}
+let p = new Person("Олег");
+p.greet();</code></pre>
+            </div>
           </details>
 
           <!-- 87 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 87. Що таке ES6 module?</summary>
+            <summary><span class="chev">▸</span>87. Як реалізується наслідування класів?</summary>
             <div class="answer">
-              <p>Сучасний синтаксис для модулів: <code>export</code> та <code>import</code>.</p>
+              <pre><code>class Animal {
+  speak() { console.log("Звук"); }
+}
+
+class Dog extends Animal {
+  speak() { console.log("Гав!"); }
+}
+
+new Dog().speak(); // Гав!</code></pre>
             </div>
           </details>
 
           <!-- 88 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 88. Що таке dynamic import?</summary>
+            <summary><span class="chev">▸</span>88. Що таке модулі в JS?</summary>
             <div class="answer">
-              <p>Імпорт модуля всередині коду функції з <code>import()</code>, що повертає проміс.</p>
+              <p>Дозволяють імпортувати/експортувати змінні та функції між файлами.</p>
+              <pre><code>// math.js
+export function add(a,b){ return a+b; }
+
+// main.js
+import {add} from "./math.js";
+console.log(add(2,3));</code></pre>
             </div>
           </details>
 
           <!-- 89 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 89. Що таке top-level await?</summary>
+            <summary><span class="chev">▸</span>89. У чому різниця між default і named export?</summary>
             <div class="answer">
-              <p>Можливість використовувати <code>await</code> на верхньому рівні модуля без async функції.</p>
+              <pre><code>// default export
+export default function greet(){ console.log("Hi"); }
+import greet from "./file.js";
+
+// named export
+export function sum(a,b){ return a+b; }
+import {sum} from "./file.js";</code></pre>
             </div>
           </details>
 
           <!-- 90 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 90. Що таке WeakRef?</summary>
-            <div class="answer"><p>Об’єкт, який утримує слабке посилання на інший об’єкт без запобігання його збору сміттям.</p></div>
+            <summary><span class="chev">▸</span>90. Що таке Proxy?</summary>
+            <div class="answer">
+              <p>Proxy дозволяє перехоплювати операції з об’єктом.</p>
+              <pre><code>let obj = {name:"Іра"};
+let proxy = new Proxy(obj, {
+  get(target, prop) {
+    return prop in target ? target[prop] : "Немає!";
+  }
+});
+console.log(proxy.name); // Іра
+console.log(proxy.age);  // Немає!</code></pre>
+            </div>
           </details>
 
           <!-- 91 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 91. Що таке FinalizationRegistry?</summary>
-            <div class="answer"><p>API для спостереження за збором сміття об’єктів.</p></div>
+            <summary><span class="chev">▸</span>91. Що таке Map і Set?</summary>
+            <div class="answer">
+              <ul>
+                <li><b>Map</b> — зберігає пари ключ-значення (будь-який тип ключа).</li>
+                <li><b>Set</b> — колекція унікальних значень.</li>
+              </ul>
+              <pre><code>let map = new Map();
+map.set("a",1);
+console.log(map.get("a"));
+
+let set = new Set([1,2,2,3]);
+console.log(set); // {1,2,3}</code></pre>
+            </div>
           </details>
 
           <!-- 92 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 92. Що таке Proxy?</summary>
-            <div class="answer"><p>Об’єкт-обгортка для перехоплення операцій над іншим об’єктом.</p></div>
+            <summary><span class="chev">▸</span>92. Що таке WeakMap і WeakSet?</summary>
+            <div class="answer">
+              <p>Вони зберігають лише об’єкти як ключі/значення і не заважають garbage collection.</p>
+              <pre><code>let weakMap = new WeakMap();
+let obj = {};
+weakMap.set(obj, "дані");
+console.log(weakMap.get(obj));</code></pre>
+            </div>
           </details>
 
           <!-- 93 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 93. Що таке Reflect API?</summary>
+            <summary><span class="chev">▸</span>93. Що таке Symbol?</summary>
             <div class="answer">
-              <p>Методи для операцій над об’єктами як функції, наприклад <code>Reflect.get</code>, <code>Reflect.set</code>.</p>
+              <p>Унікальний і незмінний тип даних, часто для прихованих властивостей.</p>
+              <pre><code>let id = Symbol("id");
+let user = {name:"Іра", [id]:123};
+console.log(user); // {name:"Іра", Symbol(id):123}</code></pre>
             </div>
           </details>
 
           <!-- 94 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 94. Що таке event loop?</summary>
-            <div class="answer"><p>Механізм обробки черги задач і асинхронних операцій у JS.</p></div>
+            <summary><span class="chev">▸</span>94. Як працюють Generators у сучасному JS?</summary>
+            <div class="answer">
+              <p>Генератори дозволяють керувати потоком виконання асинхронно або поетапно.</p>
+              <pre><code>function* idGen() {
+  let id=1;
+  while(true) yield id++;
+}
+let gen = idGen();
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2</code></pre>
+            </div>
           </details>
 
           <!-- 95 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 95. Що таке call stack?</summary>
-            <div class="answer"><p>Стек викликів функцій у JS, де відстежується поточний виконуваний контекст.</p></div>
+            <summary><span class="chev">▸</span>95. Що таке async generators?</summary>
+            <div class="answer">
+              <pre><code>async function* gen() {
+  yield "A";
+  yield "B";
+}
+(async ()=>{
+  for await(let v of gen()){
+    console.log(v);
+  }
+})();</code></pre>
+            </div>
           </details>
 
           <!-- 96 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 96. Що таке microtask queue?</summary>
-            <div class="answer"><p>Черга для промісів та mutation observers, виконується після поточного call stack.</p></div>
+            <summary><span class="chev">▸</span>96. Що таке модульні патерни у JS?</summary>
+            <div class="answer">
+              <p>Модульний патерн дозволяє інкапсулювати код і уникати глобальних змінних.</p>
+              <pre><code>let Module = (function(){
+  let secret = "приватне";
+  return {
+    getSecret: () => secret
+  };
+})();
+console.log(Module.getSecret());</code></pre>
+            </div>
           </details>
 
           <!-- 97 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 97. Що таке macro task queue?</summary>
-            <div class="answer"><p>Черга для setTimeout, setInterval та I/O подій, виконується після microtasks.</p></div>
+            <summary><span class="chev">▸</span>97. Що таке Singleton у JS?</summary>
+            <div class="answer">
+              <p>Патерн, який гарантує існування лише одного екземпляра.</p>
+              <pre><code>class Singleton {
+  constructor(){
+    if(Singleton.instance) return Singleton.instance;
+    Singleton.instance = this;
+  }
+}
+let a = new Singleton();
+let b = new Singleton();
+console.log(a===b); // true</code></pre>
+            </div>
           </details>
 
           <!-- 98 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 98. Що таке memory leak?</summary>
-            <div class="answer"><p>Помилка, коли об’єкти залишаються в пам’яті без потреби, погіршуючи продуктивність.</p></div>
+            <summary><span class="chev">▸</span>98. Бандл у JS</summary>
+            <div class="answer">
+              <p>Бандл (bundle) — це об'єднаний файл, що містить весь JS-код, модулі, бібліотеки та ресурси проєкту, готовий для браузера.</p>
+              <ul>
+                <li>Сумісність із браузерами: сучасний код перетворюється у старіший формат.</li>
+                <li>Менше запитів: один або кілька файлів замість сотень маленьких.</li>
+                <li>Оптимізація: мінімізація, tree shaking, code splitting.</li>
+                <li>Зручність розробки: модульний код працює як єдиний застосунок.</li>
+              </ul>
+              <p><strong>Приклад:</strong></p>
+              <pre><code>// math.js
+export function add(a, b) { return a + b; }
+
+// app.js
+import { add } from './math.js';
+console.log(add(2, 3));
+
+// після бандлу (bundle.js) можна підключити в HTML:
+&lt;script src="bundle.js"&gt;&lt;/script&gt;</code></pre>
+            </div>
           </details>
 
           <!-- 99 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 99. Що таке structuredClone?</summary>
-            <div class="answer"><p>Функція для глибокого копіювання об’єктів у JS.</p></div>
+            <summary><span class="chev">▸</span>99. Що таке lazy loading?</summary>
+            <div class="answer">
+              <p>Відкладене завантаження ресурсів, коли вони реально потрібні (зображення, модулі).</p>
+              <pre><code>// динамічний імпорт
+import("./math.js").then(module=>{
+  console.log(module.add(2,3));
+});</code></pre>
+            </div>
           </details>
 
           <!-- 100 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 100. Що таке top-level module scope?</summary>
+            <summary><span class="chev">▸</span>100. Як оптимізувати роботу JS у браузері?</summary>
             <div class="answer">
-              <p>Модулі ES6 мають власний scope, відокремлений від глобального, тому <code>var</code> не створює глобальні змінні.</p>
+              <ul>
+                <li>мінімізувати доступ до DOM</li>
+                <li>використовувати дебаунс/тротлінг для подій</li>
+                <li>дробити великі задачі через <code>setTimeout</code> / <code>requestIdleCallback</code></li>
+                <li>використовувати кешування даних</li>
+                <li>lazy loading для ресурсів</li>
+              </ul>
             </div>
           </details>
         </div>

@@ -1,14 +1,15 @@
 {
-	"liveServer.settings.port": 5502
-}
-{
-"[css]": {
-  "editor.colorDecorators": false
-},
-"[html]": {
-  "editor.colorDecorators": false
-},
-"[scss]": {
-  "editor.colorDecorators": false
-}
+  "liveServer.settings.port": 5501,
+  "[css]": {
+    "editor.colorDecorators": true
+  },
+  "[html]": {
+    "editor.colorDecorators": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.colorDecorators": false
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
 }

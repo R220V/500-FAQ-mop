@@ -198,7 +198,10 @@ header {
   border-radius: 6px;
   background: var(--card);
   color: var(--text);
-  transition: background 0.5s, color 0.5s, transform 0.3s;
+  transition:
+    background 0.5s,
+    color 0.5s,
+    transform 0.3s;
 }
 
 .header-link:hover {
@@ -224,7 +227,9 @@ header {
 /* #region theme switcher */
 .theme-circle {
   position: fixed;
-  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.53), inset 0 -4px 10px rgba(34, 34, 34, 0.53);
+  box-shadow:
+    inset 0 4px 10px rgba(0, 0, 0, 0.53),
+    inset 0 -4px 10px rgba(34, 34, 34, 0.53);
   width: 100vw;
   top: 0;
   right: 50%;
@@ -245,8 +250,12 @@ header {
   outline: 0.5px solid rgba(0, 0, 0, 1);
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: inset 5px 5px 0px rgba(0, 255, 255, 0), inset 0 0 1px rgba(255, 255, 255, 1), inset 2px 2px 2px rgba(255, 255, 255, 0.39),
-    inset -2px -2px 4px rgba(0, 0, 0, 0.7), 5px 5px 20px var(--accent);
+  box-shadow:
+    inset 5px 5px 0px rgba(0, 255, 255, 0),
+    inset 0 0 1px rgba(255, 255, 255, 1),
+    inset 2px 2px 2px rgba(255, 255, 255, 0.39),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.7),
+    5px 5px 20px var(--accent);
 }
 
 .circle:hover,
@@ -360,7 +369,9 @@ header {
   background-color: var(--card);
   color: var(--text);
   outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 .input-buttons input[type='search']:hover,
 .input-buttons input[type='search']:focus {
@@ -379,7 +390,10 @@ header {
   color: var(--text);
   cursor: pointer;
   user-select: none;
-  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .btn:hover,
@@ -544,7 +558,9 @@ pre {
   transform: translate(-30px, -80px);
   cursor: pointer;
   border: 2px solid rgba(190, 190, 190, 1);
-  box-shadow: 0 0 5px 2px #000000ff, inset 0 0 18px #63636386;
+  box-shadow:
+    0 0 5px 2px #000000ff,
+    inset 0 0 18px #63636386;
   border-radius: 4px;
   transition: ease 350ms;
   z-index: 6;
@@ -880,7 +896,9 @@ pre {
     max-width: 1200px;
     gap: clamp(8px, calc((100vw - 320px) / 10), 30px);
     padding: 10px 0;
-    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.53), inset 0 -4px 10px rgba(34, 34, 34, 0.53);
+    box-shadow:
+      inset 0 4px 10px rgba(0, 0, 0, 0.53),
+      inset 0 -4px 10px rgba(34, 34, 34, 0.53);
     border: 1px solid var(--stroke);
   }
   .circle {

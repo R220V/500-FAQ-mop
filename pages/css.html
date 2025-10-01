@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
@@ -35,72 +35,63 @@
           style="background: rgb(255, 75, 75)"
           onclick="setTheme('red')"
           aria-label="Встановити червону тему"
-          title="Червона тема"
-        ></button>
+          title="Червона тема"></button>
         <button
           class="circle"
           data-color="orange"
           style="background: rgb(255, 185, 55)"
           onclick="setTheme('orange')"
           aria-label="Встановити помаранчеву тему"
-          title="Помаранчева тема"
-        ></button>
+          title="Помаранчева тема"></button>
         <button
           class="circle"
           data-color="yellow"
           style="background: rgba(255, 255, 85)"
           onclick="setTheme('yellow')"
           aria-label="Встановити жовту тему"
-          title="Жовта тема"
-        ></button>
+          title="Жовта тема"></button>
         <button
           class="circle"
           data-color="green"
           style="background: rgba(115, 255, 100)"
           onclick="setTheme('green')"
           aria-label="Встановити зелену тему"
-          title="Зелена тема"
-        ></button>
+          title="Зелена тема"></button>
         <button
           class="circle"
           data-color="skyblue"
           style="background: rgb(100, 200, 250)"
           onclick="setTheme('skyblue')"
           aria-label="Встановити блакитну тему"
-          title="Блакитна тема"
-        ></button>
+          title="Блакитна тема"></button>
         <button
           class="circle"
           data-color="blue"
           style="background: rgba(55, 55, 255)"
           onclick="setTheme('blue')"
           aria-label="Встановити синю тему"
-          title="Синя тема"
-        ></button>
+          title="Синя тема"></button>
         <button
           class="circle"
           data-color="purple"
           style="background: purple"
           onclick="setTheme('purple')"
           aria-label="Встановити фіолетову тему"
-          title="Фіолетоватема"
-        ></button>
+          title="Фіолетоватема"></button>
         <button
           class="circle"
           data-color="light"
           style="background: rgb(235, 235, 235)"
           onclick="setTheme('light')"
           aria-label="Встановити білу тему"
-          title="Біла тема"
-        ></button>
+          title="Біла тема"></button>
         <button
           class="circle"
           data-color="dark"
           style="background: rgba(45, 45, 45)"
           onclick="setTheme('dark')"
           aria-label="Встановити чорну тему"
-          title="Чорна тема"
-        ></button>
+          title="Чорна тема"></button>
       </div>
       <!-- #endregion theme -->
 
@@ -148,8 +139,7 @@
             type="search"
             placeholder="Пошук по питаннях і відповідях…"
             aria-label="Поле пошуку по питаннях і відповідях"
-            title="Введіть ключове слово для пошуку"
-          />
+            title="Введіть ключове слово для пошуку" />
 
           <button id="openAll" class="btn" type="button" aria-label="Відкрити всі питання і відповіді" title="Розгорнути всі">Відкрити всі</button>
 
@@ -157,815 +147,827 @@
         </div>
 
         <div>
-                <!-- 1 -->
-        <details class="faq">
-          <summary><span class="chev">▸</span>1. Що таке CSS і для чого він потрібен?</summary>
-          <div class="answer">
-            <p>CSS (Cascading Style Sheets) — це мова стилів, яка визначає, як HTML-елементи відображаються на сторінці.</p>
-            <ul>
-              <li>Встановлює кольори, шрифти, відступи, розміри блоків</li>
-              <li>Дозволяє робити адаптивний дизайн</li>
-              <li>Розділяє структуру (HTML) і стиль (CSS)</li>
-            </ul>
-          </div>
-        </details>
+          <!-- 1 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>1. Що таке CSS і для чого він потрібен?</summary>
+            <div class="answer">
+              <p>CSS (Cascading Style Sheets) — це мова стилів, яка визначає, як HTML-елементи відображаються на сторінці.</p>
+              <ul>
+                <li>Встановлює кольори, шрифти, відступи, розміри блоків</li>
+                <li>Дозволяє робити адаптивний дизайн</li>
+                <li>Розділяє структуру (HTML) і стиль (CSS)</li>
+              </ul>
+            </div>
+          </details>
 
-        <!-- 2 -->
-        <details class="faq">
-          <summary><span class="chev">▸</span>2. Як підключити CSS до HTML (inline, internal, external)?</summary>
-          <div class="answer">
-            <ul>
-              <li>
-                <strong>Inline:</strong> всередині тегу HTML через атрибут <code>style</code>
-                <pre><code>&lt;p style="color:red;"&gt;Текст&lt;/p&gt;</code></pre>
-              </li>
-              <li>
-                <strong>Internal:</strong> всередині тегу <code>&lt;style&gt;</code> в HTML
-                <pre><code>&lt;style&gt; p { color: red; }&lt;/style&gt;</code></pre>
-              </li>
-              <li>
-                <strong>External:</strong> через окремий файл CSS
-                <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
-              </li>
-            </ul>
-          </div>
-        </details>
+          <!-- 2 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>2. Як підключити CSS до HTML (inline, internal, external)?</summary>
+            <div class="answer">
+              <ul>
+                <li>
+                  <strong>Inline:</strong> всередині тегу HTML через атрибут <code>style</code>
+                  <pre><code>&lt;p style="color:red;"&gt;Текст&lt;/p&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>Internal:</strong> всередині тегу <code>&lt;style&gt;</code> в HTML
+                  <pre><code>&lt;style&gt; p { color: red; }&lt;/style&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>External:</strong> через окремий файл CSS
+                  <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+                </li>
+              </ul>
+            </div>
+          </details>
 
-        <!-- 3 -->
-        <details class="faq">
-          <summary><span class="chev">▸</span>3. Що таке селектори та які їх типи?</summary>
-          <div class="answer">
-            <p>Селектори визначають, до яких елементів застосовувати стиль.</p>
-            <ul>
-              <li>Тегові: <code>p { color: blue; }</code></li>
-              <li>Класові: <code>.button { padding: 10px; }</code></li>
-              <li>ID: <code>#header { background: gray; }</code></li>
-              <li>Універсальний: <code>* { margin: 0; }</code></li>
-              <li>Комбіновані: <code>div p { font-size: 14px; }</code></li>
-              <li>Псевдокласи та псевдоелементи: <code>:hover</code>, <code>::before</code></li>
-            </ul>
-          </div>
+          <!-- 3 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>3. Що таке селектори та які їх типи?</summary>
+            <div class="answer">
+              <p>Селектори визначають, до яких елементів застосовувати стиль.</p>
+              <ul>
+                <li>Тегові: <code>p { color: blue; }</code></li>
+                <li>Класові: <code>.button { padding: 10px; }</code></li>
+                <li>ID: <code>#header { background: gray; }</code></li>
+                <li>Універсальний: <code>* { margin: 0; }</code></li>
+                <li>Комбіновані: <code>div p { font-size: 14px; }</code></li>
+                <li>Псевдокласи та псевдоелементи: <code>:hover</code>, <code>::before</code></li>
+              </ul>
+            </div>
 
-          <p>CSS застосовує стилі за пріоритетом: Inline > Internal > External; також враховується специфічність селекторів.</p>
-        </details>
-        <!-- 4 -->
-        <details class="faq">
-          <summary><span class="chev">▸</span>4. Чим відрізняються класи від id?</summary>
-          <div class="answer">
-            <ul>
-              <li><strong>Клас (<code>.class</code>):</strong> можна застосувати до багатьох елементів</li>
-              <li><strong>ID (<code>#id</code>):</strong> унікальний для одного елемента на сторінці</li>
-              <li>ID має вищий пріоритет у CSS (specificity)</li>
-            </ul>
-          </div>
-        </details>
+            <p>CSS застосовує стилі за пріоритетом: Inline > Internal > External; також враховується специфічність селекторів.</p>
+          </details>
+          <!-- 4 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>4. Чим відрізняються класи від id?</summary>
+            <div class="answer">
+              <ul>
+                <li><strong>Клас (<code>.class</code>):</strong> можна застосувати до багатьох елементів</li>
+                <li><strong>ID (<code>#id</code>):</strong> унікальний для одного елемента на сторінці</li>
+                <li>ID має вищий пріоритет у CSS (specificity)</li>
+              </ul>
+            </div>
+          </details>
 
-        <!-- 5 -->
-        <details class="faq">
-          <summary><span class="chev">▸</span>5. Що таке універсальний селектор <code>*</code>?</summary>
-          <div class="answer">
-            <p>Універсальний селектор застосовує стиль до всіх елементів на сторінці.</p>
-            <pre><code>* { margin: 0; padding: 0; }</code></pre>
-            <p>Зазвичай використовується для "CSS reset".</p>
-          </div>
-        </details>
+          <!-- 5 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>5. Що таке універсальний селектор <code>*</code>?</summary>
+            <div class="answer">
+              <p>Універсальний селектор застосовує стиль до всіх елементів на сторінці.</p>
+              <pre><code>* { margin: 0; padding: 0; }</code></pre>
+              <p>Зазвичай використовується для "CSS reset".</p>
+            </div>
+          </details>
 
-        <!-- 6 -->
-        <details class="faq">
-          <summary><span class="chev">▸</span>6. Як працює селектор нащадків <code>parent descendant</code>?</summary>
-          <div class="answer">
-            <p>Селектор нащадків застосовує стиль до елементів, які знаходяться всередині іншого елемента.</p>
-            <pre><code>div p { color: blue; }</code></pre>
-            <p>Всі <code>p</code> всередині <code>div</code> стануть синіми.</p>
-          </div>
-        </details>
+          <!-- 6 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>6. Як працює селектор нащадків <code>parent descendant</code>?</summary>
+            <div class="answer">
+              <p>Селектор нащадків застосовує стиль до елементів, які знаходяться всередині іншого елемента.</p>
+              <pre><code>div p { color: blue; }</code></pre>
+              <p>Всі <code>p</code> всередині <code>div</code> стануть синіми.</p>
+            </div>
+          </details>
 
-        <!-- 7 -->
-        <details class="faq">
-          <summary><span class="chev">▸</span>7. Що таке псевдокласи <code>:hover</code>, <code>:first-child</code> і як їх використовувати?</summary>
-          <div class="answer">
-            <p>Псевдокласи змінюють стиль елемента в певному стані.</p>
-            <ul>
-              <li><code>:hover</code> — коли курсор миші на елементі</li>
-              <li><code>:first-child</code> — перший елемент серед братів</li>
-              <li>
-                Приклад:
-                <pre><code>button:hover { background: green; }</code></pre>
-              </li>
-            </ul>
-          </div>
-        </details>
+          <!-- 7 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>7. Що таке псевдокласи <code>:hover</code>, <code>:first-child</code> і як їх використовувати?</summary>
+            <div class="answer">
+              <p>Псевдокласи змінюють стиль елемента в певному стані.</p>
+              <ul>
+                <li><code>:hover</code> — коли курсор миші на елементі</li>
+                <li><code>:first-child</code> — перший елемент серед братів</li>
+                <li>
+                  Приклад:
+                  <pre><code>button:hover { background: green; }</code></pre>
+                </li>
+              </ul>
+            </div>
+          </details>
 
-        <!-- 8 -->
-        <details class="faq">
-          <summary><span class="chev">▸</span>8. Як працюють групові селектори <code>h1, h2, h3 { ... }</code>?</summary>
-          <div class="answer">
-            <p>Груповий селектор застосовує один стиль до кількох елементів.</p>
-            <pre><code>h1, h2, h3 { margin: 0; }</code></pre>
-          </div>
-        </details>
-        <!-- 9 -->
-        <details class="faq">
-          <summary><span class="chev">▸</span>9. Що таке властивість кольору в CSS?</summary>
-          <p> <p>Властивість <code>color</code> визначає, який колір буде застосовано до тексту або елемента. Найчастіше використовується для тексту, але є й інші властивості для кольору фону, рамок тощо.</p>
-</p>
-<strong>HEX</strong> [шістнадцятковий код], <strong>RGB</strong> [Red Green Blue], <strong>HSL</strong> [(Hue, Saturation, Lightness)]?
+          <!-- 8 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>8. Як працюють групові селектори <code>h1, h2, h3 { ... }</code>?</summary>
+            <div class="answer">
+              <p>Груповий селектор застосовує один стиль до кількох елементів.</p>
+              <pre><code>h1, h2, h3 { margin: 0; }</code></pre>
+            </div>
+          </details>
+          <!-- 9 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span> 9. Що таке властивість кольору в CSS?</summary>
+            <div class="answer">
+              <p>
+                Властивість <code>color</code> визначає, який колір буде застосовано до тексту або елемента. Найчастіше використовується для тексту, але є й
+                інші властивості для кольору фону, рамок тощо.
+              </p>
 
-          <div class="answer">
-            <ul>
-              <li>Назви: <code>color: red;</code></li>
-              <li>HEX: <code>#FF0000</code></li>
-              <li>RGB: <code>rgb(255,0,0)</code></li>
-              <li>HSL: <code>hsl(0,100%,50%)</code></li>
-            </ul>
-          </div>
-        </details>
-        <!-- 10 -->
-        <details class="faq">
-          <summary>
-            <span class="chev">▸</span>10. Чим відрізняються відносні та абсолютні одиниці (<code>px</code>, <code>%</code>, <code>em</code>, <code>rem</code>,
-            <code>vw</code>, <code>vh</code>)?
-          </summary>
-          <div class="answer">
-            <ul>
-              <li><strong>px</strong> — фіксовані пікселі</li>
-              <li><strong>%</strong> — відсоток від батьківського елемента</li>
-              <li><strong>em</strong> — від розміру шрифту батька</li>
-              <li><strong>rem</strong> — від розміру шрифту кореня (html)</li>
-              <li><strong>vw / vh</strong> — від ширини / висоти viewport (1vw = 1% ширини)</li>
-            </ul>
-          </div>
-        </details>
-        <!-- 11 -->
-        <details class="faq">
-          <summary><span class="chev">▸</span>11. Що таке <code>inherit</code> і <code>initial</code> у CSS?</summary>
-          <div class="answer">
-            <ul>
-              <li><code>inherit</code> — успадковує значення від батьківського елемента</li>
-              <li><code>initial</code> — встановлює значення за замовчуванням для властивості</li>
-            </ul>
-          </div>
-        </details>
+              <p>Основні способи задання кольору:</p>
+              <ul>
+                <li>Назви: <code>color: red;</code></li>
+                <li>HEX (шістнадцятковий код): <code>color: #FF0000;</code></li>
+                <li>RGB (Red, Green, Blue): <code>color: rgb(255, 0, 0);</code></li>
+                <li>HSL (Hue, Saturation, Lightness): <code>color: hsl(0, 100%, 50%);</code></li>
+              </ul>
+            </div>
+          </details>
 
-        <!-- 12 -->
-        <details class="faq">
-          <summary><span class="chev">▸</span>12. Як працює пріоритет CSS (specificity)?</summary>
-          <div class="answer">
-            <p>CSS-селектори мають “вагу” (числовий показник):</p>
-            <p>
-              Inline (вбудований стиль) = 1000,<br />
-              ID-селектор = 100, <br />
-              Клас / псевдоклас / атрибут = 10,<br />
-              Тег / псевдоелемент = 1,<br />
-              Універсальний селектор = 0
-            </p>
-            <p>Браузер застосовує стиль з найвищою специфічністю.</p>
-            <p>Приклад:</p>
-            <pre><code>p { color: blue; }          /* вага = 1 */
+          <!-- 10 -->
+          <details class="faq">
+            <summary>
+              <span class="chev">▸</span>10. Чим відрізняються відносні та абсолютні одиниці (<code>px</code>, <code>%</code>, <code>em</code>,
+              <code>rem</code>, <code>vw</code>, <code>vh</code>)?
+            </summary>
+            <div class="answer">
+              <ul>
+                <li><strong>px</strong> — фіксовані пікселі</li>
+                <li><strong>%</strong> — відсоток від батьківського елемента</li>
+                <li><strong>em</strong> — від розміру шрифту батька</li>
+                <li><strong>rem</strong> — від розміру шрифту кореня (html)</li>
+                <li><strong>vw / vh</strong> — від ширини / висоти viewport (1vw = 1% ширини)</li>
+              </ul>
+            </div>
+          </details>
+          <!-- 11 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>11. Що таке <code>inherit</code> і <code>initial</code> у CSS?</summary>
+            <div class="answer">
+              <ul>
+                <li><code>inherit</code> — успадковує значення від батьківського елемента</li>
+                <li><code>initial</code> — встановлює значення за замовчуванням для властивості</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- 12 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>12. Як працює пріоритет CSS (specificity)?</summary>
+            <div class="answer">
+              <p>CSS-селектори мають “вагу” (числовий показник):</p>
+              <p>
+                Inline (вбудований стиль) = 1000,<br />
+                ID-селектор = 100, <br />
+                Клас / псевдоклас / атрибут = 10,<br />
+                Тег / псевдоелемент = 1,<br />
+                Універсальний селектор = 0
+              </p>
+              <p>Браузер застосовує стиль з найвищою специфічністю.</p>
+              <p>Приклад:</p>
+              <pre><code>p { color: blue; }          /* вага = 1 */
 .button { color: green; }   /* вага = 10 */
 #header { color: red; }     /* вага = 100 */
 <hr>
 Якщо &lt;p id="header" class="button">Текст&lt;/p&gt;, то текст буде червоним, бо ID-селектор має більшу специфічність за клас і тег.</code></pre>
-          </div>
-        </details>
+            </div>
+          </details>
 
-        <!-- 13 -->
-        <details class="faq">
-          <summary><span class="chev">▸</span>13. Що таке коментарі в CSS і як їх правильно писати?</summary>
-          <div class="answer">
-            <p>Коментарі допомагають пояснювати код і не виконуються браузером.</p>
-            <pre><code>/* Це коментар */</code></pre>
-          </div>
-        </details>
-        <!-- 14 -->
-        <details class="faq">
-          <summary><span class="chev">▸</span>14 Як працює правило <code>!important</code> і коли його варто використовувати?</summary>
-          <div class="answer">
-            <p><code>!important</code> примусово підвищує пріоритет стилю.</p>
-            <pre><code>p { color: red !important; }</code></pre>
-            <p>Використовувати рідко, лише у крайніх випадках, бо порушує логіку cascade.</p>
-          </div>
-        </details>
-        <!-- 15 -->
-        <details class="faq">
-  <summary><span class="chev">▸</span>15. Як задавати фон в CSS</summary>
-  <div class="answer">
-    <p>Властивість <code>background</code> дозволяє задавати колір, зображення та інші параметри одночасно:</p>
-   
-    <p>Деталі параметрів:</p>
-    <p>
-      <strong>lightblue</strong> — колір фону;  
-      <strong>url('image.jpg')</strong> — зображення;  
-      <strong>no-repeat</strong> — заборона повторення;  
-      <strong>center</strong> — позиція;  
-      <strong>cover</strong> — масштабування на весь елемент
-    </p>
-    <p>І окремі властивості фонів:</p>
-    <p>
-      <code>background-repeat</code>: repeat, no-repeat, repeat-x, repeat-y; <br>
-      <code>background-position</code>: center, top right тощо; <br>
-      <code>background-size</code>: cover, contain, px/%; <br>
-      <code>background-attachment</code>: scroll, fixed
-    </p>
-		 <pre><code>body {
+          <!-- 13 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>13. Що таке коментарі в CSS і як їх правильно писати?</summary>
+            <div class="answer">
+              <p>Коментарі допомагають пояснювати код і не виконуються браузером.</p>
+              <pre><code>/* Це коментар */</code></pre>
+            </div>
+          </details>
+          <!-- 14 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>14 Як працює правило <code>!important</code> і коли його варто використовувати?</summary>
+            <div class="answer">
+              <p><code>!important</code> примусово підвищує пріоритет стилю.</p>
+              <pre><code>p { color: red !important; }</code></pre>
+              <p>Використовувати рідко, лише у крайніх випадках, бо порушує логіку cascade.</p>
+            </div>
+          </details>
+          <!-- 15 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>15. Як задавати фон в CSS</summary>
+            <div class="answer">
+              <p>Властивість <code>background</code> дозволяє задавати колір, зображення та інші параметри одночасно:</p>
+
+              <p>Деталі параметрів:</p>
+              <p>
+                <strong>lightblue</strong> — колір фону; <strong>url('image.jpg')</strong> — зображення; <strong>no-repeat</strong> — заборона повторення;
+                <strong>center</strong> — позиція; <strong>cover</strong> — масштабування на весь елемент
+              </p>
+              <p>І окремі властивості фонів:</p>
+              <p>
+                <code>background-repeat</code>: repeat, no-repeat, repeat-x, repeat-y; <br />
+                <code>background-position</code>: center, top right тощо; <br />
+                <code>background-size</code>: cover, contain, px/%; <br />
+                <code>background-attachment</code>: scroll, fixed
+              </p>
+              <pre><code>body {
   background: lightblue url('image.jpg') no-repeat center/cover;
 }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-        <!-- 16 -->
-        <details class="faq">
-          <summary><span class="chev">▸</span>16. Як працює властивість <code>opacity</code>?</summary>
-          <div class="answer">
-            <p>Визначає прозорість елемента від 0 до 1.</p>
-            <pre><code>div { opacity: 0.5; }</code></pre>
-            <p>0 — повністю прозорий, 1 — повністю непрозорий.</p>
-          </div>
-        </details>
-        <!-- 17 -->
-        <details class="faq">
-          <summary><span class="chev">▸</span>17. Що таке box model і які її складові?</summary>
-          <div class="answer">
-            <p>Box model описує, як елемент займає місце на сторінці:</p>
-            <ul>
-              <li><strong>content</strong> — вміст</li>
-              <li><strong>padding</strong> — внутрішній відступ — простір між контентом і рамкою</li>
-              <li><strong>border</strong> — рамка</li>
-              <li><strong>margin</strong> — зовнішній відступ — простір навколо елемента, між іншими елементами</li>
-            </ul>
-          </div>
-        </details>
-        <!-- 18 -->
-        <details class="faq">
-  <summary><span class="chev">▸</span>18. Що таке CSS reset і normalize.css?</summary>
-  <div class="answer">
-    <ul>
-      <li><b>Reset</b> — обнуляє всі стилі браузера (margin, padding тощо).</li>
-      <li><b>Normalize.css</b> — робить стилі більш узгодженими між браузерами, але не повністю обнуляє.</li>
-    </ul>
-  </div>
-</details>
-        <!-- 19 -->
-        <details class="faq">
-          <summary><span class="chev">▸</span>19. Чим відрізняється <code>inline</code>, <code>block</code> та <code>inline-block</code> елементи?</summary>
-          <div class="answer">
-            <ul>
-              <li><strong>inline</strong> — не переносить рядок, займає лише ширину контенту</li>
-              <li><strong>block</strong> — займає всю ширину, починається з нового рядка</li>
-              <li><strong>inline-block</strong> — як inline, але можна задавати ширину та висоту</li>
-            </ul>
-          </div>
-        </details>
-        <!-- 20 -->
-        <details class="faq">
-          <summary><span class="chev">▸</span>20. Що таке CSS reset і для чого він потрібен?</summary>
-          <div class="answer">
-            <p>CSS reset прибирає стандартні стилі браузера, щоб усі елементи виглядали однаково на різних пристроях.</p>
-            <pre><code>* { margin: 0; padding: 0; box-sizing: border-box; }</code></pre>
-          </div>
-        </details>
+          <!-- 16 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>16. Як працює властивість <code>opacity</code>?</summary>
+            <div class="answer">
+              <p>Визначає прозорість елемента від 0 до 1.</p>
+              <pre><code>div { opacity: 0.5; }</code></pre>
+              <p>0 — повністю прозорий, 1 — повністю непрозорий.</p>
+            </div>
+          </details>
+          <!-- 17 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>17. Що таке box model і які її складові?</summary>
+            <div class="answer">
+              <p>Box model описує, як елемент займає місце на сторінці:</p>
+              <ul>
+                <li><strong>content</strong> — вміст</li>
+                <li><strong>padding</strong> — внутрішній відступ — простір між контентом і рамкою</li>
+                <li><strong>border</strong> — рамка</li>
+                <li><strong>margin</strong> — зовнішній відступ — простір навколо елемента, між іншими елементами</li>
+              </ul>
+            </div>
+          </details>
+          <!-- 18 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>18. Що таке CSS reset і normalize.css?</summary>
+            <div class="answer">
+              <ul>
+                <li><b>Reset</b> — обнуляє всі стилі браузера (margin, padding тощо).</li>
+                <li><b>Normalize.css</b> — робить стилі більш узгодженими між браузерами, але не повністю обнуляє.</li>
+              </ul>
+            </div>
+          </details>
+          <!-- 19 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>19. Чим відрізняється <code>inline</code>, <code>block</code> та <code>inline-block</code> елементи?</summary>
+            <div class="answer">
+              <ul>
+                <li><strong>inline</strong> — не переносить рядок, займає лише ширину контенту</li>
+                <li><strong>block</strong> — займає всю ширину, починається з нового рядка</li>
+                <li><strong>inline-block</strong> — як inline, але можна задавати ширину та висоту</li>
+              </ul>
+            </div>
+          </details>
+          <!-- 20 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>20. Що таке CSS reset і для чого він потрібен?</summary>
+            <div class="answer">
+              <p>CSS reset прибирає стандартні стилі браузера, щоб усі елементи виглядали однаково на різних пристроях.</p>
+              <pre><code>* { margin: 0; padding: 0; box-sizing: border-box; }</code></pre>
+            </div>
+          </details>
 
-				<!-- 21 -->
-				 <details class="faq">
-  <summary><span class="chev">▸</span>21. Як змінити шрифт тексту за допомогою CSS?</summary>
-  <div class="answer">
-    <p>Властивість <code>font-family</code> дозволяє вказати бажаний шрифт. Можна задавати кілька шрифтів через кому: якщо перший не доступний, браузер використає наступний.</p>
-    <pre><code>p { font-family: "Arial", "Helvetica", sans-serif; }</code></pre>
-    <p>Варто вказувати запасний "generic" шрифт: serif, sans-serif, monospace, cursive, fantasy.</p>
-  </div>
-</details>
-<!-- 22 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>22. Що таке властивість <code>font-size</code> і як задавати розмір шрифту?</summary>
-  <div class="answer">
-    <p>Задає розмір тексту. Можна використовувати абсолютні (<code>px</code>) і відносні одиниці (<code>em, rem, %, vw</code>):</p>
-    <pre><code>p { font-size: 16px; }
+          <!-- 21 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>21. Як змінити шрифт тексту за допомогою CSS?</summary>
+            <div class="answer">
+              <p>
+                Властивість <code>font-family</code> дозволяє вказати бажаний шрифт. Можна задавати кілька шрифтів через кому: якщо перший не доступний, браузер
+                використає наступний.
+              </p>
+              <pre><code>p { font-family: "Arial", "Helvetica", sans-serif; }</code></pre>
+              <p>Варто вказувати запасний "generic" шрифт: serif, sans-serif, monospace, cursive, fantasy.</p>
+            </div>
+          </details>
+          <!-- 22 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>22. Що таке властивість <code>font-size</code> і як задавати розмір шрифту?</summary>
+            <div class="answer">
+              <p>Задає розмір тексту. Можна використовувати абсолютні (<code>px</code>) і відносні одиниці (<code>em, rem, %, vw</code>):</p>
+              <pre><code>p { font-size: 16px; }
 h1 { font-size: 2em; } /* у 2 рази більше за батьківський */</code></pre>
-    <p>Для адаптивності краще використовувати <code>em</code>, <code>rem</code>, або <code>clamp()</code>.</p>
-  </div>
-</details>
-<!-- 23 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>23. Як працює властивість <code>font-weight</code> і які є значення?</summary>
-  <div class="answer">
-    <p>Відповідає за товщину шрифту. Є ключові слова та числові значення (100–900):</p>
-    <pre><code>p { font-weight: normal; }  /* 400 */
+              <p>Для адаптивності краще використовувати <code>em</code>, <code>rem</code>, або <code>clamp()</code>.</p>
+            </div>
+          </details>
+          <!-- 23 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>23. Як працює властивість <code>font-weight</code> і які є значення?</summary>
+            <div class="answer">
+              <p>Відповідає за товщину шрифту. Є ключові слова та числові значення (100–900):</p>
+              <pre><code>p { font-weight: normal; }  /* 400 */
 p { font-weight: bold; }    /* 700 */
 p { font-weight: 300; }     /* тонший */</code></pre>
-    <p>Не всі шрифти підтримують усі значення — частіше працюють <code>normal</code> та <code>bold</code>.</p>
-  </div>
-</details>
-<!-- 24 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>24. Що таке <code>font-style</code> і як робити курсив чи нормальний текст?</summary>
-  <div class="answer">
-    <p>Визначає стиль написання:</p>
-    <pre><code>p { font-style: normal; }
+              <p>Не всі шрифти підтримують усі значення — частіше працюють <code>normal</code> та <code>bold</code>.</p>
+            </div>
+          </details>
+          <!-- 24 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>24. Що таке <code>font-style</code> і як робити курсив чи нормальний текст?</summary>
+            <div class="answer">
+              <p>Визначає стиль написання:</p>
+              <pre><code>p { font-style: normal; }
 p { font-style: italic; }   /* курсив */
 p { font-style: oblique; }  /* нахилений текст */</code></pre>
-    <p><code>italic</code> — справжній курсив, <code>oblique</code> — лише нахил.</p>
-  </div>
-</details>
-<!-- 25 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>25. Як працює <code>line-height</code> і для чого він потрібен?</summary>
-  <div class="answer">
-    <p>Встановлює висоту рядка тексту, впливає на відстань між рядками.</p>
-    <pre><code>p { line-height: 1.5; } /* 150% від розміру шрифту */</code></pre>
-    <p>Може задаватися в одиницях (<code>px</code>) або як множник (<code>1.5</code> = 150%).</p>
-  </div>
-</details>
+              <p><code>italic</code> — справжній курсив, <code>oblique</code> — лише нахил.</p>
+            </div>
+          </details>
+          <!-- 25 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>25. Як працює <code>line-height</code> і для чого він потрібен?</summary>
+            <div class="answer">
+              <p>Встановлює висоту рядка тексту, впливає на відстань між рядками.</p>
+              <pre><code>p { line-height: 1.5; } /* 150% від розміру шрифту */</code></pre>
+              <p>Може задаватися в одиницях (<code>px</code>) або як множник (<code>1.5</code> = 150%).</p>
+            </div>
+          </details>
 
-<!-- 26 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>26. Що таке <code>letter-spacing</code> і як змінювати відстань між буквами?</summary>
-  <div class="answer">
-    <p>Регулює проміжки між символами:</p>
-    <pre><code>p { letter-spacing: 2px; }
+          <!-- 26 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>26. Що таке <code>letter-spacing</code> і як змінювати відстань між буквами?</summary>
+            <div class="answer">
+              <p>Регулює проміжки між символами:</p>
+              <pre><code>p { letter-spacing: 2px; }
 p { letter-spacing: -1px; } /* тісніше */</code></pre>
-    <p>Може бути корисно для логотипів чи стилізації заголовків.</p>
-  </div>
-</details>
-<!-- 27 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>27. Як використовувати <code>text-transform</code> для зміни регістру?</summary>
-  <div class="answer">
-    <p>Перетворює регістр тексту без зміни HTML:</p>
-    <pre><code>p { text-transform: uppercase; }  /* ВЕЛИКІ */
+              <p>Може бути корисно для логотипів чи стилізації заголовків.</p>
+            </div>
+          </details>
+          <!-- 27 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>27. Як використовувати <code>text-transform</code> для зміни регістру?</summary>
+            <div class="answer">
+              <p>Перетворює регістр тексту без зміни HTML:</p>
+              <pre><code>p { text-transform: uppercase; }  /* ВЕЛИКІ */
 p { text-transform: lowercase; }  /* маленькі */
 p { text-transform: capitalize; } /* Перші Літери Великі */</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 28 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>28. Що таке <code>text-decoration</code>?</summary>
-  <div class="answer">
-    <p>Керує декоративними лініями:</p>
-    <pre><code>a { text-decoration: underline; }
+          <!-- 28 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>28. Що таке <code>text-decoration</code>?</summary>
+            <div class="answer">
+              <p>Керує декоративними лініями:</p>
+              <pre><code>a { text-decoration: underline; }
 del { text-decoration: line-through; }
 h1 { text-decoration: overline; }</code></pre>
-    <p>Додатково можна змінювати стиль і колір: <code>text-decoration-style</code>, <code>text-decoration-color</code>.</p>
-  </div>
-</details>
+              <p>Додатково можна змінювати стиль і колір: <code>text-decoration-style</code>, <code>text-decoration-color</code>.</p>
+            </div>
+          </details>
 
-<!-- 29 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>29. Як вирівнювати текст за допомогою <code>text-align</code>?</summary>
-  <div class="answer">
-    <p>Вирівнює текст по горизонталі:</p>
-    <pre><code>p { text-align: left; }
+          <!-- 29 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>29. Як вирівнювати текст за допомогою <code>text-align</code>?</summary>
+            <div class="answer">
+              <p>Вирівнює текст по горизонталі:</p>
+              <pre><code>p { text-align: left; }
 p { text-align: center; }
 p { text-align: right; }
 p { text-align: justify; } /* по ширині */</code></pre>
-    <p>Застосовується до блочного контейнера, в якому є текст.</p>
-  </div>
-</details>
+              <p>Застосовується до блочного контейнера, в якому є текст.</p>
+            </div>
+          </details>
 
-<!-- 30 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>30. Як працює <code>vertical-align</code> і коли він застосовується?</summary>
-  <div class="answer">
-    <p>Вирівнює елементи по вертикалі в рядковому контексті (наприклад, картинка в тексті):</p>
-    <pre><code>img { vertical-align: middle; }</code></pre>
-    <p>Не працює для блочних елементів — для цього використовують Flexbox або Grid.</p>
-  </div>
-</details>
+          <!-- 30 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>30. Як працює <code>vertical-align</code> і коли він застосовується?</summary>
+            <div class="answer">
+              <p>Вирівнює елементи по вертикалі в рядковому контексті (наприклад, картинка в тексті):</p>
+              <pre><code>img { vertical-align: middle; }</code></pre>
+              <p>Не працює для блочних елементів — для цього використовують Flexbox або Grid.</p>
+            </div>
+          </details>
 
-<!-- 31 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>31. Що таке блокова модель <code>box model</code> і як вона впливає на елементи?</summary>
-  <div class="answer">
-    <p>Кожен елемент у CSS складається з 4 частин:</p>
-    <ul>
-      <li><b>content</b> – сам вміст (текст, зображення)</li>
-      <li><b>padding</b> – внутрішні відступи</li>
-      <li><b>border</b> – рамка</li>
-      <li><b>margin</b> – зовнішні відступи</li>
-    </ul>
-    <pre><code>[margin] → [border] → [padding] → [content]</code></pre>
-  </div>
-</details>
-<!-- 32 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>32. Як працює <code>width</code> і <code>height</code> для блоків?</summary>
-  <div class="answer">
-    <p>Визначають ширину й висоту елемента:</p>
-    <pre><code>div { width: 200px; height: 100px; }</code></pre>
-    <p>Значення можуть бути у <code>px</code>, <code>%</code>, <code>vw/vh</code>, <code>em/rem</code>.</p>
-  </div>
-</details>
+          <!-- 31 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>31. Що таке блокова модель <code>box model</code> і як вона впливає на елементи?</summary>
+            <div class="answer">
+              <p>Кожен елемент у CSS складається з 4 частин:</p>
+              <ul>
+                <li><b>content</b> – сам вміст (текст, зображення)</li>
+                <li><b>padding</b> – внутрішні відступи</li>
+                <li><b>border</b> – рамка</li>
+                <li><b>margin</b> – зовнішні відступи</li>
+              </ul>
+              <pre><code>[margin] → [border] → [padding] → [content]</code></pre>
+            </div>
+          </details>
+          <!-- 32 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>32. Як працює <code>width</code> і <code>height</code> для блоків?</summary>
+            <div class="answer">
+              <p>Визначають ширину й висоту елемента:</p>
+              <pre><code>div { width: 200px; height: 100px; }</code></pre>
+              <p>Значення можуть бути у <code>px</code>, <code>%</code>, <code>vw/vh</code>, <code>em/rem</code>.</p>
+            </div>
+          </details>
 
-<!-- 33 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>33. Що таке <code>min-width</code>, <code>max-width</code>, <code>min-height</code>, <code>max-height</code>?</summary>
-  <div class="answer">
-    <p>Обмежують розміри елементів, щоб вони не були занадто великими чи маленькими:</p>
-    <pre><code>div { min-width: 200px; max-width: 800px; }</code></pre>
-    <p>Корисно для адаптивної верстки.</p>
-  </div>
-</details>
+          <!-- 33 -->
+          <details class="faq">
+            <summary>
+              <span class="chev">▸</span>33. Що таке <code>min-width</code>, <code>max-width</code>, <code>min-height</code>, <code>max-height</code>?
+            </summary>
+            <div class="answer">
+              <p>Обмежують розміри елементів, щоб вони не були занадто великими чи маленькими:</p>
+              <pre><code>div { min-width: 200px; max-width: 800px; }</code></pre>
+              <p>Корисно для адаптивної верстки.</p>
+            </div>
+          </details>
 
-<!-- 34 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>34. Як працює <code>overflow</code> (visible, hidden, scroll, auto)?</summary>
-  <div class="answer">
-    <p>Вказує, як відображати вміст, який виходить за межі блока:</p>
-    <pre><code>div { overflow: visible; } /* за замовчуванням */
+          <!-- 34 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>34. Як працює <code>overflow</code> (visible, hidden, scroll, auto)?</summary>
+            <div class="answer">
+              <p>Вказує, як відображати вміст, який виходить за межі блока:</p>
+              <pre><code>div { overflow: visible; } /* за замовчуванням */
 div { overflow: hidden; }  /* обрізає */
 div { overflow: scroll; }  /* завжди показує скрол */
 div { overflow: auto; }    /* скрол при потребі */</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 35 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>35. Що таке <code>display</code> і основні значення?</summary>
-  <div class="answer">
-    <p>Визначає, як елемент поводиться у потоці:</p>
-    <pre><code>display: block;        /* блочний елемент */
+          <!-- 35 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>35. Що таке <code>display</code> і основні значення?</summary>
+            <div class="answer">
+              <p>Визначає, як елемент поводиться у потоці:</p>
+              <pre><code>display: block;        /* блочний елемент */
 display: inline;       /* у рядку */
 display: inline-block; /* як inline, але з шириною/висотою */
 display: none;         /* приховує */</code></pre>
-    <p>Існують й інші значення: <code>flex</code>, <code>grid</code>, <code>inline-flex</code>.</p>
-  </div>
-</details>
+              <p>Існують й інші значення: <code>flex</code>, <code>grid</code>, <code>inline-flex</code>.</p>
+            </div>
+          </details>
 
-<!-- 36 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>36. Як працює <code>position</code> (static, relative, absolute, fixed, sticky)?</summary>
-  <div class="answer">
-    <p>Визначає спосіб позиціонування елемента:</p>
-    <ul>
-      <li><b>static</b> – стандартне розташування</li>
-      <li><b>relative</b> – зміщення від звичайної позиції</li>
-      <li><b>absolute</b> – відносно найближчого "positioned" предка</li>
-      <li><b>fixed</b> – відносно вікна браузера</li>
-      <li><b>sticky</b> – "прилипає" при скролі</li>
-    </ul>
-  </div>
-</details>
+          <!-- 36 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>36. Як працює <code>position</code> (static, relative, absolute, fixed, sticky)?</summary>
+            <div class="answer">
+              <p>Визначає спосіб позиціонування елемента:</p>
+              <ul>
+                <li><b>static</b> – стандартне розташування</li>
+                <li><b>relative</b> – зміщення від звичайної позиції</li>
+                <li><b>absolute</b> – відносно найближчого "positioned" предка</li>
+                <li><b>fixed</b> – відносно вікна браузера</li>
+                <li><b>sticky</b> – "прилипає" при скролі</li>
+              </ul>
+            </div>
+          </details>
 
-<!-- 37 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>37. Що таке <code>z-index</code> і як змінювати порядок шарів?</summary>
-  <div class="answer">
-    <p>Керує накладанням елементів по осі Z (вище/нижче):</p>
-    <pre><code>.box1 { position: absolute; z-index: 1; }
+          <!-- 37 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>37. Що таке <code>z-index</code> і як змінювати порядок шарів?</summary>
+            <div class="answer">
+              <p>Керує накладанням елементів по осі Z (вище/нижче):</p>
+              <pre><code>.box1 { position: absolute; z-index: 1; }
 .box2 { position: absolute; z-index: 10; }</code></pre>
-    <p>Більше значення — вище в стеку. Працює тільки для позиціонованих елементів.</p>
-  </div>
-</details>
+              <p>Більше значення — вище в стеку. Працює тільки для позиціонованих елементів.</p>
+            </div>
+          </details>
 
-<!-- 38 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>38. Як працюють <code>float</code> та <code>clear</code> у CSS?</summary>
-  <div class="answer">
-    <p><strong>float</strong> використовується, щоб вирівняти елемент ліворуч або праворуч, дозволяючи іншим елементам обтікати його.</p>
-    <pre><code>img { float: left; }  /* картинка зліва, текст обтікає справа */</code></pre>
+          <!-- 38 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>38. Як працюють <code>float</code> та <code>clear</code> у CSS?</summary>
+            <div class="answer">
+              <p><strong>float</strong> використовується, щоб вирівняти елемент ліворуч або праворуч, дозволяючи іншим елементам обтікати його.</p>
+              <pre><code>img { float: left; }  /* картинка зліва, текст обтікає справа */</code></pre>
 
-    <p><strong>clear</strong> «очищає» обтікання і переносить елемент нижче елементів з <code>float</code>.</p>
-    <pre><code>div { clear: both; }  /* не дозволяє стати поряд з елементами, що мають float */</code></pre>
+              <p><strong>clear</strong> «очищає» обтікання і переносить елемент нижче елементів з <code>float</code>.</p>
+              <pre><code>div { clear: both; }  /* не дозволяє стати поряд з елементами, що мають float */</code></pre>
 
-    <ul>
-      <li><code>clear: left;</code> — прибирає обтікання зліва</li>
-      <li><code>clear: right;</code> — справа</li>
-      <li><code>clear: both;</code> — з обох боків</li>
-    </ul>
+              <ul>
+                <li><code>clear: left;</code> — прибирає обтікання зліва</li>
+                <li><code>clear: right;</code> — справа</li>
+                <li><code>clear: both;</code> — з обох боків</li>
+              </ul>
 
-    <p>Сьогодні <code>float</code> рідко використовується для макетів — його замінили <b>Flexbox</b> та <b>Grid</b>. Але він досі корисний для картинок у тексті.</p>
-  </div>
-</details>
+              <p>
+                Сьогодні <code>float</code> рідко використовується для макетів — його замінили <b>Flexbox</b> та <b>Grid</b>. Але він досі корисний для картинок
+                у тексті.
+              </p>
+            </div>
+          </details>
 
-<!-- 39 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>39. Як працює <code>box-sizing</code> і в чому різниця між <code>content-box</code> та <code>border-box</code>?</summary>
-  <div class="answer">
-    <p>Визначає, як рахувати ширину та висоту елемента:</p>
-    <ul>
-      <li><b>content-box</b> – width/height враховує лише контент</li>
-      <li><b>border-box</b> – width/height включає padding + border</li>
-    </ul>
-    <pre><code>* { box-sizing: border-box; }</code></pre>
-    <p>Зручніше для верстки — елементи не "вилазять" за розміри.</p>
-  </div>
-</details>
+          <!-- 39 -->
+          <details class="faq">
+            <summary>
+              <span class="chev">▸</span>39. Як працює <code>box-sizing</code> і в чому різниця між <code>content-box</code> та <code>border-box</code>?
+            </summary>
+            <div class="answer">
+              <p>Визначає, як рахувати ширину та висоту елемента:</p>
+              <ul>
+                <li><b>content-box</b> – width/height враховує лише контент</li>
+                <li><b>border-box</b> – width/height включає padding + border</li>
+              </ul>
+              <pre><code>* { box-sizing: border-box; }</code></pre>
+              <p>Зручніше для верстки — елементи не "вилазять" за розміри.</p>
+            </div>
+          </details>
 
-<!-- 40 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>40. Як відцентрувати блоковий елемент у CSS?</summary>
-  <div class="answer">
-    <p>Є кілька способів центрувати елемент по горизонталі та/або вертикалі:</p>
-    <ul>
-      <li>
-        <b>По горизонталі (margin auto):</b>
-        <pre><code>.box {
+          <!-- 40 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>40. Як відцентрувати блоковий елемент у CSS?</summary>
+            <div class="answer">
+              <p>Є кілька способів центрувати елемент по горизонталі та/або вертикалі:</p>
+              <ul>
+                <li>
+                  <b>По горизонталі (margin auto):</b>
+                  <pre><code>.box {
   width: 200px;
   margin: 0 auto;
 }</code></pre>
-      </li>
-      <li>
-        <b>Flexbox (по центру по обидвох осях):</b>
-        <pre><code>.parent {
+                </li>
+                <li>
+                  <b>Flexbox (по центру по обидвох осях):</b>
+                  <pre><code>.parent {
   display: flex;
   justify-content: center; /* горизонтально */
   align-items: center;     /* вертикально */
 }</code></pre>
-      </li>
-      <li>
-        <b>Grid:</b>
-        <pre><code>.parent {
+                </li>
+                <li>
+                  <b>Grid:</b>
+                  <pre><code>.parent {
   display: grid;
   place-items: center;
 }</code></pre>
-      </li>
-      <li>
-        <b>Абсолютне позиціювання:</b>
-        <pre><code>.box {
+                </li>
+                <li>
+                  <b>Абсолютне позиціювання:</b>
+                  <pre><code>.box {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }</code></pre>
-      </li>
-    </ul>
-    <p><i>Рекомендовано використовувати Flexbox або Grid для сучасних проєктів.</i></p>
-  </div>
-</details>
+                </li>
+              </ul>
+              <p><i>Рекомендовано використовувати Flexbox або Grid для сучасних проєктів.</i></p>
+            </div>
+          </details>
 
- <!-- 41 -->
-	<details class="faq">
-  <summary><span class="chev">▸</span>41. Що таке Flexbox у CSS?</summary>
-  <div class="answer">
-    <p><b>Flexbox</b> (Flexible Box Layout) — це модель розташування елементів, яка спрощує створення адаптивних макетів.</p>
-    <pre><code>container {
+          <!-- 41 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>41. Що таке Flexbox у CSS?</summary>
+            <div class="answer">
+              <p><b>Flexbox</b> (Flexible Box Layout) — це модель розташування елементів, яка спрощує створення адаптивних макетів.</p>
+              <pre><code>container {
   display: flex;
 }</code></pre>
-    <p>Основні можливості: вирівнювання по осях, рівномірний розподіл простору, адаптивні блоки.</p>
-  </div>
-</details>
+              <p>Основні можливості: вирівнювання по осях, рівномірний розподіл простору, адаптивні блоки.</p>
+            </div>
+          </details>
 
-<!-- 42 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>42. Як працює <code>flex-direction</code>?</summary>
-  <div class="answer">
-    <p>Задає напрямок основної осі:</p>
-    <pre><code>flex-direction: row;        /* за замовчуванням, зліва направо */
+          <!-- 42 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>42. Як працює <code>flex-direction</code>?</summary>
+            <div class="answer">
+              <p>Задає напрямок основної осі:</p>
+              <pre><code>flex-direction: row;        /* за замовчуванням, зліва направо */
 flex-direction: row-reverse;
 flex-direction: column;     /* зверху вниз */
 flex-direction: column-reverse;</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 43 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>43. Що робить властивість <code>justify-content</code>?</summary>
-  <div class="answer">
-    <p>Вирівнює елементи по головній осі (горизонтальній або вертикальній залежно від <code>flex-direction</code>):</p>
-    <pre><code>justify-content: flex-start;
+          <!-- 43 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>43. Що робить властивість <code>justify-content</code>?</summary>
+            <div class="answer">
+              <p>Вирівнює елементи по головній осі (горизонтальній або вертикальній залежно від <code>flex-direction</code>):</p>
+              <pre><code>justify-content: flex-start;
 justify-content: flex-end;
 justify-content: center;
 justify-content: space-between;
 justify-content: space-around;
 justify-content: space-evenly;</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 44 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>44. Що робить властивість <code>align-items</code>?</summary>
-  <div class="answer">
-    <p>Вирівнює елементи по <b>перпендикулярній осі</b> (для <code>row</code> це вертикаль):</p>
-    <pre><code>align-items: stretch;   /* за замовчуванням */
+          <!-- 44 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>44. Що робить властивість <code>align-items</code>?</summary>
+            <div class="answer">
+              <p>Вирівнює елементи по <b>перпендикулярній осі</b> (для <code>row</code> це вертикаль):</p>
+              <pre><code>align-items: stretch;   /* за замовчуванням */
 align-items: flex-start;
 align-items: flex-end;
 align-items: center;
 align-items: baseline;</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 45 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>45. Як працює <code>flex-wrap</code>?</summary>
-  <div class="answer">
-    <p>Дозволяє елементам переноситися на новий рядок:</p>
-    <pre><code>flex-wrap: nowrap;   /* за замовчуванням */
+          <!-- 45 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>45. Як працює <code>flex-wrap</code>?</summary>
+            <div class="answer">
+              <p>Дозволяє елементам переноситися на новий рядок:</p>
+              <pre><code>flex-wrap: nowrap;   /* за замовчуванням */
 flex-wrap: wrap;     /* дозволяє перенос */
 flex-wrap: wrap-reverse;</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 46 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>46. Що таке <code>align-content</code> у Flexbox?</summary>
-  <div class="answer">
-    <p>Керує простором між рядками, коли є кілька flex-рядків (при <code>flex-wrap: wrap</code>):</p>
-    <pre><code>align-content: stretch;
+          <!-- 46 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>46. Що таке <code>align-content</code> у Flexbox?</summary>
+            <div class="answer">
+              <p>Керує простором між рядками, коли є кілька flex-рядків (при <code>flex-wrap: wrap</code>):</p>
+              <pre><code>align-content: stretch;
 align-content: flex-start;
 align-content: flex-end;
 align-content: center;
 align-content: space-between;
 align-content: space-around;</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 47 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>47. Як працюють <code>order</code> і <code>flex</code> для елементів?</summary>
-  <div class="answer">
-    <p><b>order</b> змінює порядок елемента:</p>
-    <pre><code>.item { order: 2; }</code></pre>
-    <p><b>flex</b> — коротка форма для <code>flex-grow</code>, <code>flex-shrink</code>, <code>flex-basis</code>:</p>
-    <pre><code>.item { flex: 1 1 200px; }</code></pre>
-  </div>
-</details>
+          <!-- 47 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>47. Як працюють <code>order</code> і <code>flex</code> для елементів?</summary>
+            <div class="answer">
+              <p><b>order</b> змінює порядок елемента:</p>
+              <pre><code>.item { order: 2; }</code></pre>
+              <p><b>flex</b> — коротка форма для <code>flex-grow</code>, <code>flex-shrink</code>, <code>flex-basis</code>:</p>
+              <pre><code>.item { flex: 1 1 200px; }</code></pre>
+            </div>
+          </details>
 
-<!-- 48 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>48. Що таке CSS Grid?</summary>
-  <div class="answer">
-    <p><b>Grid</b> — це двовимірна система верстки (рядки + колонки).</p>
-    <pre><code>container {
+          <!-- 48 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>48. Що таке CSS Grid?</summary>
+            <div class="answer">
+              <p><b>Grid</b> — це двовимірна система верстки (рядки + колонки).</p>
+              <pre><code>container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
 }</code></pre>
-    <p>Grid дає більше контролю над розміщенням, ніж Flexbox.</p>
-  </div>
-</details>
+              <p>Grid дає більше контролю над розміщенням, ніж Flexbox.</p>
+            </div>
+          </details>
 
-<!-- 49 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>49. Як працюють <code>grid-template-columns</code> і <code>grid-template-rows</code>?</summary>
-  <div class="answer">
-    <p>Визначають кількість і розмір колонок та рядків:</p>
-    <pre><code>grid-template-columns: 200px 1fr 2fr;
+          <!-- 49 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>49. Як працюють <code>grid-template-columns</code> і <code>grid-template-rows</code>?</summary>
+            <div class="answer">
+              <p>Визначають кількість і розмір колонок та рядків:</p>
+              <pre><code>grid-template-columns: 200px 1fr 2fr;
 grid-template-rows: 100px auto;</code></pre>
-    <p>Можна використовувати <code>repeat()</code>, <code>minmax()</code>, <code>fr</code>.</p>
-  </div>
-</details>
+              <p>Можна використовувати <code>repeat()</code>, <code>minmax()</code>, <code>fr</code>.</p>
+            </div>
+          </details>
 
-<!-- 50 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>50. Що таке <code>gap</code> у Grid та Flexbox?</summary>
-  <div class="answer">
-    <p>Задає відстань між елементами без використання <code>margin</code>:</p>
-    <pre><code>grid-gap: 20px;
+          <!-- 50 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>50. Що таке <code>gap</code> у Grid та Flexbox?</summary>
+            <div class="answer">
+              <p>Задає відстань між елементами без використання <code>margin</code>:</p>
+              <pre><code>grid-gap: 20px;
 gap: 10px 30px; /* row-gap + column-gap */</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 51 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>51. Як вирівнювати елементи в Grid <code>justify-items</code>, <code>align-items</code>?</summary>
-  <div class="answer">
-    <p>Grid має властивості для вирівнювання в кожній комірці:</p>
-    <pre><code>justify-items: start | center | end | stretch;
+          <!-- 51 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>51. Як вирівнювати елементи в Grid <code>justify-items</code>, <code>align-items</code>?</summary>
+            <div class="answer">
+              <p>Grid має властивості для вирівнювання в кожній комірці:</p>
+              <pre><code>justify-items: start | center | end | stretch;
 align-items: start | center | end | stretch;</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 52 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>52. Як вирівнювати весь Grid <code>justify-content</code>, <code>align-content</code>?</summary>
-  <div class="answer">
-    <p>Ці властивості вирівнюють всю сітку в контейнері:</p>
-    <pre><code>justify-content: space-between;
+          <!-- 52 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>52. Як вирівнювати весь Grid <code>justify-content</code>, <code>align-content</code>?</summary>
+            <div class="answer">
+              <p>Ці властивості вирівнюють всю сітку в контейнері:</p>
+              <pre><code>justify-content: space-between;
 align-content: center;</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 53 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>53. Як працює <code>grid-area</code>?</summary>
-  <div class="answer">
-    <p>Дозволяє розташувати елемент на кілька рядків/колонок:</p>
-    <pre><code>.item {
+          <!-- 53 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>53. Як працює <code>grid-area</code>?</summary>
+            <div class="answer">
+              <p>Дозволяє розташувати елемент на кілька рядків/колонок:</p>
+              <pre><code>.item {
   grid-column: 1 / 3; /* займає 2 колонки */
   grid-row: 2 / 4;    /* займає 2 рядки */
 }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 54 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>54. У чому різниця між <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code>?</summary>
-  <div class="answer">
-    <ul>
-      <li><b>relative</b> — зміщується від своєї початкової позиції</li>
-      <li><b>absolute</b> — позиціонується відносно найближчого <code>positioned</code> предка</li>
-      <li><b>fixed</b> — прив’язаний до вікна браузера</li>
-      <li><b>sticky</b> — прилипає при прокрутці</li>
-    </ul>
-  </div>
-</details>
+          <!-- 54 -->
+          <details class="faq">
+            <summary>
+              <span class="chev">▸</span>54. У чому різниця між <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code>?
+            </summary>
+            <div class="answer">
+              <ul>
+                <li><b>relative</b> — зміщується від своєї початкової позиції</li>
+                <li><b>absolute</b> — позиціонується відносно найближчого <code>positioned</code> предка</li>
+                <li><b>fixed</b> — прив’язаний до вікна браузера</li>
+                <li><b>sticky</b> — прилипає при прокрутці</li>
+              </ul>
+            </div>
+          </details>
 
-<!-- 56 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>55. Як працює <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>?</summary>
-  <div class="answer">
-    <p>Визначають зміщення позиціонованого елемента:</p>
-    <pre><code>.box {
+          <!-- 56 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>55. Як працює <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>?</summary>
+            <div class="answer">
+              <p>Визначають зміщення позиціонованого елемента:</p>
+              <pre><code>.box {
   position: absolute;
   top: 20px;
   left: 50px;
 }</code></pre>
-    <p>Працюють тільки якщо <code>position ≠ static</code>.</p>
-  </div>
-</details>
+              <p>Працюють тільки якщо <code>position ≠ static</code>.</p>
+            </div>
+          </details>
 
-<!-- 56 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>56. Що таке <code>clip-path</code> і для чого використовується?</summary>
-  <div class="answer">
-    <p>Обрізає елемент за заданою формою:</p>
-    <pre><code>div {
+          <!-- 56 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>56. Що таке <code>clip-path</code> і для чого використовується?</summary>
+            <div class="answer">
+              <p>Обрізає елемент за заданою формою:</p>
+              <pre><code>div {
   clip-path: circle(50%);
 }</code></pre>
-    <p>Можна робити круглі аватарки, складні фігури.</p>
-  </div>
-</details>
+              <p>Можна робити круглі аватарки, складні фігури.</p>
+            </div>
+          </details>
 
-<!-- 57 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>57. Як працює <code>object-fit</code> для зображень та відео?</summary>
-  <div class="answer">
-    <p>Визначає, як медіа вміщується в контейнер:</p>
-    <pre><code>img { object-fit: cover; }
+          <!-- 57 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>57. Як працює <code>object-fit</code> для зображень та відео?</summary>
+            <div class="answer">
+              <p>Визначає, як медіа вміщується в контейнер:</p>
+              <pre><code>img { object-fit: cover; }
 img { object-fit: contain; }</code></pre>
-    <ul>
-      <li><code>cover</code> — заповнює контейнер, обрізаючи</li>
-      <li><code>contain</code> — повністю вміщується, може бути з полями</li>
-      <li><code>fill</code> — розтягує</li>
-    </ul>
-  </div>
-</details>
+              <ul>
+                <li><code>cover</code> — заповнює контейнер, обрізаючи</li>
+                <li><code>contain</code> — повністю вміщується, може бути з полями</li>
+                <li><code>fill</code> — розтягує</li>
+              </ul>
+            </div>
+          </details>
 
-<!-- 58 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>58. Як працює <code>object-position</code>?</summary>
-  <div class="answer">
-    <p>Визначає вирівнювання зображення/відео в контейнері:</p>
-    <pre><code>img {
+          <!-- 58 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>58. Як працює <code>object-position</code>?</summary>
+            <div class="answer">
+              <p>Визначає вирівнювання зображення/відео в контейнері:</p>
+              <pre><code>img {
   object-fit: cover;
   object-position: top center;
 }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 59 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>59. У чому різниця між Flexbox і Grid?</summary>
-  <div class="answer">
-    <ul>
-      <li><b>Flexbox</b> — одномірний (працює по рядку або колонці).</li>
-      <li><b>Grid</b> — двомірний (рядки + колонки).</li>
-      <li>Flexbox краще для дрібних компонентів, Grid — для загальної структури сторінки.</li>
-    </ul>
-  </div>
-</details>
-<!-- 60 -->
-<details class="faq">
+          <!-- 59 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>59. У чому різниця між Flexbox і Grid?</summary>
+            <div class="answer">
+              <ul>
+                <li><b>Flexbox</b> — одномірний (працює по рядку або колонці).</li>
+                <li><b>Grid</b> — двомірний (рядки + колонки).</li>
+                <li>Flexbox краще для дрібних компонентів, Grid — для загальної структури сторінки.</li>
+              </ul>
+            </div>
+          </details>
+          <!-- 60 -->
+          <details class="faq">
             <summary><span class="chev">▸</span> 60. Що таке resize?</summary>
             <div class="answer">
               <p>Дозволяє користувачу змінювати розмір елемента: none, both, horizontal, vertical.</p>
             </div>
           </details>
 
- <!-- 61 -->
-	<details class="faq">
-  <summary><span class="chev">▸</span>61. Що таке CSS transition?</summary>
-  <div class="answer">
-    <p><b>transition</b> додає плавність при зміні властивостей.</p>
-    <pre><code>button {
+          <!-- 61 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>61. Що таке CSS transition?</summary>
+            <div class="answer">
+              <p><b>transition</b> додає плавність при зміні властивостей.</p>
+              <pre><code>button {
   transition: background 0.3s ease, transform 0.2s;
 }
 button:hover {
   background: red;
   transform: scale(1.1);
 }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 62 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>62. Які параметри має <code>transition</code>?</summary>
-  <div class="answer">
-    <ul>
-      <li><code>transition-property</code> — які властивості анімувати</li>
-      <li><code>transition-duration</code> — час анімації</li>
-      <li><code>transition-timing-function</code> — крива швидкості (ease, linear, ease-in-out, cubic-bezier)</li>
-      <li><code>transition-delay</code> — затримка</li>
-    </ul>
-  </div>
-</details>
+          <!-- 62 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>62. Які параметри має <code>transition</code>?</summary>
+            <div class="answer">
+              <ul>
+                <li><code>transition-property</code> — які властивості анімувати</li>
+                <li><code>transition-duration</code> — час анімації</li>
+                <li><code>transition-timing-function</code> — крива швидкості (ease, linear, ease-in-out, cubic-bezier)</li>
+                <li><code>transition-delay</code> — затримка</li>
+              </ul>
+            </div>
+          </details>
 
-<!-- 63 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>63. Що таке CSS animation?</summary>
-  <div class="answer">
-    <p><b>animation</b> дозволяє створювати багатокадрові анімації з ключовими кадрами.</p>
-    <pre><code>@keyframes pulse {
+          <!-- 63 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>63. Що таке CSS animation?</summary>
+            <div class="answer">
+              <p><b>animation</b> дозволяє створювати багатокадрові анімації з ключовими кадрами.</p>
+              <pre><code>@keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.2); }
   100% { transform: scale(1); }
@@ -973,206 +975,206 @@ button:hover {
 div {
   animation: pulse 2s infinite;
 }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 64 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>64. Які параметри має <code>animation</code>?</summary>
-  <div class="answer">
-    <ul>
-      <li><code>animation-name</code> — назва keyframes</li>
-      <li><code>animation-duration</code> — тривалість</li>
-      <li><code>animation-timing-function</code> — тип анімації</li>
-      <li><code>animation-delay</code> — затримка</li>
-      <li><code>animation-iteration-count</code> — кількість повторів (число | infinite)</li>
-      <li><code>animation-direction</code> — напрям (normal, reverse, alternate)</li>
-      <li><code>animation-fill-mode</code> — як застосовуються стилі до/після</li>
-      <li><code>animation-play-state</code> — running | paused</li>
-    </ul>
-  </div>
-</details>
+          <!-- 64 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>64. Які параметри має <code>animation</code>?</summary>
+            <div class="answer">
+              <ul>
+                <li><code>animation-name</code> — назва keyframes</li>
+                <li><code>animation-duration</code> — тривалість</li>
+                <li><code>animation-timing-function</code> — тип анімації</li>
+                <li><code>animation-delay</code> — затримка</li>
+                <li><code>animation-iteration-count</code> — кількість повторів (число | infinite)</li>
+                <li><code>animation-direction</code> — напрям (normal, reverse, alternate)</li>
+                <li><code>animation-fill-mode</code> — як застосовуються стилі до/після</li>
+                <li><code>animation-play-state</code> — running | paused</li>
+              </ul>
+            </div>
+          </details>
 
-<!-- 65 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>65. У чому різниця між transition і animation?</summary>
-  <div class="answer">
-    <ul>
-      <li><b>transition</b> — запускається при зміні стану (hover, click).</li>
-      <li><b>animation</b> — може працювати без тригера, циклічно.</li>
-    </ul>
-  </div>
-</details>
+          <!-- 65 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>65. У чому різниця між transition і animation?</summary>
+            <div class="answer">
+              <ul>
+                <li><b>transition</b> — запускається при зміні стану (hover, click).</li>
+                <li><b>animation</b> — може працювати без тригера, циклічно.</li>
+              </ul>
+            </div>
+          </details>
 
-<!-- 66 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>66. Що таке transform у CSS?</summary>
-  <div class="answer">
-    <p>Дозволяє змінювати вигляд елементів (переміщати, масштабувати, обертати).</p>
-    <pre><code>div {
+          <!-- 66 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>66. Що таке transform у CSS?</summary>
+            <div class="answer">
+              <p>Дозволяє змінювати вигляд елементів (переміщати, масштабувати, обертати).</p>
+              <pre><code>div {
   transform: translate(50px, 20px) rotate(15deg) scale(1.2);
 }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 67 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>67. Як працює <code>transform-origin</code>?</summary>
-  <div class="answer">
-    <p>Задає точку, відносно якої виконується трансформація:</p>
-    <pre><code>transform-origin: center; 
+          <!-- 67 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>67. Як працює <code>transform-origin</code>?</summary>
+            <div class="answer">
+              <p>Задає точку, відносно якої виконується трансформація:</p>
+              <pre><code>transform-origin: center; 
 transform-origin: top left;
 transform-origin: 50% 100%;</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 68 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>68. Що таке псевдокласи?</summary>
-  <div class="answer">
-    <p><b>Псевдокласи</b> описують особливий стан елемента.</p>
-    <pre><code>a:hover { color: red; }
+          <!-- 68 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>68. Що таке псевдокласи?</summary>
+            <div class="answer">
+              <p><b>Псевдокласи</b> описують особливий стан елемента.</p>
+              <pre><code>a:hover { color: red; }
 input:focus { border-color: blue; }
 p:first-child { font-weight: bold; }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 69 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>69. Найпоширеніші псевдокласи?</summary>
-  <div class="answer">
-    <ul>
-      <li><code>:hover</code> — при наведенні</li>
-      <li><code>:focus</code> — при фокусі</li>
-      <li><code>:active</code> — під час кліку</li>
-      <li><code>:first-child</code>, <code>:last-child</code></li>
-      <li><code>:nth-child(n)</code> — вибір елементів за порядком</li>
-      <li><code>:not()</code> — виняток</li>
-      <li><code>:checked</code> — вибраний чекбокс/радіо</li>
-    </ul>
-  </div>
-</details>
+          <!-- 69 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>69. Найпоширеніші псевдокласи?</summary>
+            <div class="answer">
+              <ul>
+                <li><code>:hover</code> — при наведенні</li>
+                <li><code>:focus</code> — при фокусі</li>
+                <li><code>:active</code> — під час кліку</li>
+                <li><code>:first-child</code>, <code>:last-child</code></li>
+                <li><code>:nth-child(n)</code> — вибір елементів за порядком</li>
+                <li><code>:not()</code> — виняток</li>
+                <li><code>:checked</code> — вибраний чекбокс/радіо</li>
+              </ul>
+            </div>
+          </details>
 
-<!-- 70 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>70 Що таке псевдоелементи?</summary>
-  <div class="answer">
-    <p><b>Псевдоелементи</b> створюють віртуальні елементи, яких немає в HTML.</p>
-    <pre><code>p::first-line { font-weight: bold; }
+          <!-- 70 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>70 Що таке псевдоелементи?</summary>
+            <div class="answer">
+              <p><b>Псевдоелементи</b> створюють віртуальні елементи, яких немає в HTML.</p>
+              <pre><code>p::first-line { font-weight: bold; }
 p::first-letter { font-size: 2em; }
 div::before { content: "★ "; }
 div::after { content: " ✔"; }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 71 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>71. У чому різниця між псевдокласами та псевдоелементами?</summary>
-  <div class="answer">
-    <ul>
-      <li><b>Псевдокласи</b> описують стан існуючого елемента.</li>
-      <li><b>Псевдоелементи</b> створюють віртуальну частину елемента.</li>
-    </ul>
-    <pre><code>a:hover {}   /* псевдоклас */
+          <!-- 71 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>71. У чому різниця між псевдокласами та псевдоелементами?</summary>
+            <div class="answer">
+              <ul>
+                <li><b>Псевдокласи</b> описують стан існуючого елемента.</li>
+                <li><b>Псевдоелементи</b> створюють віртуальну частину елемента.</li>
+              </ul>
+              <pre><code>a:hover {}   /* псевдоклас */
 p::before {} /* псевдоелемент */</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 72 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>72. Що таке ::before та ::after?</summary>
-  <div class="answer">
-    <p>Додають вміст до або після елемента (через <code>content</code>).</p>
-    <pre><code>button::before { content: "👉 "; }
+          <!-- 72 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>72. Що таке ::before та ::after?</summary>
+            <div class="answer">
+              <p>Додають вміст до або після елемента (через <code>content</code>).</p>
+              <pre><code>button::before { content: "👉 "; }
 button::after { content: " ✅"; }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 73 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>73. Як працює <code>content</code> у псевдоелементах?</summary>
-  <div class="answer">
-    <p>Обов’язкова властивість для <code>::before</code> і <code>::after</code>. Вміст може бути:</p>
-    <ul>
-      <li>рядок: <code>content: "Hello";</code></li>
-      <li>порожній: <code>content: "";</code></li>
-      <li>url-зображення: <code>content: url(icon.png);</code></li>
-    </ul>
-  </div>
-</details>
+          <!-- 73 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>73. Як працює <code>content</code> у псевдоелементах?</summary>
+            <div class="answer">
+              <p>Обов’язкова властивість для <code>::before</code> і <code>::after</code>. Вміст може бути:</p>
+              <ul>
+                <li>рядок: <code>content: "Hello";</code></li>
+                <li>порожній: <code>content: "";</code></li>
+                <li>url-зображення: <code>content: url(icon.png);</code></li>
+              </ul>
+            </div>
+          </details>
 
-<!-- 74 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>74. Що таке keyframes у CSS?</summary>
-  <div class="answer">
-    <p>Ключові кадри визначають етапи анімації:</p>
-    <pre><code>@keyframes slide {
+          <!-- 74 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>74. Що таке keyframes у CSS?</summary>
+            <div class="answer">
+              <p>Ключові кадри визначають етапи анімації:</p>
+              <pre><code>@keyframes slide {
   from { transform: translateX(0); }
   to   { transform: translateX(100px); }
 }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 75 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>75. Що таке cubic-bezier?</summary>
-  <div class="answer">
-    <p>Користувацька функція швидкості для transition/animation.</p>
-    <pre><code>transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);</code></pre>
-    <p>Дозволяє створювати «пружність», «сповільнення» тощо.</p>
-  </div>
-</details>
+          <!-- 75 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>75. Що таке cubic-bezier?</summary>
+            <div class="answer">
+              <p>Користувацька функція швидкості для transition/animation.</p>
+              <pre><code>transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);</code></pre>
+              <p>Дозволяє створювати «пружність», «сповільнення» тощо.</p>
+            </div>
+          </details>
 
-<!-- 76 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>76. Як поставити затримку для анімацій?</summary>
-  <div class="answer">
-    <p>Через <code>transition-delay</code> або <code>animation-delay</code>.</p>
-    <pre><code>div {
+          <!-- 76 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>76. Як поставити затримку для анімацій?</summary>
+            <div class="answer">
+              <p>Через <code>transition-delay</code> або <code>animation-delay</code>.</p>
+              <pre><code>div {
   animation: fade 1s;
   animation-delay: 2s;
 }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 77 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>77. Що таке infinite у анімаціях?</summary>
-  <div class="answer">
-    <p><code>animation-iteration-count: infinite;</code> означає, що анімація повторюється безкінечно.</p>
-    <pre><code>div { animation: spin 3s infinite linear; }</code></pre>
-  </div>
-</details>
+          <!-- 77 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>77. Що таке infinite у анімаціях?</summary>
+            <div class="answer">
+              <p><code>animation-iteration-count: infinite;</code> означає, що анімація повторюється безкінечно.</p>
+              <pre><code>div { animation: spin 3s infinite linear; }</code></pre>
+            </div>
+          </details>
 
-<!-- 78 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>78. Як зупинити або запустити анімацію?</summary>
-  <div class="answer">
-    <p>Керується властивістю <code>animation-play-state</code>:</p>
-    <pre><code>div:hover {
+          <!-- 78 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>78. Як зупинити або запустити анімацію?</summary>
+            <div class="answer">
+              <p>Керується властивістю <code>animation-play-state</code>:</p>
+              <pre><code>div:hover {
   animation-play-state: paused;
 }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 79 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>79. Як працює властивість <code>wil-change</code>?</summary>
-  <div class="answer">
-    <p>Вказує браузеру, які властивості можуть змінюватися, щоб оптимізувати рендеринг.</p>
-    <pre><code>div {
+          <!-- 79 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>79. Як працює властивість <code>wil-change</code>?</summary>
+            <div class="answer">
+              <p>Вказує браузеру, які властивості можуть змінюватися, щоб оптимізувати рендеринг.</p>
+              <pre><code>div {
   will-change: transform, opacity;
 }</code></pre>
-    <p>Використовується для плавніших анімацій, але не варто застосовувати без потреби (може навантажувати пам’ять).</p>
-  </div>
-</details>
+              <p>Використовується для плавніших анімацій, але не варто застосовувати без потреби (може навантажувати пам’ять).</p>
+            </div>
+          </details>
 
-<!-- 80 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>80. Як зробити нескінченний ефект «бігучого рядка» в CSS?</summary>
-  <div class="answer">
-    <p>Через <code>@keyframes</code> та <code>animation</code> можна створити рух тексту.</p>
-    <pre><code>.marquee {
+          <!-- 80 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>80. Як зробити нескінченний ефект «бігучого рядка» в CSS?</summary>
+            <div class="answer">
+              <p>Через <code>@keyframes</code> та <code>animation</code> можна створити рух тексту.</p>
+              <pre><code>.marquee {
   white-space: nowrap;
   overflow: hidden;
 }
@@ -1184,240 +1186,240 @@ button::after { content: " ✅"; }</code></pre>
   from { transform: translateX(100%); }
   to   { transform: translateX(-100%); }
 }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 81 -->
- <details class="faq">
-  <summary><span class="chev">▸</span>81. Що таке CSS-змінні (custom properties)?</summary>
-  <div class="answer">
-    <p>CSS-змінні зберігають значення для повторного використання.</p>
-    <pre><code>:root {
+          <!-- 81 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>81. Що таке CSS-змінні (custom properties)?</summary>
+            <div class="answer">
+              <p>CSS-змінні зберігають значення для повторного використання.</p>
+              <pre><code>:root {
   --main-color: #3498db;
 }
 button {
   color: var(--main-color);
 }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 82 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>82. Як перевизначати значення CSS-змінних?</summary>
-  <div class="answer">
-    <p>Змінні наслідуються і можуть бути перевизначені в межах елемента.</p>
-    <pre><code>.dark {
+          <!-- 82 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>82. Як перевизначати значення CSS-змінних?</summary>
+            <div class="answer">
+              <p>Змінні наслідуються і можуть бути перевизначені в межах елемента.</p>
+              <pre><code>.dark {
   --main-color: #fff;
 }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 83 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>83. Як працює backdrop-filter?</summary>
-  <div class="answer">
-    <p>Застосовує фільтри до фону позаду елемента.</p>
-    <pre><code>.glass {
+          <!-- 83 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>83. Як працює backdrop-filter?</summary>
+            <div class="answer">
+              <p>Застосовує фільтри до фону позаду елемента.</p>
+              <pre><code>.glass {
   backdrop-filter: blur(10px);
 }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 84 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>84. Що таке calc() у CSS?</summary>
-  <div class="answer">
-    <p>Дозволяє виконувати обчислення прямо у стилях.</p>
-    <pre><code>div { width: calc(100% - 50px); }</code></pre>
-  </div>
-</details>
+          <!-- 84 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>84. Що таке calc() у CSS?</summary>
+            <div class="answer">
+              <p>Дозволяє виконувати обчислення прямо у стилях.</p>
+              <pre><code>div { width: calc(100% - 50px); }</code></pre>
+            </div>
+          </details>
 
-<!-- 85 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>85. Як працює функція clamp()?</summary>
-  <div class="answer">
-    <p>Задає значення між мінімумом і максимумом.</p>
-    <pre><code>font-size: clamp(14px, 2vw, 24px);</code></pre>
-  </div>
+          <!-- 85 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>85. Як працює функція clamp()?</summary>
+            <div class="answer">
+              <p>Задає значення між мінімумом і максимумом.</p>
+              <pre><code>font-size: clamp(14px, 2vw, 24px);</code></pre>
+            </div>
 
-  <details class="faq">
-        <summary><span class="chev">▸</span>40. Що робить <code>font-size: clamp(22px, 3.2vw, 32px);</code>?</summary>
-        <div class="answer">
-          <p>Властивість <code>clamp(MIN, PREFERRED, MAX)</code> задає значення, яке завжди буде між мінімумом і максимумом.</p>
-          <pre><code>font-size: clamp(22px, 3.2vw, 32px);</code></pre>
-          <ul>
-            <li><strong>22px</strong> → мінімальний розмір (менше ніколи не стане)</li>
-            <li><strong>2.2vw</strong> → бажане (динамічне, залежить від ширини вікна)</li>
-            <li><strong>32px</strong> → максимальний розмір (більше не виросте)</li>
-          </ul>
-          <p>Шрифт гнучко підлаштовується під екран: від 22px до 32px, а між ними масштабується через <code>vw</code>.</p>
-          <p>1vw = 1% від ширини вікна браузера (viewport width).</p>
-          <p>Якщо ширина вікна = 1000px, тоді 1vw = 10px.</p>
-          <p>Якщо ширина вікна = 500px, тоді 1vw = 5px.</p>
-        </div>
-      </details>
-</details>
+            <details class="faq">
+              <summary><span class="chev">▸</span>40. Що робить <code>font-size: clamp(22px, 3.2vw, 32px);</code>?</summary>
+              <div class="answer">
+                <p>Властивість <code>clamp(MIN, PREFERRED, MAX)</code> задає значення, яке завжди буде між мінімумом і максимумом.</p>
+                <pre><code>font-size: clamp(22px, 3.2vw, 32px);</code></pre>
+                <ul>
+                  <li><strong>22px</strong> → мінімальний розмір (менше ніколи не стане)</li>
+                  <li><strong>2.2vw</strong> → бажане (динамічне, залежить від ширини вікна)</li>
+                  <li><strong>32px</strong> → максимальний розмір (більше не виросте)</li>
+                </ul>
+                <p>Шрифт гнучко підлаштовується під екран: від 22px до 32px, а між ними масштабується через <code>vw</code>.</p>
+                <p>1vw = 1% від ширини вікна браузера (viewport width).</p>
+                <p>Якщо ширина вікна = 1000px, тоді 1vw = 10px.</p>
+                <p>Якщо ширина вікна = 500px, тоді 1vw = 5px.</p>
+              </div>
+            </details>
+          </details>
 
-<!-- 86 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>86. Що таке min(), max() у CSS?</summary>
-  <div class="answer">
-    <p>Повертають найменше або найбільше значення.</p>
-    <pre><code>width: min(50%, 400px);
+          <!-- 86 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>86. Що таке min(), max() у CSS?</summary>
+            <div class="answer">
+              <p>Повертають найменше або найбільше значення.</p>
+              <pre><code>width: min(50%, 400px);
 height: max(100px, 10vh);</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 87 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>87. Як працює @supports (feature queries)?</summary>
-  <div class="answer">
-    <p>Дозволяє застосовувати стилі тільки якщо браузер підтримує властивість.</p>
-    <pre><code>@supports (display: grid) {
+          <!-- 87 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>87. Як працює @supports (feature queries)?</summary>
+            <div class="answer">
+              <p>Дозволяє застосовувати стилі тільки якщо браузер підтримує властивість.</p>
+              <pre><code>@supports (display: grid) {
   div { display: grid; }
 }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 88 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>88. Як працює lazy-loading зображень і відео?</summary>
-  <div class="answer">
-    <p>Медіа завантажуються тільки коли з’являються у viewport.</p>
-    <pre><code>&lt;img src="photo.jpg" loading="lazy" alt="Фото"&gt;
+          <!-- 88 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>88. Як працює lazy-loading зображень і відео?</summary>
+            <div class="answer">
+              <p>Медіа завантажуються тільки коли з’являються у viewport.</p>
+              <pre><code>&lt;img src="photo.jpg" loading="lazy" alt="Фото"&gt;
 &lt;iframe src="video.mp4" loading="lazy"&gt;&lt;/iframe&gt;</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 89 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>89. Що таке CSS logical properties?</summary>
-  <div class="answer">
-    <p>Властивості, що враховують напрямок письма (LTR/RTL).</p>
-    <pre><code>margin-inline-start: 20px; /* замість margin-left */
+          <!-- 89 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>89. Що таке CSS logical properties?</summary>
+            <div class="answer">
+              <p>Властивості, що враховують напрямок письма (LTR/RTL).</p>
+              <pre><code>margin-inline-start: 20px; /* замість margin-left */
 padding-block-end: 10px;  /* замість padding-bottom */</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 90 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>90. Як працює prefers-color-scheme?</summary>
-  <div class="answer">
-    <p>Медіа-запит для темної/світлої теми.</p>
-    <pre><code>@media (prefers-color-scheme: dark) {
+          <!-- 90 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>90. Як працює prefers-color-scheme?</summary>
+            <div class="answer">
+              <p>Медіа-запит для темної/світлої теми.</p>
+              <pre><code>@media (prefers-color-scheme: dark) {
   body { background: #111; color: #eee; }
 }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 91 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>91. Що таке prefers-reduced-motion?</summary>
-  <div class="answer">
-    <p>Медіа-запит для користувачів, які відключають анімації.</p>
-    <pre><code>@media (prefers-reduced-motion: reduce) {
+          <!-- 91 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>91. Що таке prefers-reduced-motion?</summary>
+            <div class="answer">
+              <p>Медіа-запит для користувачів, які відключають анімації.</p>
+              <pre><code>@media (prefers-reduced-motion: reduce) {
   * { animation: none; transition: none; }
 }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 92 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>92. Як працюють media queries?</summary>
-  <div class="answer">
-    <p>Дозволяють застосовувати стилі для різних розмірів екранів.</p>
-    <pre><code>@media (max-width: 768px) {
+          <!-- 92 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>92. Як працюють media queries?</summary>
+            <div class="answer">
+              <p>Дозволяють застосовувати стилі для різних розмірів екранів.</p>
+              <pre><code>@media (max-width: 768px) {
   body { font-size: 14px; }
 }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 93 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>93. Що таке mobile-first підхід у responsive design?</summary>
-  <div class="answer">
-    <p>Спочатку пишуться стилі для мобільних пристроїв, а потім додаються стилі для більших екранів через <code>min-width</code>.</p>
-  </div>
-</details>
-<!-- 94 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>94. Як працює viewport meta tag?</summary>
-  <div class="answer">
-    <p>Налаштовує відображення сторінки на мобільних.</p>
-    <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></pre>
-  </div>
-</details>
+          <!-- 93 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>93. Що таке mobile-first підхід у responsive design?</summary>
+            <div class="answer">
+              <p>Спочатку пишуться стилі для мобільних пристроїв, а потім додаються стилі для більших екранів через <code>min-width</code>.</p>
+            </div>
+          </details>
+          <!-- 94 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>94. Як працює viewport meta tag?</summary>
+            <div class="answer">
+              <p>Налаштовує відображення сторінки на мобільних.</p>
+              <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></pre>
+            </div>
+          </details>
 
-<!-- 95 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>95. Як працюють relative units (em, rem, vw, vh)?</summary>
-  <div class="answer">
-    <ul>
-      <li><b>em</b> — відносно розміру шрифту батька</li>
-      <li><b>rem</b> — відносно кореневого шрифту</li>
-      <li><b>vw</b> — 1% ширини вікна</li>
-      <li><b>vh</b> — 1% висоти вікна</li>
-    </ul>
-  </div>
-</details>
+          <!-- 95 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>95. Як працюють relative units (em, rem, vw, vh)?</summary>
+            <div class="answer">
+              <ul>
+                <li><b>em</b> — відносно розміру шрифту батька</li>
+                <li><b>rem</b> — відносно кореневого шрифту</li>
+                <li><b>vw</b> — 1% ширини вікна</li>
+                <li><b>vh</b> — 1% висоти вікна</li>
+              </ul>
+            </div>
+          </details>
 
-<!-- 96 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>96. Як оптимізувати CSS для продуктивності?</summary>
-  <div class="answer">
-    <ul>
-      <li>Мінімізувати файли (minify)</li>
-      <li>Видаляти невикористані стилі (purgecss)</li>
-      <li>Об’єднувати селектори</li>
-      <li>Зменшувати вкладеність</li>
-      <li>Використовувати сучасні властивості замість хаків</li>
-    </ul>
-  </div>
-</details>
+          <!-- 96 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>96. Як оптимізувати CSS для продуктивності?</summary>
+            <div class="answer">
+              <ul>
+                <li>Мінімізувати файли (minify)</li>
+                <li>Видаляти невикористані стилі (purgecss)</li>
+                <li>Об’єднувати селектори</li>
+                <li>Зменшувати вкладеність</li>
+                <li>Використовувати сучасні властивості замість хаків</li>
+              </ul>
+            </div>
+          </details>
 
-<!-- 97 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>97. Що таке critical CSS?</summary>
-  <div class="answer">
-    <p>Це стилі, потрібні для першого екрану. Їх вставляють прямо в <code>&lt;head&gt;</code>, решта підвантажується асинхронно.</p>
-  </div>
-</details>
+          <!-- 97 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>97. Що таке critical CSS?</summary>
+            <div class="answer">
+              <p>Це стилі, потрібні для першого екрану. Їх вставляють прямо в <code>&lt;head&gt;</code>, решта підвантажується асинхронно.</p>
+            </div>
+          </details>
 
-<!--98-->
-<details class="faq">
-  <summary><span class="chev">▸</span>98. Що таке lazy loading фону?</summary>
-  <div class="answer">
-    <p>Техніка, коли великі зображення фону завантажуються тільки при потребі.</p>
-    <pre><code>.bg {
+          <!--98-->
+          <details class="faq">
+            <summary><span class="chev">▸</span>98. Що таке lazy loading фону?</summary>
+            <div class="answer">
+              <p>Техніка, коли великі зображення фону завантажуються тільки при потребі.</p>
+              <pre><code>.bg {
   background: none;
 }
 .bg[data-loaded="true"] {
   background-image: url("large.jpg");
 }</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 99 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>99. Як використовувати CSS variables з JavaScript?</summary>
-  <div class="answer">
-    <pre><code>document.documentElement
+          <!-- 99 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>99. Як використовувати CSS variables з JavaScript?</summary>
+            <div class="answer">
+              <pre><code>document.documentElement
   .style.setProperty("--main-color", "tomato");</code></pre>
-  </div>
-</details>
+            </div>
+          </details>
 
-<!-- 100 -->
-<details class="faq">
-  <summary><span class="chev">▸</span>100. Що таке container queries?</summary>
-  <div class="answer">
-    <p>Адаптивність не тільки по вікну браузера, а по контейнеру.</p>
-    <pre><code>@container (min-width: 500px) {
+          <!-- 100 -->
+          <details class="faq">
+            <summary><span class="chev">▸</span>100. Що таке container queries?</summary>
+            <div class="answer">
+              <p>Адаптивність не тільки по вікну браузера, а по контейнеру.</p>
+              <pre><code>@container (min-width: 500px) {
   .card { display: flex; }
 }</code></pre>
-  </div>
-</details>
-</div>
-</div>
+            </div>
+          </details>
+        </div>
+      </div>
     </main>
     <footer class="footerok container" id="footer">
       <p>Створено з <span class="heart">💗</span>&nbsp;|&nbsp; Україна</p>

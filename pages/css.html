@@ -181,9 +181,7 @@
               </li>
               <li>
                 <strong>Internal:</strong> всередині тегу <code>&lt;style&gt;</code> в HTML
-                <pre><code>&lt;style&gt;
-p { color: red; }
-&lt;/style&gt;</code></pre>
+                <pre><code>&lt;style&gt; p { color: red; }&lt;/style&gt;</code></pre>
               </li>
               <li>
                 <strong>External:</strong> через окремий файл CSS
@@ -234,7 +232,7 @@ p { color: red; }
 
         <!-- 6 -->
         <details class="faq">
-          <summary><span class="chev">▸</span>6. Як працює селектор нащадків (<code>parent descendant</code>)?</summary>
+          <summary><span class="chev">▸</span>6. Як працює селектор нащадків <code>parent descendant</code>?</summary>
           <div class="answer">
             <p>Селектор нащадків застосовує стиль до елементів, які знаходяться всередині іншого елемента.</p>
             <pre><code>div p { color: blue; }</code></pre>
@@ -244,7 +242,7 @@ p { color: red; }
 
         <!-- 7 -->
         <details class="faq">
-          <summary><span class="chev">▸</span>7. Що таке псевдокласи (<code>:hover</code>, <code>:first-child</code>) і як їх використовувати?</summary>
+          <summary><span class="chev">▸</span>7. Що таке псевдокласи <code>:hover</code>, <code>:first-child</code> і як їх використовувати?</summary>
           <div class="answer">
             <p>Псевдокласи змінюють стиль елемента в певному стані.</p>
             <ul>
@@ -260,7 +258,7 @@ p { color: red; }
 
         <!-- 8 -->
         <details class="faq">
-          <summary><span class="chev">▸</span>8. Як працюють групові селектори (<code>h1, h2, h3 { ... }</code>)?</summary>
+          <summary><span class="chev">▸</span>8. Як працюють групові селектори <code>h1, h2, h3 { ... }</code>?</summary>
           <div class="answer">
             <p>Груповий селектор застосовує один стиль до кількох елементів.</p>
             <pre><code>h1, h2, h3 { margin: 0; }</code></pre>
@@ -621,7 +619,7 @@ display: none;         /* приховує */</code></pre>
 
 <!-- 38 -->
 <details class="faq">
-  <summary><span class="chev">▸</span>39. Як працюють <code>float</code> та <code>clear</code> у CSS?</summary>
+  <summary><span class="chev">▸</span>38. Як працюють <code>float</code> та <code>clear</code> у CSS?</summary>
   <div class="answer">
     <p><strong>float</strong> використовується, щоб вирівняти елемент ліворуч або праворуч, дозволяючи іншим елементам обтікати його.</p>
     <pre><code>img { float: left; }  /* картинка зліва, текст обтікає справа */</code></pre>
@@ -819,7 +817,7 @@ gap: 10px 30px; /* row-gap + column-gap */</code></pre>
 
 <!-- 51 -->
 <details class="faq">
-  <summary><span class="chev">▸</span>51. Як вирівнювати елементи в Grid (<code>justify-items</code>, <code>align-items</code>)?</summary>
+  <summary><span class="chev">▸</span>51. Як вирівнювати елементи в Grid <code>justify-items</code>, <code>align-items</code>?</summary>
   <div class="answer">
     <p>Grid має властивості для вирівнювання в кожній комірці:</p>
     <pre><code>justify-items: start | center | end | stretch;
@@ -829,7 +827,7 @@ align-items: start | center | end | stretch;</code></pre>
 
 <!-- 52 -->
 <details class="faq">
-  <summary><span class="chev">▸</span>52. Як вирівнювати весь Grid (<code>justify-content</code>, <code>align-content</code>)?</summary>
+  <summary><span class="chev">▸</span>52. Як вирівнювати весь Grid <code>justify-content</code>, <code>align-content</code>?</summary>
   <div class="answer">
     <p>Ці властивості вирівнюють всю сітку в контейнері:</p>
     <pre><code>justify-content: space-between;
@@ -928,7 +926,7 @@ img { object-fit: contain; }</code></pre>
 </details>
 <!-- 60 -->
 <details class="faq">
-            <summary><span class="chev">▸</span> 57. Що таке resize?</summary>
+            <summary><span class="chev">▸</span> 60. Що таке resize?</summary>
             <div class="answer">
               <p>Дозволяє користувачу змінювати розмір елемента: none, both, horizontal, vertical.</p>
             </div>
@@ -1227,7 +1225,7 @@ button {
 
 <!-- 84 -->
 <details class="faq">
-  <summary><span class="chev">▸</span>85. Що таке calc() у CSS?</summary>
+  <summary><span class="chev">▸</span>84. Що таке calc() у CSS?</summary>
   <div class="answer">
     <p>Дозволяє виконувати обчислення прямо у стилях.</p>
     <pre><code>div { width: calc(100% - 50px); }</code></pre>
@@ -1278,6 +1276,16 @@ height: max(100px, 10vh);</code></pre>
     <pre><code>@supports (display: grid) {
   div { display: grid; }
 }</code></pre>
+  </div>
+</details>
+
+<!-- 88 -->
+<details class="faq">
+  <summary><span class="chev">▸</span>88. Як працює lazy-loading зображень і відео?</summary>
+  <div class="answer">
+    <p>Медіа завантажуються тільки коли з’являються у viewport.</p>
+    <pre><code>&lt;img src="photo.jpg" loading="lazy" alt="Фото"&gt;
+&lt;iframe src="video.mp4" loading="lazy"&gt;&lt;/iframe&gt;</code></pre>
   </div>
 </details>
 
@@ -1408,7 +1416,8 @@ padding-block-end: 10px;  /* замість padding-bottom */</code></pre>
 }</code></pre>
   </div>
 </details>
-
+</div>
+</div>
     </main>
     <footer class="footerok container" id="footer">
       <p>Створено з <span class="heart">💗</span>&nbsp;|&nbsp; Україна</p>

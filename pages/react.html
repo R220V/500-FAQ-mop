@@ -157,719 +157,939 @@
         </div>
 
         <div>
+          <!-- 1–20 → Основи React (JSX, компоненти, props, state, події, рендеринг) -->
+
           <!-- 1 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 1. Що таке React?</summary>
+            <summary><span class="chev">▸</span>1. Що таке React?</summary>
             <div class="answer">
-              <p>Бібліотека для побудови UI-компонентів на JavaScript, орієнтована на декларативний рендеринг.</p>
+              <p>
+                React — це бібліотека JavaScript для створення користувацьких інтерфейсів. Основна концепція — компонентний підхід та декларативний рендеринг.
+              </p>
+              <ul>
+                <li>Розроблена Facebook</li>
+                <li>Дозволяє створювати повторно використовувані компоненти</li>
+                <li>Використовує Virtual DOM для оптимізації оновлень</li>
+                <li>Підтримує хуки для роботи зі станом і побічними ефектами у функціональних компонентах</li>
+              </ul>
+              <pre><code>function Hello() {
+  return &lt;h1&gt;Привіт, React!&lt;/h1&gt;;
+}
+
+// Використання
+ReactDOM.render(&lt;Hello /&gt;, document.getElementById('root'));</code></pre>
+              <p>Порада: розділяйте UI на маленькі компоненти для кращої підтримуваності та тестованості.</p>
             </div>
           </details>
 
           <!-- 2 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 2. Що таке компонент у React?</summary>
+            <summary><span class="chev">▸</span>2. Що таке JSX?</summary>
             <div class="answer">
-              <p>Функція або клас, що повертає JSX для відображення частини UI.</p>
+              <p>JSX — це синтаксис, що дозволяє писати HTML-подібний код всередині JavaScript. React компілює його у звичайні виклики React.createElement.</p>
+              <ul>
+                <li>JSX спрощує читання та написання UI-коду</li>
+                <li>Можна використовувати JavaScript-вирази всередині { }</li>
+                <li>Вимагає один кореневий елемент для кожного блоку</li>
+              </ul>
+              <pre><code>const element = &lt;h1&gt;Привіт, JSX!&lt;/h1&gt;;
+
+// З JavaScript виразом
+const name = "Анна";
+const greeting = &lt;h1&gt;Привіт, {name}!&lt;/h1&gt;;</code></pre>
             </div>
           </details>
 
           <!-- 3 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 3. Що таке JSX?</summary>
+            <summary><span class="chev">▸</span>3. Що таке компонент у React?</summary>
             <div class="answer">
-              <p>Синтаксис, що схожий на HTML, який React перетворює у виклики <code>React.createElement()</code>.</p>
+              <p>Компонент — це самостійна частина інтерфейсу, яку можна повторно використовувати. В React є два типи компонентів:</p>
+              <ul>
+                <li>Функціональні (function components)</li>
+                <li>Класові (class components)</li>
+              </ul>
+              <pre><code>// Функціональний
+function Button() {
+  return &lt;button&gt;Натисни мене&lt;/button&gt;;
+}
+
+// Використання
+&lt;Button /&gt;</code></pre>
+              <p>Порада: для нових проектів рекомендується використовувати функціональні компоненти з хуками.</p>
             </div>
           </details>
 
           <!-- 4 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 4. Яка різниця між функціональним і класовим компонентом?</summary>
+            <summary><span class="chev">▸</span>4. Що таке пропси (props)?</summary>
             <div class="answer">
-              <p>Функціональні компоненти — прості функції, класові — ES6 класи з методами життєвого циклу.</p>
+              <p>Props — це параметри, які передаються компоненту ззовні, роблячи його гнучким та повторно використовуваним.</p>
+              <ul>
+                <li>Не змінюються всередині компонента</li>
+                <li>Дозволяють передавати дані та функції</li>
+              </ul>
+              <pre><code>function Greeting(props) {
+  return &lt;h1&gt;Привіт, {props.name}!&lt;/h1&gt;;
+}
+
+// Використання
+&lt;Greeting name="Анна" /&gt;</code></pre>
             </div>
           </details>
 
           <!-- 5 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 5. Що таке props?</summary>
+            <summary><span class="chev">▸</span>5. Що таке state?</summary>
             <div class="answer">
-              <p>Властивості, які передаються компоненту з батьківського компонента для налаштування або передачі даних.</p>
+              <p>State — це внутрішній стан компонента, який може змінюватися, викликаючи перерендер.</p>
+              <ul>
+                <li>Використовується для динамічних даних</li>
+                <li>Зміни стану викликають оновлення UI</li>
+              </ul>
+              <pre><code>function Counter() {
+  const [count, setCount] = React.useState(0);
+
+  return &lt;button onClick={() =&gt; setCount(count + 1)&gt;{count}&lt;/button&gt;;
+}</code></pre>
+              <p>Порада: у складних станах розгляньте useReducer замість useState.</p>
             </div>
           </details>
 
           <!-- 6 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 6. Що таке state?</summary>
+            <summary><span class="chev">▸</span>6. Як створити функціональний компонент?</summary>
             <div class="answer">
-              <p>Локальний стан компоненту, який можна змінювати і який викликає повторний рендер при зміні.</p>
+              <p>Функціональний компонент — це звичайна функція, яка повертає JSX.</p>
+              <pre><code>function Welcome() {
+  return &lt;h1&gt;Ласкаво просимо!&lt;/h1&gt;;
+}
+
+// Використання
+&lt;Welcome /&gt;</code></pre>
+              <p>Порада: додавайте хуки для керування станом і побічними ефектами.</p>
             </div>
           </details>
 
           <!-- 7 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 7. Як створити state у функціональному компоненті?</summary>
+            <summary><span class="chev">▸</span>7. Як створити класовий компонент?</summary>
             <div class="answer">
-              <p>За допомогою хука <code>useState</code>: <code>const [count, setCount] = useState(0);</code></p>
+              <p>Класовий компонент — ES6 клас, що розширює React.Component і має метод render().</p>
+              <pre><code>class Welcome extends React.Component {
+  render() {
+    return &lt;h1&gt;Ласкаво просимо!&lt;/h1&gt;;
+  }
+}</code></pre>
+              <p>Порада: класові компоненти використовують рідше у сучасних проєктах через наявність хуків.</p>
             </div>
           </details>
 
           <!-- 8 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 8. Що таке useEffect?</summary>
+            <summary><span class="chev">▸</span>8. Що таке Virtual DOM?</summary>
             <div class="answer">
-              <p>Хук для виконання побічних ефектів у функціональних компонентах (fetch, підписки, таймери).</p>
+              <p>
+                Virtual DOM — це легка копія реального DOM у пам’яті. React порівнює старий та новий Virtual DOM і мінімізує зміни у реальному DOM для
+                продуктивності.
+              </p>
+              <ul>
+                <li>Зменшує кількість операцій з DOM</li>
+                <li>Покращує продуктивність великих додатків</li>
+              </ul>
             </div>
           </details>
 
           <!-- 9 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 9. Як передати дані від батька до дитини?</summary>
+            <summary><span class="chev">▸</span>9. Що таке useState?</summary>
             <div class="answer">
-              <p>Через props: <code>&lt;Child name="Ivan" /&gt;</code></p>
+              <p>useState — хук для додавання стану у функціональний компонент.</p>
+              <pre><code>const [name, setName] = React.useState("Анна");
+
+// Оновлення стану
+setName("Петро");</code></pre>
+              <p>Порада: передавайте функцію у useState для відкладеної ініціалізації складних значень.</p>
             </div>
           </details>
 
           <!-- 10 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 10. Як передати дані від дитини до батька?</summary>
+            <summary><span class="chev">▸</span>10. Що таке useEffect?</summary>
             <div class="answer">
-              <p>За допомогою callback-функцій, переданих через props.</p>
+              <p>useEffect — хук для виконання побічних ефектів у функціональних компонентах.</p>
+              <ul>
+                <li>Може замінювати componentDidMount, componentDidUpdate, componentWillUnmount</li>
+                <li>Використовується для fetch-запитів, підписок на події, таймерів</li>
+              </ul>
+              <pre><code>React.useEffect(() =&gt; {
+  console.log("Компонент змонтовано або оновлено");
+  return () =&gt; console.log("Компонент буде видалено");
+}, []);</code></pre>
             </div>
           </details>
 
           <!-- 11 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 11. Що таке conditional rendering?</summary>
+            <summary><span class="chev">▸</span>11. Що таке ключі (keys) у списках?</summary>
             <div class="answer">
-              <p>Відображення компонентів чи елементів на основі умов: <code>{isLoggedIn ? &lt;Logout/&gt; : &lt;Login/&gt;}</code></p>
+              <p>Key — унікальний ідентифікатор для елементів списку, який допомагає React відстежувати елементи при оновленні.</p>
+              <pre><code>const items = ["Яблуко","Банан"];
+items.map((item, index) =&gt; &lt;li key={index}&gt;{item}&lt;/li&gt;);</code></pre>
+              <p>Порада: використовуйте унікальні значення, а не індекси, якщо порядок елементів може змінюватися.</p>
             </div>
           </details>
 
           <!-- 12 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 12. Що таке list rendering?</summary>
+            <summary><span class="chev">▸</span>12. Що таке компонент вищого порядку (HOC)?</summary>
             <div class="answer">
-              <p>
-                Відображення масивів через метод <code>.map()</code> з унікальним ключем:
-                <code>{items.map(item =&gt; &lt;li key={item.id}&gt;{item.name}&lt;/li&gt;)}</code>
-              </p>
+              <p>HOC — функція, яка приймає компонент і повертає новий компонент із додатковими можливостями.</p>
+              <pre><code>function withLogging(WrappedComponent) {
+  return function(props) {
+    console.log("Рендер компонента");
+    return &lt;WrappedComponent {...props} /&gt;;
+  }
+}</code></pre>
             </div>
           </details>
 
           <!-- 13 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 13. Що таке key у списках?</summary>
+            <summary><span class="chev">▸</span>13. Що таке умовний рендеринг?</summary>
             <div class="answer">
-              <p>Унікальний ідентифікатор елемента списку для оптимізації рендеру React.</p>
+              <p>Умовний рендеринг дозволяє показувати різний UI залежно від стану або пропсів.</p>
+              <pre><code>function Greeting({ isLoggedIn }) {
+  return &lt;div&gt;{isLoggedIn ? "Привіт, користувач!" : "Будь ласка, увійдіть"}&lt;/div&gt;;
+}</code></pre>
             </div>
           </details>
 
           <!-- 14 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 14. Що таке controlled component?</summary>
+            <summary><span class="chev">▸</span>14. Як обробляти події в React?</summary>
             <div class="answer">
-              <p>Форма, значення якої керується через state React, наприклад <code>&lt;input value={value} onChange={handleChange} /&gt;</code>.</p>
+              <p>Події в React пишуться як camelCase і передаються функції, а не рядком.</p>
+              <pre><code>function Button() {
+  function handleClick() {
+    alert("Натиснули кнопку!");
+  }
+  return &lt;button onClick={handleClick}&gt;Натисни&lt;/button&gt;;
+}</code></pre>
             </div>
           </details>
 
           <!-- 15 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 15. Що таке uncontrolled component?</summary>
+            <summary><span class="chev">▸</span>15. Як передавати функції через props?</summary>
             <div class="answer">
-              <p>Форма, яка керується DOM, а не state React; можна використовувати <code>ref</code> для доступу до значення.</p>
+              <p>Функції можна передавати у пропсах для взаємодії між компонентами.</p>
+              <pre><code>function Child({ onClick }) {
+  return &lt;button onClick={onClick}&gt;Натисни&lt;/button&gt;;
+}
+
+function Parent() {
+  function sayHello() { alert("Привіт!"); }
+  return &lt;Child onClick={sayHello} /&gt;;
+}</code></pre>
             </div>
           </details>
 
           <!-- 16 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 16. Що таке React Fragment?</summary>
+            <summary><span class="chev">▸</span>16. Що таке controlled component?</summary>
             <div class="answer">
-              <p>
-                Компонент, що дозволяє групувати елементи без додаткового DOM-вузла: <code>&lt;Fragment&gt;...&lt;/Fragment&gt;</code> або
-                <code>&lt;&gt;...&lt;/&gt;</code>
-              </p>
+              <p>Controlled component — це форма, у якій значення керується станом React.</p>
+              <pre><code>function Form() {
+  const [value, setValue] = React.useState("");
+  return &lt;input value={value} onChange={e =&gt; setValue(e.target.value)} /&gt;;
+}</code></pre>
             </div>
           </details>
 
           <!-- 17 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 17. Що таке React Portal?</summary>
+            <summary><span class="chev">▸</span>17. Що таке uncontrolled component?</summary>
             <div class="answer">
-              <p>Механізм рендеру компоненту у DOM-вузол поза основним деревом: <code>ReactDOM.createPortal(child, container)</code></p>
+              <p>Uncontrolled component — форма, значення якої контролюється самим DOM.</p>
+              <pre><code>function Form() {
+  const inputRef = React.useRef();
+  function handleSubmit() {
+    alert(inputRef.current.value);
+  }
+  return &lt;&gt;
+    &lt;input ref={inputRef} /&gt;
+    &lt;button onClick={handleSubmit}&gt;Відправити&lt;/button&gt;
+  &lt;/&gt;;
+}</code></pre>
             </div>
           </details>
 
           <!-- 18 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 18. Що таке React Router?</summary>
+            <summary><span class="chev">▸</span>18. Що таке фрагменти (Fragments)?</summary>
             <div class="answer">
-              <p>Бібліотека для маршрутизації в React-додатках.</p>
+              <p>Fragment дозволяє групувати елементи без додаткового DOM-вузла.</p>
+              <pre><code>function List() {
+  return &lt;React.Fragment&gt;
+    &lt;li&gt;Елемент 1&lt;/li&gt;
+    &lt;li&gt;Елемент 2&lt;/li&gt;
+  &lt;/React.Fragment&gt;;
+}</code></pre>
             </div>
           </details>
 
           <!-- 19 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 19. Як створити маршрут у React Router?</summary>
+            <summary><span class="chev">▸</span>19. Як використовувати refs?</summary>
             <div class="answer">
-              <p>Через компонент <code>&lt;Route path="/about" element=&lt;About /&gt; /&gt;</code></p>
+              <p>Refs дозволяють отримати доступ до DOM-елементів або компонентів.</p>
+              <pre><code>function InputFocus() {
+  const inputRef = React.useRef();
+  return &lt;&gt;
+    &lt;input ref={inputRef} /&gt;
+    &lt;button onClick={() =&gt; inputRef.current.focus()}&gt;Фокус&lt;/button&gt;
+  &lt;/&gt;;
+}</code></pre>
             </div>
           </details>
 
           <!-- 20 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 20. Що таке useRef?</summary>
+            <summary><span class="chev">▸</span>20. Що таке lifting state up?</summary>
             <div class="answer">
-              <p>Хук для доступу до DOM-вузла або збереження змінної без ререндеру: <code>const inputRef = useRef();</code></p>
+              <p>Lifting state up — переміщення стану у спільний батьківський компонент для синхронізації між дітьми.</p>
+              <pre><code>function Parent() {
+  const [value, setValue] = React.useState("");
+  return &lt;&gt;
+    &lt;Child1 value={value} setValue={setValue} /&gt;
+    &lt;Child2 value={value} /&gt;
+  &lt;/&gt;;
+}</code></pre>
             </div>
           </details>
 
+          <!-- 21–40 → Списки й форми (умовний рендеринг, списки, keys, форми, керовані компоненти) -->
+
           <!-- 21 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 21. Що таке useContext?</summary>
-            <div class="answer">
-              <p>Хук, який дозволяє отримати дані з <code>React.Context</code> без пропс-дрилінгу.</p>
-            </div>
+            <summary><span class="chev">▸</span>21. Що таке умовний рендеринг?</summary>
+            <p>Умовний рендеринг дозволяє показувати різні елементи залежно від логіки.</p>
+            <pre><code>{isLoggedIn ? &lt;LogoutButton /&gt; : &lt;LoginButton /&gt;}</code></pre>
           </details>
 
           <!-- 22 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 22. Що таке context API?</summary>
-            <div class="answer">
-              <p>Механізм глобального зберігання даних у React, альтернатива пропс-дрилінгу.</p>
-            </div>
+            <summary><span class="chev">▸</span>22. Як рендерити списки в React?</summary>
+            <p>За допомогою методу <code>map()</code>, створюючи компонент для кожного елемента.</p>
+            <pre><code>const fruits = ["Яблуко","Банан"];
+fruits.map((fruit, index) =&gt; &lt;li key={index}&gt;{fruit}&lt;/li&gt;);</code></pre>
           </details>
 
           <!-- 23 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 23. Що таке useReducer?</summary>
-            <div class="answer">
-              <p>Хук для керування складним state через reducer-функцію (аналог Redux, але локально).</p>
-            </div>
+            <summary><span class="chev">▸</span>23. Що таке ключі (keys) у списках?</summary>
+            <p>Key — унікальний ідентифікатор для кожного елемента списку, щоб React ефективно оновлював DOM.</p>
           </details>
 
           <!-- 24 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 24. Коли варто використовувати useReducer замість useState?</summary>
-            <div class="answer">
-              <p>Коли state складний або залежить від попереднього значення, або є багато різних дій над ним.</p>
-            </div>
+            <summary><span class="chev">▸</span>24. Що таке controlled component?</summary>
+            <p>Форма, значення якої контролюється станом React через <code>value</code> і <code>onChange</code>.</p>
+            <pre><code>const [value, setValue] = React.useState("");
+&lt;input value={value} onChange={e =&gt; setValue(e.target.value)} /&gt;</code></pre>
           </details>
 
           <!-- 25 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 25. Що таке підйом state (lifting state up)?</summary>
-            <div class="answer">
-              <p>Перенесення state з дочірнього компонента в батьківський для спільного використання.</p>
-            </div>
+            <summary><span class="chev">▸</span>25. Що таке uncontrolled component?</summary>
+            <p>Форма, значення якої контролює DOM сам по собі, без стану React.</p>
+            <pre><code>const inputRef = React.useRef();
+&lt;input ref={inputRef} /&gt;;</code></pre>
           </details>
 
           <!-- 26 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 26. Що таке HOC (Higher-Order Component)?</summary>
-            <div class="answer">
-              <p>Функція, яка приймає компонент і повертає новий компонент з розширеною логікою.</p>
-            </div>
+            <summary><span class="chev">▸</span>26. Як обробляти події в React?</summary>
+            <p>Події передаються через camelCase атрибути і функції-обробники.</p>
+            <pre><code>&lt;button onClick={() =&gt; alert("Натиснуто!")}&gt;Клік&lt;/button&gt;</code></pre>
           </details>
 
           <!-- 27 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 27. Що таке render props?</summary>
-            <div class="answer">
-              <p>Техніка, коли компонент приймає функцію як пропс для рендеру UI.</p>
-            </div>
+            <summary><span class="chev">▸</span>27. Що таке PropTypes?</summary>
+            <p>Бібліотека для валідації типів пропсів компонентів.</p>
+            <pre><code>import PropTypes from 'prop-types';
+MyComponent.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number
+};</code></pre>
           </details>
 
           <!-- 28 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 28. Що таке custom hook?</summary>
-            <div class="answer">
-              <p>Функція з префіксом <code>use</code>, яка інкапсулює логіку з іншими хуками для повторного використання.</p>
-            </div>
+            <summary><span class="chev">▸</span>28. Що таке defaultProps?</summary>
+            <p>Значення пропсів за замовчуванням, якщо вони не передані компоненту.</p>
+            <pre><code>MyComponent.defaultProps = {
+  name: "Гість"
+};</code></pre>
           </details>
 
           <!-- 29 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 29. Які правила хуків?</summary>
-            <div class="answer">
-              <ul>
-                <li>Викликати хуки тільки на верхньому рівні компонента.</li>
-                <li>Не викликати в циклах, умовах чи вкладених функціях.</li>
-                <li>Викликати тільки з React-компонентів або custom hooks.</li>
-              </ul>
-            </div>
+            <summary><span class="chev">▸</span>29. Що таке form validation у React?</summary>
+            <p>Механізм перевірки даних форми перед їхнім відправленням.</p>
+            <pre><code>const handleSubmit = e =&gt; {
+  e.preventDefault();
+  if(!email) alert("Введіть email");
+};</code></pre>
           </details>
 
           <!-- 30 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 30. Що таке useMemo?</summary>
-            <div class="answer">
-              <p>Хук, що кешує результат обчислень для оптимізації продуктивності.</p>
-            </div>
+            <summary><span class="chev">▸</span>30. Що таке controlled checkbox / radio?</summary>
+            <p>Контролювані поля вибору через стан React.</p>
+            <pre><code>const [checked, setChecked] = React.useState(false);
+&lt;input type="checkbox" checked={checked} onChange={e =&gt; setChecked(e.target.checked)} /&gt;</code></pre>
           </details>
-
           <!-- 31 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 31. Що таке useCallback?</summary>
-            <div class="answer">
-              <p>Хук, що повертає мемоізовану функцію, щоб уникати її перевизначення при кожному рендері.</p>
-            </div>
+            <summary><span class="chev">▸</span>31. Що таке lifting state up?</summary>
+            <p>Підйом стану вгору – передача стану від дочірніх компонентів до спільного батька для синхронізації.</p>
+            <pre><code>const [value, setValue] = React.useState("");
+&lt;Child value={value} onChange={setValue} /&gt;</code></pre>
           </details>
 
           <!-- 32 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 32. Чим useMemo відрізняється від useCallback?</summary>
-            <div class="answer">
-              <p><code>useMemo</code> кешує значення, <code>useCallback</code> — функцію.</p>
-            </div>
+            <summary><span class="chev">▸</span>32. Що таке React Fragment?</summary>
+            <p>Компонент, що дозволяє групувати елементи без додаткового DOM-елемента.</p>
+            <pre><code>&lt;React.Fragment&gt;&lt;Child1 /&gt;&lt;Child2 /&gt;&lt;/React.Fragment&gt;</code></pre>
+            <p>Або короткий запис: <code>&lt;&gt;&lt;/&gt;</code></p>
           </details>
 
           <!-- 33 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 33. Що таке React.memo?</summary>
-            <div class="answer">
-              <p>Функція вищого порядку для мемоізації функціонального компонента, щоб уникнути зайвих ререндерів.</p>
-            </div>
+            <summary><span class="chev">▸</span>33. Що таке useRef?</summary>
+            <p>Хук для збереження посилань на DOM-елементи або збереження змінних між рендерами.</p>
+            <pre><code>const inputRef = React.useRef();
+&lt;input ref={inputRef} /&gt;;</code></pre>
           </details>
 
           <!-- 34 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 34. Що таке Virtual DOM?</summary>
-            <div class="answer">
-              <p>Віртуальне представлення DOM у пам'яті, яке дозволяє React ефективно оновлювати UI через diffing-алгоритм.</p>
-            </div>
+            <summary><span class="chev">▸</span>34. Що таке useMemo?</summary>
+            <p>Хук, який кешує результат функції для оптимізації продуктивності.</p>
+            <pre><code>const computed = React.useMemo(() =&gt; heavyComputation(value), [value]);</code></pre>
           </details>
 
           <!-- 35 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 35. Що таке reconciliation?</summary>
-            <div class="answer">
-              <p>Процес порівняння старого і нового Virtual DOM та оновлення реального DOM лише там, де є зміни.</p>
-            </div>
+            <summary><span class="chev">▸</span>35. Що таке useCallback?</summary>
+            <p>Хук для запам’ятовування функцій, щоб не створювати їх заново при кожному рендері.</p>
+            <pre><code>const handleClick = React.useCallback(() =&gt; console.log(value), [value]);</code></pre>
           </details>
 
           <!-- 36 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 36. Що таке key у reconciliation?</summary>
-            <div class="answer">
-              <p>Ключ допомагає React ідентифікувати елементи списку для оптимального оновлення DOM.</p>
-            </div>
+            <summary><span class="chev">▸</span>36. Що таке higher-order component (HOC)?</summary>
+            <p>Функція, яка приймає компонент і повертає новий компонент з додатковим функціоналом.</p>
+            <pre><code>const withLogger = Wrapped =&gt; props =&gt; {
+  console.log(props);
+  return &lt;Wrapped {...props} /&gt;;
+};</code></pre>
           </details>
 
           <!-- 37 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 37. Чим відрізняється SPA від MPA?</summary>
-            <div class="answer">
-              <p>
-                SPA (Single Page Application) має один HTML, оновлює контент через JS; MPA (Multi Page Application) перезавантажує сторінку при кожному
-                переході.
-              </p>
-            </div>
+            <summary><span class="chev">▸</span>37. Що таке render props?</summary>
+            <p>Техніка, коли компонент приймає функцію як пропс і викликає її для рендерингу.</p>
+            <pre><code>&lt;DataProvider render={data =&gt; &lt;Child data={data} /&gt;} /&gt;</code></pre>
           </details>
 
           <!-- 38 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 38. Як підключити CSS у React?</summary>
-            <div class="answer">
-              <p>Через імпорт: <code>import './App.css';</code> або CSS-модулі чи styled-components.</p>
-            </div>
+            <summary><span class="chev">▸</span>38. Що таке context API?</summary>
+            <p>Механізм для передачі даних між компонентами без пропсів на кожному рівні.</p>
+            <pre><code>const ThemeContext = React.createContext("light");
+&lt;ThemeContext.Provider value="dark"&gt;&lt;App /&gt;&lt;/ThemeContext.Provider&gt;</code></pre>
           </details>
 
           <!-- 39 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 39. Що таке CSS Modules?</summary>
-            <div class="answer">
-              <p>Технологія локальної ізоляції стилів у React: <code>import styles from './App.module.css';</code></p>
-            </div>
+            <summary><span class="chev">▸</span>39. Як споживати context?</summary>
+            <p>За допомогою хука <code>useContext</code> або компонента <code>Context.Consumer</code>.</p>
+            <pre><code>const theme = React.useContext(ThemeContext);</code></pre>
           </details>
 
           <!-- 40 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 40. Що таке styled-components?</summary>
-            <div class="answer">
-              <p>Бібліотека для CSS-in-JS, що дозволяє писати стилі прямо в JS як компоненти.</p>
-            </div>
+            <summary><span class="chev">▸</span>40. Що таке React.lazy?</summary>
+            <p>Функція для динамічного імпорту компонентів, що дозволяє code splitting.</p>
+            <pre><code>const LazyComponent = React.lazy(() =&gt; import('./MyComponent'));
+&lt;React.Suspense fallback=&lt;div&gt;Loading...&lt;/div&gt;&gt;
+  &lt;LazyComponent /&gt;
+&lt;/React.Suspense&gt;</code></pre>
           </details>
+
+          <!-- 41–60 → Хуки (useState, useEffect, useRef, useMemo, useCallback, useContext, кастомні хуки) -->
 
           <!-- 41 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 41. Що таке prop drilling?</summary>
-            <div class="answer">
-              <p>Передача props через кілька проміжних компонентів, навіть якщо вони там не потрібні.</p>
-            </div>
+            <summary><span class="chev">▸</span>41. Що таке Suspense?</summary>
+            <p>Компонент, який дозволяє відображати fallback, поки дочірні компоненти завантажуються асинхронно.</p>
+            <pre><code>&lt;React.Suspense fallback=&lt;div&gt;Loading...&lt;/div&gt;&gt;
+  &lt;LazyComponent /&gt;
+&lt;/React.Suspense&gt;</code></pre>
           </details>
 
           <!-- 42 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 42. Як уникнути prop drilling?</summary>
-            <div class="answer">
-              <p>Використати Context API, Redux або інший state manager.</p>
-            </div>
+            <summary><span class="chev">▸</span>42. Що таке error boundaries?</summary>
+            <p>Компоненти, що ловлять помилки в дочірніх компонентах і відображають запасний UI.</p>
+            <pre><code>class ErrorBoundary extends React.Component {
+  state = { hasError: false };
+  static getDerivedStateFromError() { return { hasError: true }; }
+  render() { return this.state.hasError ? &lt;h1>Error!&lt;h1&gt; : this.props.children; }
+} </code></pre>
           </details>
 
           <!-- 43 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 43. Що таке Redux?</summary>
-            <div class="answer">
-              <p>Бібліотека керування глобальним state за принципом Flux: один store, reducer-и та actions.</p>
-            </div>
+            <summary><span class="chev">▸</span>43. Що таке controlled component?</summary>
+            <p>Форма або елемент, значення якого керується станом React.</p>
+            <pre><code>const [value, setValue] = React.useState("");
+&lt;input value={value} onChange={e =&gt; setValue(e.target.value)} /&gt;</code></pre>
           </details>
 
           <!-- 44 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 44. Що таке store у Redux?</summary>
-            <div class="answer">
-              <p>Єдине сховище глобального стану застосунку.</p>
-            </div>
+            <summary><span class="chev">▸</span>44. Що таке uncontrolled component?</summary>
+            <p>Елемент форми, який сам керує своїм станом, наприклад через ref.</p>
+            <pre><code>const inputRef = React.useRef();
+&lt;input ref={inputRef} /&gt;</code></pre>
           </details>
 
           <!-- 45 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 45. Що таке reducer у Redux?</summary>
-            <div class="answer">
-              <p>Функція, яка приймає поточний state та action і повертає новий state.</p>
-            </div>
+            <summary><span class="chev">▸</span>45. Що таке reconciliation?</summary>
+            <p>Процес порівняння нового та старого Virtual DOM і оновлення реального DOM мінімальним способом.</p>
           </details>
 
           <!-- 46 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 46. Що таке action у Redux?</summary>
-            <div class="answer">
-              <p>Об’єкт з обов'язковим полем <code>type</code>, який описує, яку зміну треба зробити.</p>
-            </div>
+            <summary><span class="chev">▸</span>46. Що таке key у списках React?</summary>
+            <p>Унікальний ідентифікатор елемента для ефективного оновлення списку.</p>
+            <pre><code>{items.map(item =&gt; &lt;li key={item.id}&gt;{item.name}&lt;/li&gt;)}</code></pre>
           </details>
 
           <!-- 47 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 47. Що таке middleware у Redux?</summary>
-            <div class="answer">
-              <p>Функції, що розширюють логіку Redux (наприклад, redux-thunk для асинхронності).</p>
-            </div>
+            <summary><span class="chev">▸</span>47. Що таке PureComponent?</summary>
+            <p>Класовий компонент, який реалізує shouldComponentUpdate з поверхневим порівнянням props і state.</p>
           </details>
 
           <!-- 48 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 48. Що таке Redux Toolkit?</summary>
-            <div class="answer">
-              <p>Офіційна бібліотека для спрощення роботи з Redux (менше коду, зручні createSlice, createAsyncThunk).</p>
-            </div>
+            <summary><span class="chev">▸</span>48. Що таке memo?</summary>
+            <p>Функція для обгортання компонента і запобігання його перерендеру, якщо props не змінилися.</p>
+            <pre><code>const MemoComponent = React.memo(Component);</code></pre>
           </details>
 
           <!-- 49 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 49. Що таке React Query?</summary>
-            <div class="answer">
-              <p>Бібліотека для асинхронного керування даними (fetch, кешування, синхронізація).</p>
-            </div>
+            <summary><span class="chev">▸</span>49. Що таке useReducer?</summary>
+            <p>Хук для управління складним станом через редюсер (схожий на Redux).</p>
+            <pre><code>const [state, dispatch] = React.useReducer(reducer, initialState);</code></pre>
           </details>
 
           <!-- 50 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 50. Що таке useTransition?</summary>
-            <div class="answer">
-              <p>Хук React 18 для позначення оновлень як "неголовних", щоб UI залишався чутливим.</p>
-            </div>
+            <summary><span class="chev">▸</span>50. Що таке synthetic event?</summary>
+            <p>Об’єкт події React, що нормалізує браузерні події для кросбраузерності.</p>
           </details>
 
           <!-- 51 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 51. Що таке useDeferredValue?</summary>
-            <div class="answer"><p>Хук, що відкладає оновлення значення для покращення продуктивності UI.</p></div>
+            <summary><span class="chev">▸</span>51. Що таке prop drilling?</summary>
+            <p>Передача пропсів через багато рівнів компонентів, навіть якщо проміжні не використовують їх.</p>
           </details>
 
           <!-- 52 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 52. Що таке Suspense?</summary>
-            <div class="answer"><p>Компонент для відображення fallback-контенту під час завантаження асинхронних даних.</p></div>
+            <summary><span class="chev">▸</span>52. Як уникнути prop drilling?</summary>
+            <p>За допомогою Context API або state management (Redux, Zustand).</p>
           </details>
 
           <!-- 53 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 53. Що таке Error Boundary?</summary>
-            <div class="answer"><p>Компонент, який відловлює JavaScript-помилки в дочірніх компонентах і відображає запасний UI.</p></div>
+            <summary><span class="chev">▸</span>53. Що таке lazy loading компонентів?</summary>
+            <p>Динамічне завантаження компонентів лише тоді, коли вони потрібні.</p>
           </details>
 
           <!-- 54 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 54. Як створити Error Boundary?</summary>
-            <div class="answer">
-              <p>Тільки класовий компонент із методами <code>componentDidCatch</code> та <code>getDerivedStateFromError</code>.</p>
-            </div>
+            <summary><span class="chev">▸</span>54. Що таке code splitting?</summary>
+            <p>Розділення JS-коду на менші частини для прискорення завантаження сторінки.</p>
           </details>
 
           <!-- 55 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 55. Що таке hydration?</summary>
-            <div class="answer"><p>Процес відновлення подій і state на стороні клієнта після серверного рендеру.</p></div>
+            <summary><span class="chev">▸</span>55. Що таке hydration?</summary>
+            <p>Процес, коли React «підключається» до вже відрендереного HTML на сервері.</p>
           </details>
 
           <!-- 56 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 56. Що таке SSR у React?</summary>
-            <div class="answer"><p>Server-Side Rendering — рендер React-компонентів на сервері перед відправкою HTML клієнту.</p></div>
+            <summary><span class="chev">▸</span>56. Що таке server-side rendering (SSR)?</summary>
+            <p>Рендеринг React-компонентів на сервері замість браузера.</p>
           </details>
 
           <!-- 57 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 57. Що таке Next.js?</summary>
-            <div class="answer"><p>Фреймворк на базі React для SSR, SSG, маршрутизації, API routes та оптимізації продуктивності.</p></div>
+            <summary><span class="chev">▸</span>57. Що таке client-side rendering (CSR)?</summary>
+            <p>Рендеринг React-компонентів безпосередньо в браузері.</p>
           </details>
 
           <!-- 58 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 58. Що таке Gatsby?</summary>
-            <div class="answer"><p>Фреймворк для статичної генерації сайтів на React.</p></div>
+            <summary><span class="chev">▸</span>58. Що таке static site generation (SSG)?</summary>
+            <p>Попереднє рендерення сторінок під час збірки для швидкого завантаження.</p>
           </details>
 
           <!-- 59 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 59. Що таке React Native?</summary>
-            <div class="answer"><p>Фреймворк на React для створення мобільних застосунків під iOS і Android.</p></div>
+            <summary><span class="chev">▸</span>59. Що таке hydration mismatch?</summary>
+            <p>Помилка, що виникає, коли серверний HTML не відповідає HTML після клієнтського рендеру.</p>
           </details>
+
           <!-- 60 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 60. Що таке Expo?</summary>
-            <div class="answer"><p>Інструмент для швидкої розробки на React Native з готовим набором бібліотек.</p></div>
+            <summary><span class="chev">▸</span>60. Що таке React Profiler?</summary>
+            <p>Інструмент для вимірювання продуктивності React-компонентів.</p>
+            <pre><code>&lt;Profiler id="App" onRender={(id, phase, actualTime) =&gt; { console.log(actualTime); }}&gt;
+  &lt;App /&gt;
+&lt;/Profiler&gt;</code></pre>
           </details>
+
+          <!-- 61–80 → Стан і маршрутизація (React Router, Context API, Redux, Zustand, Suspense, lazy) -->
 
           <!-- 61 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 61. Що таке JSX transpilation?</summary>
-            <div class="answer"><p>Процес перетворення JSX у звичайний JavaScript через Babel.</p></div>
+            <summary><span class="chev">▸</span>61. Що таке SuspenseList?</summary>
+            <p>SuspenseList дозволяє координувати порядок відображення кількох Suspense-компонентів, щоб контролювати їхнє завантаження.</p>
+            <pre><code>&lt;SuspenseList revealOrder="forwards"&gt;
+  &lt;Suspense fallback=&lt;div&gt;Завантаження 1...&lt;/div&gt;&gt;&lt;Component1 /&gt;&lt;/Suspense&gt;
+  &lt;Suspense fallback=&lt;div&gt;Завантаження 2...&lt;/div&gt;&gt;&lt;Component2 /&gt;&lt;/Suspense&gt;
+&lt;/SuspenseList&gt;</code></pre>
           </details>
 
           <!-- 62 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 62. Що таке Babel у React?</summary>
-            <div class="answer"><p>Транспайлер, що перетворює JSX і сучасний JS у сумісний із браузерами код.</p></div>
+            <summary><span class="chev">▸</span>62. Що таке useLayoutEffect?</summary>
+            <p>Хук, який виконується синхронно після того, як всі зміни DOM застосовані, але перед тим, як браузер оновить екран.</p>
+            <pre><code>React.useLayoutEffect(() =&gt; {
+  // логіка, що потребує вимірювання DOM
+}, [dependencies]);</code></pre>
           </details>
 
           <!-- 63 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 63. Що таке Webpack у React?</summary>
-            <div class="answer"><p>Бандлер, який збирає JS, CSS, зображення у один пакет.</p></div>
+            <summary><span class="chev">▸</span>63. Різниця між useEffect і useLayoutEffect?</summary>
+            <p>
+              useEffect виконується асинхронно після рендеру, не блокує оновлення екрану. useLayoutEffect виконується синхронно після змін DOM, перед тим як
+              браузер промалює UI.
+            </p>
           </details>
 
           <!-- 64 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 64. Що таке CRA (Create React App)?</summary>
-            <div class="answer"><p>Інструмент для швидкого створення React-проєктів із готовою конфігурацією.</p></div>
+            <summary><span class="chev">▸</span>64. Що таке useReducer?</summary>
+            <p>useReducer — хук для керування складним станом за допомогою редюсера.</p>
+            <pre><code>const [state, dispatch] = React.useReducer(reducer, initialState);
+
+// приклад reducer
+function reducer(state, action) {
+  switch(action.type) {
+    case 'increment': return { count: state.count + 1 };
+    case 'decrement': return { count: state.count - 1 };
+    default: return state;
+  }
+}</code></pre>
           </details>
 
           <!-- 65 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 65. Що таке Vite?</summary>
-            <div class="answer"><p>Сучасний швидкий бандлер і дев-сервер для React (альтернатива CRA).</p></div>
+            <summary><span class="chev">▸</span>65. Переваги useReducer над useState?</summary>
+            <ul>
+              <li>Краще для складної логіки стану</li>
+              <li>Прогнозовані оновлення через dispatch</li>
+              <li>Легше тестувати reducer-функції</li>
+            </ul>
           </details>
 
           <!-- 66 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 66. Що таке hot reloading?</summary>
-            <div class="answer"><p>Автоматичне оновлення коду в браузері без перезавантаження сторінки.</p></div>
+            <summary><span class="chev">▸</span>66. Що таке controlled component?</summary>
+            <p>Компонент форми, стан якого керується React через value і onChange.</p>
+            <pre><code>const [value, setValue] = React.useState('');
+&lt;input value={value} onChange={e =&gt; setValue(e.target.value)} /&gt;</code></pre>
           </details>
 
           <!-- 67 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 67. Що таке lazy loading у React?</summary>
-            <div class="answer">
-              <p>Динамічне завантаження компонентів через <code>React.lazy()</code> та <code>Suspense</code>.</p>
-            </div>
+            <summary><span class="chev">▸</span>67. Що таке uncontrolled component?</summary>
+            <p>Компонент форми, який керується самим DOM без контролю React.</p>
+            <pre><code>const inputRef = React.useRef();
+&lt;input defaultValue="текст" ref={inputRef} /&gt;</code></pre>
           </details>
 
           <!-- 68 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 68. Що таке code splitting?</summary>
-            <div class="answer"><p>Розбиття бандла на менші частини для швидшого завантаження.</p></div>
+            <summary><span class="chev">▸</span>68. Що таке PropTypes?</summary>
+            <p>Бібліотека для валідації типів пропсів компонентів.</p>
+            <pre><code>import PropTypes from 'prop-types';
+MyComponent.propTypes = {
+  name: PropTypes.string,
+  age: PropTypes.number
+};</code></pre>
           </details>
 
           <!-- 69 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 69. Як оптимізувати продуктивність React?</summary>
-            <div class="answer"><p>Мемоізація, React.memo, useMemo, useCallback, code splitting, virtualization.</p></div>
+            <summary><span class="chev">▸</span>69. Що таке defaultProps?</summary>
+            <p>Значення пропсів за замовчуванням, якщо вони не передані.</p>
+            <pre><code>MyComponent.defaultProps = {
+  name: 'Гість'
+};</code></pre>
           </details>
 
           <!-- 70 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 70. Що таке virtualization у React?</summary>
-            <div class="answer"><p>Рендер лише видимих елементів списку (react-window, react-virtualized).</p></div>
+            <summary><span class="chev">▸</span>70. Що таке key у списках?</summary>
+            <p>Унікальний ідентифікатор елемента списку для оптимізації рендеру.</p>
+            <pre><code>{items.map(item =&gt; &lt;li key={item.id}&gt;{item.name}&lt;/li&gt;)}</code></pre>
           </details>
 
           <!-- 71 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 71. Що таке server components?</summary>
-            <div class="answer"><p>Компоненти React 18, які виконуються на сервері, не потрапляючи у клієнтський бандл.</p></div>
+            <summary><span class="chev">▸</span>71. Що таке shallow comparison?</summary>
+            <p>Порівняння об’єктів або масивів лише по першому рівню властивостей, без глибокої перевірки.</p>
           </details>
 
           <!-- 72 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 72. Що таке concurrent rendering?</summary>
-            <div class="answer"><p>Механізм React 18, що дозволяє робити рендер частинами, не блокуючи UI.</p></div>
+            <summary><span class="chev">▸</span>72. Що таке reconciliation priority?</summary>
+            <p>Пріоритет оновлень у React для оптимізації часу рендеру та відгуку UI.</p>
           </details>
 
           <!-- 73 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 73. Що таке useId?</summary>
-            <div class="answer"><p>Хук React 18 для генерації стабільних унікальних ID для елементів.</p></div>
+            <summary><span class="chev">▸</span>73. Що таке React Profiler?</summary>
+            <p>Інструмент для вимірювання продуктивності компонентів.</p>
+            <pre><code>&lt;Profiler id="App" onRender={callback}&gt;&lt;/Profiler&gt;</code></pre>
           </details>
 
           <!-- 74 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 74. Що таке forwardRef?</summary>
-            <div class="answer"><p>Функція, яка дозволяє передавати ref з батька до дочірнього компонента.</p></div>
+            <summary><span class="chev">▸</span>74. Що таке hydration?</summary>
+            <p>Процес додавання обробників подій до серверного HTML під час SSR.</p>
           </details>
 
           <!-- 75 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 75. Що таке useImperativeHandle?</summary>
-            <div class="answer"><p>Хук, що дозволяє кастомізувати значення, яке доступне через ref у батьківському компоненті.</p></div>
+            <summary><span class="chev">▸</span>75. Що таке SSR (Server-Side Rendering)?</summary>
+            <p>Рендер компонентів на сервері, щоб користувач отримав готовий HTML для швидкого завантаження.</p>
           </details>
 
           <!-- 76 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 76. Що таке StrictMode у React?</summary>
-            <div class="answer"><p>Інструмент для виявлення потенційних проблем, подвійно викликає деякі методи у dev-режимі.</p></div>
+            <summary><span class="chev">▸</span>76. Що таке CSR (Client-Side Rendering)?</summary>
+            <p>Рендер компонентів на клієнті за допомогою JavaScript після завантаження сторінки.</p>
           </details>
 
           <!-- 77 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 77. Як відстежити ререндери у React?</summary>
-            <div class="answer">
-              <p>Використати React DevTools або <code>useWhyDidYouUpdate</code> hook.</p>
-            </div>
+            <summary><span class="chev">▸</span>77. Що таке React Router?</summary>
+            <p>Бібліотека для навігації між сторінками в SPA-додатках.</p>
           </details>
 
           <!-- 78 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 78. Що таке useLayoutEffect?</summary>
-            <div class="answer"><p>Хук, схожий на useEffect, але виконується синхронно після DOM-оновлень.</p></div>
+            <summary><span class="chev">▸</span>78. Що таке useParams?</summary>
+            <p>Хук React Router для отримання параметрів маршруту.</p>
+            <pre><code>const { id } = useParams();</code></pre>
           </details>
 
           <!-- 79 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 79. Чим відрізняється useLayoutEffect від useEffect?</summary>
-            <div class="answer">
-              <p><code>useEffect</code> виконується асинхронно, <code>useLayoutEffect</code> — синхронно після рендеру.</p>
-            </div>
+            <summary><span class="chev">▸</span>79. Що таке useNavigate?</summary>
+            <p>Хук React Router для програмної навігації між маршрутами.</p>
+            <pre><code>const navigate = useNavigate();
+navigate('/home');</code></pre>
           </details>
 
           <!-- 80 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 80. Що таке useSyncExternalStore?</summary>
-            <div class="answer"><p>Хук React 18 для підписки на зовнішні сховища стану (Redux, Zustand).</p></div>
+            <summary><span class="chev">▸</span>80. Що таке useLocation?</summary>
+            <p>Хук React Router для отримання поточного об'єкта локації (pathname, search, state).</p>
+            <pre><code>const location = useLocation();
+console.log(location.pathname);</code></pre>
           </details>
+
+          <!-- 81–100 → Просунуті теми (портали, error boundaries, нові хуки, server components, Next.js, тестування, оптимізація) -->
 
           <!-- 81 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 81. Що таке Zustand?</summary>
-            <div class="answer"><p>Легка бібліотека для керування глобальним state у React.</p></div>
+            <summary><span class="chev">▸</span>81. Що таке lazy loading у React?</summary>
+            <p>Механізм відкладеного імпорту компонентів для зменшення початкового розміру бандлу.</p>
+            <pre><code>const MyComponent = React.lazy(() =&gt; import('./MyComponent'));
+&lt;Suspense fallback=&lt;div&gt;Завантаження...&lt;/div&gt;&gt;
+  &lt;MyComponent /&gt;
+&lt;/Suspense&gt;</code></pre>
           </details>
 
           <!-- 82 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 82. Що таке Jotai?</summary>
-            <div class="answer"><p>Бібліотека state management у React на базі атомів.</p></div>
+            <summary><span class="chev">▸</span>82. Що таке memo?</summary>
+            <p>HOC для запобігання повторного рендеру компонентів, якщо пропси не змінилися.</p>
+            <pre><code>const MemoComponent = React.memo(MyComponent);</code></pre>
           </details>
 
           <!-- 83 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 83. Що таке Recoil?</summary>
-            <div class="answer"><p>Бібліотека state management для React від Facebook із концепцією атомів та селекторів.</p></div>
+            <summary><span class="chev">▸</span>83. Що таке useCallback?</summary>
+            <p>Хук для мемоізації функцій, щоб вони не створювалися заново при кожному рендері.</p>
+            <pre><code>const memoizedCallback = React.useCallback(() =&gt; {
+  doSomething(a, b);
+}, [a, b]);</code></pre>
           </details>
 
           <!-- 84 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 84. Що таке MobX?</summary>
-            <div class="answer"><p>Бібліотека state management на основі observables.</p></div>
+            <summary><span class="chev">▸</span>84. Що таке useMemo?</summary>
+            <p>Хук для мемоізації обчислених значень, щоб уникнути повторних дорогих обчислень.</p>
+            <pre><code>const memoizedValue = React.useMemo(() =&gt; computeExpensiveValue(a, b), [a, b]);</code></pre>
           </details>
 
           <!-- 85 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 85. Що таке Formik?</summary>
-            <div class="answer"><p>Бібліотека для зручної роботи з формами у React.</p></div>
+            <summary><span class="chev">▸</span>85. Що таке forwardRef?</summary>
+            <p>Механізм для передачі ref до дочірнього компонента.</p>
+            <pre><code>const Input = React.forwardRef((props, ref) =&gt; &lt;input ref={ref} {...props} /&gt;);</code></pre>
           </details>
 
           <!-- 86 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 86. Що таке React Hook Form?</summary>
-            <div class="answer"><p>Легка бібліотека для форм у React із хуками.</p></div>
+            <summary><span class="chev">▸</span>86. Що таке useImperativeHandle?</summary>
+            <p>Хук для контролю того, які значення або методи будуть доступні через ref.</p>
+            <pre><code>useImperativeHandle(ref, () =&gt; ({
+  focus: () =&gt; { inputRef.current.focus(); }
+}));</code></pre>
           </details>
 
           <!-- 87 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 87. Що таке controlled form libraries?</summary>
-            <div class="answer"><p>Бібліотеки, які керують формами через state (Formik, React Hook Form).</p></div>
+            <summary><span class="chev">▸</span>87. Що таке Context API?</summary>
+            <p>Механізм для передачі даних між компонентами без пропс-дриллінгу.</p>
+            <pre><code>const ThemeContext = React.createContext('light');</code></pre>
           </details>
 
           <!-- 88 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 88. Що таке testing-library/react?</summary>
-            <div class="answer"><p>Бібліотека для тестування React-компонентів через симуляцію користувацьких дій.</p></div>
+            <summary><span class="chev">▸</span>88. Як використовувати Provider і Consumer?</summary>
+            <p>Provider передає значення вниз по дереву, Consumer отримує його.</p>
+            <pre><code>&lt;ThemeContext.Provider value="dark"&gt;
+  &lt;Child /&gt;
+&lt;/ThemeContext.Provider&gt;
+
+const theme = React.useContext(ThemeContext);</code></pre>
           </details>
 
           <!-- 89 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 89. Що таке Jest?</summary>
-            <div class="answer"><p>Фреймворк для тестування JavaScript і React.</p></div>
+            <summary><span class="chev">▸</span>89. Що таке render props?</summary>
+            <p>Техніка, коли компонент приймає функцію як пропс для динамічного рендеру.</p>
+            <pre><code>&lt;DataProvider render={data =&gt; &lt;Child data={data} /&gt;} /&gt;</code></pre>
           </details>
 
           <!-- 90 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 90. Що таке snapshot testing?</summary>
-            <div class="answer"><p>Метод тестування, що зберігає рендер у файл та порівнює його з новими результатами.</p></div>
+            <summary><span class="chev">▸</span>90. Що таке compound components?</summary>
+            <p>Компоненти, які працюють разом і обмінюються станом через контекст.</p>
           </details>
 
           <!-- 91 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 91. Що таке enzyme?</summary>
-            <div class="answer"><p>Бібліотека для тестування React-компонентів (застаріла, замінюється RTL).</p></div>
+            <summary><span class="chev">▸</span>91. Що таке React Portals?</summary>
+            <p>Механізм для рендеру дочірнього компонента в DOM-елемент, який знаходиться поза батьківським деревом.</p>
+            <pre><code>ReactDOM.createPortal(&lt;Child /&gt;, document.getElementById('modal-root'));</code></pre>
           </details>
 
           <!-- 92 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 92. Що таке React DevTools?</summary>
-            <div class="answer"><p>Розширення браузера для дебагу компонентів React.</p></div>
+            <summary><span class="chev">▸</span>92. Що таке hydrateRoot?</summary>
+            <p>Метод для гидратації SSR-документів у React 18+.</p>
+            <pre><code>import { hydrateRoot } from 'react-dom/client';
+hydrateRoot(document.getElementById('root'), &lt;App /&gt;);</code></pre>
           </details>
 
           <!-- 93 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 93. Що таке storybook?</summary>
-            <div class="answer"><p>Інструмент для документування та тестування UI-компонентів у ізоляції.</p></div>
+            <summary><span class="chev">▸</span>93. Що таке batching?</summary>
+            <p>Групування кількох оновлень стану в одне рендер-цикл, щоб оптимізувати продуктивність.</p>
           </details>
 
           <!-- 94 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 94. Що таке monorepo у React-проєктах?</summary>
-            <div class="answer"><p>Організація кількох пакетів у єдиному репозиторії (NX, Turborepo).</p></div>
+            <summary><span class="chev">▸</span>94. Що таке double rendering у StrictMode?</summary>
+            <p>У режимі StrictMode React навмисно виконує подвійний рендер компонентів для виявлення побічних ефектів.</p>
           </details>
 
           <!-- 95 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 95. Що таке microfrontends у React?</summary>
-            <div class="answer"><p>Архітектура, де фронтенд ділиться на незалежні частини, які можна розробляти окремо.</p></div>
+            <summary><span class="chev">▸</span>95. Що таке Concurrent Mode?</summary>
+            <p>Режим React для паралельного рендерингу, який робить UI більш відзивчивим.</p>
           </details>
+
           <!-- 96 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 96. Що таке React Fiber?</summary>
-            <div class="answer"><p>Нова архітектура внутрішнього ядра React (з версії 16) для кращого планування рендеру.</p></div>
+            <summary><span class="chev">▸</span>96. Що таке transition?</summary>
+            <p>API для позначення станів низького пріоритету, які можна відкладати.</p>
+            <pre><code>const [isPending, startTransition] = React.useTransition();
+startTransition(() =&gt; setState(newValue));</code></pre>
           </details>
+
           <!-- 97 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 97. Що таке render phase і commit phase?</summary>
-            <div class="answer"><p>Render phase — підготовка змін у Virtual DOM. Commit phase — оновлення реального DOM.</p></div>
+            <summary><span class="chev">▸</span>97. Що таке Suspense для даних?</summary>
+            <p>Механізм для відкладеного рендерингу компонентів, які очікують асинхронні дані.</p>
           </details>
+
           <!-- 98 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 98. Що таке double rendering у StrictMode?</summary>
-            <div class="answer"><p>Функціональні компоненти викликаються двічі у dev-режимі для виявлення побічних ефектів.</p></div>
+            <summary><span class="chev">▸</span>98. Що таке ErrorBoundary у функціональних компонентах?</summary>
+            <p>
+              На сьогодні ErrorBoundary можна робити лише через класові компоненти; у функціональних можна використати сторонні бібліотеки або хук
+              useErrorBoundary.
+            </p>
           </details>
+
           <!-- 99 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 99. Що таке hydration errors?</summary>
-            <div class="answer"><p>Помилки, коли HTML із сервера не збігається з рендером на клієнті.</p></div>
+            <summary><span class="chev">▸</span>99. Що таке StrictMode?</summary>
+            <p>Компонент для підсвічування потенційних проблем у додатку без впливу на продуктивність в продакшн.</p>
           </details>
+
           <!-- 100 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> 100. Що таке React Server Components (RSC)?</summary>
-            <div class="answer"><p>Можливість виконувати компоненти на сервері, передаючи результат клієнту без JS.</p></div>
+            <summary><span class="chev">▸</span>100. Як оптимізувати продуктивність у React?</summary>
+            <ul>
+              <li>Мемоізація компонентів і функцій (React.memo, useMemo, useCallback)</li>
+              <li>Lazy loading компонентів</li>
+              <li>Ключі у списках для уникнення перерендеру</li>
+              <li>Оптимізація рендеру через batching і Concurrent Mode</li>
+            </ul>
           </details>
         </div>
       </div>

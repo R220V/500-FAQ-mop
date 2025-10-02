@@ -785,121 +785,71 @@
           </details>
 
           <!-- 26 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 26. Що таке <strong>таблиці</strong> в HTML і як їх створюють?</summary>
-            <div class="answer">
-              <p>Таблиці використовуються для впорядкування даних у рядки та стовпці:</p>
-              <ul>
-                <li><code>&lt;table&gt;</code> — контейнер таблиці.</li>
-                <li><code>&lt;tr&gt;</code> — рядок таблиці.</li>
-                <li><code>&lt;th&gt;</code> — заголовочна комірка (жирна, по центру).</li>
-                <li><code>&lt;td&gt;</code> — звичайна комірка з даними.</li>
-              </ul>
-              <hr />
-              <pre><code>&lt;table&gt;
+<details class="faq">
+  <summary><span class="chev">▸</span> 26. Що таке <strong>таблиці</strong> в HTML і як їх створюють?</summary>
+  <div class="answer">
+    <p>Таблиці використовуються для впорядкування даних у рядки та стовпці:</p>
+    <ul>
+      <li><code>&lt;table&gt;</code> — контейнер таблиці.</li>
+      <li><code>&lt;tr&gt;</code> — рядок таблиці.</li>
+      <li><code>&lt;th&gt;</code> — заголовочна комірка (жирна, по центру).</li>
+      <li><code>&lt;td&gt;</code> — звичайна комірка з даними.</li>
+    </ul>
+    <hr />
+    <pre><code>&lt;table style="border-collapse: collapse;"&gt;
   &lt;tr&gt;
-    &lt;th&gt;Ім’я&lt;/th&gt;
-    &lt;th&gt;Вік&lt;/th&gt;
+    &lt;th style="border: 1px solid #000; padding: 5px;"&gt;Ім’я&lt;/th&gt;
+    &lt;th style="border: 1px solid #000; padding: 5px;"&gt;Вік&lt;/th&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;td&gt;Оля&lt;/td&gt;
-    &lt;td&gt;25&lt;/td&gt;
+    &lt;td style="border: 1px solid #000; padding: 5px;"&gt;Оля&lt;/td&gt;
+    &lt;td style="border: 1px solid #000; padding: 5px;"&gt;25&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;td&gt;Іван&lt;/td&gt;
-    &lt;td&gt;30&lt;/td&gt;
+    &lt;td style="border: 1px solid #000; padding: 5px;"&gt;Іван&lt;/td&gt;
+    &lt;td style="border: 1px solid #000; padding: 5px;"&gt;30&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;</code></pre>
-              <p>Результат на сторінці:</p>
-              <table border="1" cellpadding="5">
-                <tr>
-                  <th>Ім’я</th>
-                  <th>Вік</th>
-                </tr>
-                <tr>
-                  <td>Оля</td>
-                  <td>25</td>
-                </tr>
-                <tr>
-                  <td>Іван</td>
-                  <td>30</td>
-                </tr>
-              </table>
-            </div>
-          </details>
+    <p>Результат на сторінці:</p>
+    <table style="border-collapse: collapse;">
+      <tr>
+        <th style="border: 1px solid #000; padding: 5px;">Ім’я</th>
+        <th style="border: 1px solid #000; padding: 5px;">Вік</th>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000; padding: 5px;">Оля</td>
+        <td style="border: 1px solid #000; padding: 5px;">25</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000; padding: 5px;">Іван</td>
+        <td style="border: 1px solid #000; padding: 5px;">30</td>
+      </tr>
+    </table>
+  </div>
+</details>
 
           <!-- 27 -->
-          <details class="faq">
-            <summary><span class="chev">▸</span> 27. Які додаткові теги використовують для <strong>структурування таблиць</strong> в HTML?</summary>
-            <div class="answer">
-              <p>Для поліпшення семантики та структури таблиць використовують додаткові теги:</p>
-              <ul>
-                <li>
-                  <code>&lt;caption&gt;</code> — заголовок таблиці. Дає семантичний опис таблиці,покращує доступність (для читалок) та відображається над
-                  таблицею за замовчуванням.
-                </li>
-                <li><code>&lt;thead&gt;</code> — група рядків заголовків таблиці.</li>
-                <li><code>&lt;tbody&gt;</code> — група основних рядків таблиці.</li>
-                <li><code>&lt;tfoot&gt;</code> — група рядків підвалу таблиці (підсумки, підсумкові дані).</li>
-                <li><code>&lt;th&gt;</code> — заголовочна комірка (по горизонталі або вертикалі).</li>
-                <li><code>&lt;td&gt;</code> — звичайна комірка даних.</li>
-                <li><code>colspan="N"</code> — комірка займає (об'єднує) <em>N</em> стовпців.</li>
-                <li><code>rowspan="N"</code> — комірка займає (об'єднує) <em>N</em> рядків.</li>
-              </ul>
-              <hr />
-              <pre><code>&lt;table border="1"&gt;
-  &lt;caption&gt;Таблиця користувачів&lt;/caption&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Ім’я&lt;/th&gt;
-      &lt;th&gt;Вік&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Оля&lt;/td&gt;
-      &lt;td&gt;25&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Іван&lt;/td&gt;
-      &lt;td&gt;30&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;tfoot&gt;
-    &lt;tr&gt;
-      &lt;td colspan="2"&gt;Всього: 2 користувачі&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tfoot&gt;
-&lt;/table&gt;</code></pre>
-              <p>Результат на сторінці:</p>
-              <table border="1" cellpadding="5">
-                <caption>
-                  Таблиця користувачів
-                </caption>
-                <thead>
-                  <tr>
-                    <th>Ім’я</th>
-                    <th>Вік</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Оля</td>
-                    <td>25</td>
-                  </tr>
-                  <tr>
-                    <td>Іван</td>
-                    <td>30</td>
-                  </tr>
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <td colspan="2">Всього: 2 користувачі</td>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
-          </details>
+<details class="faq">
+  <summary><span class="chev">▸</span> 27. Що таке <strong>мнемонізація</strong> в HTML?</summary>
+  <div class="answer">
+    <p>
+      Мнемонізація в HTML — це використання спеціальних символьних кодів (мнемонік), 
+      які починаються з <code>&amp;</code> та закінчуються на <code>;</code>. 
+      Вони дозволяють відображати символи, які мають службове значення в HTML або 
+      не завжди доступні на клавіатурі.
+    </p>
+    <p>Приклади:</p>
+    <ul>
+      <li><code>&amp;lt;</code> → &lt; (менше)</li>
+      <li><code>&amp;gt;</code> → &gt; (більше)</li>
+      <li><code>&amp;amp;</code> → &amp; (амперсанд)</li>
+      <li><code>&amp;quot;</code> → &quot; (лапки)</li>
+      <li><code>&amp;copy;</code> → &copy; (знак копірайту)</li>
+      <li><code>&amp;nbsp;</code> → &nbsp; (нерозривний пробіл)</li>
+    </ul>
+  </div>
+</details>
+
 
           <!-- 28 -->
           <details class="faq">
@@ -1946,7 +1896,7 @@ socket.onmessage = (event) =&gt; console.log(event.data);</code></pre>
 
           <!-- 87 -->
           <details class="faq">
-            <summary><span class="chev">▸</span> Як захистити форми в HTML?</summary>
+            <summary><span class="chev">▸</span>87. Як захистити форми в HTML?</summary>
             <div class="answer">
               <ul>
                 <li>Використовувати HTTPS для захищеного передавання даних.</li>

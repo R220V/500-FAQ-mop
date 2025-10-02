@@ -73,7 +73,7 @@ h4 {
 h1 {
   font-size: 1.6rem;
   text-align: center;
-  padding: 60px 8px 35px 8px;
+  padding: 40px 8px 15px 8px;
 }
 
 h2 {
@@ -116,11 +116,18 @@ ol {
 
 section ul {
   background-color: rgba(126, 126, 126, 0.08);
-  padding: 0 10px;
+  padding: 2px 10px;
 }
 
 section li {
   padding-bottom: 5px;
+}
+.section-about {
+  background-color: var(--bshadow-alt);
+  border: 1px solid var(--stroke);
+  border-radius: 6px;
+  margin: 10px 0;
+  padding: 10px;
 }
 
 section li::before {
@@ -128,12 +135,6 @@ section li::before {
   color: var(--text);
   font-weight: bold;
   font-size: 14px;
-}
-.section-about {
-  background-color: var(--code-bg);
-  border: 1px solid var(--stroke);
-  border-radius: 6px;
-  margin: 30px;
 }
 
 .highlight {
@@ -168,10 +169,12 @@ section li::before {
 /* #endregion layout */
 
 /* #region header */
+
 header {
   margin-bottom: 0;
   border-radius: 0;
-  border: 1px solid var(--stroke);
+  border: none;
+  box-shadow: none;
   width: 100%;
   background: var(--card-alt);
 }
@@ -180,7 +183,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: clamp(6px, calc((1024px - 320px) / 10), 12px);
+  gap: clamp(6px, calc(320px / 10), 12px);
 }
 
 .header-link {
@@ -212,17 +215,20 @@ header {
 }
 /* #endregion header */
 
+/* #region nav */
 .nav-menu {
   position: sticky;
-  top: 43px;
-  padding: 15px;
-  margin: 10px 149px;
+  top: 31px;
+  padding: 5px;
+  margin: 0;
   border: 1px solid var(--stroke);
   box-shadow: inset 0 0 5px var(--accent);
   background-color: var(--bg);
-  border-radius: 6px;
+  border-radius: 0;
+  box-shadow: 0 0 8px var(--accent);
   z-index: 5;
 }
+/* #endregion nav */
 
 /* #region theme switcher */
 .theme-circle {
@@ -237,7 +243,7 @@ header {
   display: flex;
   justify-content: center;
   gap: clamp(8px, calc((100vw - 320px) / 10), 20px);
-  padding: 5px 0;
+  padding: 6px;
   transform: translateX(50%);
   background-color: #e7e7e7ff;
   border: 1px solid var(--stroke);
@@ -344,7 +350,7 @@ header {
 /* #region input + buttons */
 .input-buttons {
   position: sticky;
-  top: 31px;
+  top: 32px;
   left: 0;
   display: flex;
   flex-wrap: wrap;
@@ -354,8 +360,8 @@ header {
   margin-top: 6px;
   margin-bottom: 6px;
   border: 2px solid var(--text);
-  border-radius: 8px;
-  background: linear-gradient(0deg, var(--text), var(--bg));
+  border-radius: 6px;
+  background: linear-gradient(0deg, var(--nonopacity), var(--nonopacity));
   box-shadow: 0 0 15px var(--text);
   z-index: 3;
 }
@@ -382,8 +388,9 @@ header {
 
 .btn {
   flex: 1 1 auto;
-  padding: 4px 6px;
-  font-size: 18px;
+  padding: 6px 10px;
+  font-size: 16px;
+
   border: 1px solid var(--stroke);
   border-radius: 6px;
   background: var(--code-bg);
@@ -400,7 +407,6 @@ header {
 .btn:focus {
   background: var(--card-alt);
   border-color: #0e1426;
-  /* border-collapse: collapse; */
   outline: 1px solid var(--accent);
 }
 
@@ -425,7 +431,7 @@ details.faq {
 summary {
   display: inline-block;
   gap: 5px;
-  padding-right: 60px;
+  padding-right: 0;
   font-weight: 600;
   letter-spacing: 0.2px;
   user-select: none;
@@ -468,7 +474,7 @@ code {
   border-radius: 4px;
   padding: 0;
   font-family: Consolas, monospace;
-  font-size: 1.1em;
+  font-size: 0.95em;
   white-space: pre-wrap;
   word-break: break-word;
   max-width: 100%;
@@ -489,7 +495,7 @@ pre {
   background: var(--card-alt);
   border-top: 1px solid var(--stroke);
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   box-shadow: inset 0 0 10px var(--text);
 }
 .footerok {
@@ -500,10 +506,6 @@ pre {
   box-shadow: inset 0 0 10px var(--text);
 }
 
-.footer p {
-  text-align: center;
-  color: var(--accent);
-}
 .footerok p {
   text-align: center;
   color: var(--accent);
@@ -513,7 +515,7 @@ pre {
 
 .footer a {
   color: var(--text);
-  font-weight: bolder;
+  font-weight: 400;
   text-decoration: none;
 }
 
@@ -524,10 +526,12 @@ pre {
 
 .footer-top {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+
   align-items: flex-start;
   max-width: 900px;
-  font-size: 1.1rem;
+  font-size: 1rem;
+
   margin: 0 auto;
   width: 100%;
 }
@@ -535,17 +539,21 @@ pre {
 .footer-left p,
 .footer-right p {
   margin: 0;
-  line-height: 1.5;
+  /* line-height: 1.5; */
+  line-height: 1.4;
 }
 
 .footer-right {
   text-align: right;
+  display: none;
 }
 
 .footer .copy {
-  margin-top: 5px;
+  /* margin-top: 5px; */
+  /* display: none; */
   text-align: center;
-  font-size: 1rem;
+  /* font-size: 1rem; */
+  font-size: 0.9rem;
   color: var(--accent);
 }
 /* #endregion footer */
@@ -553,9 +561,9 @@ pre {
 /* #region  logo */
 .logo {
   position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translate(-30px, -80px);
+  bottom: 32px;
+  left: -15px;
+  transform: rotate(270deg) scale(0.8);
   cursor: pointer;
   border: 2px solid rgba(190, 190, 190, 1);
   box-shadow:
@@ -570,119 +578,8 @@ pre {
 }
 /* #endregion  logo */
 
-/* -------------------------------------------------320- */
-@media (min-width: 320px) {
-  body {
-    font-size: 16px;
-    line-height: 1.4;
-  }
-  .header-menu {
-    gap: 0.8em;
-  }
-  .header {
-    box-shadow: none;
-    border: none;
-  }
 
-  .header-menu {
-    justify-content: center;
-    gap: clamp(6px, calc(320px / 10), 12px);
-  }
-  .nav-menu {
-    top: 31px;
-    margin: 0;
-    padding: 5px;
-    border: 1px solid var(--stroke);
-    border-radius: 0;
-    box-shadow: 0 0 8px var(--accent);
-  }
-
-  .theme-circle {
-    padding: 6px 0;
-  }
-
-  .input-buttons {
-    top: 32px;
-    border-radius: 6px;
-    background: linear-gradient(0deg, var(--nonopacity), var(--nonopacity));
-  }
-  .theme-circle {
-    gap: clamp(8px, calc((100vw - 320px) / 10), 20px);
-    padding: 6px;
-  }
-  .circle {
-    width: 18px;
-    height: 18px;
-  }
-  section ul {
-    padding: 2px 10px;
-  }
-  .section-about {
-    background-color: var(--bshadow-alt);
-    border: 1px solid var(--stroke);
-    border-radius: 6px;
-    margin: 10px 0;
-    padding: 10px;
-  }
-
-  .btn {
-    font-size: 16px;
-    padding: 6px 10px;
-  }
-  h1 {
-    font-size: 1.6rem;
-    padding: 40px 8px 15px 8px;
-  }
-  summary {
-    padding-right: 0;
-  }
-
-  pre,
-  code {
-    font-size: 0.95em;
-  }
-
-  .footer {
-    padding: 5px;
-  }
-  .footerok p {
-    text-align: center;
-    color: var(--accent);
-    padding: 30px;
-    letter-spacing: 2px;
-  }
-  .footer a {
-    font-weight: 400;
-  }
-
-  .footer-top {
-    justify-content: center;
-    font-size: 1rem;
-    margin: 0 auto;
-  }
-
-  .footer-left p {
-    margin: 0;
-    line-height: 1.4;
-  }
-
-  .footer-right {
-    display: none;
-  }
-
-  .footer .copy {
-    margin-top: 0;
-    font-size: 0.9rem;
-  }
-
-  .logo {
-    bottom: 32px;
-    left: -15px;
-    transform: rotate(270deg) scale(0.8);
-  }
-}
-
-/* -------------------------------------------------768- */
+/* #region min 768 -------------------------------------- */
 @media (min-width: 768px) {
   body {
     font-size: 20px;
@@ -806,6 +703,9 @@ pre {
     height: 27px;
   }
   /* ------------------- */
+  .footer {
+    padding: 10px 25px;
+  }
   .footer p {
     text-align: left;
     color: var(--accent);
@@ -830,7 +730,9 @@ pre {
     transform: translate(-30px, -80px);
   }
 }
-/* -------------------------------------------------1024- */
+/* #endregion min 768 */
+
+/* #region min 1024 -------------------------------------- */
 @media (min-width: 1024px) {
   body {
     max-width: 1200px;
@@ -848,7 +750,7 @@ pre {
     background: url('../img/bg/zavitushki.jpg') center / 105%;
     opacity: 0.12;
     z-index: -1;
-    animation: bgscroll 40s linear infinite alternate;
+    animation: bgscroll 60s linear infinite alternate;
   }
 
   @keyframes bgscroll {
@@ -1015,3 +917,4 @@ pre {
     }
   }
 }
+/* #endregion min 1024 */

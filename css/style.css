@@ -561,7 +561,7 @@ pre {
 /* #region  logo */
 .logo {
   position: absolute;
-  bottom: 32px;
+  bottom: 37px;
   left: -15px;
   transform: rotate(270deg) scale(0.8);
   cursor: pointer;

@@ -134,6 +134,8 @@ section li {
   border-radius: 6px;
   margin: 10px 0;
   padding: 10px;
+    box-shadow: 0 0 6px var(--accent);
+
 }
 
 section li::before {
@@ -555,10 +557,7 @@ pre {
 }
 
 .footer .copy {
-  /* margin-top: 5px; */
-  /* display: none; */
   text-align: center;
-  /* font-size: 1rem; */
   font-size: 0.9rem;
   color: var(--accent);
 }
@@ -674,7 +673,6 @@ pre {
     border-radius: 6px;
     margin: 30px 30px;
     padding: 20px;
-    box-shadow: 0 0 8px var(--accent);
   }
 
   .wrap-content {
